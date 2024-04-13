@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome to the Home Page</h1>
+<button id="logoutButton">Logout</button>
+
+<script>
+    document.getElementById("logoutButton").onclick = async function() {
+        const response = await fetch('http://localhost:8081/member/logout', {
+            method: 'POST'
+        });
+
+        if(response.ok) {
+            alert('Logged out');
+            window.location.href = '/login.html'; // Redirect to login page
+        } else {
+            alert('Logout failed');
+        }
+    }
+</script>
+</body>
+</html>
