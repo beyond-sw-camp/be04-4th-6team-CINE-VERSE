@@ -42,12 +42,16 @@ onMounted(() => {
 function logout() {
     localStorage.removeItem('sessionId');
     alert('로그아웃 되었습니다.');
-    router.push('/main');
+    router.push('/');
     isLoggedin.value = false;
 }
 
 function join() {
-    router.push("/member/regist");
+    if (isLoggedin.value) {
+        alert('로그인 상태입니다.');
+    } else {
+        router.push("/");
+    }
 }
 
 function login() {
