@@ -131,7 +131,7 @@ onMounted(async () => {
             console.error("뱃지를 가져오는 중 에러가 발생했습니다:", error);
         }
     } else {
-        console.error("No memberId found in cookie.");
+        console.error("로그인 여부를 확인해주세요.");
     }
 });
 
@@ -150,7 +150,7 @@ const buyBadge = async (badgeId) => {
             alert('뱃지 구매에 실패했습니다.');
         }
     } else {
-        alert('Member ID is not found. Please log in again.');
+        alert('로그인 여부를 확인해주세요.');
     }
 };
 
@@ -168,7 +168,7 @@ onMounted(async () => {
             console.error("사용자 뱃지 정보를 가져오는 중 에러가 발생했습니다:", error);
         }
     } else {
-        console.error("No memberId found in cookie.");
+        console.error("로그인 여부를 확인해주세요.");
     }
 });
 
