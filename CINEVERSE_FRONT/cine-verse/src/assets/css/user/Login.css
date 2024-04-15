@@ -1,0 +1,149 @@
+.logincontent {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login {
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 3%
+}
+
+.choose1,
+.choose2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    margin-right: 30px;
+}
+
+.choose1 {
+    margin-left: 20px;
+    min-width: 500px;
+}
+
+.choosing1,
+.choosing2,
+.choosing3 {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    line-height: 50px; 
+    font-size: 16px;
+    margin: 0 40px; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.choosing1 {
+    color: #ff6b6b;
+}
+
+.basicline,
+.colorline {
+    position: absolute;
+}
+
+.basicline {
+    width: 30%;
+    height: 5px;
+    background-color: #ccc;
+}
+
+.colorline {
+    width: 20%;
+    height: 5px;
+    background-color: red;
+    transition: all 0.3s ease;
+    margin-right: 220px;
+}
+
+.loginbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.idtext,
+.pwtext {
+    min-width: 50px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+.idbox,
+.pwbox {
+    flex-grow: 1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 440px;
+}
+
+.loginbtndiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.loginbtn {
+    width: 440px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginbtn:hover {
+    background-color: darken(#ff6b6b, 10%);
+}
+
+.question {
+    margin-top: 2.5%;
+    margin-bottom: 10px;
+}
+
+.joinbtndiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 110px;
+}
+
+.joinbtn {
+    width: 8%;
+    padding: 5px 0;
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    background-color: white;
+    color: #ff6b6b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 7%;
+    margin-top: 1.8%;
+    margin-left: 20px;
+    min-width: 80px;
+    font-family: GmarketSansMedium;
+}
+
+.joinbtn:hover {
+    background-color: #FFF1F0;
+    color: #FF786C; 
+}
+
+.test {
+    margin-left: 300px;
+}

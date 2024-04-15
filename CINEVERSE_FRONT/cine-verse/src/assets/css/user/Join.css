@@ -1,0 +1,76 @@
+.joincontent {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.join {
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 3%
+}
+
+.joinbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.idtext,
+.pwtext,
+.pwtext2,
+.nicknametext,
+.mailtext,
+.nametext,
+.datetext,
+.phonetext {
+    min-width: 50px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+.idbox,
+.pwbox,
+.pwbox2,
+.nicknamebox,
+.mailbox,
+.namebox,
+.datebox,
+.phonebox {
+    flex-grow: 1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 440px;
+}
+
+.joinbtndiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.joinbtn {
+    width: 440px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5%;
+    margin-bottom: 10%;
+    margin-top: 10px;
+}
+
+.test {
+    margin-left: 300px;
+}

@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; 
+    margin: auto;
+}
+
+.banner {
+    width: 100%;
+}
+
+.bannerimg {
+    margin-top: 4%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.mainbannerimage {
+    max-width: 100%;
+    height: 220px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 5%;
+}
+
+.likepost,
+.allpost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.likepostbtn,
+.allpostbtn {
+    padding: 7px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #FF786C;
+    background-color: #FF786C;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.likepostbox,
+.allpostbox {
+    width: 950px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid #FFF1F0;
+    background-color: #FFF1F0;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-rankings-container {
+    position: absolute;
+    top: 50px; /* 헤더 바로 아래 */
+    right: 0; /* 페이지의 오른쪽 */
+    height: 100vh; /* 전체 높이 */
+    width: 330px; /* 사이드바 너비 */
+    padding-top: 100px; /* 헤더와 영화 순위 사이의 공간 */
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.movie-rankings {
+    background-color: #FFF; /* 배경 색상 */
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+    border-radius: 4px; /* 경계 둥글게 */
+    max-height: 600px; /* 최대 높이 */
+    overflow-y: auto; /* 넘치면 스크롤 */
+}
+
+.movie-rankings h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.movie-rankings ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-rankings li {
+    margin-bottom: 10px;
+}
