@@ -55,10 +55,8 @@
     width: 980px;
     padding: 10px 0;
     background-color: #FFD8D8;
-    /* 배경색 변경 */
     border-radius: 10px;
     margin-bottom: 5px;
-    /* 헤더와 게시글 사이 여백 */
 }
 
 .eventpostheadertitle {
@@ -73,11 +71,6 @@
     font-weight: bold;
 }
 
-.edit {
-    display: flex;
-    justify-content: space-between;
-}
-
 .eventpostheadernickname {
     flex: 1.5;
     text-align: center;
@@ -85,7 +78,7 @@
 }
 
 .eventpostheaderdate {
-    flex: 1.5;
+    flex: 1.2;
     text-align: center;
     font-weight: bold;
 }

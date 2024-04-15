@@ -5,16 +5,16 @@
                 <img src="@/assets/img/mainpagebanner.png" class="mainbannerimage">
             </div>
             <div class="content">
-      <div class="eventpost" v-if="latestEvents.length > 0">
-        <h3 class="eventpostbtn">최신 이벤트 게시글</h3>
-        <div class="eventpostheader">
-          <div class="eventpostheadertitle">제목</div>
-          <div class="eventpostheadercontent">내용</div>
-          <div class="eventpostheadernickname">닉네임</div>
-          <div class="eventpostheaderdate">작성일</div>
-          <div class="eventpostheaderviews">조회수</div>
-        </div>
-        <div class="eventpostbox">
+                <div class="eventpost" v-if="latestEvents.length > 0">
+                    <h3 class="eventpostbtn">최신 이벤트 게시글</h3>
+                    <div class="eventpostheader">
+                        <div class="eventpostheadertitle">제목</div>
+                        <div class="eventpostheadercontent">내용</div>
+                        <div class="eventpostheadernickname">닉네임</div>
+                        <div class="eventpostheaderdate">작성일</div>
+                        <div class="eventpostheaderviews">조회수</div>
+                    </div>
+                    <div class="eventpostbox">
                         <li v-for="(event, index) in latestEvents" :key="index" class="eventpostrow">
                             <div class="eventposttitle">{{ event.eventTitle }}</div>
                             <div class="eventpostcontent">{{ event.eventContent }}</div>
