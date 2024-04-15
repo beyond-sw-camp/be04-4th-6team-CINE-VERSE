@@ -40,7 +40,7 @@
                     </div>
                     <div class="namelabel">
                         <p class="nametext">Name</p>
-                        <button class="namebox">{{ editUserInfo.Nickname }}</button>
+                        <button class="namebox">{{ editUserInfo.memberName }}</button>
                     </div>
                     <div class="datelabel">
                         <p class="datetext">Birthdate</p>

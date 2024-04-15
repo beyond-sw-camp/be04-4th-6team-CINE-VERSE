@@ -98,9 +98,18 @@ onMounted(() => {
     }
 });
 
-
 function edit() {
-    router.push("/member/modify/1");
+    const memberIdCookie = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('memberId='));
+    const memberId = memberIdCookie ? memberIdCookie.split('=')[1] : null;
+
+    if (memberId) {
+        router.push(`/member/modify/${memberId}`);
+    } else {
+        alert('로그인이 필요합니다.');
+        router.push('/login');
+    }
 }
 
 function badge() {
@@ -108,7 +117,17 @@ function badge() {
 }
 
 function mybadge() {
-    router.push("/badge/1");
+    const memberIdCookie = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('memberId='));
+    const memberId = memberIdCookie ? memberIdCookie.split('=')[1] : null;
+
+    if (memberId) {
+        router.push(`/badge/${memberId}`);
+    } else {
+        alert('로그인이 필요합니다.');
+        router.push('/login');
+    }
 }
 
 

@@ -72,7 +72,7 @@ const login = async () => {
 
             alert('로그인 성공');
 
-            router.push('/main');
+            router.push('/');
         }
     } catch (error) {
         console.log("로그인 실패:", error.response ? error.response.data.message : "Unknown Error")
