@@ -17,7 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-// 젠킨스 테스트 주석
+// 젠킨스 테스트 주석 ver2
 @RestController
 @RequestMapping("/event_board")
 public class EventBoardController {
