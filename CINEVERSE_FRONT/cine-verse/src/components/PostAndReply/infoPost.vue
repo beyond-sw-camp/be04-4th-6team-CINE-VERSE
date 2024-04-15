@@ -3,7 +3,7 @@
         <section>
             <div class="clickdiv" @click="mainBoard()">
                 <h1 class="boardname">정보 게시판</h1> 
-                <h2 class="boardcategory">축전</h2>
+                <h2 class="boardcategory">{{ info.infoCategory.infoCategory }}</h2>
             </div>
             <hr class="boardtitleLine">
         </section>
@@ -23,13 +23,14 @@
                 <h3 class="writer">{{ info.member.memberName }}</h3>
             </div>
             <div class="viewandlike">
-                <h3 class="viewandlike">{{ info.infoViewCount }} 33</h3>
+                <h3 class="viewandlike">{{ info.infoViewCount }}</h3>
             </div>
         </div>
         <hr class="titleLine">
         <div class="maincontent">
             <p v-html="info.infoContent"></p>
         </div>
+        <Like/>
         <div class="like">
            <button type="button" @click="deletePost">
                 삭제
@@ -42,6 +43,7 @@
 <script setup>
     import router from '@/router/mainRouter';
     import Reply from './Reply.vue';
+    import Like from './Like.vue';
     import axios from "axios";
     import { ref, onBeforeMount } from "vue";
     import { useRoute } from "vue-router";

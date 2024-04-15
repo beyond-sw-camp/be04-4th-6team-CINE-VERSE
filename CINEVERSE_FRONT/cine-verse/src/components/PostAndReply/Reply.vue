@@ -2,7 +2,7 @@
     <div>
       <div class="allreply" v-for="reply in replys" :key="reply.infoCommentId" >
         <div class="replywriterdiv">
-          <span v-if="reply.member">{{ reply.member.memberId }}</span>
+          <span v-if="reply.member">{{ reply.member.memberName }}</span>
         </div>
         <div class="replycontentdiv">
           <p>{{ reply.commentContent }}</p>
@@ -24,7 +24,7 @@
   
       <hr class="replyregistline">
       <div class="registreplywriterdiv">
-        <span v-if="replys.length > 0 && replys[0].member">{{ replys[0].member.memberId }}</span>
+        <span v-if="replys.length > 0 && replys[0].member">{{ replys[0].member.memberName }}</span>
       </div>
       <div class="registreplydiv">
         <form id="comment" @submit.prevent="submitReply">
@@ -101,14 +101,8 @@ onMounted(async () => {
     
     const response = await axios.get(`http://localhost:8081/info_comment/list?infoId=${infoId}`);
     replys.value = response.data.filter(comment => {
-  console.log('코멘트 하나의 info: ' + comment.infoId);
-  console.log('reply info: ' + infoId);
-  
   const commentInfoId = parseInt(comment.infoId);
   const routerInfoId = parseInt(infoId);
-
-  console.log('반환될 결과: ' + (commentInfoId === routerInfoId));
-
   return commentInfoId === routerInfoId;
 });
     // replys.value = response.data;

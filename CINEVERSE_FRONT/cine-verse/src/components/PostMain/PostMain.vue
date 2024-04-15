@@ -15,31 +15,24 @@
         </td>
       </tr>
       <tr class="header2">
-        <td>
-          <select v-model="sortBy" @change="sortInfo">
-            <option value="infoDate">작성일자</option>
-            <option value="memberId">작성자</option>
-          </select>
-        </td>
         <td class="search" id="search-1">
-                <div id="searchDropdown">
-                    <select class="form-control" name="search_type" v-model="search_type"
-                        style="height: 30px; font-size: 12px;">
-                        <option value="titleContent">제목 내용</option>
-                        <option value="title">제목</option>
-                        <option value="content">내용</option>
-                        <option value="writerId">작성자</option>
-                    </select>
-                  </div>
-                  <div>
-                    <input type="text" id='searchText' class="form-control" placeholder="Search..."
-                        v-model="search_condition" @keyup.enter="callData">
-                </div>
-                <div class="">
-                    <button class="btn" id="searchBtn" type="button" @click="callData">검색</button>
-                </div>
-              </td>
-
+          <div id="searchDropdown">
+            <select class="form-control" name="search_type" v-model="search_type"
+              style="height: 30px; font-size: 12px;">
+              <option value="titleContent">제목 내용</option>
+              <option value="title">제목</option>
+              <option value="content">내용</option>
+              <option value="writerId">작성자</option>
+            </select>
+          </div>
+          <div>
+            <input type="text" id='searchText' class="form-control" placeholder="Search..."
+              v-model="search_condition" @keyup.enter="callData">
+          </div>
+          <div class="">
+            <button class="btn" id="searchBtn" type="button" @click="callData">검색</button>
+          </div>
+        </td>
       </tr>
       <tr class="header1">
         <td class="num">게시글 번호</td>
@@ -51,34 +44,36 @@
         <td>작성일자</td>
       </tr>
       <tbody>
-        <tr v-for="(item, index) in info" :key="item.infoId" class="allpost" @click="changeRouter(item.infoId)">
-          <td>{{ index + 1 }}</td>
-          <td class="boardname">{{ item.infoTitle }}</td>
-          <td>{{ item.infoCategoryId }}</td>
-          <td>{{ item.infoViewCount }}</td>
-          <td>{{ item.postLike }}</td>
-          <td>{{ item.member.memberName }}</td>
-          <td>{{ item.infoDate }}</td>
-        </tr>
-      </tbody>
+  <tr v-for="(item, index) in filteredInfo" :key="item.infoId" class="allpost" @click="changeRouter(item.infoId)">
+    <td>{{ index + 1 }}</td>
+    <td class="boardname">{{ item.infoTitle }}</td>
+    <td>{{ item.infoCategory.infoCategory }}</td>
+    <td>{{ item.infoViewCount }}</td>
+    <td>{{ item.postLike }}</td>
+    <td>{{ item.member.memberName }}</td>
+    <td>{{ item.infoDate }}</td>
+  </tr>
+</tbody>
     </table>
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import axios from "axios";
 import router from "@/router/mainRouter";
 
 const info = ref([]);
 const index = 1;
-// const sortBy = ref('infoDate'); // 기본 정렬 기준은 작성일자로 설정
-// const searchQuery = ref(''); // 검색어 상태 추가
+const search_condition = ref("");
+const search_type = ref("titleContent");
+const filteredInfo = ref([]);
 
 const fetchInfo = () => {
   axios.get(`http://localhost:8081/info_board/list`)
     .then(response => {
       info.value = response.data;
+      filteredInfo.value = response.data; // 초기에 전체 데이터를 filteredInfo에 할당
     })
     .catch(error => {
       console.error("Error fetching info:", error);
@@ -97,17 +92,39 @@ function goToWritePage(){
   router.push(`/info_board/regist`);
 }
 
-// function sortInfo() {
-//   info.value.sort((a, b) => {
-//     if (sortBy.value === 'infoDate') {
-//       return new Date(b.infoDate) - new Date(a.infoDate);
-//     } else if (sortBy.value === 'memberId') {
-//       return a.memberId.localeCompare(b.memberId);
-//     }
-//   });
-// }
+// 검색 기능 구현
+watch([search_condition, search_type], () => {
+  if (search_condition.value && search_type.value) {
+    filterInfo();
+  } else {
+    // 검색 조건이 비어있으면 전체 데이터를 보여줍니다.
+    filteredInfo.value = info.value;
+  }
+});
 
+function filterInfo() {
+  const condition = search_condition.value.toLowerCase();
+  const type = search_type.value;
 
+  if (type === "titleContent") {
+    filteredInfo.value = info.value.filter(item =>
+      item.infoTitle.toLowerCase().includes(condition) ||
+      item.infoContent.toLowerCase().includes(condition)
+    );
+  } else if (type === "title") {
+    filteredInfo.value = info.value.filter(item =>
+      item.infoTitle.toLowerCase().includes(condition)
+    );
+  } else if (type === "content") {
+    filteredInfo.value = info.value.filter(item =>
+      item.infoContent.toLowerCase().includes(condition)
+    );
+  } else if (type === "writerId") {
+    filteredInfo.value = info.value.filter(item =>
+      item.member.memberName.toLowerCase().includes(condition)
+    );
+  }
+}
 </script>
 
 <style scoped>
