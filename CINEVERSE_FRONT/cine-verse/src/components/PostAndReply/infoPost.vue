@@ -29,6 +29,9 @@
         <hr class="titleLine">
         <div class="maincontent">
             <p v-html="info.infoContent"></p>
+            <div v-if="info.images && info.images.length > 0" class="image-container">
+                <img v-for="(image, index) in info.images" :key="index" :src="image.accessUrl" :alt="'Image ' + (index + 1)" class="info-image">
+            </div>
         </div>
         <Like/>
         <div class="like">
