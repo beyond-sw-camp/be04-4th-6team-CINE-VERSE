@@ -110,7 +110,7 @@ const isPurchased = (badgeId) => {
 };
 
 const purchaseButtonText = (badgeId) => {
-    return isPurchased(badgeId) ? "구매완료" : "$ 구매하기";
+    return isPurchased(badgeId) ? "구매완료" : "$1000 구매하기";
 };
 
 onMounted(async () => {

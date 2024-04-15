@@ -88,8 +88,8 @@ async function fetchMemberData(memberId) {
         memInfo.value = memberResponse.data;
         console.log('회원 정보:', memInfo.value);
 
-        const pointResponse = await axios.get(`http://localhost:8081/point/${memberId}`);
-        pointInfo.value = pointResponse.data;
+        const pointResponse = await axios.get(`http://localhost:8081/point/1`);
+        pointInfo.value = pointResponse.data[0];
         console.log('포인트 정보:', pointInfo.value);
     } catch (error) {
         console.error('데이터를 가져오는데 실패했습니다', error);
