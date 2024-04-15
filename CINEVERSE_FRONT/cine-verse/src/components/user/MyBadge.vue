@@ -43,9 +43,7 @@
 
 <script setup>
 import axios from "axios";
-import { onMounted, ref, inject } from "vue";
-
-const globalState = inject('globalState');
+import { onMounted, ref} from "vue";
 
 const wearingBadge = ref(null);
 const purchasedBadges = ref([]);
@@ -69,9 +67,19 @@ const wearBadge = async (badge) => {
         };
         await axios.post('http://localhost:8081/badge/use', memberBadgeDto);
 
-        wearingBadge.value = badge;
-        purchasedBadges.value = purchasedBadges.value.filter(b => b.badge.badgeId !== badge.badge.badgeId);
+        // 착용중인 뱃지 이동 -> 구매한 뱃지로
+        if (wearingBadge.value) {
+            purchasedBadges.value = [...purchasedBadges.value, wearingBadge.value]
+                .map(b => ({ ...b, badgeStatus: 'N' })); // 모든 구매한 뱃지의 badgeStatus를 'N'으로 설정
+        }
 
+        // 새로운 뱃지 착용
+        wearingBadge.value = badge;
+
+        // 착용하지 않은 뱃지 목록에서 현재 착용한 뱃지 제거
+        purchasedBadges.value = purchasedBadges.value
+            .filter(b => b.badge.badgeId !== badge.badge.badgeId);
+        
     } catch (error) {
         console.error("뱃지 착용 중 에러가 발생했습니다:", error);
     }
