@@ -19,4 +19,7 @@ public class Badge {
 
     @Column(name = "badge_location")
     private String badgeLocation;
+
+    @Column(name = "badge_name")
+    private String badgeName;
 }

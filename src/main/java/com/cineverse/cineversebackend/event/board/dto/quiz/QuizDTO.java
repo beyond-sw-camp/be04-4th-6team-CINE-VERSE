@@ -9,6 +9,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@Builder
 public class QuizDTO {
     private int quizId;
     private String quizAnswer;

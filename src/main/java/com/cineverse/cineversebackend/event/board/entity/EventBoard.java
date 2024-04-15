@@ -12,6 +12,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name = "tbl_event_board")
+@Builder
 public class EventBoard {
     @Id
     @Column(name = "event_board_id")

@@ -13,6 +13,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@Builder
 public class EventBoardDTO {
     private int eventBoardId;
     private String eventTitle;

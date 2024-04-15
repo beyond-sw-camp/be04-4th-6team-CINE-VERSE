@@ -10,6 +10,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name = "tbl_quiz_solver")
+@Builder
 public class QuizSolver {
     @Id
     @Column(name = "quiz_solver_id")
