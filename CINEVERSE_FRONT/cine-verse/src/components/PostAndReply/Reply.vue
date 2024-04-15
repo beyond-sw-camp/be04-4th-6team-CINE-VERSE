@@ -1,8 +1,8 @@
 <template>
     <div>
-      <div class="allreply" v-for="reply in replys" :key="reply.replyId" >
+      <div class="allreply" v-for="reply in replys" :key="reply.infoCommentId" >
         <div class="replywriterdiv">
-            <span v-if="replys.length > 0">{{ replys[0].member ? replys[0].member.memberId : '' }}</span>
+          <span v-if="reply.member">{{ reply.member.memberId }}</span>
         </div>
         <div class="replycontentdiv">
           <p>{{ reply.commentContent }}</p>
@@ -24,7 +24,7 @@
   
       <hr class="replyregistline">
       <div class="registreplywriterdiv">
-        <span>{{ replys.length > 0 ? replys[0].member.memberId : '' }}</span>
+        <span v-if="replys.length > 0 && replys[0].member">{{ replys[0].member.memberId }}</span>
       </div>
       <div class="registreplydiv">
         <form id="comment" @submit.prevent="submitReply">
@@ -49,6 +49,7 @@ const router = useRouter();
 const replys = ref([]);
 const newComment = ref('');
 
+// console.log(replys)
 const submitReply = async () => {
   try {
     const memberIdCookie = document.cookie.split('; ').find(cookie => cookie.startsWith('memberId='));
@@ -83,24 +84,34 @@ const submitReply = async () => {
 const removeReply = async (infoCommentId) => {
   try {
     if (confirm('댓글을 삭제하시겠습니까?')) {
-      await axios.delete(`http://localhost:8081/delete/${infoCommentId}`, {
-        data: { /* InfoCommentDTO 객체 데이터 */ }
+      await axios.patch(`http://localhost:8081/info_comment/delete/${infoCommentId}`,{
+        infoCommentId: infoCommentId
       });
-      // 삭제된 댓글을 제외하고 댓글 목록 업데이트
+      
       replys.value = replys.value.filter(reply => reply.replyId !== infoCommentId);
     }
   } catch (error) {
     console.error('댓글 삭제 중 에러 발생:', error);
   }
 };
-
 onMounted(async () => {
   try {
     // Vue Router를 통해 infoId 가져오기
     const infoId = router.currentRoute.value.params.infoId;
     
-    const commentsResponse = await axios.get(`http://localhost:8081/info_comment/list?infoId=${infoId}`);
-    replys.value = commentsResponse.data.filter(comment => comment.infoId === infoId);
+    const response = await axios.get(`http://localhost:8081/info_comment/list?infoId=${infoId}`);
+    replys.value = response.data.filter(comment => {
+  console.log('코멘트 하나의 info: ' + comment.infoId);
+  console.log('reply info: ' + infoId);
+  
+  const commentInfoId = parseInt(comment.infoId);
+  const routerInfoId = parseInt(infoId);
+
+  console.log('반환될 결과: ' + (commentInfoId === routerInfoId));
+
+  return commentInfoId === routerInfoId;
+});
+    // replys.value = response.data;
   } catch (error) {
     console.error('데이터 가져오는 중 에러 발생:', error);
   }
