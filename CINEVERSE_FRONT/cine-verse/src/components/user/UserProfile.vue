@@ -46,31 +46,14 @@
             <div class="deletebtndiv">
                 <button type="submit" class="deletebtn" @click="deleteMember">탈퇴하기</button>
             </div>
-            <!-- <div class="userpostbox">
-            <p class="userpost1">작성 게시글</p>
-            <ul>
-                <li v-for="(post, index) in userPosts" :key="index">
-                    <h3>{{ post.freeTitle }}</h3> 
-                    <p>{{ post.freeDate }}</p> 
-                </li>
-            </ul>
-        </div> -->
-            <!-- <div class="likepostbox">
-            <p class="likepost1">좋아요한 게시글</p>
-            <div class="likepost2">좋아요한 게시글 5개</div>
-        </div> -->
-            <!-- <div class="userreplybox">
-            <p class="userreply1">작성 댓글</p>
-            <div class="userreply2">작성 댓글 5개</div>
-        </div> -->
         </div>
     </div>
 </template>
 
 <script setup>
-import axios from "axios";
 import { onMounted, ref, computed } from "vue";
-import { useRoute, useRouter } from 'vue-router';
+import axios from "axios";
+import { useRouter } from 'vue-router';
 
 const memInfo = ref({});
 const pointInfo = ref({});
@@ -79,38 +62,40 @@ const wearingBadge = ref(null);
 const totalPoint = computed(() => pointInfo.value.totalPoint || 0);
 
 const router = useRouter();
-const route = useRoute();
 
-// 회원 정보와 포인트 정보
 async function fetchMemberData(memberId) {
     try {
         const memberResponse = await axios.get(`http://localhost:8081/member/${memberId}`);
         memInfo.value = memberResponse.data;
-        console.log('회원 정보:', memInfo.value);
 
-        const pointResponse = await axios.get(`http://localhost:8081/point/1`);
+        const pointResponse = await axios.get(`http://localhost:8081/point/${memberId}`);
         pointInfo.value = pointResponse.data[0];
-        console.log('포인트 정보:', pointInfo.value);
     } catch (error) {
-        console.error('데이터를 가져오는데 실패했습니다', error);
+        console.error('Error fetching data:', error);
     }
 }
 
-// 착용중인 뱃지 정보
 async function fetchWearingBadge(memberId) {
     try {
         const response = await axios.get(`http://localhost:8081/badge/${memberId}`);
-        wearingBadge.value = response.data.find(badge => badge.badgeStatus === 'Y');
-        console.log('착용중인 뱃지 정보:', wearingBadge.value);
+        wearingBadge.value = response.data.find(b => b.badgeStatus === 'Y');
     } catch (error) {
-        console.error('착용중인 뱃지 정보를 가져오는데 실패했습니다', error);
+        console.error('Error fetching badge data:', error);
     }
 }
 
 onMounted(() => {
-    const memberId = route.params.memberId || 1;
-    fetchMemberData(memberId);         // 회원 정보와 포인트 정보
-    fetchWearingBadge(memberId);       // 착용중인 뱃지 정보
+    const memberIdCookie = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('memberId='));
+    const memberId = memberIdCookie ? memberIdCookie.split('=')[1] : null;
+
+    if (memberId) {
+        fetchMemberData(memberId);
+        fetchWearingBadge(memberId);
+    } else {
+        console.error('No memberId found in cookie.');
+    }
 });
 
 
@@ -135,9 +120,9 @@ async function deleteMember() {
             const userId = memInfo.value.userId;
             const nickname = memInfo.value.nickname;
 
-            // console.log(`탈퇴한 회원 정보: memberId=${memberId}, userId=${userId}, nickname=${nickname}`); // userprofile의 memberId가 탈퇴
+            console.log(`탈퇴한 회원 정보: memberId=${memberId}, userId=${userId}, nickname=${nickname}`); // userprofile의 memberId가 탈퇴
 
-            await axios.patch('http://localhost:8081/member/delete/14');
+            await axios.patch(`http://localhost:8081/member/delete/${memberId}`);
             alert('회원 탈퇴가 완료되었습니다.');
             router.push('/main');
         } catch (error) {
@@ -147,21 +132,6 @@ async function deleteMember() {
     }
 }
 
-
-// onMounted(async () => {
-//     const memberId = route.params.memberId;
-
-//     if (memberId && !isNaN(parseInt(memberId))) {
-//         try {
-//             const postsResponse = await axios.get(`http://localhost:8081/free_board/${memberId}`);
-//             userPosts.value = postsResponse.data.slice(0, 5); // 처음 5개의 게시글만 저장
-//         } catch (error) {
-//             console.error('회원의 게시글 정보를 가져오는데 실패했습니다', error);
-//         }
-//     } else {
-//         console.error('유효하지 않은 memberId입니다.');
-//     }
-// });
 </script>
 
 <style scoped>

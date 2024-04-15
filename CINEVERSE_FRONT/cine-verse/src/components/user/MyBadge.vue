@@ -60,6 +60,7 @@ const wearBadge = async (badge) => {
 
         wearingBadge.value = badge;
         purchasedBadges.value = purchasedBadges.value.filter(b => b !== badge);
+
     } catch (error) {
         console.error("뱃지 착용 중 에러가 발생했습니다:", error);
     }

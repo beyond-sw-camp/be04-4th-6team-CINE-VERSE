@@ -34,7 +34,6 @@ import { inject, onMounted } from 'vue';
 
 const router = useRouter();
 const isLoggedin = inject('isLoggedin');
-const memberId = sessionStorage.getItem('memberId');
 
 onMounted(() => {
     isLoggedin.value = !!localStorage.getItem('sessionId'); 
@@ -79,17 +78,18 @@ function main() {
     router.push("/main");
 }
 
-// profile 함수 수정
-// function profile() {
-//     if (memberId) {
-//         router.push(`/member/${memberId}`);
-//     } else {
-//         alert('로그인이 필요합니다.');
-//     }
-// }
-
 function profile() {
-    router.push("/member/1");
+    const memberIdCookie = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('memberId='));
+    const memberId = memberIdCookie ? memberIdCookie.split('=')[1] : null;
+
+    if (memberId) {
+        router.push(`/member/${memberId}`);
+    } else {
+        alert('로그인이 필요합니다.');
+        router.push('/login');
+    }
 }
 
 function badge() {
