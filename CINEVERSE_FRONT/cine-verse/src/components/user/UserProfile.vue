@@ -148,7 +148,6 @@ async function deleteMember() {
 }
 
 
-
 // onMounted(async () => {
 //     const memberId = route.params.memberId;
 
