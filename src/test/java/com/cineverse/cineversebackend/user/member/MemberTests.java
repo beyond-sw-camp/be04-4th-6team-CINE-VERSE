@@ -37,45 +37,45 @@ public class MemberTests {
         this.memberRepository = memberRepository;
     }
 
-//    @BeforeEach
-//    public void setup() {
-//        Member testMember = Member.builder()
-//                .userId("testUser")
-//                .userPassword("testPassword")
-//                .nickname("testNickname")
-//                .memberName("testName")
-//                .memberNumber("010-0909-0909")
-//                .memberEmail("testEmail@gmail.com")
-//                .memberDate("2000.01.01")
-//                .joinDate("2024.04.12")
-//                .gradeId(1)
-//                .reportNum(0)
-//                .memberStatus("Y")
-//                .build();
-//        memberRepository.save(testMember);
-//    }
-//
-//    @Test
-//    @Transactional
-//    @DisplayName("정상 회원가입 테스트")
-//    public void registUserTest() {
-//        Member member = Member.builder()
-//                .userId("userId1")
-//                .userPassword("userPassword")
-//                .nickname("userNickname1")
-//                .memberName("userName1")
-//                .memberNumber("010-1234-5390")
-//                .memberEmail("testEmail1@gmail.com")
-//                .memberDate("2000.01.01")
-//                .build();
-//
-//        Member registUser = memberService.registMember(member);
-//
-//        Member findUser = memberService.findMemberById(registUser.getMemberId());
-//
-//        assertThat(registUser).isEqualTo(findUser);
-//
-//    }
+    @BeforeEach
+    public void setup() {
+        Member testMember = Member.builder()
+                .userId("testUser")
+                .userPassword("testPassword")
+                .nickname("testNickname")
+                .memberName("testName")
+                .memberNumber("010-0909-0909")
+                .memberEmail("testEmail@gmail.com")
+                .memberDate("2000.01.01")
+                .joinDate("2024.04.12")
+                .gradeId(1)
+                .reportNum(0)
+                .memberStatus("Y")
+                .build();
+        memberRepository.save(testMember);
+    }
+
+    @Test
+    @Transactional
+    @DisplayName("정상 회원가입 테스트")
+    public void registUserTest() {
+        Member member = Member.builder()
+                .userId("userId1")
+                .userPassword("userPassword")
+                .nickname("userNickname1")
+                .memberName("userName1")
+                .memberNumber("010-1234-5390")
+                .memberEmail("testEmail1@gmail.com")
+                .memberDate("2000.01.01")
+                .build();
+
+        Member registUser = memberService.registMember(member);
+
+        Member findUser = memberService.findMemberById(registUser.getMemberId());
+
+        assertThat(registUser).isEqualTo(findUser);
+
+    }
 //
 //    @Test
 //    @Transactional
