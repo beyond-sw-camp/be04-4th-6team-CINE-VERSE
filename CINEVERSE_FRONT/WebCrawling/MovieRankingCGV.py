@@ -34,7 +34,7 @@ top_10_movies = movie_df.head(10).reset_index(drop=True)
 top_10_movies.index += 1
 
 # 데이터프레임을 JSON 파일로 저장
-file_path = r'C:\\Users\\pc\\Desktop\\HW BEYOND SW\\CINEVERSE_FRONT\\cine-verse\\public\\top_10_movies.json'
+file_path = r'C:\\Users\\pc\\Desktop\\HW BEYOND SW\\be04-4th-6team-CINE-VERSE-FRONT\\CINEVERSE_FRONT\\cine-verse\\public\\top_10_movies.json'
 top_10_movies.to_json(file_path, force_ascii=False, orient='index', indent=2)
 
 print(f"파일이 저장되었습니다: {file_path}")
