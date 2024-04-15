@@ -50,7 +50,7 @@
       <td>{{ item.reviewCategory.reviewCategory }}</td>
       <td>{{ item.reviewViewCount }}</td>
       <td>{{ item.postLike }}</td>
-      <td>{{ item.member.memberName }}</td>
+      <td>{{ item.member.nickname }}</td>
       <td>{{ item.reviewDate }}</td>
     </tr>
   </tbody>
@@ -121,7 +121,7 @@
       );
     } else if (type === "writerId") {
       filteredreview.value = review.value.filter(item =>
-        item.member.memberName.toLowerCase().includes(condition)
+        item.member.nickname.toLowerCase().includes(condition)
       );
     }
   }

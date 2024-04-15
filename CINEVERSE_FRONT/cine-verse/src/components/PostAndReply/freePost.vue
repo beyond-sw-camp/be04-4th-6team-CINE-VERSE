@@ -19,7 +19,7 @@
             </button>
         </div>
             <div class="writerdiv">
-                <h3 class="writer">{{ free.member.memberName }}</h3>
+                <h3 class="writer">{{ free.member.nickname }}</h3>
             </div>
             <div class="viewandlike">
                 <h3 class="viewandlike">{{ free.freeViewCount }}</h3>

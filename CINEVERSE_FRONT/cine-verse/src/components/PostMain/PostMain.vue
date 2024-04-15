@@ -50,7 +50,7 @@
     <td>{{ item.infoCategory.infoCategory }}</td>
     <td>{{ item.infoViewCount }}</td>
     <td>{{ item.postLike }}</td>
-    <td>{{ item.member.memberName }}</td>
+    <td>{{ item.member.nickname }}</td>
     <td>{{ item.infoDate }}</td>
   </tr>
 </tbody>
@@ -121,7 +121,7 @@ function filterInfo() {
     );
   } else if (type === "writerId") {
     filteredInfo.value = info.value.filter(item =>
-      item.member.memberName.toLowerCase().includes(condition)
+      item.member.nickname.toLowerCase().includes(condition)
     );
   }
 }

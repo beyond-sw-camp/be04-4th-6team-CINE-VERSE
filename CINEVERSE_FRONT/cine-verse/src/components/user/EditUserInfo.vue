@@ -40,7 +40,7 @@
                     </div>
                     <div class="namelabel">
                         <p class="nametext">Name</p>
-                        <button class="namebox">{{ editUserInfo.memberName }}</button>
+                        <button class="namebox">{{ editUserInfo.Nickname }}</button>
                     </div>
                     <div class="datelabel">
                         <p class="datetext">Birthdate</p>
@@ -105,7 +105,7 @@ const submitForm = async () => {
         userId: editUserInfo.value.userId,
         userPassword: member_pwd.value,
         nickname: member_nickname.value,
-        memberName: editUserInfo.value.memberName,
+        Nickname: editUserInfo.value.Nickname,
         memberNumber: member_number.value,
         gradeId: editUserInfo.value.gradeId,
         memberEmail: member_email.value,

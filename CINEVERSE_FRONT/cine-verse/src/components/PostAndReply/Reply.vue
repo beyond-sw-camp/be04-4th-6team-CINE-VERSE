@@ -2,7 +2,7 @@
     <div>
       <div class="allreply" v-for="reply in replys" :key="reply.infoCommentId" >
         <div class="replywriterdiv">
-          <span v-if="reply.member">{{ reply.member.memberName }}</span>
+          <span v-if="reply.member">{{ reply.member.nickname }}</span>
         </div>
         <div class="replycontentdiv">
           <p>{{ reply.commentContent }}</p>
@@ -24,7 +24,7 @@
   
       <hr class="replyregistline">
       <div class="registreplywriterdiv">
-        <span v-if="replys.length > 0 && replys[0].member">{{ replys[0].member.memberName }}</span>
+        <span v-if="replys.length > 0 && replys[0].member">{{ replys[0].member.nickname }}</span>
       </div>
       <div class="registreplydiv">
         <form id="comment" @submit.prevent="submitReply">

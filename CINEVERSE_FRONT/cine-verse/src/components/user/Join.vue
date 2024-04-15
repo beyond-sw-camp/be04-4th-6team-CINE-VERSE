@@ -82,7 +82,7 @@ const submitForm = async () => {
             userPassword: member_pwd.value,
             nickname: member_nickname.value,
             memberEmail: member_email.value,
-            memberName: member_name.value,
+            Nickname: member_name.value,
             memberNumber: member_phone.value,
             memberDate: member_date.value,
             memberGrade: 1

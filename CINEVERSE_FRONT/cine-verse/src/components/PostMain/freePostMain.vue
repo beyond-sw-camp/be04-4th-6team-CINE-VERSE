@@ -49,7 +49,7 @@
       <td class="boardname">{{ item.freeTitle }}</td>
       <td>{{ item.freeViewCount }}</td>
       <td>{{ item.postLike }}</td>
-      <td>{{ item.member.memberName }}</td>
+      <td>{{ item.member.nickname }}</td>
       <td>{{ item.freeDate }}</td>
     </tr>
   </tbody>
@@ -120,7 +120,7 @@
       );
     } else if (type === "writerId") {
       filteredfree.value = free.value.filter(item =>
-        item.member.memberName.toLowerCase().includes(condition)
+        item.member.nickname.toLowerCase().includes(condition)
       );
     }
   }
