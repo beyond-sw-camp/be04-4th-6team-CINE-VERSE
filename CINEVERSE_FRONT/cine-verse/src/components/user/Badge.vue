@@ -14,7 +14,7 @@
                         <div class="votebox1">
                             <img :src="findBadgeById(1).badgeLocation" class="badgeimage">
                         </div>
-                        <div class="votebox2">{{ findBadgeById(1).badgeId }} 아이언맨
+                        <div class="votebox2">{{ findBadgeById(1).badgeId }}. {{ findBadgeById(1).badgeName }}
                             <button class="like1" @click="buyBadge(1)" :disabled="isPurchased(1)"
                                 :class="{ purchased: isPurchased(1) }">
                                 {{ purchaseButtonText(1) }}
@@ -26,7 +26,7 @@
                         <div class="votebox3">
                             <img :src="findBadgeById(2).badgeLocation" class="badgeimage">
                         </div>
-                        <div class="votebox4">{{ findBadgeById(2).badgeId }} 스파이더맨
+                        <div class="votebox4">{{ findBadgeById(2).badgeId }}. {{ findBadgeById(2).badgeName }}
                             <button class="like2" @click="buyBadge(2)" :disabled="isPurchased(2)"
                                 :class="{ purchased: isPurchased(2) }">
                                 {{ purchaseButtonText(2) }}
@@ -38,7 +38,7 @@
                         <div class="votebox5">
                             <img :src="findBadgeById(3).badgeLocation" class="badgeimage">
                         </div>
-                        <div class="votebox6">{{ findBadgeById(3).badgeId }} 토르
+                        <div class="votebox6">{{ findBadgeById(3).badgeId }}. {{ findBadgeById(3).badgeName }}
                             <button class="like3" @click="buyBadge(3)" :disabled="isPurchased(3)"
                                 :class="{ purchased: isPurchased(3) }">
                                 {{ purchaseButtonText(3) }}
@@ -57,7 +57,7 @@
                         <div class="quizbox1">
                             <img :src="findBadgeById(4).badgeLocation" class="badgeimage">
                         </div>
-                        <div class="quizbox2">{{ findBadgeById(4).badgeId }} 배트맨
+                        <div class="quizbox2">{{ findBadgeById(4).badgeId }}. {{ findBadgeById(4).badgeName }}
                             <button class="like4" @click="buyBadge(4)" :disabled="isPurchased(4)"
                                 :class="{ purchased: isPurchased(4) }">
                                 {{ purchaseButtonText(4) }}
@@ -69,7 +69,7 @@
                         <div class="quizbox3">
                             <img :src="findBadgeById(5).badgeLocation" class="badgeimage">
                         </div>
-                        <div class="quizbox4">{{ findBadgeById(5).badgeId }} 슈퍼맨
+                        <div class="quizbox4">{{ findBadgeById(5).badgeId }}. {{ findBadgeById(5).badgeName }}
                             <button class="like5" @click="buyBadge(5)" :disabled="isPurchased(5)"
                                 :class="{ purchased: isPurchased(5) }">
                                 {{ purchaseButtonText(5) }}
@@ -81,7 +81,7 @@
                         <div class="quizbox5">
                             <img :src="findBadgeById(6).badgeLocation" class="badgeimage">
                         </div>
-                        <div class="quizbox6">{{ findBadgeById(6).badgeId }} 조커
+                        <div class="quizbox6">{{ findBadgeById(6).badgeId }}. {{ findBadgeById(6).badgeName }}
                             <button class="like6" @click="buyBadge(6)" :disabled="isPurchased(6)"
                                 :class="{ purchased: isPurchased(6) }">
                                 {{ purchaseButtonText(6) }}

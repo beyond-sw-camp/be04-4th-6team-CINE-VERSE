@@ -14,7 +14,7 @@
                             <img :src="wearingBadge.badge.badgeLocation" class="badgeimage">
                         </div>
                         <div class="votebox2">
-                            {{ wearingBadge.badge.badgeId }}
+                            {{ wearingBadge.badge.badgeId }}. {{ wearingBadge.badge.badgeName }}
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                             <img :src="badge.badge.badgeLocation" class="badgeimage">
                         </div>
                         <div class="quizbox2">
-                            {{ badge.badge.badgeId }}
+                            {{ badge.badge.badgeId }}. {{ badge.badge.badgeName }}
                             <button class="like4" @click="wearBadge(badge)">착용하기</button>
                         </div>
                     </div>
