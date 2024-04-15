@@ -71,11 +71,11 @@ function free() {
 }
 
 function qna() {
-    router.push("/main");
+    router.push("/");
 }
 
 function main() {
-    router.push("/main");
+    router.push("/");
 }
 
 function profile() {
