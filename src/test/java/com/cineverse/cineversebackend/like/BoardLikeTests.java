@@ -1,7 +1,10 @@
 package com.cineverse.cineversebackend.like;
 
 import com.cineverse.cineversebackend.event.board.repo.EventBoardRepository;
+import com.cineverse.cineversebackend.free.board.entity.FreeBoard;
 import com.cineverse.cineversebackend.free.board.repo.FreeBoardRepository;
+import com.cineverse.cineversebackend.info.board.entity.InfoBoard;
+import com.cineverse.cineversebackend.info.board.entity.InfoCategory;
 import com.cineverse.cineversebackend.info.board.repo.InfoBoardRepository;
 import com.cineverse.cineversebackend.like.service.PostLikeService;
 import com.cineverse.cineversebackend.review.board.entity.ReviewBoard;
@@ -59,5 +62,29 @@ public class BoardLikeTests {
                 .reviewCategory(reviewCategory)
                 .build();
         reviewBoardRepository.save(reviewBoard);
+
+        FreeBoard freeBoard = FreeBoard.builder()
+                .freeTitle("자유 제목")
+                .freeContent("게시글 내용")
+                .freeDate("2024.04.14")
+                .freeViewCount(0)
+                .member(member)
+                .build();
+        freeBoardRepository.save(freeBoard);
+
+        InfoCategory infoCategory = InfoCategory.builder()
+                .infoCategoryId(1)
+                .infoCategory("테스트 카테고리")
+                .build();
+
+        InfoBoard infoBoard = InfoBoard.builder()
+                .infoTitle("게시글 제목")
+                .infoContent("게시글 내용")
+                .infoViewCount(0)
+                .infoDate("2024.04.14")
+                .member(member)
+                .infoCategory(infoCategory)
+                .build();
+        infoBoardRepository.save(infoBoard);
     }
 }

@@ -9,6 +9,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@Builder
 public class MemberBadgeDTO {
     private int memberBadgeId;
     private Badge badge;
