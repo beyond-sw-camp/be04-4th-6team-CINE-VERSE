@@ -49,42 +49,48 @@
     margin-bottom: 15px;
 }
 
-.eventpostheader {
+.eventpostheader,
+.freepostheader {
     display: flex;
     justify-content: space-between;
-    width: 980px;
+    width: 950px;
     padding: 10px 0;
     background-color: #FFD8D8;
     border-radius: 10px;
     margin-bottom: 5px;
 }
 
-.eventpostheadertitle {
+.eventpostheadertitle,
+.freepostheadertitle {
     flex: 2;
     text-align: center;
     font-weight: bold;
 }
 
-.eventpostheadercontent {
+.eventpostheadercontent,
+.freepostheadercontent {
     flex: 2;
     text-align: center;
     font-weight: bold;
 }
 
-.eventpostheadernickname {
+.eventpostheadernickname,
+.freepostheadernickname {
     flex: 1.5;
     text-align: center;
     font-weight: bold;
 }
 
-.eventpostheaderdate {
+.eventpostheaderdate,
+.freepostheaderdate {
     flex: 1.2;
     text-align: center;
     font-weight: bold;
 }
 
 
-.eventpostheaderviews {
+.eventpostheaderviews,
+.freepostheaderviews {
     flex: 1;
     text-align: center;
     font-weight: bold;
@@ -93,7 +99,7 @@
 
 .eventpostbox,
 .freepostbox {
-    width: 950px;
+    width: 920px;
     height: auto;
     border-radius: 5px;
     border: 2px solid #FFF1F0;
@@ -106,7 +112,8 @@
     padding: 1.5%;
 }
 
-.eventpostrow {
+.eventpostrow,
+.freepostrow {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -116,34 +123,47 @@
     margin-left: 80px;
 }
 
-.eventposttitle {
+.eventposttitle,
+.freeposttitle {
     flex: 2;
     padding: 0 10px;
 }
 
-.eventpostcontent {
+.eventpostcontent,
+.freepostcontent {
     flex: 2.5;
     padding: 0 10px;
 }
 
 
-.eventpostnickname {
+.eventpostnickname,
+.freepostnickname {
     flex: 1.5;
     padding: 0 10px;
     /* text-align: center; */
 }
 
 
-.eventpostdate {
+.eventpostdate,
+.freepostdate {
     flex: 1.5;
     padding: 0 10px;
 }
 
-.eventpostviews {
+.eventpostviews,
+.freepostviews {
     flex: 1;
     padding: 0 10px;
 }
 
+.freeposttitle,
+.freepostcontent,
+.eventposttitle,
+.eventpostcontent {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 .movie-rankings-container {
     position: absolute;

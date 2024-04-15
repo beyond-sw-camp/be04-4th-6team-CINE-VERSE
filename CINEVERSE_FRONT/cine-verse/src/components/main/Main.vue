@@ -24,9 +24,24 @@
                         </li>
                     </div>
                 </div>
-                <div class="freepost">
+                <div class="freepost"  v-if="latestFreePosts.length > 0">
                     <h3 class="freepostbtn">최신 자유 게시글</h3>
-                    <div class="freepostbox">자유게시글 10개</div>
+                    <div class="freepostheader">
+                        <div class="freepostheadertitle">제목</div>
+                        <div class="freepostheadercontent">내용</div>
+                        <div class="freepostheadernickname">닉네임</div>
+                        <div class="freepostheaderdate">작성일</div>
+                        <div class="freepostheaderviews">조회수</div>
+                    </div>
+                    <div class="freepostbox">
+                        <li v-for="(post, index) in latestFreePosts" :key="index" class="freepostrow">
+                            <div class="freeposttitle">{{ post.freeTitle }}</div>
+                            <div class="freepostcontent">{{ post.freeContent }}</div>
+                            <div class="freepostnickname">{{ post.member.nickname }}</div>
+                            <div class="freepostdate">{{ post.freeDate }}</div>
+                            <div class="freepostviews">{{ post.freeViewCount }}</div>
+                        </li>
+                    </div>
                 </div>
             </div>
             <div class="movie-rankings-container">
@@ -73,6 +88,21 @@ onMounted(async () => {
         console.error('최신 이벤트 게시글을 가져오는데 실패했습니다.', error);
     }
 });
+
+
+const latestFreePosts = ref([]);
+
+onMounted(async () => {
+
+    try {
+        const freePostResponse = await axios.get("http://localhost:8081/free_board/list");
+        const sortedFreePosts = freePostResponse.data.sort((a, b) => new Date(b.freeDate) - new Date(a.freeDate));
+        latestFreePosts.value = sortedFreePosts.slice(0, 10);
+    } catch (error) {
+        console.error('최신 자유 게시글을 가져오는데 실패했습니다.', error);
+    }
+});
+
 </script>
 
 <style scoped>
