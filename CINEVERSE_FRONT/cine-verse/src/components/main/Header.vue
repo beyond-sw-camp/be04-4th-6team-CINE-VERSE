@@ -50,7 +50,7 @@ function join() {
     if (isLoggedin.value) {
         alert('로그인 상태입니다.');
     } else {
-        router.push("/");
+        router.push("/member/regist");
     }
 }
 
@@ -83,18 +83,24 @@ function main() {
 }
 
 function profile() {
-    const memberIdCookie = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('memberId='));
-    const memberId = memberIdCookie ? memberIdCookie.split('=')[1] : null;
+    if (isLoggedin.value) {
+        const memberIdCookie = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('memberId='));
+        const memberId = memberIdCookie ? memberIdCookie.split('=')[1] : null;
 
-    if (memberId) {
-        router.push(`/member/${memberId}`);
+        if (memberId) {
+            router.push(`/member/${memberId}`);
+        } else {
+            console.error('로그인 해주세요.');
+            router.push('/member/login');
+        }
     } else {
-        alert('로그인이 필요합니다.');
-        router.push('/login');
+        alert('로그인 해주세요.');
+        router.push('/member/login');
     }
 }
+
 
 function badge() {
     router.push("/badge/list");

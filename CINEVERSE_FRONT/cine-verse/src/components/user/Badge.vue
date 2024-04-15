@@ -96,10 +96,12 @@
 
 <script setup>
 import axios from "axios";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, inject } from "vue";
 
 const badges = ref([]);
 const purchasedStatus = ref({});
+const isLoggedin = inject('isLoggedin');
+
 
 const getMemberIdFromCookie = () => {
     const memberIdCookie = document.cookie.split('; ').find(row => row.startsWith('memberId='));
