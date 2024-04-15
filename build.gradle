@@ -40,6 +40,9 @@ dependencies {
     runtimeOnly 'com.mysql:mysql-connector-j'
 
     implementation 'org.springframework.boot:spring-boot-starter-mail' // Email
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '3.0.4'
 }
 
 tasks.named('test') {
