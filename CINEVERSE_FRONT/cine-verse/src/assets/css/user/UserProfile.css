@@ -120,7 +120,8 @@
 
 .joinbtndiv,
 .mybadgebtndiv,
-.badgebtndiv {
+.badgebtndiv,
+.deletebtndiv {
     display: flex;
     justify-content: center;
     width: 350px;
@@ -131,17 +132,25 @@
     margin-top: 10px;
 }
 
-.joinbtn {
+.joinbtn,
+.deletebtn {
     width: 440px;
     padding: 10px 0;
     border: none;
     border-radius: 10px;
-    background-color: #ff6b6b;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1.5%;
     margin-bottom: 30px;
+}
+
+.joinbtn {
+    background-color: #ff6b6b;
+}
+
+.deletebtn {
+    background-color: #ccc;
 }
 
 .badgeimage {
@@ -171,7 +180,7 @@
     color: #ff6b6b;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: bold;
 }
 

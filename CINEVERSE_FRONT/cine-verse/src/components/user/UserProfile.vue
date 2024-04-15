@@ -43,6 +43,9 @@
             <div class="badgebtndiv">
                 <button type="submit" class="badgebtn" @click="badge">뱃지 상점</button>
             </div>
+            <div class="deletebtndiv">
+                <button type="submit" class="deletebtn" @click="deleteMember">탈퇴하기</button>
+            </div>
             <!-- <div class="userpostbox">
             <p class="userpost1">작성 게시글</p>
             <ul>
@@ -105,10 +108,11 @@ async function fetchWearingBadge(memberId) {
 }
 
 onMounted(() => {
-    const memberId = route.params.memberId || 1; 
-    fetchMemberData(memberId);
-    fetchWearingBadge(memberId);
+    const memberId = route.params.memberId || 1;
+    fetchMemberData(memberId);         // 회원 정보와 포인트 정보
+    fetchWearingBadge(memberId);       // 착용중인 뱃지 정보
 });
+
 
 function edit() {
     router.push("/member/modify/1");
@@ -121,6 +125,28 @@ function badge() {
 function mybadge() {
     router.push("/badge/1");
 }
+
+
+async function deleteMember() {
+    const confirmDelete = window.confirm("정말로 탈퇴하시겠습니까?");
+    if (confirmDelete) {
+        try {
+            const memberId = memInfo.value.memberId;
+            const userId = memInfo.value.userId;
+            const nickname = memInfo.value.nickname;
+
+            // console.log(`탈퇴한 회원 정보: memberId=${memberId}, userId=${userId}, nickname=${nickname}`); // userprofile의 memberId가 탈퇴
+
+            await axios.patch('http://localhost:8081/member/delete/14');
+            alert('회원 탈퇴가 완료되었습니다.');
+            router.push('/main');
+        } catch (error) {
+            alert('회원 탈퇴 중 오류가 발생했습니다.');
+            console.error(error);
+        }
+    }
+}
+
 
 
 // onMounted(async () => {
