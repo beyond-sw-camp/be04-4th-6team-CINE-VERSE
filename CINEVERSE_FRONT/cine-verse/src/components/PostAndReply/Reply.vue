@@ -1,4 +1,5 @@
 <template>
+    <hr class="replyregistline">
     <div>
       <div class="allreply" v-for="reply in replys" :key="reply.infoCommentId" >
         <div class="replywriterdiv">
@@ -21,8 +22,6 @@
       <div class="noreply" v-if="!replys.length">
         <p>댓글이 없습니다.</p>
       </div>
-  
-      <hr class="replyregistline">
       <div class="registreplywriterdiv">
         <span v-if="replys.length > 0 && replys[0].member">{{ replys[0].member.nickname }}</span>
       </div>
@@ -208,12 +207,16 @@ onMounted(async () => {
             justify-content: flex-start;
             width: 100%;
             font-size:12px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         .noreply {
             width: 100%;
-            font-size:12px;
+            font-size:20px;
             text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         .registreplywriterdiv{

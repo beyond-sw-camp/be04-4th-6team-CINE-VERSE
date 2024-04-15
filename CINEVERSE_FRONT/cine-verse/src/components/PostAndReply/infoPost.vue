@@ -12,33 +12,37 @@
                 <h2 class="boardtitle"> {{ info.infoTitle }}</h2>
             </div>
             <div class="datediv">
-                <h3 class="date">{{ info.infoDate }}</h3>
+                <h3 class="date">작성일: {{ info.infoDate }}</h3>
             </div>
-            <div class="like">
-           <button type="button" @click="editPost">
-                수정
-            </button>
-        </div>
             <div class="writerdiv">
-                <h3 class="writer">{{ info.member.nickname }}</h3>
+                <h3 class="writer">작성자: {{ info.member.nickname }}</h3>
             </div>
             <div class="viewandlike">
-                <h3 class="viewandlike">{{ info.infoViewCount }}</h3>
+                <h3 class="viewandlike">조회수: {{ info.infoViewCount }}</h3>
+            </div>
+            <div class="edit">
+                <button type="button" @click="editPost" class="editbtn">
+                수정
+            </button>
+            </div>
+            <div class="delete">
+            <button type="button" @click="deletePost" class="deletebtn">
+                삭제
+            </button>
             </div>
         </div>
         <hr class="titleLine">
-        <div class="maincontent">
-            <p v-html="info.infoContent"></p>
-            <div v-if="info.images && info.images.length > 0" class="image-container">
-                <img v-for="(image, index) in info.images" :key="index" :src="image.accessUrl" :alt="'Image ' + (index + 1)" class="info-image">
+            <div class="maincontent">
+                <div v-if="info.images && info.images.length > 0" class="image-container">
+                    <img v-for="(image, index) in info.images" :key="index" :src="image.accessUrl" :alt="'Image ' + (index + 1)" class="info-image">
+                </div>
+                <div class="content">
+                    <p v-html="info.infoContent"></p>
+                </div>
             </div>
-        </div>
-        <Like/>
-        <div class="like">
-           <button type="button" @click="deletePost">
-                삭제
-            </button>
-        </div>
+            <div class="like">
+                <Like/>
+            </div>
         <Reply/>
     </div>
 </template>
@@ -88,103 +92,5 @@
 </script>
 
 <style scoped>
-        .clickdiv {
-            width: 20%;
-        }
-
-        .boardtitleLine {
-            width:100%;
-            height: 3px;
-            border: 0;
-            background-color: #e9740e;
-        }
-
-        .titleLine {
-            width:95%;
-            margin-left: 2%;
-            margin-right: 2%;
-            height: 2px;
-            border: 0;
-            background-color:  #e9740e;
-        }
-
-        .wrapper {
-            height: auto;
-            min-height: 100%;
-            width: 68%;
-            margin-top: 50px;
-            padding-bottom: 100px;
-            margin-left: 16%;
-            margin-right: 16%;
-        }
-
-        .boardname {
-            font-size: 32px;
-            cursor: pointer;
-        }
-
-        .boardtitle {
-            font-size: 20px;
-            margin-top: 20px;  
-        }
-
-        .writer {
-            font-size: 12px;
-            margin-top: 30px;
-        }
-
-        .date {
-            font-size: 10px;
-            margin-top: 5px;
-        }
-
-        .allboard {
-            display: flex;
-            flex-direction: rows;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .boardtitlediv {
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-left: 0%;
-            width: 70%;
-        }
-
-        .writerdiv {
-            width: 15%;
-        }
-
-        .datediv {
-            width:20%;
-            margin-right:2%;
-            float:right;
-        }
-        .viewandlike{
-            font-size: 12px;
-            margin-top: 30px;
-            padding-right: 10px;
-            margin-right: 2%;
-            float:right;
-        }
-
-        
-
-        .maincontent {
-            max-width: 80%;
-            margin-left: 10%;
-            margin-right: 10%;
-            margin-top: 3%;
-        }
-        .like{
-            display:inline-block ;
-            margin-left: 30%;
-            margin-right: 10%;
-            margin-top: 10%;
-        }
-
-        
-
-        
+    @import url('@/assets/css/postAndReply/InfoPost.css');
 </style>

@@ -1,0 +1,127 @@
+.clickdiv {
+    width: 20%;
+}
+
+.boardtitleLine {
+    width:1110px;
+    height: 3px;
+    border: 0;
+    background-color: #e9740e;
+}
+
+.titleLine {
+    width:1110px;
+    /* margin-left: 2%; */
+    /* margin-right: 2%; */
+    height: 3px;
+    border: 0;
+    background-color:  #e9740e;
+}
+
+.wrapper {
+    height: auto;
+    min-height: 100%;
+    width: 68%;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    margin-left: 30%;
+    margin-right: 16%;
+}
+
+.boardname {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.boardtitle {
+    font-size: 20px;
+    margin-top: 20px;  
+}
+
+.writer {
+    font-size: 12px;
+}
+
+.allboard {
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    width: 1100px;
+}
+
+.boardtitlediv {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0%;
+    width: 500px;
+}
+
+.writerdiv {
+    width: 15%;
+    margin-top: 13px;
+}
+
+.datediv {
+    width:20%;
+    float:right;
+    font-size: 10px;
+    margin-top: 15px;
+}
+.edit{
+    /* margin-left: 50px; */
+}
+.editbtn {
+    width: 50px;
+    height: 30px;
+    margin-top: 17px;
+    border-radius: 5px;
+}
+
+.deletebtn {
+    width: 50px;
+    height: 30px;
+    margin-top: 17px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.viewandlike{
+    width: 100px;
+    font-size: 12px;
+    padding-right: 10px;
+    margin-top: 12px;
+    margin-left: 5px;
+    float:right;
+}
+
+.maincontent {
+    max-width: 80%;
+    margin-right: 15%;
+    margin-top: 3%;
+}
+.like{
+    display:inline-block ;
+    margin-left: 490px;
+    margin-top: 50px;
+}
+
+.image-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+margin-bottom: 20px;
+gap: 10px;
+width: 1100px;
+}
+
+.info-image {
+width: 100%; 
+height: 300px;
+object-fit: cover;
+border-radius: 5px;
+border: 3px solid black;
+}
+
+.content {
+clear: both;
+width: 1100px;
+}
