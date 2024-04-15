@@ -14,7 +14,7 @@
         <div class="closebuttondiv">
           <form action="" name="deleteReply" method="post">
             <button type="button" class="closebutton" @click="removeReply(reply.infoCommentId)">
-              <img src="@/assets/img/delete.png" style="width: 5px; height: 5px;">
+              <img src="@/assets/img/delete.png" style="width: 15px; height: 15px;">
             </button>
           </form>
         </div>
@@ -137,7 +137,7 @@ onMounted(async () => {
 
         }
         .replyline {
-            width:95%;
+            width:120%;
             margin-left: 2%;
             margin-right: 2%;
             height: 2px;
@@ -146,7 +146,7 @@ onMounted(async () => {
         }
 
         .replyregistline {
-            width:95%;
+            width:120%;
             margin-top: 20%;
             margin-left: 2%;
             margin-right: 2%;
@@ -156,7 +156,7 @@ onMounted(async () => {
         }
 
         .replyregistbottomline {
-            width:95%;
+            width:120%;
             margin-top: 3%;
             margin-left: 2%;
             margin-right: 2%;
@@ -205,14 +205,14 @@ onMounted(async () => {
             display: flex;
             flex-direction: rows;
             justify-content: flex-start;
-            width: 100%;
-            font-size:12px;
+            width: 120%;
+            font-size:15px;
             margin-top: 50px;
             margin-bottom: 50px;
         }
 
         .noreply {
-            width: 100%;
+            width: 120%;
             font-size:20px;
             text-align: center;
             margin-top: 50px;

@@ -3,7 +3,7 @@
         <section>
             <div class="clickdiv" @click="mainBoard()">
                 <h1 class="boardname">정보 게시판</h1> 
-                <h2 class="boardcategory">{{ info.infoCategory.infoCategory }}</h2>
+                <h2 class="boardcategory">{{ info && info.infoCategory ? info.infoCategory.infoCategory : 'No Category' }}</h2>
             </div>
             <hr class="boardtitleLine">
         </section>
@@ -15,7 +15,7 @@
                 <h3 class="date">작성일: {{ info.infoDate }}</h3>
             </div>
             <div class="writerdiv">
-                <h3 class="writer">작성자: {{ info.member.nickname }}</h3>
+                <h3 class="writer">작성자: {{ info && info.member ? info.member.nickname : 'Unknown' }}</h3>
             </div>
             <div class="viewandlike">
                 <h3 class="viewandlike">조회수: {{ info.infoViewCount }}</h3>
