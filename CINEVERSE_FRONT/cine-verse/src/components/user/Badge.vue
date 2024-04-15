@@ -101,6 +101,11 @@ import { onMounted, ref } from "vue";
 const badges = ref([]);
 const purchasedStatus = ref({});
 
+const getMemberIdFromCookie = () => {
+    const memberIdCookie = document.cookie.split('; ').find(row => row.startsWith('memberId='));
+    return memberIdCookie ? memberIdCookie.split('=')[1] : null;
+};
+
 const findBadgeById = (id) => {
     return badges.value.find(badge => badge.badgeId === id) || { badgeId: 'Not Found', badgeName: 'Unknown', badgeLocation: 'default.jpg' };
 };
@@ -114,42 +119,56 @@ const purchaseButtonText = (badgeId) => {
 };
 
 onMounted(async () => {
-    try {
-        const response = await axios.get('http://localhost:8081/badge/list');
-        badges.value = response.data;
-        badges.value.forEach(badge => {
-            purchasedStatus.value[badge.badgeId] = badge.purchased;
-        });
-    } catch (error) {
-        console.error("뱃지를 가져오는 중 에러가 발생했습니다:", error);
+    const memberId = getMemberIdFromCookie();
+    if (memberId) {
+        try {
+            const response = await axios.get(`http://localhost:8081/badge/list?memberId=${memberId}`);
+            badges.value = response.data;
+            badges.value.forEach(badge => {
+                purchasedStatus.value[badge.badgeId] = badge.purchased;
+            });
+        } catch (error) {
+            console.error("뱃지를 가져오는 중 에러가 발생했습니다:", error);
+        }
+    } else {
+        console.error("No memberId found in cookie.");
     }
 });
 
 const buyBadge = async (badgeId) => {
-    try {
-        await axios.post('http://localhost:8081/badge/buy', {
-            badge: { badgeId },
-            member: { memberId: 1 }  // 동적 ID
-        });
-        purchasedStatus.value[badgeId] = true;
-        alert('뱃지 구매가 완료되었습니다!');
-    } catch (error) {
-        console.error("뱃지 구매 중 에러가 발생했습니다:", error);
-        alert('뱃지 구매에 실패했습니다.');
+    const memberId = getMemberIdFromCookie();
+    if (memberId) {
+        try {
+            await axios.post('http://localhost:8081/badge/buy', {
+                badge: { badgeId },
+                member: { memberId }
+            });
+            purchasedStatus.value[badgeId] = true;
+            alert('뱃지 구매가 완료되었습니다!');
+        } catch (error) {
+            console.error("뱃지 구매 중 에러가 발생했습니다:", error);
+            alert('뱃지 구매에 실패했습니다.');
+        }
+    } else {
+        alert('Member ID is not found. Please log in again.');
     }
 };
 
 onMounted(async () => {
-    const memberId = 1;  // 동적 ID
-    try {
-        const response = await axios.get(`http://localhost:8081/badge/${memberId}`);
-
-        // badgeStatus가 'Y'이면 착용중, 'N'이면 구매완료
-        response.data.forEach(memberBadge => {
-            purchasedStatus.value[memberBadge.badge.badgeId] = memberBadge.badgeStatus === 'Y' || memberBadge.badgeStatus === 'N';
-        });
-    } catch (error) {
-        console.error("사용자 뱃지 정보를 가져오는 중 에러가 발생했습니다:", error);
+    const memberId = getMemberIdFromCookie();
+    if (memberId) {
+        try {
+            const response = await axios.get(`http://localhost:8081/badge/${memberId}`);
+            response.data.forEach(memberBadge => {
+                // badgeStatus가 'Y'이면 착용중, 'N'이면 구매완료
+                purchasedStatus.value[memberBadge.badge.badgeId] = 
+                    memberBadge.badgeStatus === 'Y' || memberBadge.badgeStatus === 'N';
+            });
+        } catch (error) {
+            console.error("사용자 뱃지 정보를 가져오는 중 에러가 발생했습니다:", error);
+        }
+    } else {
+        console.error("No memberId found in cookie.");
     }
 });
 
