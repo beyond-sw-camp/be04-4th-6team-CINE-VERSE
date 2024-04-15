@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -30,16 +30,16 @@
     margin-bottom: 5%;
 }
 
-.likepost,
-.allpost {
+.eventpost,
+.freepost {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
 }
 
-.likepostbtn,
-.allpostbtn {
+.eventpostbtn,
+.freepostbtn {
     padding: 7px 15px;
     cursor: pointer;
     border-radius: 10px;
@@ -49,37 +49,136 @@
     margin-bottom: 15px;
 }
 
-.likepostbox,
-.allpostbox {
-    width: 950px;
-    height: 100px;
+.eventpostheader {
+    display: flex;
+    justify-content: space-between;
+    width: 980px;
+    padding: 10px 0;
+    background-color: #FFD8D8;
+    /* 배경색 변경 */
     border-radius: 10px;
+    margin-bottom: 5px;
+    /* 헤더와 게시글 사이 여백 */
+}
+
+.eventpostheadertitle {
+    flex: 2;
+    text-align: center;
+    font-weight: bold;
+}
+
+.eventpostheadercontent {
+    flex: 2;
+    text-align: center;
+    font-weight: bold;
+}
+
+.edit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eventpostheadernickname {
+    flex: 1.5;
+    text-align: center;
+    font-weight: bold;
+}
+
+.eventpostheaderdate {
+    flex: 1.5;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.eventpostheaderviews {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.eventpostbox,
+.freepostbox {
+    width: 950px;
+    height: auto;
+    border-radius: 5px;
     border: 2px solid #FFF1F0;
     background-color: #FFF1F0;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 1.5%;
 }
+
+.eventpostrow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 6px;
+    /* 각 이벤트 행 사이에 공간 */
+    margin-left: 80px;
+}
+
+.eventposttitle {
+    flex: 2;
+    padding: 0 10px;
+}
+
+.eventpostcontent {
+    flex: 2.5;
+    padding: 0 10px;
+}
+
+
+.eventpostnickname {
+    flex: 1.5;
+    padding: 0 10px;
+    /* text-align: center; */
+}
+
+
+.eventpostdate {
+    flex: 1.5;
+    padding: 0 10px;
+}
+
+.eventpostviews {
+    flex: 1;
+    padding: 0 10px;
+}
+
 
 .movie-rankings-container {
     position: absolute;
-    top: 50px; /* 헤더 바로 아래 */
-    right: 0; /* 페이지의 오른쪽 */
-    height: 100vh; /* 전체 높이 */
-    width: 330px; /* 사이드바 너비 */
-    padding-top: 100px; /* 헤더와 영화 순위 사이의 공간 */
+    top: 50px;
+    /* 헤더 바로 아래 */
+    right: 0;
+    /* 페이지의 오른쪽 */
+    height: 100vh;
+    /* 전체 높이 */
+    width: 330px;
+    /* 사이드바 너비 */
+    padding-top: 100px;
+    /* 헤더와 영화 순위 사이의 공간 */
     margin-right: 50px;
     margin-top: 30px;
 }
 
 .movie-rankings {
-    background-color: #FFF; /* 배경 색상 */
+    background-color: #FFF;
+    /* 배경 색상 */
     padding: 20px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
-    border-radius: 4px; /* 경계 둥글게 */
-    max-height: 600px; /* 최대 높이 */
-    overflow-y: auto; /* 넘치면 스크롤 */
+    border-radius: 4px;
+    /* 경계 둥글게 */
+    max-height: 600px;
+    /* 최대 높이 */
+    overflow-y: auto;
+    /* 넘치면 스크롤 */
 }
 
 .movie-rankings h2 {
