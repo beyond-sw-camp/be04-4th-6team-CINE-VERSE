@@ -105,7 +105,7 @@ public class EventBoardServiceImpl implements EventBoardService {
         EventBoard eventBoard = optionalEventBoard.get();
 
         if (eventBoard.getEventTitle() != null) {
-            eventBoard.setEventTitle(eventBoard.getEventTitle());
+            eventBoard.setEventTitle(event.getEventTitle());
         }
 
         if (eventBoard.getEventContent() != null) {
