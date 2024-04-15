@@ -55,7 +55,7 @@ public class EventBoardServiceImpl implements EventBoardService {
 
     @Override
     @Transactional
-    public void registEvent(EventBoardDTO eventDTO) {
+    public EventBoard registEvent(EventBoardDTO eventDTO) {
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String registDate = format.format(date);
@@ -91,6 +91,7 @@ public class EventBoardServiceImpl implements EventBoardService {
             }
         }
         pointService.addBoardPoint(newEvent.getMember().getMemberId());
+        return newEvent;
     }
 
     @Override
