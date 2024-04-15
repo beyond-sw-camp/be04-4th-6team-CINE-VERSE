@@ -45,7 +45,7 @@
       </tr>
       <tbody>
   <tr v-for="(item, index) in filteredInfo" :key="item.infoId" class="allpost" @click="changeRouter(item.infoId)">
-    <td>{{ index + 1 }}</td>
+    <td>{{ item.infoId }}</td>
     <td class="boardname">{{ item.infoTitle }}</td>
     <td>{{ item.infoCategory.infoCategory }}</td>
     <td>{{ item.infoViewCount }}</td>

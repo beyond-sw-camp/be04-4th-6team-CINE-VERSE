@@ -1,137 +1,193 @@
 <template>
-    <table class="table">
+    <div>
+      <table class="table">
         <tr class="top">
-            <td class="post">
-                <h1 class="boardTitle">자유 게시판</h1>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td> 
-            <td class="thing">
-                <button onclick="" class="writebutton">게시글 작성</button>
-            </td>
+          <td class="post">
+            <h1 class="boardTitle">자유 게시판</h1>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="thing">
+            <button @click="goToWritePage" class="writebutton">게시글 작성</button>
+          </td>
         </tr>
         <tr class="header2">
-            <td>정렬기준</td>
-            <td>작성일자</td>
-            <td>내림차순</td>
-            <td>작성자</td>
-            <td>searchbox</td>
+          <td class="search" id="search-1">
+            <div id="searchDropdown">
+              <select class="form-control" name="search_type" v-model="search_type"
+                style="height: 30px; font-size: 12px;">
+                <option value="titleContent">제목 내용</option>
+                <option value="title">제목</option>
+                <option value="content">내용</option>
+                <option value="writerId">작성자</option>
+              </select>
+            </div>
+            <div>
+              <input type="text" id='searchText' class="form-control" placeholder="Search..."
+                v-model="search_condition" @keyup.enter="callData">
+            </div>
+            <div class="">
+              <button class="btn" id="searchBtn" type="button" @click="callData">검색</button>
+            </div>
+          </td>
         </tr>
-        <!-- <hr class="titleLine"> -->
         <tr class="header1">
-            <td class="num">게시글 번호</td>
-            <td>게시글 제목</td>
-            <td>카테고리</td>
-            <td>조회수</td>
-            <td>좋아요</td>
-            <td>작성자</td>
-            <td>작성일자</td>
+          <td class="num">게시글 번호</td>
+          <td>게시글 제목</td>
+          <td>카테고리</td>
+          <td>조회수</td>
+          <td>좋아요</td>
+          <td>작성자</td>
+          <td>작성일자</td>
         </tr>
         <tbody>
-      <tr v-for="(info, index) in infos" :key="info.infoId" class="allpost">
-        <td>{{ index + 1 }}</td>
-        <td class="boardname" @click="changeRouter(info.infoId)">{{ info.infoTitle }}</td>
-        <td>{{ info.infoCategory }}</td>
-        <td>{{ info.infoViewCount }}</td>
-        <td>{{ info.memberId }}</td>
-        <td>{{ info.infoDate }}</td>
-      </tr>
-    </tbody>
-  </table>
-</template>
-<script setup>
-    import { RouterLink, RouterView } from 'vue-router';
-    import axios from "axios";
-    import { onMounted, ref } from "vue";
-    import router from '@/router/mainRouter';
-    import { useRoute } from 'vue-router';
-
-    const info = ref([]);
-    const index = 1;
-
-    onMounted(async () =>{
-        axios.get("http://localhost:8081/info_board/list")
-        .then(response => {
-            info.value = response.data;
-            console.log(info.value);
-            console.log(info.value[0].postTitle);
-        })
-    });
-
-
-    function changeRouter(id) {
-        const infoId = id;
-        console.log(infoId);
-        router.push(`/info_board/${infoId}`)
+    <tr v-for="(item, index) in filteredfree" :key="item.freeId" class="allpost" @click="changeRouter(item.freeId)">
+      <td>{{ item.freeId}}</td>
+      <td class="boardname">{{ item.freeTitle }}</td>
+      <td>{{ item.freeViewCount }}</td>
+      <td>{{ item.postLike }}</td>
+      <td>{{ item.member.memberName }}</td>
+      <td>{{ item.freeDate }}</td>
+    </tr>
+  </tbody>
+      </table>
+    </div>
+  </template>
+  
+  <script setup>
+  import { onMounted, ref, watch } from "vue";
+  import axios from "axios";
+  import router from "@/router/mainRouter";
+  
+  const free = ref([]);
+  const index = 1;
+  const search_condition = ref("");
+  const search_type = ref("titleContent");
+  const filteredfree = ref([]);
+  
+  const fetchfree = () => {
+    axios.get(`http://localhost:8081/free_board/list`)
+      .then(response => {
+        free.value = response.data;
+        filteredfree.value = response.data; // 초기에 전체 데이터를 filteredfree에 할당
+      })
+      .catch(error => {
+        console.error("Error fetching free:", error);
+      });
+  };
+  
+  onMounted(() => {
+    fetchfree();
+  });
+  
+  function changeRouter(freeId) {
+    router.push(`/free_board/${freeId}`);
+  }
+  
+  function goToWritePage(){
+    router.push(`/free_board/regist`);
+  }
+  
+  // 검색 기능 구현
+  watch([search_condition, search_type], () => {
+    if (search_condition.value && search_type.value) {
+      filterfree();
+    } else {
+      // 검색 조건이 비어있으면 전체 데이터를 보여줍니다.
+      filteredfree.value = free.value;
     }
-</script>
-
-<style scoped>
-    table {
-        margin: auto;
-        width: 68%;
-        height: auto;
-        min-height: 100%;
-        border-radius: 5px;
-        border-collapse: collapse;
-        border-top: none;
+  });
+  
+  function filterfree() {
+    const condition = search_condition.value.toLowerCase();
+    const type = search_type.value;
+  
+    if (type === "titleContent") {
+      filteredfree.value = free.value.filter(item =>
+        item.freeTitle.toLowerCase().includes(condition) ||
+        item.freeContent.toLowerCase().includes(condition)
+      );
+    } else if (type === "title") {
+      filteredfree.value = free.value.filter(item =>
+        item.freeTitle.toLowerCase().includes(condition)
+      );
+    } else if (type === "content") {
+      filteredfree.value = free.value.filter(item =>
+        item.freeContent.toLowerCase().includes(condition)
+      );
+    } else if (type === "writerId") {
+      filteredfree.value = free.value.filter(item =>
+        item.member.memberName.toLowerCase().includes(condition)
+      );
     }
-
-    .boardname {
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-    }
-
-    .boardTitle {
-        font-size:32px;
-        margin-top: 50px;
-    }
-
-    .titleLine {
-            width:440%;
-            margin-left: 2%;
-            margin-right: 2%;
-            height: 2px;
-            border: 0;
-            background-color: grey;
-    }
-
-    .writebutton{
-        background-color: #8c52ff;
-        color: white;
-        padding: 14px 20px;
-        margin-top: 40px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        font-style: bold;
-        float: right;
-    }
-
-    .header1 {
-        background-color: rgb(218, 231, 255);
-        height: 50px;
-        font-size: 12px;
-        text-align: center;
-
-    }
-
-    .header1 .td {
-        width: 10%;
-    }
-
-    .header2 {
-        font-size: 12px;
-    }
-
-    .allpost{
-        text-align: center;
-    }
-    
-    
-</style>
+  }
+  </script>
+  
+  <style scoped>
+  
+  table {
+    margin: auto;
+    width: 68%;
+    height: auto;
+    min-height: 100%;
+    border-radius: 5px;
+    border-collapse: collapse;
+    border-top: none;
+  }
+  
+  .boardname {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .boardTitle {
+    font-size: 32px;
+    margin-top: 50px;
+  }
+  
+  .titleLine {
+    width: 440%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 2px;
+    border: 0;
+    background-color: grey;
+  }
+  
+  .writebutton {
+    background-color: #ffae52;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-style: bold;
+    float: right;
+  }
+  
+  .header1 {
+    background-color: rgb(218, 231, 255);
+    height: 50px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .header1 .td {
+    width: 10%;
+  }
+  
+  .header2 {
+    font-size: 12px;
+  }
+  
+  .allpost {
+    text-align: center;
+  }
+  
+  </style>

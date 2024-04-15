@@ -78,6 +78,46 @@ const router = createRouter({
             path: '/info_board/modify/:infoId',
             component: () => import('@/components/editPost/InfoPostEdit.vue')
         }
+        ,
+        {
+            path: '/review_board/:reviewId',
+            component: () => import('@/components/PostAndReply/reviewPost.vue')
+        }
+        ,
+        {
+            path: '/review_board/list',
+            component: () => import('@/components/PostMain/reviewPostMain.vue')
+        }
+        ,
+        {
+            path: '/review_board/regist',
+            component: () => import('@/components/CreatePost/InfoPostContent.vue')
+        }
+        ,
+        {
+            path: '/review_board/modify/:reviewId',
+            component: () => import('@/components/editPost/InfoPostEdit.vue')
+        }
+        ,
+        {
+            path: '/free_board/:freeId',
+            component: () => import('@/components/PostAndReply/freePost.vue')
+        }
+        ,
+        {
+            path: '/free_board/list',
+            component: () => import('@/components/PostMain/freePostMain.vue')
+        }
+        ,
+        {
+            path: '/free_board/regist',
+            component: () => import('@/components/CreatePost/InfoPostContent.vue')
+        }
+        ,
+        {
+            path: '/free_board/modify/:freeId',
+            component: () => import('@/components/editPost/InfoPostEdit.vue')
+        }
 
     ]
 })
