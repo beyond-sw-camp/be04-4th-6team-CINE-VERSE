@@ -217,7 +217,7 @@ public class MemberTests {
         String memberEmail = member.getMemberEmail();
 
         EmailMessage emailMessage = EmailMessage.builder()
-                .to("wodms6199@gmail.com")
+                .to("yunjaeeun12@naver.com")
                 .build();
         emailService.sendMail(emailMessage);
 

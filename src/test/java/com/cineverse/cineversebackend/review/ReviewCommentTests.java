@@ -46,7 +46,7 @@ public class ReviewCommentTests {
 
     @BeforeEach
     public void setup() {
-        Optional<Member> optionalMember = memberRepository.findById(1);
+        Optional<Member> optionalMember = memberRepository.findById(4);
         Member member = optionalMember.get();
 
         ReviewCategory reviewCategory = ReviewCategory.builder()

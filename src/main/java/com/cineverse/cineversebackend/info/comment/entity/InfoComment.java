@@ -11,6 +11,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name="tbl_info_comment")
+@Builder
 public class InfoComment {
 
     @Id

@@ -25,7 +25,7 @@ public class ReviewComment {
     @Column(name = "comment_date")
     private String commentDate;
 
-    @Column(name = "comment-delete_date")
+    @Column(name = "comment_delete_date")
     private String commentDeleteDate;
 
     @JoinColumn(name = "member_id")

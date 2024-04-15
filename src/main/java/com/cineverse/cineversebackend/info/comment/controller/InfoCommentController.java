@@ -44,9 +44,8 @@ public class InfoCommentController {
 
     /* 설명. 댓글 삭제 */
     @PatchMapping("/delete/{infoCommentId}")
-    public ResponseEntity<InfoComment> deleteInfoComment(@RequestBody InfoCommentDTO infoCommentDTO,
-                                                         @PathVariable int infoCommentId) {
-        return ResponseEntity.ok(infoCommentService.modifyInfoCommentDeleteDate(infoCommentId, infoCommentDTO));
+    public ResponseEntity<InfoComment> deleteInfoComment(@PathVariable int infoCommentId) {
+        return ResponseEntity.ok(infoCommentService.modifyInfoCommentDeleteDate(infoCommentId));
     }
 
     /* 설명. 댓글 전체 조회 */

@@ -6,7 +6,6 @@ import com.cineverse.cineversebackend.info.comment.repo.InfoCommentRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
@@ -28,13 +27,14 @@ public class InfoCommentServiceImpl implements InfoCommentService{
     }
 
     @Override
-    public void registInfoComment(InfoComment infoComment) {
+    public InfoComment registInfoComment(InfoComment infoComment) {
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String registDate = format.format(date);
         infoComment.setCommentDate(registDate);
 
         infoCommentRepository.save(infoComment);
+        return infoComment;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class InfoCommentServiceImpl implements InfoCommentService{
     }
 
     @Override
-    public InfoComment modifyInfoCommentDeleteDate(int infoCommentId, InfoCommentDTO infoCommentDTO) {
+    public InfoComment modifyInfoCommentDeleteDate(int infoCommentId) {
         Optional<InfoComment> optionalInfoComment = infoCommentRepository.findById(infoCommentId);
         if (optionalInfoComment.isEmpty()) {
             throw new EntityNotFoundException("게시글이 존재하지 않습니다.");

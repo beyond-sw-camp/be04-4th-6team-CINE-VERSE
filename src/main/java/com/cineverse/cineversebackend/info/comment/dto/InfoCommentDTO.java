@@ -8,6 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@Builder
 public class InfoCommentDTO {
     private int infoCommentId;
     private String commentContent;
