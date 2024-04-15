@@ -3,8 +3,6 @@ package com.cineverse.cineversebackend.review.board.service;
 import com.cineverse.cineversebackend.image.entity.Image;
 import com.cineverse.cineversebackend.image.repo.ImageRepository;
 import com.cineverse.cineversebackend.image.service.ImageService;
-import com.cineverse.cineversebackend.like.repo.PostLikeRepository;
-import com.cineverse.cineversebackend.like.service.PostLikeService;
 import com.cineverse.cineversebackend.point.service.PointService;
 import com.cineverse.cineversebackend.review.board.dto.ReviewBoardDTO;
 import com.cineverse.cineversebackend.review.board.entity.ReviewBoard;
@@ -14,7 +12,6 @@ import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -49,7 +46,7 @@ public class ReviewBoardServiceImpl implements ReviewBoardService{
     /* 설명. 리뷰 작성 */
     @Override
     @Transactional
-    public void registReview(ReviewBoardDTO newReview, MultipartFile[] images) {
+    public ReviewBoard registReview(ReviewBoardDTO newReview, MultipartFile[] images) {
 
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -67,6 +64,7 @@ public class ReviewBoardServiceImpl implements ReviewBoardService{
         }
 
         pointService.addBoardPoint(reviewBoard.getMember().getMemberId());
+        return reviewBoard;
     }
 
     /* 설명. 단일 리뷰 조회 */
@@ -97,7 +95,7 @@ public class ReviewBoardServiceImpl implements ReviewBoardService{
     /* 설명. 리뷰 수정 */
     @Override
     @Transactional
-    public void modifyReview(int boardId, ReviewBoardDTO review, MultipartFile[] images) {
+    public ReviewBoard modifyReview(int boardId, ReviewBoardDTO review, MultipartFile[] images) {
         ReviewBoard reviewBoard = reviewBoardRepository.findById(boardId)
                 .orElseThrow(() -> new EntityNotFoundException("존재하지 않는 리뷰입니다."));
 
@@ -125,6 +123,7 @@ public class ReviewBoardServiceImpl implements ReviewBoardService{
         }
 
         reviewBoardRepository.save(reviewBoard);
+        return reviewBoard;
     }
 
     /* 설명. 게시글 삭제 */

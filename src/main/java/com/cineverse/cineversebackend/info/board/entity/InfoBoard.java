@@ -15,6 +15,7 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "tbl_info_board")
+@Builder
 public class InfoBoard {
     @Id
     @Column(name = "info_id")

@@ -12,7 +12,6 @@ import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -46,7 +45,7 @@ public class FreeBoardServiceImpl implements FreeBoardService{
     }
 
     @Override
-    public void registFree(FreeBoardDTO newBoard, MultipartFile[] images) {
+    public FreeBoard registFree(FreeBoardDTO newBoard, MultipartFile[] images) {
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String registDate = format.format(date);
@@ -63,11 +62,12 @@ public class FreeBoardServiceImpl implements FreeBoardService{
         }
 
         pointService.addBoardPoint(freeBoard.getMember().getMemberId());
+        return freeBoard;
     }
 
     @Override
     @Transactional
-    public void modifyFree(int freeId, FreeBoardDTO free, MultipartFile[] images) {
+    public FreeBoard modifyFree(int freeId, FreeBoardDTO free, MultipartFile[] images) {
         FreeBoard freeBoard = freeBoardRepository.findById(freeId)
                 .orElseThrow(() -> new EntityNotFoundException("존재하지 않는 게시글입니다."));
 
@@ -85,6 +85,7 @@ public class FreeBoardServiceImpl implements FreeBoardService{
                 imageService.saveImage(image, freeBoard);
             }
         }
+        return freeBoard;
     }
 
     @Override

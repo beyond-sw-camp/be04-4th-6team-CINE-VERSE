@@ -46,10 +46,9 @@ public class ReviewCommentController {
 
     /* 설명. 댓글 삭제 */
     @PatchMapping("/delete/{reviewCommentId}")
-    public ResponseEntity<ReviewComment> deleteReviewComment(@RequestBody ReviewCommentDTO reviewCommentDTO,
-                                                             @PathVariable int reviewCommentId) {
+    public ResponseEntity<ReviewComment> deleteReviewComment(@PathVariable int reviewCommentId) {
         return ResponseEntity
-                .ok(reviewCommentService.modifyReviewCommentDeleteDate(reviewCommentId, reviewCommentDTO));
+                .ok(reviewCommentService.modifyReviewCommentDeleteDate(reviewCommentId));
     }
 
     /* 설명. 댓글 전체 조회 */

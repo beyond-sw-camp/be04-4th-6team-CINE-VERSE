@@ -6,7 +6,6 @@ import com.cineverse.cineversebackend.free.comment.repo.FreeCommentRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
@@ -28,13 +27,14 @@ public class FreeCommentServiceImpl implements FreeCommentService{
     }
 
     @Override
-    public void registFreeComment(FreeComment freeComment) {
+    public FreeComment registFreeComment(FreeComment freeComment) {
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String registDate = format.format(date);
         freeComment.setCommentDate(registDate);
 
         freeCommentRepository.save(freeComment);
+        return freeComment;
     }
 
     @Override
@@ -44,14 +44,14 @@ public class FreeCommentServiceImpl implements FreeCommentService{
             throw new EntityNotFoundException("댓글이 존재하지 않습니다.");
         }
 
-        FreeComment freeComment=optionalFreeComment.get();
+        FreeComment freeComment = optionalFreeComment.get();
         freeComment.setCommentContent(freeCommentDTO.getCommentContent());
 
         return freeCommentRepository.save(freeComment);
     }
 
     @Override
-    public FreeComment modifyFreeCommentDeleteDate(int freeCommentId, FreeCommentDTO freeCommentDTO) {
+    public FreeComment modifyFreeCommentDeleteDate(int freeCommentId) {
 
         Optional<FreeComment> optionalFreeComment = freeCommentRepository.findById(freeCommentId);
         if (optionalFreeComment.isEmpty()) {

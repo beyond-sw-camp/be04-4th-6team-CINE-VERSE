@@ -11,6 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@Builder
 public class FreeBoardDTO {
     private int freeId;
     private String freeTitle;

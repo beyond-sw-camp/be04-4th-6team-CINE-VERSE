@@ -43,8 +43,8 @@ public class FreeCommentController {
 
     /* 설명. 댓글 삭제 (댓글 삭제일 update) */
     @PatchMapping("/delete/{freeCommentId}")
-    public ResponseEntity<FreeComment> deleteFreeComment (@RequestBody FreeCommentDTO freeCommentDTO, @PathVariable int freeCommentId) {
-        return ResponseEntity.ok(freeCommentService.modifyFreeCommentDeleteDate(freeCommentId, freeCommentDTO));
+    public ResponseEntity<FreeComment> deleteFreeComment (@PathVariable int freeCommentId) {
+        return ResponseEntity.ok(freeCommentService.modifyFreeCommentDeleteDate(freeCommentId));
     }
 
     /* 설명. 댓글 전체 조회 */

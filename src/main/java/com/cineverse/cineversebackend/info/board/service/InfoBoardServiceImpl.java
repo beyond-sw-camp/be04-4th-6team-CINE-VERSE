@@ -12,7 +12,6 @@ import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -46,7 +45,7 @@ public class InfoBoardServiceImpl implements InfoBoardService{
     }
 
     @Override
-    public void registInfo(InfoBoardDTO newInfo, MultipartFile[] images) {
+    public InfoBoard registInfo(InfoBoardDTO newInfo, MultipartFile[] images) {
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String registDate = format.format(date);
@@ -63,11 +62,12 @@ public class InfoBoardServiceImpl implements InfoBoardService{
         }
 
         pointService.addBoardPoint(infoBoard.getMember().getMemberId());
+        return infoBoard;
     }
 
     @Override
     @Transactional
-    public void modifyInfo(int infoId, InfoBoardDTO info, MultipartFile[] images) {
+    public InfoBoard modifyInfo(int infoId, InfoBoardDTO info, MultipartFile[] images) {
         InfoBoard infoBoard = infoBoardRepository.findById(infoId)
                 .orElseThrow(() -> new EntityNotFoundException("존재하지 않는 게시글입니다."));
 
@@ -91,6 +91,7 @@ public class InfoBoardServiceImpl implements InfoBoardService{
         }
 
         infoBoardRepository.save(infoBoard);
+        return infoBoard;
     }
 
     @Override

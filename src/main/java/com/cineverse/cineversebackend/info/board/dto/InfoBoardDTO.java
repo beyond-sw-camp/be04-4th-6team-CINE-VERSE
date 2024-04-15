@@ -12,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@Builder
 public class InfoBoardDTO {
     private int infoId;
     private String infoTitle;

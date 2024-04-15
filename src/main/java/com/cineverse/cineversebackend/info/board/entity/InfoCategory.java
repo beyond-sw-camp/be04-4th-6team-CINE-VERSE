@@ -10,6 +10,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name = "tbl_info_category")
+@Builder
 public class InfoCategory {
     @Id
     @Column(name = "info_category_id")

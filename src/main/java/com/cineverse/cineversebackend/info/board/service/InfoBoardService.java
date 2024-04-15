@@ -17,7 +17,7 @@ public interface InfoBoardService {
 
     InfoBoardDTO findInfoById(int infoId);
 
-    void registInfo(InfoBoardDTO newInfo, MultipartFile[] images);
+    InfoBoard registInfo(InfoBoardDTO newInfo, MultipartFile[] images);
 
-    void modifyInfo(int infoId, InfoBoardDTO info, MultipartFile[] images);
+    InfoBoard modifyInfo(int infoId, InfoBoardDTO info, MultipartFile[] images);
 }

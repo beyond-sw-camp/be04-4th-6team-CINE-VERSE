@@ -6,7 +6,6 @@ import com.cineverse.cineversebackend.review.comment.repo.ReviewCommentRepositor
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
@@ -28,13 +27,14 @@ public class ReviewCommentServiceImpl implements ReviewCommentService {
     }
 
     @Override
-    public void registReviewComment(ReviewComment reviewComment) {
+    public ReviewComment registReviewComment(ReviewComment reviewComment) {
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String registDate = format.format(date);
         reviewComment.setCommentDate(registDate);
 
         reviewCommentRepository.save(reviewComment);
+        return reviewComment;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class ReviewCommentServiceImpl implements ReviewCommentService {
     }
 
     @Override
-    public ReviewComment modifyReviewCommentDeleteDate(int reviewCommentId, ReviewCommentDTO reviewCommentDTO) {
+    public ReviewComment modifyReviewCommentDeleteDate(int reviewCommentId) {
         Optional<ReviewComment> optionalReviewComment = reviewCommentRepository.findById(reviewCommentId);
         if (optionalReviewComment.isEmpty()) {
             throw new EntityNotFoundException("댓글이 존재하지 않습니다.");

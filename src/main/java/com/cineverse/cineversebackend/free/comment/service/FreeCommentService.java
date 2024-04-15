@@ -6,8 +6,8 @@ import com.cineverse.cineversebackend.free.comment.entity.FreeComment;
 import java.util.List;
 
 public interface FreeCommentService {
-    void registFreeComment(FreeComment freeComment);
+    FreeComment registFreeComment(FreeComment freeComment);
     FreeComment modifyFreeComment(int freeCommentId, FreeCommentDTO freeCommentDTO);
-    FreeComment modifyFreeCommentDeleteDate(int freeCommentId, FreeCommentDTO freeCommentDTO);
+    FreeComment modifyFreeCommentDeleteDate(int freeCommentId);
     List<FreeComment> findFreeCommentList();
 }

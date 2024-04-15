@@ -11,6 +11,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name="tbl_free_comment")
+@Builder
 public class FreeComment {
 
     @Id
