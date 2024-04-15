@@ -98,16 +98,6 @@
 import axios from "axios";
 import { onMounted, ref, inject } from "vue";
 
-const badges = ref([]);
-const purchasedStatus = ref({});
-const isLoggedin = inject('isLoggedin');
-
-
-const getMemberIdFromCookie = () => {
-    const memberIdCookie = document.cookie.split('; ').find(row => row.startsWith('memberId='));
-    return memberIdCookie ? memberIdCookie.split('=')[1] : null;
-};
-
 const findBadgeById = (id) => {
     return badges.value.find(badge => badge.badgeId === id) || { badgeId: 'Not Found', badgeName: 'Unknown', badgeLocation: 'default.jpg' };
 };
@@ -120,57 +110,47 @@ const purchaseButtonText = (badgeId) => {
     return isPurchased(badgeId) ? "구매완료" : "$1000 구매하기";
 };
 
-onMounted(async () => {
-    const memberId = getMemberIdFromCookie();
-    if (memberId) {
-        try {
-            const response = await axios.get(`http://localhost:8081/badge/list?memberId=${memberId}`);
-            badges.value = response.data;
-            badges.value.forEach(badge => {
-                purchasedStatus.value[badge.badgeId] = badge.purchased;
-            });
-        } catch (error) {
-            console.error("뱃지를 가져오는 중 에러가 발생했습니다:", error);
-        }
-    } else {
-        console.error("로그인 여부를 확인해주세요.");
-    }
-});
+// 뱃지 정보와 구매 여부
+const badges = ref([]);
+const purchasedStatus = ref({});
+const isLoggedin = inject('isLoggedin');
 
-const buyBadge = async (badgeId) => {
-    const memberId = getMemberIdFromCookie();
-    if (memberId) {
-        try {
-            await axios.post('http://localhost:8081/badge/buy', {
-                badge: { badgeId },
-                member: { memberId }
-            });
-            purchasedStatus.value[badgeId] = true;
-            alert('뱃지 구매가 완료되었습니다!');
-        } catch (error) {
-            console.error("뱃지 구매 중 에러가 발생했습니다:", error);
-            alert('뱃지 구매에 실패했습니다.');
-        }
-    } else {
-        alert('로그인 여부를 확인해주세요.');
+const getMemberIdFromCookie = () => {
+    const memberIdCookie = document.cookie.split('; ').find(row => row.startsWith('memberId='));
+    return memberIdCookie ? memberIdCookie.split('=')[1] : null;
+};
+
+// 뱃지 정보
+const fetchBadges = async () => {
+    try {
+        const response = await axios.get('http://localhost:8081/badge/list');
+        badges.value = response.data;
+    } catch (error) {
+        console.error("뱃지 정보를 가져오는 중 에러가 발생했습니다:", error);
+    }
+};
+
+// 뱃지 구매 여부
+const fetchPurchaseStatus = async (memberId) => {
+    try {
+        const response = await axios.get(`http://localhost:8081/badge/${memberId}`);
+        response.data.forEach(memberBadge => {
+            purchasedStatus.value[memberBadge.badge.badgeId] =
+                memberBadge.badgeStatus === 'Y' || memberBadge.badgeStatus === 'N';
+        });
+    } catch (error) {
+        console.error("구매 상태를 가져오는 중 에러가 발생했습니다:", error);
     }
 };
 
 onMounted(async () => {
-    const memberId = getMemberIdFromCookie();
-    if (memberId) {
-        try {
-            const response = await axios.get(`http://localhost:8081/badge/${memberId}`);
-            response.data.forEach(memberBadge => {
-                // badgeStatus가 'Y'이면 착용중, 'N'이면 구매완료
-                purchasedStatus.value[memberBadge.badge.badgeId] = 
-                    memberBadge.badgeStatus === 'Y' || memberBadge.badgeStatus === 'N';
-            });
-        } catch (error) {
-            console.error("사용자 뱃지 정보를 가져오는 중 에러가 발생했습니다:", error);
+    await fetchBadges();  // 뱃지 정보는 항상
+
+    if (isLoggedin.value) {  // 로그인 상태일 때만 구매 여부
+        const memberId = getMemberIdFromCookie();
+        if (memberId) {
+            await fetchPurchaseStatus(memberId);
         }
-    } else {
-        console.error("로그인 여부를 확인해주세요.");
     }
 });
 

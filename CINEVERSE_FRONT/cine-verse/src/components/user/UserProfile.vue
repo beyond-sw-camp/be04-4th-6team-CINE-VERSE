@@ -51,7 +51,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref, computed } from "vue";
+import { onMounted, ref, computed, inject } from "vue";
 import axios from "axios";
 import { useRouter } from 'vue-router';
 
@@ -62,6 +62,7 @@ const wearingBadge = ref(null);
 const totalPoint = computed(() => pointInfo.value.totalPoint || 0);
 
 const router = useRouter();
+const isLoggedin = inject('isLoggedin');
 
 async function fetchMemberData(memberId) {
     try {
@@ -130,6 +131,9 @@ function mybadge() {
     }
 }
 
+onMounted(() => {
+    isLoggedin.value = !!localStorage.getItem('sessionId'); 
+});
 
 async function deleteMember() {
     const confirmDelete = window.confirm("정말로 탈퇴하시겠습니까?");
@@ -143,7 +147,9 @@ async function deleteMember() {
 
             await axios.patch(`http://localhost:8081/member/delete/${memberId}`);
             alert('회원 탈퇴가 완료되었습니다.');
-            router.push('/main');
+            localStorage.removeItem('sessionId');
+            router.push('/');
+            isLoggedin.value = false;
         } catch (error) {
             alert('회원 탈퇴 중 오류가 발생했습니다.');
             console.error(error);
