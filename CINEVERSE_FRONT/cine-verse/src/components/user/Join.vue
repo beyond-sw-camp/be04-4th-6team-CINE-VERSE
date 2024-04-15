@@ -8,14 +8,17 @@
                 <form @submit.prevent="submitForm">
                     <div class="idlabel">
                         <p class="idtext">ID</p>
-                        <input type="text" class="idbox" id="idbox" v-model.trim="member_id" placeholder="아이디를 입력해주세요.">
+                        <input type="text" class="idbox" id="idbox" v-model.trim="member_id"
+                            placeholder="영문 소문자, 숫자 포함 10자 이하로 입력해주세요."
+                            pattern="(?=.*\d)(?=.*[a-z]).{1,10}"
+                            title="아이디는 영문 소문자, 숫자 포함 10자 이하로 입력해주세요.">
                     </div>
                     <div class="pwlabel">
                         <p class="pwtext">Password</p>
                         <input type="password" class="pwbox" id="pwbox" v-model.trim="member_pwd"
-                            placeholder="영어 대문자, 소문자, 숫자를 포함한 10자 이하로 입력해주세요."
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,10}"
-                            title="비밀번호는 영어 대문자, 소문자, 숫자를 포함한 10자 이하로 입력해주세요.">
+                            placeholder="영문 대소문자, 숫자를 포함한 10 ~ 20자로 입력해주세요."
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,20}"
+                            title="비밀번호는 영문 대소문자, 숫자를 포함한 10 ~ 20자로 입력해주세요.">
                     </div>
                     <div class="pwlabel2">
                         <p class="pwtext2">Password Check</p>
@@ -25,7 +28,9 @@
                     <div class="nicknamelabel">
                         <p class="nicknametext">Nickname</p>
                         <input type="text" class="nicknamebox" id="nicknamebox" v-model.trim="member_nickname"
-                            placeholder="닉네임을 입력해주세요.">
+                            placeholder="한글, 영문 대소문자, 숫자 포함 10자 이하로 입력해주세요."
+                            pattern="^[ㄱ-ㅎ가-힣a-zA-Z0-9]{1,10}$"
+                            title="닉네임은 한글, 영문 대소문자, 숫자 포함 10자 이하로 입력해주세요.">
                     </div>
                     <div class="maillabel">
                         <p class="mailtext">E-mail</p>
@@ -41,8 +46,7 @@
                         <p class="phonetext">Phone</p>
                         <input type="tel" class="phonebox" id="phonebox" v-model.trim="member_phone"
                             placeholder="전화번호를 입력해주세요. 예시: 010-1234-5678, 02-1234-5678"
-                            pattern="^[0-9]{2,3}-\d{3,4}-\d{4}$"
-                            title="전화번호를 입력해주세요. 예시: 010-1234-5678, 02-1234-5678">
+                            pattern="^[0-9]{2,3}-\d{3,4}-\d{4}$" title="전화번호를 입력해주세요. 예시: 010-1234-5678, 02-1234-5678">
                     </div>
                     <div class="datelabel">
                         <p class="datetext">Birthdate</p>
@@ -80,7 +84,7 @@ const submitForm = async () => {
             userPassword: member_pwd.value,
             nickname: member_nickname.value,
             memberEmail: member_email.value,
-            Nickname: member_name.value,
+            memberName: member_name.value,
             memberNumber: member_phone.value,
             memberDate: member_date.value,
             memberGrade: 1

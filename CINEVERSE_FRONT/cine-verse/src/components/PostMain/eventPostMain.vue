@@ -6,7 +6,7 @@
             </div>
             <div class="votecontent">
                 <div class="votebtndiv">
-                    <button class="votebtn">투표</button>
+                    <button class="votebtn">퀴즈</button>
                 </div>
                 <div class="voteboxesdiv">
                     <div class="voteboxdiv1"  v-if="events.length > 0">
@@ -31,7 +31,7 @@
             </div>
             <div class="quizcontent">
                 <div class="quizbtndiv">
-                    <button class="quizbtn">퀴즈</button>
+                    <!-- <button class="quizbtn">퀴즈</button> -->
                 </div>
                 <div class="quizboxesdiv">
                     <div class="quizboxdiv1">

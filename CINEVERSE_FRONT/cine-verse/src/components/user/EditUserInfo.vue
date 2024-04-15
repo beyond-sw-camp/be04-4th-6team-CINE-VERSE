@@ -13,7 +13,9 @@
                     <div class="pwlabel">
                         <p class="pwtext">Password</p>
                         <input type="password" class="pwbox" id="pwbox" v-model.trim="member_pwd"
-                        placeholder="새 비밀번호를 입력해주세요.">
+                            placeholder="영문 대소문자, 숫자를 포함한 10 ~ 20자로 입력해주세요."
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,20}"
+                            title="비밀번호는 영문 대소문자, 숫자를 포함한 10 ~ 20자로 입력해주세요.">
                     </div>
                     <div class="pwlabel2">
                         <p class="pwtext2">Password Check</p>
@@ -23,20 +25,19 @@
                     <div class="nicknamelabel">
                         <p class="nicknametext">Nickname</p>
                         <input type="text" class="nicknamebox" id="nicknamebox" v-model.trim="member_nickname"
-                            placeholder="한글, 영문 대소문자, 숫자, 공백 포함 10글자 이하로 입력해주세요."
-                            pattern="^[ㄱ-ㅎ가-힣a-zA-Z0-9\s]{1,10}$"
-                            title="닉네임은 한글, 영문 대소문자, 숫자, 공백 포함 10글자 이하로 입력해주세요.">
+                            placeholder="한글, 영문 대소문자, 숫자 포함 10자 이하로 입력해주세요." pattern="^[ㄱ-ㅎ가-힣a-zA-Z0-9]{1,10}$"
+                            title="닉네임은 한글, 영문 대소문자, 숫자 포함 10자 이하로 입력해주세요.">
                     </div>
                     <div class="maillabel">
                         <p class="mailtext">E-mail</p>
-                        <input type="email" class="mailbox" id="mailbox" v-model.trim="member_email" placeholder="이메일">
+                        <input type="email" class="mailbox" id="mailbox" v-model.trim="member_email"
+                            placeholder="이메일을 입력해주세요.">
                     </div>
                     <div class="phonelabel">
                         <p class="phonetext">Phone</p>
                         <input type="tel" class="phonebox" id="phonebox" v-model.trim="member_number"
                             placeholder="전화번호를 입력해주세요. 예시: 010-1234-5678, 02-1234-5678"
-                            pattern="^[0-9]{2,3}-\d{3,4}-\d{4}$"
-                            title="전화번호를 입력해주세요. 예시: 010-1234-5678, 02-1234-5678">
+                            pattern="^[0-9]{2,3}-\d{3,4}-\d{4}$" title="전화번호를 입력해주세요. 예시: 010-1234-5678, 02-1234-5678">
                     </div>
                     <div class="namelabel">
                         <p class="nametext">Name</p>
