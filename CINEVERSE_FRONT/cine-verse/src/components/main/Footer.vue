@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="leftthings">
-            <img src="@/assets/img/logo.png" class="logoimage">
+            <img src="@/assets/img/logo2.png" class="logoimage">
         </div>
         <div class="middlethings">
             <div class="middle1">Resources</div>

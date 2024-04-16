@@ -57,6 +57,23 @@ body {
     margin-right: -1px;
 }
 
+.badgeimage:hover {
+    width: 40px;
+    height: 36px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: -1px;
+}
+
+.profileimage:hover {
+    width: 40px;
+    height: 36px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: -1px;
+}
+
+
 .joinbtn,
 .loginbtn,
 .logoutbtn {

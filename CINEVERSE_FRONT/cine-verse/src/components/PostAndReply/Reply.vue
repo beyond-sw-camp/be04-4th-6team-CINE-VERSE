@@ -14,7 +14,7 @@
         <div class="closebuttondiv">
           <form action="" name="deleteReply" method="post">
             <button type="button" class="closebutton" @click="removeReply(reply.infoCommentId)">
-              <img src="@/assets/img/delete.png" style="width: 15px; height: 15px;">
+              <img src="@/assets/img/delete3.png" style="width: 15px; height: 15px;">
             </button>
           </form>
         </div>

@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="logo">
-            <img src="@/assets/img/logo.png" class="logoimage" @click="main">
+            <img src="@/assets/img/logo2.png" class="logoimage" @click="main">
         </div>
         <div class="menu">
             <button type="button" class="infobtn" @click="info()">정보</button>
@@ -12,10 +12,10 @@
         </div>
         <div class="btnbox">
             <div class="Badgeimg">
-                <img src="@/assets/img/spidermanbadge.jpg" class="badgeimage" @click="badge">
+                <img src="@/assets/img/batmanbadge.jpg" class="badgeimage" @click="badge">
             </div>
             <div class="Profile" @click="profile">
-                <img src="@/assets/img/profile.png" class="profileimage" @click="profile">
+                <img src="@/assets/img/profile1.png" class="profileimage" @click="profile">
             </div>
             <div class="joinbtndiv">
                 <button type="button" class="joinbtn" @click="join()">회원가입</button>
