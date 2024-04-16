@@ -84,7 +84,7 @@ onMounted(async () => {
     try {
         const response = await axios.get("http://localhost:8081/event_board/list");
         const sortedEvents = response.data.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate));
-        latestEvents.value = sortedEvents.slice(0, 5);
+        latestEvents.value = sortedEvents.slice(0, 10);
     } catch (error) {
         console.error('최신 이벤트 게시글을 가져오는데 실패했습니다.', error);
     }
