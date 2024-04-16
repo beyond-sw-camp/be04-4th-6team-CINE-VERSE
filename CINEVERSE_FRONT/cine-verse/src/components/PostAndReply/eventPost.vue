@@ -1,3 +1,7 @@
+<style scoped>
+@import url('@/assets/css/postAndReply/eventPost.css');
+</style> 
+
 <template>
   <div class="wrapper">
     <section>
@@ -39,13 +43,23 @@
         삭제
       </button>
     </div>
-    <Reply />
+    </div>
+  <div>
+    <!-- 퀴즈를 표시할 영역 -->
+    <div v-if="quiz">
+      <h2>{{ quiz.quizQuestion }}</h2>
+      <input type="text" v-model="answer" placeholder="정답을 입력하세요">
+      <button @click="submitAnswer">제출</button>
+    </div>
+    <!-- 퀴즈 정답률을 표시할 영역 -->
+    <div v-if="quizResult">
+      <h2>퀴즈 정답률: {{ quizResult.correctRate }}%</h2>
+    </div>
   </div>
 </template>
 
 <script setup>
 import router from '@/router/mainRouter';
-import Reply from './Reply.vue';
 import Like from './Like.vue';
 import axios from "axios";
 import { ref, onBeforeMount } from "vue";
@@ -53,6 +67,9 @@ import { useRoute } from "vue-router";
 
 const event = ref({});
 const eventId = useRoute();
+const quiz = ref(null);
+const answer = ref('');
+const quizResult = ref(null);
 
 const fetchevent = () => {
   axios.get(`http://localhost:8081/event_board/${eventId.params.eventId}`)
@@ -83,59 +100,32 @@ function deletePost() {
     });
 }
 
-</script>
+// 서버로부터 퀴즈를 가져오는 함수
+const fetchQuiz = async () => {
+  try {
+    const response = await axios.get('/event_board/quiz');
+    quiz.value = response.data; // 서버로부터 받은 퀴즈를 저장
+  } catch (error) {
+    console.error('퀴즈를 가져오는 중 에러 발생:', error);
+  }
+};
 
+// 서버에 퀴즈 답안을 제출하는 함수
+const submitAnswer = async () => {
+  try {
+    const response = await axios.post('/event_board/quiz/submit', {
+      quizId: quiz.value.quizId,
+      quizAnswer: answer.value
+    });
+    quizResult.value = response.data; // 서버로부터 받은 퀴즈 정답률을 저장
+  } catch (error) {
+    console.error('퀴즈 답안을 제출하는 중 에러 발생:', error);
+  }
+};
+
+// 페이지가 로드될 때 퀴즈를 가져오는 함수 호출
+fetchQuiz();
+</script>
 <style scoped>
 @import url('@/assets/css/postAndReply/eventPost.css');
-</style>
-
-<!-- <template>
-    <div>
-      <h1>퀴즈</h1>
-      <div v-for="quiz in quizzes" :key="quiz.quizId">
-        <p>{{ quiz.quizQuestion }}</p>
-        <input type="text" v-model="answers[quiz.quizId]">
-        <button @click="submitAnswer(quiz.quizId)">제출</button>
-      </div>
-    </div>
-  </template>
-  
-  <script>
-  import axios from 'axios';
-  
-  export default {
-    data() {
-      return {
-        quizzes: [],
-        answers: {}
-      };
-    },
-    mounted() {
-      this.fetchQuizzes();
-    },
-    methods: {
-      async fetchQuizzes() {
-        try {
-          const response = await axios.get('http://localhost:8081/event_board/${eventId.params.eventId}');
-          this.quizzes = response.data;
-        } catch (error) {
-          console.error('Error fetching quizzes:', error);
-        }
-      },
-      async submitAnswer(quizId) {
-        const answer = this.answers[quizId];
-        try {
-          const response = await axios.post('/event_board/quiz/submit', {
-            quizId: quizId,
-            answer: answer
-          });
-          console.log('Answer submitted successfully:', response.data);
-          // 서버로부터 응답을 받아 정답률이 변경되었다면 다시 데이터를 불러올 수 있음
-          this.fetchQuizzes();
-        } catch (error) {
-          console.error('Error submitting answer:', error);
-        }
-      }
-    }
-  };
-  </script> -->
+</style> 
