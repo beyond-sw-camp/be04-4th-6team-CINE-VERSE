@@ -127,12 +127,14 @@
 .freeposttitle {
     flex: 2;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 .eventpostcontent,
 .freepostcontent {
     flex: 2.5;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 

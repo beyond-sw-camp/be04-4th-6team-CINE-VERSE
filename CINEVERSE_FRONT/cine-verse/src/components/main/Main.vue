@@ -16,8 +16,8 @@
                     </div>
                     <div class="eventpostbox">
                         <li v-for="(event, index) in latestEvents" :key="index" class="eventpostrow">
-                            <div class="eventposttitle">{{ event.eventTitle }}</div>
-                            <div class="eventpostcontent">{{ event.eventContent }}</div>
+                            <div class="eventposttitle" @click="gotoEvent(event.eventBoardId)">{{ event.eventTitle }}</div>
+                            <div class="eventpostcontent" @click="gotoEvent(event.eventBoardId)">{{ event.eventContent }}</div>
                             <div class="eventpostnickname">{{ event.member.nickname }}</div>
                             <div class="eventpostdate">{{ event.eventDate }}</div>
                             <div class="eventpostviews">{{ event.eventViewCount }}</div>
@@ -59,8 +59,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
+import router from '@/router/mainRouter';
 
 const movies = ref([]);
 
@@ -88,6 +89,18 @@ onMounted(async () => {
         console.error('최신 이벤트 게시글을 가져오는데 실패했습니다.', error);
     }
 });
+
+function gotoEvent(eventBoardId) {
+    if (eventBoardId) {
+        router.push(`/event_board/${eventBoardId}`).catch(err => {
+            if (err.name !== 'NavigationDuplicated') {
+                console.error(err);
+            }
+        });
+    } else {
+        console.error('eventBoardId가 정의되지 않았습니다.');
+    }
+}
 
 
 const latestFreePosts = ref([]);
