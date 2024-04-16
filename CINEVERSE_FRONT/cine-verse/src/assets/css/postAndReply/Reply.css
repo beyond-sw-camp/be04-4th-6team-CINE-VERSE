@@ -1,3 +1,13 @@
+textarea {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.btn {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
 /* 기본 텍스트 박스 설정 */
 .box {
     width: 900px; /* 부모 컨테이너에 맞춰서 조정 */
@@ -58,7 +68,7 @@
     margin-bottom: 10px;
     margin-left: 20px;
     border-bottom: 1px solid rgb(196, 196, 196); /* 각 댓글 아래에 회색 선을 추가합니다. */
-    padding-left: 30px;
+    padding-left: 60px;
 }
 
 .replywriterdiv {
@@ -73,11 +83,11 @@
 
 
 .replywriterdiv {
-    flex-basis: 10%; /* 초기 크기 설정 */
+    flex-basis: 11%; /* 초기 크기 설정 */
 }
 
 .replycontentdiv {
-    flex-basis: 65%;
+    flex-basis: 60%;
     margin-left: 100px;   
 }
 
@@ -105,16 +115,17 @@
     float: none; /* 플로팅 제거 */
     clear: both; /* 이전 플로트 제거 */
     width: 100%; /* 전체 너비 사용 */
-    padding: 10px 0;
+    /* padding: 10px 0; */
 }
 .registreplywriterdiv {
     margin-left: 80px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .registreplydiv {
     display: flex;
     justify-content: center; /* 중앙 정렬 */
+    margin-top: 10px;
 }
 
 textarea::placeholder {
