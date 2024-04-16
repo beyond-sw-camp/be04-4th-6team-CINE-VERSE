@@ -15,9 +15,10 @@
         <div class="form-group">
           <label for="reviewCategory">카테고리:</label>
           <select id="reviewCategory" v-model="reviewCategory">
-            <option value="1">카테고리 1</option>
-            <option value="2">카테고리 2</option>
-            <option value="3">카테고리 3</option>
+            <option value="1">영화</option>
+            <option value="2">영화관</option>
+            <option value="3">음식</option>
+            <option value="4">기타</option>
           </select>
         </div>
   

@@ -15,9 +15,10 @@
       <div class="form-group">
         <label for="infoCategory">카테고리:</label>
         <select id="infoCategory" v-model="infoCategory">
-          <option value="1">카테고리 1</option>
-          <option value="2">카테고리 2</option>
-          <option value="3">카테고리 3</option>
+          <option value="1">특전</option>
+          <option value="2">행사</option>
+          <option value="3">할인</option>
+          <option value="4">기타</option>
         </select>
       </div>
 
