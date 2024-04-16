@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-/* 젠킨스 주석 */
 @RestController
 @RequestMapping("/review_board")
 public class ReviewBoardController {
