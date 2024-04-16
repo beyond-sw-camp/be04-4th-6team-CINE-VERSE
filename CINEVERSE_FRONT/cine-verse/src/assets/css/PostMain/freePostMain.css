@@ -2,10 +2,11 @@
     width: 150%;
     min-width: 1000px;
     max-width: 1000px;
-    border-collapse: collapse;
+    border-collapse: separate;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-spacing: 0 10px; /* 간격 조절 */
   }
   
   /* 게시글 제목 */
