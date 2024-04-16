@@ -1,6 +1,6 @@
 <template>
     <hr class="replyregistline">
-    <div>
+    <div class="replys">
       <div class="allreply" v-for="reply in replys" :key="reply.infoCommentId" >
         <div class="replywriterdiv">
           <span v-if="reply.member">{{ reply.member.nickname }}</span>
@@ -9,7 +9,7 @@
           <p>{{ reply.commentContent }}</p>
         </div>
         <div class="replydatediv">
-          <p>{{ reply.commentDate }}</p>
+          <p>작성일: {{ reply.commentDate }}</p>
         </div>
         <div class="closebuttondiv">
           <form action="" name="deleteReply" method="post">
@@ -33,7 +33,6 @@
           <input type="submit" class="btn" value="등록">
         </form>
       </div>
-      <hr class="replyregistbottomline">
     </div>
   </template>
   

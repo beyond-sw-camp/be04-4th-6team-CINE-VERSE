@@ -1,132 +1,134 @@
+/* 기본 텍스트 박스 설정 */
 .box {
-    width:100%;
-    height:100px;
+    width: 900px; /* 부모 컨테이너에 맞춰서 조정 */
+    max-width: 900px; /* 최대 너비 설정 */
+    height: 100px;
+    max-height: 100px;
+    margin-left: 250px;
 }
 
-.closebutton{
-    border:0px;
+/* 닫기 버튼 스타일 */
+.closebutton {
+    border: 0;
     cursor: pointer;
-    
 }
 
+/* 등록 버튼 스타일 */
 .btn {
     background-color: #e9740e;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     font-style: bold;
-    float: right;
-
+    margin-left: auto; /* 오른쪽 정렬 */
+    display: block; /* 버튼을 별도의 블록으로 설정 */
 }
-.replyline {
-    width:120%;
-    margin-left: 2%;
-    margin-right: 2%;
-    height: 2px;
+
+/* 댓글 구분선 스타일 */
+.replyregistline, .replyregistbottomline {
+    width: 1100px;
+    height: 3px;
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
     border: 0;
     background-color: #e9740e;
+    margin-bottom: 30px;
 }
 
-.replyregistline {
-    width:120%;
-    margin-top: 20%;
-    margin-left: 2%;
-    margin-right: 2%;
-    height: 2px;
-    border: 0;
-    background-color: #e9740e;
+.new-replyline{
+    width: 1100px; /* 기존 폭 유지 */
+    height: 2px; /* 높이 설정 유지 */
+    background-color: gray; /* 색상 유지 */
+    margin-right: auto; /* 오른쪽 마진 자동 조정으로 중앙 정렬 효과 제거 */
 }
-
-.replyregistbottomline {
-    width:120%;
+.replyregistline, .replyregistbottomline {
     margin-top: 3%;
-    margin-left: 2%;
-    margin-right: 2%;
-    height: 2px;
-    border: 0;
-    background-color: #e9740e;
 }
 
-.replytitlediv {
-    margin-top: 10%;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 2%;
-    float: left;
+/* 댓글 작성자, 내용, 날짜, 닫기 버튼의 스타일 */
+.allreply {
+    display: flex;
+    align-items: center; /* 모든 항목을 세로 중앙에 위치시키기 */
+    width: 1000px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-bottom: 1px solid rgb(196, 196, 196); /* 각 댓글 아래에 회색 선을 추가합니다. */
+    padding-left: 30px;
 }
 
 .replywriterdiv {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 3%;
-    width: 10%;
+    margin-left: 30px;
+}
+.replydatediv{
+    margin-left: 110px;
+}
+.closebuttondiv {
+    padding-right: 100px;
+}
+
+
+.replywriterdiv {
+    flex-basis: 10%; /* 초기 크기 설정 */
 }
 
 .replycontentdiv {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 10%;
-    width: 20%;
+    flex-basis: 65%;
+    margin-left: 100px;   
 }
 
 .replydatediv {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 30%;
-    width: 15%;
+    flex-basis: 20%;
+    font-size: 12px;
+    margin-left: 100px;
 }
 
 .closebuttondiv {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 2%;
-    
+    flex-basis: 10%;
+    justify-content: flex-end; /* 닫기 버튼을 오른쪽에 위치시키기 */
 }
 
-.allreply {
-    display: flex;
-    flex-direction: rows;
-    justify-content: flex-start;
-    width: 120%;
-    font-size:15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
+/* 댓글이 없을 경우의 스타일 */
 .noreply {
-    width: 120%;
-    font-size:20px;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.registreplywriterdiv{
-    margin-top:2%;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 2%;
-    float: left;
-}
-
-.registreplydiv {
-    margin-top: 1%;
-    margin-left: 5%;
-    float: left;
-    width: 82%;
-}
-
-.replytitle {
     font-size: 20px;
+    margin-top: 50px;
+    margin-left: 250px
+}
+
+/* 댓글 등록자 정보 및 댓글 박스 스타일 */
+.registreplywriterdiv, .registreplydiv {
+    float: none; /* 플로팅 제거 */
+    clear: both; /* 이전 플로트 제거 */
+    width: 100%; /* 전체 너비 사용 */
+    padding: 10px 0;
+}
+.registreplywriterdiv {
+    margin-left: 80px;
     margin-top: 20px;
 }
 
+.registreplydiv {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+}
+
 textarea::placeholder {
-    font-size:12px;
-    padding-left: 1%;
-    padding-top: 1%;
+    font-size: 12px;
+}
+
+/* 추가: 모바일 반응형 대응 */
+@media (max-width: 768px) {
+    .btn, .box, .allreply div {
+        width: 90%; /* 모바일에서는 너비를 줄임 */
+        margin: 10px auto; /* 중앙 정렬 */
+    }
+
+    .replywriterdiv, .replycontentdiv, .replydatediv, .closebuttondiv {
+        flex-direction: column; /* 모바일에서는 항목을 세로로 배열 */
+    }
 }
