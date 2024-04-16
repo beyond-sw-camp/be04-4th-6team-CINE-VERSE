@@ -9,47 +9,16 @@
                     <button class="votebtn">퀴즈</button>
                 </div>
                 <div class="voteboxesdiv">
-                    <div class="voteboxdiv1" v-if="events.length > 0">
-                        <div class="votebox1" @click="gotoEvent(events[0].eventBoardId)">{{ events[0].title }}</div>
-                        <div class="votebox2">{{ events[0].content }}
-                            <button class="like1" @click="toggleLike(1)" :class="{ liked: isLiked[0] }">♥ 좋아요</button>
-                        </div>
-                    </div>
-                    <div class="voteboxdiv2" v-if="events.length > 1">
-                        <div class="votebox3" @click="gotoEvent(events[1].eventBoardId)">{{ events[1].title }}</div>
-                        <div class="votebox4">{{ events[1].content }}
-                            <button class="like2" @click="toggleLike(2)" :class="{ liked: isLiked[1] }">♥ 좋아요</button>
-                        </div>
-                    </div>
-                    <div class="voteboxdiv3" v-if="events.length > 2">
-                        <div class="votebox5" @click="gotoEvent(events[2].eventBoardId)">{{ events[2].title }}</div>
-                        <div class="votebox6">{{ events[2].content }}
-                            <button class="like3" @click="toggleLike(3)" :class="{ liked: isLiked[2] }">♥ 좋아요</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="quizcontent" v-if="events.length > 3">
-                <div class="quizbtndiv">
-                    <!-- <button class="quizbtn">투표</button> -->
-                </div>
-                <div class="quizboxesdiv">
-                    <div class="quizboxdiv1" v-if="events.length > 3">
-                        <div class="quizbox1" @click="gotoEvent(events[3].eventBoardId)">{{ events[3].title }}</div>
-                        <div class="quizbox2">{{ events[3].content }}
-                            <button class="like4" @click="toggleLike(4)" :class="{ liked: isLiked[3] }">♥ 좋아요</button>
-                        </div>
-                    </div>
-                    <div class="quizboxdiv2" v-if="events.length > 4">
-                        <div class="quizbox3" @click="gotoEvent(events[4].eventBoardId)">{{ events[4].title }}</div>
-                        <div class="quizbox4">{{ events[4].content }}
-                            <button class="like5" @click="toggleLike(5)" :class="{ liked: isLiked[4] }">♥ 좋아요</button>
-                        </div>
-                    </div>
-                    <div class="quizboxdiv3" v-if="events.length > 5">
-                        <div class="quizbox5" @click="gotoEvent(events[5].eventBoardId)">{{ events[5].title }}</div>
-                        <div class="quizbox6">{{ events[5].content }}
-                            <button class="like6" @click="toggleLike(6)" :class="{ liked: isLiked[5] }">♥ 좋아요</button>
+                    <div class="votebox-row" v-for="(chunk, chunkIndex) in chunkedEvents" :key="`chunk-${chunkIndex}`">
+                        <div class="voteboxdiv" v-for="(event, index) in chunk" :key="event.eventBoardId">
+                            <div class="votebox-title" @click="gotoEvent(event.eventBoardId)">
+                                {{ event.title }}
+                            </div>
+                            <div class="votebox-content">
+                                {{ event.content }}
+                                <button class="like" @click="toggleLike(chunkIndex * 3 + index)"
+                                    :class="{ liked: isLiked[chunkIndex * 3 + index] }">♥ 좋아요</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,17 +35,19 @@ import router from '@/router/mainRouter';
 
 const info = ref([]);
 
-const isLiked = ref(Array(6).fill(false));
+// 동적으로 좋아요 상태 배열 생성
+const isLiked = ref([]);
 
-function toggleLike(buttonNumber) {
-    isLiked.value[buttonNumber - 1] = !isLiked.value[buttonNumber - 1];
+function toggleLike(index) {
+    isLiked.value[index] = !isLiked.value[index];
 }
 
 onMounted(async () => {
     try {
         const response = await axios.get("http://localhost:8081/event_board/list");
-        // 날짜 기준 내림차순
         info.value = response.data.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate));
+        // 데이터 로딩 후 isLiked 초기화
+        isLiked.value = Array(info.value.length).fill(false);
     } catch (error) {
         console.error('이벤트 정보 전송 시에 에러 발생하였습니다.', error);
     }
@@ -84,7 +55,7 @@ onMounted(async () => {
 
 const events = computed(() => {
     return info.value.map(event => ({
-        eventBoardId: event.eventBoardId, 
+        eventBoardId: event.eventBoardId,
         title: event.eventTitle || '이벤트 제목 없음',
         content: event.eventContent || '이벤트 내용 없음',
     }));
@@ -102,8 +73,16 @@ function gotoEvent(eventBoardId) {
     }
 }
 
-
+const chunkSize = 3;
+const chunkedEvents = computed(() => {
+    let chunks = [];
+    for (let i = 0; i < events.value.length; i += chunkSize) {
+        chunks.push(events.value.slice(i, i + chunkSize));
+    }
+    return chunks;
+});
 </script>
+
 
 
 <style scoped>
