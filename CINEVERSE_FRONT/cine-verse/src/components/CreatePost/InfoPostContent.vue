@@ -27,7 +27,7 @@
         <input type="file" id="images" multiple accept="image/*" @change="handleFileChange">
       </div>
 
-      <button type="submit" class="submit-btn">게시물 작성</button>
+      <button type="submit" class="submit-btn" :disabled="submitting">게시물 작성</button>
     </form>
   </div>
 </template>
@@ -39,14 +39,16 @@ import router from '@/router/mainRouter';
 
 const infoTitle = ref('');
 const infoContent = ref('');
-const infoCategory = ref('1'); // 기본 카테고리 설정
+const infoCategory = ref('1'); 
 const images = ref([]);
+const submitting = ref(false); 
 
 
-// 게시물 작성 함수
 const submitPost = async () => {
+  if (submitting.value) return; 
+  submitting.value = true; 
+
   try {
-    // 쿠키에서 사용자 아이디 가져오기
     const memberIdCookie = document.cookie.split('; ')
       .find(cookie => cookie.startsWith('memberId='));
     
