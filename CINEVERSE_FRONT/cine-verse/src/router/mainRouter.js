@@ -119,7 +119,11 @@ const router = createRouter({
             component: () => import('@/components/editPost/InfoPostEdit.vue')
         }
         ,    
-        { path: '/free_board/modify/:freeId',}
+        { 
+            path: '/event_board/:eventId',
+            component: () => import('@/components/PostAndReply/eventPost.vue')
+        
+        }
 
     ]
 })

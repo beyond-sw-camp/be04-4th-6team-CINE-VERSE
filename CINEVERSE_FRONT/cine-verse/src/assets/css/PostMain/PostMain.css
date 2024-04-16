@@ -1,7 +1,7 @@
 /* 테이블 컨테이너 */
 .table-container {
     width: 180%;
-    max-width: 180%;
+    max-width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
