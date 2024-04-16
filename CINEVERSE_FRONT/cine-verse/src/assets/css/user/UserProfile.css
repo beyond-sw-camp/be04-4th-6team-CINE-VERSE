@@ -143,6 +143,7 @@
     transition: background-color 0.3s ease;
     margin-top: 1.5%;
     margin-bottom: 30px;
+    font-family: GmarketSansMedium;
 }
 
 .joinbtn {
@@ -182,6 +183,7 @@
     transition: background-color 0.3s ease;
     margin-bottom: 30px;
     font-weight: bold;
+    font-family: GmarketSansMedium;
 }
 
 .test {
