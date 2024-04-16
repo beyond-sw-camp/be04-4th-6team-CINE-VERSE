@@ -82,6 +82,7 @@ pipeline {
         }
     }
 }
+```
 
 ## Jenkins Pipeline 실행 과정
 1. 변경 코드 GitHub에 업로드
@@ -113,7 +114,7 @@ spec:
           imagePullPolicy: Always    
           ports:
             - containerPort: 8081        # 현재 boot project 포트번호
-
+```
 
 ## service.yml
 ```
@@ -130,6 +131,7 @@ spec:
       nodePort: 30007                   # 외부 접속 포트번
   selector:
     app: boot002kube
+```
 
 ## Kubernetes
 1. deployment.yml -> pod를 생성하고 관리하는 정보 정의
@@ -151,12 +153,12 @@ spec:
 2. vue project 경로 터미널에서 해당 project image 생성
 ```
 docker build -t angelajsb/cine-verse-front .
-
+```
 
 3. DockerHub에 해당 image 푸쉬
 ```
 docker push angelajsb/cine-verse-front
-
+```
 
 4. deployment.yml 생성
 
@@ -167,13 +169,15 @@ docker push angelajsb/cine-verse-front
 ```
 kubectl apply -f vue002dep.yml
 kubectl apply -f vue002ser.yml
+```
 
 7. 소스코드 변경 시 이미지 재생성 후 DockerHub 푸쉬
 ```
 docker build -t angelajsb/cine-verse-front:latest .
 docker push angelajsb/cine-verse-front:latest
-
+```
 
 8. Kubernetes 재시작
 ```
 kubectl rollout restart deployment/vue002dep
+```
