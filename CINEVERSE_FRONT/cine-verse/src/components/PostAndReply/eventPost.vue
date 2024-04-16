@@ -1,91 +1,92 @@
 <template>
-    <div class="wrapper">
-        <section>
-            <div class="clickdiv" @click="mainBoard()">
-                <h1 class="boardname">자유 게시판</h1> 
-            </div>
-            <hr class="boardtitleLine">
-        </section>
-        <div class="allboard" >
-            <div class="boardtitlediv">
-                <h2 class="boardtitle"> {{ event.eventTitle }}</h2>
-            </div>
-            <div class="datediv">
-                <h3 class="date">{{ event.eventDate }}</h3>
-            </div>
-            <div class="like">
-           <button type="button" @click="editPost">
-                수정
-            </button>
-        </div>
-            <div class="writerdiv">
-                <h3 class="writer">{{ event.member.nickname }}</h3>
-            </div>
-            <div class="viewandlike">
-                <h3 class="viewandlike">{{ event.eventViewCount }}</h3>
-            </div>
-        </div>
-        <hr class="titleLine">
-        <div class="maincontent">
-            <p v-html="event.eventContent"></p>
-            <div v-if="event.images && event.images.length > 0" class="image-container">
-                <img v-for="(image, index) in event.images" :key="index" :src="image.accessUrl" :alt="'Image ' + (index + 1)" class="event-image">
-            </div>
-        </div>
-        <Like/>
-        <div class="like">
-           <button type="button" @click="deletePost">
-                삭제
-            </button>
-        </div>
-        <Reply/>
+  <div class="wrapper">
+    <section>
+      <div class="clickdiv" @click="mainBoard()">
+        <h1 class="boardname">이벤트 게시판</h1>
+      </div>
+      <hr class="boardtitleLine">
+    </section>
+    <div class="allboard">
+      <div class="boardtitlediv">
+        <h2 class="boardtitle"> {{ event.eventTitle }}</h2>
+      </div>
+      <div class="datediv">
+        <h3 class="date">{{ event.eventDate }}</h3>
+      </div>
+      <div class="like">
+        <button type="button" @click="editPost">
+          수정
+        </button>
+      </div>
+      <div class="writerdiv">
+        <h3 class="writer">{{ event.member.nickname }}</h3>
+      </div>
+      <div class="viewandlike">
+        <h3 class="viewandlike">{{ event.eventViewCount }}</h3>
+      </div>
     </div>
+    <hr class="titleLine">
+    <div class="maincontent">
+      <p v-html="event.eventContent"></p>
+      <div v-if="event.images && event.images.length > 0" class="image-container">
+        <img v-for="(image, index) in event.images" :key="index" :src="image.accessUrl" :alt="'Image ' + (index + 1)"
+          class="event-image">
+      </div>
+    </div>
+    <Like />
+    <div class="like">
+      <button type="button" @click="deletePost">
+        삭제
+      </button>
+    </div>
+    <Reply />
+  </div>
 </template>
 
 <script setup>
-    import router from '@/router/mainRouter';
-    import Reply from './Reply.vue';
-    import Like from './Like.vue';
-    import axios from "axios";
-    import { ref, onBeforeMount } from "vue";
-    import { useRoute } from "vue-router";
+import router from '@/router/mainRouter';
+import Reply from './Reply.vue';
+import Like from './Like.vue';
+import axios from "axios";
+import { ref, onBeforeMount } from "vue";
+import { useRoute } from "vue-router";
 
-    const event = ref({});
-    const eventId = useRoute();
+const event = ref({});
+const eventId = useRoute();
 
-    const fetchevent = () => {
-        axios.get(`http://localhost:8081/event_board/${eventId.params.eventId}`)
-        .then(response => {
-            event.value = response.data;
-        })
-        .catch(error => {
-            console.error("Error fetching event:", error);
-        });
-    }
-
-    onBeforeMount(() => {
-        fetchevent();
+const fetchevent = () => {
+  axios.get(`http://localhost:8081/event_board/${eventId.params.eventId}`)
+    .then(response => {
+      event.value = response.data;
+    })
+    .catch(error => {
+      console.error("Error fetching event:", error);
     });
+}
 
-    function mainBoard() {
-        router.push('/event_board/list');
-    }
+onBeforeMount(() => {
+  fetchevent();
+});
 
-    function deletePost() {
-        axios.patch(`http://localhost:8081/event_board/delete/${eventId.params.eventId}`)
-        .then(response => {
-            console.log('게시물이 성공적으로 삭제되었습니다.');
-            router.push('/event_board/list');
-        })
-        .catch(error => {
-            console.error("Error deleting post:", error);
-        });
-    }
- 
+function mainBoard() {
+  router.push('/event_board/list');
+}
+
+function deletePost() {
+  axios.patch(`http://localhost:8081/event_board/delete/${eventId.params.eventId}`)
+    .then(response => {
+      console.log('게시물이 성공적으로 삭제되었습니다.');
+      router.push('/event_board/list');
+    })
+    .catch(error => {
+      console.error("Error deleting post:", error);
+    });
+}
+
 </script>
 
 <style scoped>
-@import url('@/assets/css/postAndReply/eventPost.css');   
+@import url('@/assets/css/postAndReply/eventPost.css');
 </style>
 
 <!-- <template>

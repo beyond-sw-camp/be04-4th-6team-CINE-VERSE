@@ -47,6 +47,7 @@
     align-items: center;
     flex-basis: calc(33.333% - 20px);
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .votebtn,
@@ -139,4 +140,3 @@
 .votecontent {
     min-width: 1000px;
 }
-
