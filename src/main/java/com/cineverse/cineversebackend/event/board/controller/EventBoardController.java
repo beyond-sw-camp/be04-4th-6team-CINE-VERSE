@@ -38,7 +38,7 @@ public class EventBoardController {
 //  테스트용 주석 추가
     @GetMapping("/health_check")
     public String health() {
-        return "fine";
+        return "I'm fine";
     }
 
     /* 설명. 이벤트 게시글 작성 (기본) */
