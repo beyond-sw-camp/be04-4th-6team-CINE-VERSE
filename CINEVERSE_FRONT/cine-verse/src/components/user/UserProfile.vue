@@ -95,7 +95,7 @@ onMounted(() => {
         fetchMemberData(memberId);
         fetchWearingBadge(memberId);
     } else {
-        console.error('No memberId found in cookie.');
+        console.error('쿠키에서 memberId를 찾을 수 없습니다.');
     }
 });
 

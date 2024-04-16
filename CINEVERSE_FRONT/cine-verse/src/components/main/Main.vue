@@ -36,7 +36,7 @@
                     <div class="freepostbox">
                         <li v-for="(post, index) in latestFreePosts" :key="index" class="freepostrow">
                             <div class="freeposttitle" @click="gotoFree(post.freeId)">{{ post.freeTitle }}</div>
-                            <div class="freepostcontent">{{ post.freeContent }}</div>
+                            <div class="freepostcontent" @click="gotoFree(post.freeId)">{{ post.freeContent }}</div>
                             <div class="freepostnickname">{{ post.member.nickname }}</div>
                             <div class="freepostdate">{{ post.freeDate }}</div>
                             <div class="freepostviews">{{ post.freeViewCount }}</div>
