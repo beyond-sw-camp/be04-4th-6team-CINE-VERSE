@@ -1,43 +1,49 @@
 <template>
     <div class="wrapper">
-        <section>
-            <div class="clickdiv" @click="mainBoard()">
-                <h1 class="boardname">리뷰 게시판</h1> 
+            <div class="review-board">
+                <div class="clickdiv" @click="mainBoard()">
+                    <h1 class="boardname">리뷰 게시판</h1> 
+                </div>
+            <div class="category">
                 <h2 class="boardcategory">{{ review.reviewCategory.reviewCategory }}</h2>
             </div>
+        </div>
             <hr class="boardtitleLine">
-        </section>
         <div class="allboard" >
             <div class="boardtitlediv">
-                <h2 class="boardtitle"> {{ review.reviewTitle }}</h2>
+                <h2 class="boardtitle">{{ review.reviewTitle }}</h2>
             </div>
             <div class="datediv">
-                <h3 class="date">{{ review.reviewDate }}</h3>
+                <h3 class="date">작성일: {{ review.reviewDate }}</h3>
             </div>
-            <div class="like">
-           <button type="button" @click="editPost">
-                수정
-            </button>
-        </div>
             <div class="writerdiv">
-                <h3 class="writer">{{ review.member.nickname }}</h3>
+                <h3 class="writer">작성자: {{ review.member.nickname }}</h3>
             </div>
             <div class="viewandlike">
-                <h3 class="viewandlike">{{ review.reviewViewCount }}</h3>
+                <h3 class="viewandlike">조회수: {{ review.reviewViewCount }}</h3>
+            </div>
+            <div class="edit">
+                <button type="button" @click="editPost" class="editbtn">
+                수정
+            </button>
+            </div>
+            <div class="delete">
+                <button type="button" @click="deletePost" class="deletebtn">
+                삭제
+            </button>
             </div>
         </div>
         <hr class="titleLine">
         <div class="maincontent">
-            <p v-html="review.reviewContent"></p>
             <div v-if="review.images && review.images.length > 0" class="image-container">
                 <img v-for="(image, index) in review.images" :key="index" :src="image.accessUrl" :alt="'Image ' + (index + 1)" class="review-image">
             </div>
+            <div class="content">
+                <p v-html="review.reviewContent"></p>
+            </div>
         </div>
-        <Like/>
         <div class="like">
-           <button type="button" @click="deletePost">
-                삭제
-            </button>
+            <Like/>
         </div>
         <Reply/>
     </div>
