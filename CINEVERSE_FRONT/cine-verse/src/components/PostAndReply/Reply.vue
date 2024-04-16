@@ -23,7 +23,7 @@
         <p>댓글이 없습니다.</p>
       </div>
       <div class="registreplywriterdiv">
-        <span v-if="replys.length > 0 && replys[0].member">{{ replys[0].member.nickname }}</span>
+        <span>{{ nickname }}</span>
       </div>
       <div class="registreplydiv">
         <form id="comment" @submit.prevent="submitReply">
@@ -47,6 +47,37 @@ const router = useRouter();
 const replys = ref([]);
 const newComment = ref('');
 
+
+// 사용자 닉네임을 쿠키에서 추출하는 함수
+const extractNicknameFromCookie = () => {
+  try {
+    const nicknameCookie = document.cookie.split('; ').find(cookie => cookie.startsWith('nickname='));
+    if (!nicknameCookie) {
+      console.error('사용자 닉네임 정보가 없습니다.');
+      return null;
+    }
+
+    const nicknameValue = nicknameCookie.split('=')[1];
+    if (!nicknameValue) {
+      console.error('사용자 닉네임이 없습니다.');
+      return null;
+    }
+
+    // URL 디코딩 후 반환
+    return decodeURIComponent(nicknameValue);
+  } catch (error) {
+    console.error('사용자 닉네임 추출 중 에러 발생:', error);
+    return null;
+  }
+};
+
+// 사용자 닉네임을 추출하여 변수에 할당
+const nickname = ref(extractNicknameFromCookie());
+
+// 페이지가 로드될 때마다 사용자 닉네임을 업데이트
+onMounted(() => {
+  nickname.value = extractNicknameFromCookie();
+});
 // console.log(replys)
 const submitReply = async () => {
   try {

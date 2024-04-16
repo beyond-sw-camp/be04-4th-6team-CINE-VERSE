@@ -1,6 +1,7 @@
 .table-container {
-    width: 180%;
-    max-width: 100%;
+    width: 150%;
+    min-width: 1000px;
+    max-width: 1000px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -10,12 +11,13 @@
   
   /* 테이블 */
   .table {
-    width: 200%;
-    max-width: 200%;
-    border-collapse: collapse;
+    width: 150%;
+    max-width: 1000px;
+    border-collapse: separate;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-spacing: 0 10px; /* 간격 조절 */
   }
   
   /* 게시글 제목 */
@@ -95,15 +97,17 @@
   
   /* 전체 게시물 */
   .allpost {
+    font-weight: lighter;
     text-align: center;
-    padding: 10px 0; /* 위아래 여백 추가 */
+    margin-top: 10px;
+  }
+
+.allpost td {
+    border-right: 1px solid #ddd;
+}
+  .thing {
+    text-align: right;
   }
   .allpost .num {
     width: 5%;
-  }
-  .allpost td {
-    border-right: 1px solid #ddd;
-  }
-  .thing {
-    text-align: right;
   }

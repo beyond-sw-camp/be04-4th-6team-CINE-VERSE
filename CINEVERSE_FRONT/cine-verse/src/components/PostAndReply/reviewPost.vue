@@ -2,7 +2,7 @@
     <div class="wrapper">
         <section>
             <div class="clickdiv" @click="mainBoard()">
-                <h1 class="boardname">정보 게시판</h1> 
+                <h1 class="boardname">리뷰 게시판</h1> 
                 <h2 class="boardcategory">{{ review.reviewCategory.reviewCategory }}</h2>
             </div>
             <hr class="boardtitleLine">
