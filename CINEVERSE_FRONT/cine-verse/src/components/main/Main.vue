@@ -35,7 +35,7 @@
                     </div>
                     <div class="freepostbox">
                         <li v-for="(post, index) in latestFreePosts" :key="index" class="freepostrow">
-                            <div class="freeposttitle">{{ post.freeTitle }}</div>
+                            <div class="freeposttitle" @click="gotoFree(post.freeId)">{{ post.freeTitle }}</div>
                             <div class="freepostcontent">{{ post.freeContent }}</div>
                             <div class="freepostnickname">{{ post.member.nickname }}</div>
                             <div class="freepostdate">{{ post.freeDate }}</div>
@@ -115,6 +115,18 @@ onMounted(async () => {
         console.error('최신 자유 게시글을 가져오는데 실패했습니다.', error);
     }
 });
+
+function gotoFree(freeId) {
+    if (freeId) {
+        router.push(`/free_board/${freeId}`).catch(err => {
+            if (err.name !== 'NavigationDuplicated') {
+                console.error(err);
+            }
+        });
+    } else {
+        console.error('freeId가 정의되지 않았습니다.');
+    }
+}
 
 </script>
 
