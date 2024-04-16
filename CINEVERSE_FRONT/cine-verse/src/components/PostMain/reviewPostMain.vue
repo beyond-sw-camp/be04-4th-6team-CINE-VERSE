@@ -33,7 +33,7 @@
         <tr class="header1">
           <td class="num">게시글 번호</td>
           <td>게시글 제목</td>
-          <td>카테고리</td>
+          <td class="category">카테고리</td>
           <td>조회수</td>
           <td>작성자</td>
           <td>작성일자</td>
