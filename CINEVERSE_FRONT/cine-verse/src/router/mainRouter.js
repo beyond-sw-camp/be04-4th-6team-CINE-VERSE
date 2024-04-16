@@ -124,6 +124,11 @@ const router = createRouter({
             component: () => import('@/components/PostAndReply/eventPost.vue')
         
         }
+        ,
+        {
+            path: '/event_board/regist',
+            component: () => import('@/components/CreatePost/eventPostContent.vue')
+        }
 
     ]
 })

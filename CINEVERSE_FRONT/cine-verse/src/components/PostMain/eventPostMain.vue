@@ -8,6 +8,9 @@
                 <div class="votebtndiv">
                     <button class="votebtn">퀴즈</button>
                 </div>
+                <div class="quizbtndiv">
+                    <button class="quizbtn">작성</button>
+                </div>
                 <div class="voteboxesdiv">
                     <div class="votebox-row" v-for="(chunk, chunkIndex) in chunkedEvents" :key="`chunk-${chunkIndex}`">
                         <div class="voteboxdiv" v-for="(event, index) in chunk" :key="event.eventBoardId">
