@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper">
-                <div class="info-board">
-                    <div class="clickdiv" @click="mainBoard()">
-                    <h1 class="boardname">정보 게시판</h1> 
-                </div>
+            <div class="info-board">
+                <div class="clickdiv" @click="mainBoard()">
+                        <h1 class="boardname">정보 게시판</h1> 
+                    </div>  
                 <div class="category">
                     <h2 class="boardcategory">{{ info && info.infoCategory ? info.infoCategory.infoCategory : 'No Category' }}</h2>
                 </div>
