@@ -9,7 +9,7 @@
                     <button class="votebtn">퀴즈</button>
                 </div>
                 <div class="quizbtndiv">
-                    <button class="quizbtn">작성</button>
+                    <button @click="goToWritePage" class="quizbtn">작성</button>
                 </div>
                 <div class="voteboxesdiv">
                     <div class="votebox-row" v-for="(chunk, chunkIndex) in chunkedEvents" :key="`chunk-${chunkIndex}`">
@@ -84,6 +84,9 @@ const chunkedEvents = computed(() => {
     }
     return chunks;
 });
+function goToWritePage(){
+    router.push(`/event_board/regist`);
+  }
 </script>
 
 

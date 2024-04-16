@@ -42,13 +42,13 @@
         <div class="like">
             <Like/>       
         </div>
-        <Reply/>
+        <Replys/>
     </div>
 </template>
 
 <script setup>
     import router from '@/router/mainRouter';
-    import Reply from './Reply.vue';
+    import Replys from './Replys.vue';
     import Like from './Like.vue';
     import axios from "axios";
     import { ref, onBeforeMount } from "vue";
