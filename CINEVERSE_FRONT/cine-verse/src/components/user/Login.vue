@@ -64,9 +64,6 @@ const login = async () => {
         if (response.status === 200) {
             localStorage.setItem('sessionId', response);
             
-            console.log("memberId:", response.data.memberId); // memberId 출력
-            console.log("role:", response.data.role); // role 출력
-            
             isLoggedin.value = true; // 로그인 상태 업데이트
             router.push('/'); // 상태 업데이트 후 페이지 이동
 
