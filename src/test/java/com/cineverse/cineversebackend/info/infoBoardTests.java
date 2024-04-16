@@ -61,74 +61,74 @@ public class infoBoardTests {
         infoBoardRepository.save(infoBoard);
     }
 
-//    @Test
-//    @Transactional
-//    @DisplayName("정보 게시글 작성 성공 테스트")
-//    public void successRegistInfoBoardTest() {
-//        Optional<Member> optionalMember = memberRepository.findById(1);
-//        Member member = optionalMember.get();
-//        InfoCategory infoCategory = InfoCategory.builder()
-//                .infoCategoryId(1)
-//                .infoCategory("테스트 카테고리")
-//                .build();
-//
-//        InfoBoardDTO infoBoardDTO = InfoBoardDTO.builder()
-//                .infoTitle("작성 테스트")
-//                .infoContent("작성 테스트 네용")
-//                .infoViewCount(0)
-//                .member(member)
-//                .infoCategory(infoCategory)
-//                .build();
-//
-//        MultipartFile[] images = new MultipartFile[0];
-//
-//        InfoBoard infoBoard = infoBoardService.registInfo(infoBoardDTO, images);
-//
-//        assertThat(infoBoard.getInfoTitle()).isEqualTo(infoBoardDTO.getInfoTitle());
-//        assertThat(infoBoard.getInfoContent()).isEqualTo(infoBoardDTO.getInfoContent());
-//        assertThat(infoBoard.getInfoViewCount()).isEqualTo(infoBoardDTO.getInfoViewCount());
-//        assertThat(infoBoard.getInfoDate()).isNotNull();
-//        assertThat(infoBoard.getInfoDeleteDate()).isNull();
-//        assertThat(infoBoard.getInfoCategory()).isEqualTo(infoBoardDTO.getInfoCategory());
-//        assertThat(infoBoard.getMember()).isEqualTo(infoBoardDTO.getMember());
-//    }
-//
-//    @Test
-//    @Transactional
-//    @DisplayName("게시글 수정 성공 테스트")
-//    public void successModifyBoardTest() {
-//        InfoCategory infoCategory = InfoCategory.builder()
-//                .infoCategoryId(2)
-//                .infoCategory("카테고리2")
-//                .build();
-//
-//
-//        InfoBoardDTO modifyInfos = InfoBoardDTO.builder()
-//                .infoTitle("제목 수정 테스트")
-//                .infoContent("내용 수정 테스트")
-//                .infoCategory(infoCategory)
-//                .build();
-//
-//        MultipartFile[] images = new MultipartFile[0];
-//
-//        InfoBoard modifiedBoard = infoBoardService.modifyInfo(1, modifyInfos, images);
-//
-//        assertThat(modifiedBoard.getInfoTitle()).isEqualTo(modifyInfos.getInfoTitle());
-//        assertThat(modifiedBoard.getInfoContent()).isEqualTo(modifyInfos.getInfoContent());
-//        assertThat(modifiedBoard.getInfoCategory()).isEqualTo(modifyInfos.getInfoCategory());
-//    }
-//
-//    @Test
-//    @Transactional
-//    @DisplayName("게시글 삭제 성공 테스트")
-//    public void successDeleteBoardTest() {
-//        Optional<InfoBoard> optionalInfoBoard = infoBoardRepository.findById(1);
-//        InfoBoard infoBoard = optionalInfoBoard.get();
-//        assertThat(infoBoard.getInfoDeleteDate()).isNull();
-//
-//        InfoBoard deletedBoard = infoBoardService.deleteInfo(1);
-//        assertThat(deletedBoard.getInfoDeleteDate()).isNotNull();
-//    }
+    @Test
+    @Transactional
+    @DisplayName("정보 게시글 작성 성공 테스트")
+    public void successRegistInfoBoardTest() {
+        Optional<Member> optionalMember = memberRepository.findById(1);
+        Member member = optionalMember.get();
+        InfoCategory infoCategory = InfoCategory.builder()
+                .infoCategoryId(1)
+                .infoCategory("테스트 카테고리")
+                .build();
+
+        InfoBoardDTO infoBoardDTO = InfoBoardDTO.builder()
+                .infoTitle("작성 테스트")
+                .infoContent("작성 테스트 네용")
+                .infoViewCount(0)
+                .member(member)
+                .infoCategory(infoCategory)
+                .build();
+
+        MultipartFile[] images = new MultipartFile[0];
+
+        InfoBoard infoBoard = infoBoardService.registInfo(infoBoardDTO, images);
+
+        assertThat(infoBoard.getInfoTitle()).isEqualTo(infoBoardDTO.getInfoTitle());
+        assertThat(infoBoard.getInfoContent()).isEqualTo(infoBoardDTO.getInfoContent());
+        assertThat(infoBoard.getInfoViewCount()).isEqualTo(infoBoardDTO.getInfoViewCount());
+        assertThat(infoBoard.getInfoDate()).isNotNull();
+        assertThat(infoBoard.getInfoDeleteDate()).isNull();
+        assertThat(infoBoard.getInfoCategory()).isEqualTo(infoBoardDTO.getInfoCategory());
+        assertThat(infoBoard.getMember()).isEqualTo(infoBoardDTO.getMember());
+    }
+
+    @Test
+    @Transactional
+    @DisplayName("게시글 수정 성공 테스트")
+    public void successModifyBoardTest() {
+        InfoCategory infoCategory = InfoCategory.builder()
+                .infoCategoryId(2)
+                .infoCategory("카테고리2")
+                .build();
+
+
+        InfoBoardDTO modifyInfos = InfoBoardDTO.builder()
+                .infoTitle("제목 수정 테스트")
+                .infoContent("내용 수정 테스트")
+                .infoCategory(infoCategory)
+                .build();
+
+        MultipartFile[] images = new MultipartFile[0];
+
+        InfoBoard modifiedBoard = infoBoardService.modifyInfo(1, modifyInfos, images);
+
+        assertThat(modifiedBoard.getInfoTitle()).isEqualTo(modifyInfos.getInfoTitle());
+        assertThat(modifiedBoard.getInfoContent()).isEqualTo(modifyInfos.getInfoContent());
+        assertThat(modifiedBoard.getInfoCategory()).isEqualTo(modifyInfos.getInfoCategory());
+    }
+
+    @Test
+    @Transactional
+    @DisplayName("게시글 삭제 성공 테스트")
+    public void successDeleteBoardTest() {
+        Optional<InfoBoard> optionalInfoBoard = infoBoardRepository.findById(1);
+        InfoBoard infoBoard = optionalInfoBoard.get();
+        assertThat(infoBoard.getInfoDeleteDate()).isNull();
+
+        InfoBoard deletedBoard = infoBoardService.deleteInfo(1);
+        assertThat(deletedBoard.getInfoDeleteDate()).isNotNull();
+    }
     @Test
     @Transactional
     @DisplayName("게시글 단일 조회 성공 테스트")

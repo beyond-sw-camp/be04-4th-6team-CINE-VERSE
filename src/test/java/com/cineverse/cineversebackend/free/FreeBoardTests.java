@@ -53,56 +53,56 @@ public class FreeBoardTests {
         freeBoardRepository.save(freeBoard);
     }
 
-//    @Test
-//    @Transactional
-//    @DisplayName("게시글 생성 성공 테스트")
-//    public void successRegistFreeBoard() {
-//        Optional<Member> optionalMember = memberRepository.findById(1);
-//        Member member = optionalMember.get();
-//
-//        FreeBoardDTO freeBoardDTO = FreeBoardDTO.builder()
-//                .freeTitle("자유 제목")
-//                .freeContent("게시글 내용")
-//                .member(member)
-//                .build();
-//        MultipartFile[] images = new MultipartFile[0];
-//
-//        FreeBoard freeBoard = freeBoardService.registFree(freeBoardDTO, images);
-//
-//        assertThat(freeBoard.getFreeTitle()).isEqualTo(freeBoardDTO.getFreeTitle());
-//        assertThat(freeBoard.getFreeContent()).isEqualTo(freeBoardDTO.getFreeContent());
-//        assertThat(freeBoard.getFreeDate()).isNotNull();
-//        assertThat(freeBoard.getFreeViewCount()).isEqualTo(0);
-//        assertThat(freeBoard.getMember()).isEqualTo(freeBoardDTO.getMember());
-//    }
-//
-//    @Test
-//    @Transactional
-//    @DisplayName("게시글 수정 성공 테스트")
-//    public void successModifyFreeBoard() {
-//        FreeBoardDTO modifyInfo = FreeBoardDTO.builder()
-//                .freeTitle("자유 제목")
-//                .freeContent("게시글 내용")
-//                .build();
-//        MultipartFile[] images = new MultipartFile[0];
-//
-//        FreeBoard modifiedFreeBoard = freeBoardService.modifyFree(1, modifyInfo, images);
-//
-//        assertThat(modifiedFreeBoard.getFreeTitle()).isEqualTo(modifyInfo.getFreeTitle());
-//        assertThat(modifiedFreeBoard.getFreeContent()).isEqualTo(modifyInfo.getFreeContent());
-//    }
-//
-//    @Test
-//    @Transactional
-//    @DisplayName("게시글 삭제 성공 테스트")
-//    public void successDeleteFreeBoard() {
-//        Optional<FreeBoard> optionalFreeBoard = freeBoardRepository.findById(1);
-//        FreeBoard freeBoard = optionalFreeBoard.get();
-//        assertThat(freeBoard.getFreeDeleteDate()).isNull();
-//
-//        FreeBoard deletedFreeBoard = freeBoardService.modifyFreeDeleteDate(1);
-//        assertThat(deletedFreeBoard.getFreeDeleteDate()).isNotNull();
-//    }
+    @Test
+    @Transactional
+    @DisplayName("게시글 생성 성공 테스트")
+    public void successRegistFreeBoard() {
+        Optional<Member> optionalMember = memberRepository.findById(1);
+        Member member = optionalMember.get();
+
+        FreeBoardDTO freeBoardDTO = FreeBoardDTO.builder()
+                .freeTitle("자유 제목")
+                .freeContent("게시글 내용")
+                .member(member)
+                .build();
+        MultipartFile[] images = new MultipartFile[0];
+
+        FreeBoard freeBoard = freeBoardService.registFree(freeBoardDTO, images);
+
+        assertThat(freeBoard.getFreeTitle()).isEqualTo(freeBoardDTO.getFreeTitle());
+        assertThat(freeBoard.getFreeContent()).isEqualTo(freeBoardDTO.getFreeContent());
+        assertThat(freeBoard.getFreeDate()).isNotNull();
+        assertThat(freeBoard.getFreeViewCount()).isEqualTo(0);
+        assertThat(freeBoard.getMember()).isEqualTo(freeBoardDTO.getMember());
+    }
+
+    @Test
+    @Transactional
+    @DisplayName("게시글 수정 성공 테스트")
+    public void successModifyFreeBoard() {
+        FreeBoardDTO modifyInfo = FreeBoardDTO.builder()
+                .freeTitle("자유 제목")
+                .freeContent("게시글 내용")
+                .build();
+        MultipartFile[] images = new MultipartFile[0];
+
+        FreeBoard modifiedFreeBoard = freeBoardService.modifyFree(1, modifyInfo, images);
+
+        assertThat(modifiedFreeBoard.getFreeTitle()).isEqualTo(modifyInfo.getFreeTitle());
+        assertThat(modifiedFreeBoard.getFreeContent()).isEqualTo(modifyInfo.getFreeContent());
+    }
+
+    @Test
+    @Transactional
+    @DisplayName("게시글 삭제 성공 테스트")
+    public void successDeleteFreeBoard() {
+        Optional<FreeBoard> optionalFreeBoard = freeBoardRepository.findById(1);
+        FreeBoard freeBoard = optionalFreeBoard.get();
+        assertThat(freeBoard.getFreeDeleteDate()).isNull();
+
+        FreeBoard deletedFreeBoard = freeBoardService.modifyFreeDeleteDate(1);
+        assertThat(deletedFreeBoard.getFreeDeleteDate()).isNotNull();
+    }
 
     @Test
     @Transactional
