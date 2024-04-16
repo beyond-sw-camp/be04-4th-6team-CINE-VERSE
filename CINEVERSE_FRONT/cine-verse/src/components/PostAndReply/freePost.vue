@@ -1,42 +1,46 @@
 <template>
     <div class="wrapper">
-        <section>
+        <div class="freevboard">
             <div class="clickdiv" @click="mainBoard()">
                 <h1 class="boardname">자유 게시판</h1> 
             </div>
+        </div>
             <hr class="boardtitleLine">
-        </section>
         <div class="allboard" >
             <div class="boardtitlediv">
                 <h2 class="boardtitle"> {{ free.freeTitle }}</h2>
             </div>
             <div class="datediv">
-                <h3 class="date">{{ free.freeDate }}</h3>
+                <h3 class="date">작성일: {{ free.freeDate }}</h3>
             </div>
-            <div class="like">
-           <button type="button" @click="editPost">
-                수정
-            </button>
-        </div>
             <div class="writerdiv">
-                <h3 class="writer">{{ free.member.nickname }}</h3>
+                <h3 class="writer">작성자: {{ free.member.nickname }}</h3>
             </div>
             <div class="viewandlike">
-                <h3 class="viewandlike">{{ free.freeViewCount }}</h3>
+                <h3 class="viewandlike">조회수: {{ free.freeViewCount }}</h3>
+            </div>
+            <div class="edit">
+                <button type="button" @click="editPost" class="editbtn">
+                    수정
+                </button>
+            </div>
+            <div class="delete">
+                <button type="button" @click="deletePost" class="deletebtn">
+                    삭제
+                </button>
             </div>
         </div>
         <hr class="titleLine">
         <div class="maincontent">
-            <p v-html="free.freeContent"></p>
             <div v-if="free.images && free.images.length > 0" class="image-container">
                 <img v-for="(image, index) in free.images" :key="index" :src="image.accessUrl" :alt="'Image ' + (index + 1)" class="free-image">
             </div>
         </div>
-        <Like/>
+        <div class="content">
+            <p v-html="free.freeContent"></p>
+        </div>
         <div class="like">
-           <button type="button" @click="deletePost">
-                삭제
-            </button>
+            <Like/>       
         </div>
         <Reply/>
     </div>
