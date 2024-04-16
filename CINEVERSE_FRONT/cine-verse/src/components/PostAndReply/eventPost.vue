@@ -11,19 +11,24 @@
         <h2 class="boardtitle">{{ event.eventTitle }}</h2>
       </div>
       <div class="datediv">
-        <h3 class="date">{{ event.eventDate }}</h3>
-      </div>
-      <div class="like">
-        <button type="button" @click="editPost">
-          수정
-        </button>
+        <h3 class="date">작성일: {{ event.eventDate }}</h3>
       </div>
       <div class="writerdiv">
-        <!-- <h3 class="writer">{{ event.member.nickname }}</h3> -->
+        <h3 class="writer">작성자: {{ event && event.member ? event.member.nickname : 'Unknown' }}</h3>
       </div>
       <div class="viewandlike">
-        <h3 class="viewandlike">{{ event.eventViewCount }}</h3>
+        <h3 class="viewandlike">조회수: {{ event.eventViewCount }}</h3>
       </div>
+      <div class="edit">
+                <button type="button" @click="editPost" class="editbtn">
+                수정
+            </button>
+            </div>
+            <div class="delete">
+            <button type="button" @click="deletePost" class="deletebtn">
+                삭제
+            </button>
+            </div>
     </div>
     <hr class="titleLine">
     <div class="maincontent">
