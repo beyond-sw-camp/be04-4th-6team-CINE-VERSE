@@ -3,10 +3,9 @@
     <div class="table-container">
     <table class="table">
       <tr class="top">
-        <td class="post" colspan="6">
+        <td class="post" colspan="3">
     <h1 class="boardTitle">정보 게시판</h1>
         </td>
-        <td></td>
         <td></td>
         <td></td>
         <td class="thing">

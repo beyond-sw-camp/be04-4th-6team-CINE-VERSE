@@ -105,3 +105,6 @@
   .allpost td {
     border-right: 1px solid #ddd;
   }
+  .thing {
+    text-align: right;
+  }

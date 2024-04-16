@@ -3,12 +3,9 @@
         <div class="table-container">
       <table class="table">
         <tr class="top">
-          <td class="post" colspan="6">
+          <td class="post" colspan="3">
             <h1 class="boardTitle">리뷰 게시판</h1>
           </td>
-          <td></td>
-          <td></td>
-          <td></td>
           <td></td>
           <td></td>
           <td class="thing">
@@ -31,16 +28,13 @@
               <input type="text" id='searchText' class="form-control" placeholder="Search..."
                 v-model="search_condition" @keyup.enter="callData">
             </div>
-            <div class="">
-              <button class="btn" id="searchBtn" type="button" @click="callData">검색</button>
-            </div>
           </td>
         </tr>
         <tr class="header1">
           <td class="num">게시글 번호</td>
           <td>게시글 제목</td>
           <td>카테고리</td>
-          <td>조회수</td>>
+          <td>조회수</td>
           <td>작성자</td>
           <td>작성일자</td>
         </tr>

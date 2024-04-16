@@ -2,13 +2,9 @@
     <div>
       <table class="table">
         <tr class="top">
-            <td class="post" colspan="6">
+            <td class="post" colspan="3">
             <h1 class="boardTitle">자유 게시판</h1>
           </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
           <td></td>
           <td class="thing">
             <button @click="goToWritePage" class="writebutton">게시글 작성</button>
