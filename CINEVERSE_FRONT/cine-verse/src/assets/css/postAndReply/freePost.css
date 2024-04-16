@@ -1,0 +1,95 @@
+.clickdiv {
+    width: 20%;
+}
+
+.boardtitleLine {
+    width:100%;
+    height: 3px;
+    border: 0;
+    background-color: #e9740e;
+}
+
+.titleLine {
+    width:95%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 2px;
+    border: 0;
+    background-color:  #e9740e;
+}
+
+.wrapper {
+    height: auto;
+    min-height: 100%;
+    width: 68%;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+.boardname {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.boardtitle {
+    font-size: 20px;
+    margin-top: 20px;  
+}
+
+.writer {
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.date {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.allboard {
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    width: 100%;
+}
+
+.boardtitlediv {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0%;
+    width: 70%;
+}
+
+.writerdiv {
+    width: 15%;
+}
+
+.datediv {
+    width:20%;
+    margin-right:2%;
+    float:right;
+}
+.viewandlike{
+    font-size: 12px;
+    margin-top: 30px;
+    padding-right: 10px;
+    margin-right: 2%;
+    float:right;
+}
+
+
+
+.maincontent {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+.like{
+    display:inline-block ;
+    margin-left: 30%;
+    margin-right: 10%;
+    margin-top: 10%;
+}

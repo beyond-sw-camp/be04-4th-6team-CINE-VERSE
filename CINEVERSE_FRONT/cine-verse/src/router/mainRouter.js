@@ -91,7 +91,7 @@ const router = createRouter({
         ,
         {
             path: '/review_board/regist',
-            component: () => import('@/components/CreatePost/InfoPostContent.vue')
+            component: () => import('@/components/CreatePost/reviewPostContent.vue')
         }
         ,
         {
@@ -111,13 +111,15 @@ const router = createRouter({
         ,
         {
             path: '/free_board/regist',
-            component: () => import('@/components/CreatePost/InfoPostContent.vue')
+            component: () => import('@/components/CreatePost/freePostContent.vue')
         }
         ,
         {
             path: '/free_board/modify/:freeId',
             component: () => import('@/components/editPost/InfoPostEdit.vue')
         }
+        ,    
+        { path: '/free_board/modify/:freeId',}
 
     ]
 })

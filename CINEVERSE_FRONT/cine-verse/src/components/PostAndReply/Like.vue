@@ -47,14 +47,5 @@ export default {
 </script>
 
 <style scoped>
-  button {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    padding-bottom: 5px;
-  }
+@import url('@/assets/css/postAndReply/Like.css');
 </style>
