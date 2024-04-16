@@ -181,3 +181,16 @@ docker push angelajsb/cine-verse-front:latest
 ```
 kubectl rollout restart deployment/vue002dep
 ```
+
+
+## 기획 (의도 / 서비스화)
+
+## DB모델링
+
+## 와이어 프레임
+
+## 기능 명세서
+
+## 요구사항 명세서
+
+## 테스트 명세서
