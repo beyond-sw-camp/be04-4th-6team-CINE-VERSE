@@ -106,6 +106,8 @@
     border-radius: 5px;
     color: #FF786C;
     cursor: pointer;
+    font-family: GmarketSansMedium;
+    font-weight: bold;
 }
 
 .like1:hover,

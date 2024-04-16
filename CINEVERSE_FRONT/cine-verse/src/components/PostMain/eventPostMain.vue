@@ -9,19 +9,19 @@
                     <button class="votebtn">퀴즈</button>
                 </div>
                 <div class="voteboxesdiv">
-                    <div class="voteboxdiv1"  v-if="events.length > 0">
+                    <div class="voteboxdiv1" v-if="events.length > 0">
                         <div class="votebox1">{{ events[0].title }}</div>
                         <div class="votebox2">{{ events[0].content }}
                             <button class="like1" @click="toggleLike(1)" :class="{ liked: isLiked[0] }">♥ 좋아요</button>
                         </div>
                     </div>
-                    <div class="voteboxdiv2">
+                    <div class="voteboxdiv2" v-if="events.length > 1">
                         <div class="votebox3">{{ events[1].title }}</div>
                         <div class="votebox4">{{ events[1].content }}
                             <button class="like2" @click="toggleLike(2)" :class="{ liked: isLiked[1] }">♥ 좋아요</button>
                         </div>
                     </div>
-                    <div class="voteboxdiv3">
+                    <div class="voteboxdiv3" v-if="events.length > 2">
                         <div class="votebox5">{{ events[2].title }}</div>
                         <div class="votebox6">{{ events[2].content }}
                             <button class="like3" @click="toggleLike(3)" :class="{ liked: isLiked[2] }">♥ 좋아요</button>
@@ -29,24 +29,24 @@
                     </div>
                 </div>
             </div>
-            <div class="quizcontent">
+            <div class="quizcontent" v-if="events.length > 3">
                 <div class="quizbtndiv">
-                    <!-- <button class="quizbtn">퀴즈</button> -->
+                    <!-- <button class="quizbtn">투표</button> -->
                 </div>
                 <div class="quizboxesdiv">
-                    <div class="quizboxdiv1">
+                    <div class="quizboxdiv1" v-if="events.length > 3">
                         <div class="quizbox1">{{ events[3].title }}</div>
                         <div class="quizbox2">{{ events[3].content }}
                             <button class="like4" @click="toggleLike(4)" :class="{ liked: isLiked[3] }">♥ 좋아요</button>
                         </div>
                     </div>
-                    <div class="quizboxdiv2">
+                    <div class="quizboxdiv2" v-if="events.length > 4">
                         <div class="quizbox3">{{ events[4].title }}</div>
                         <div class="quizbox4">{{ events[4].content }}
                             <button class="like5" @click="toggleLike(5)" :class="{ liked: isLiked[4] }">♥ 좋아요</button>
                         </div>
                     </div>
-                    <div class="quizboxdiv3">
+                    <div class="quizboxdiv3" v-if="events.length > 5">
                         <div class="quizbox5">{{ events[5].title }}</div>
                         <div class="quizbox6">{{ events[5].content }}
                             <button class="like6" @click="toggleLike(6)" :class="{ liked: isLiked[5] }">♥ 좋아요</button>
@@ -57,6 +57,7 @@
         </div>
     </div>
 </template>
+
 
 <script setup>
 import axios from "axios";
@@ -74,13 +75,12 @@ function toggleLike(buttonNumber) {
 const defaultEvent = { title: '이벤트 제목 없음', content: '이벤트 내용 없음' };
 
 const events = computed(() => {
-    const filledEvents = Array(6).fill(defaultEvent);
-    const loadedEvents = info.value.map(event => ({
+    return info.value.map(event => ({
         title: event.eventTitle || '이벤트 제목 없음',
         content: event.eventContent || '이벤트 내용 없음',
     }));
-    return loadedEvents.concat(filledEvents).slice(0, 6);
 });
+
 
 onMounted(async () => {
     try {
