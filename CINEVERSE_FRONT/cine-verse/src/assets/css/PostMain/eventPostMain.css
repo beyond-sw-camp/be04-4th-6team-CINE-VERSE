@@ -50,6 +50,15 @@
     cursor: pointer;
     font-size: 1em;
 }
+.quizbtn {
+    padding: 10px 20px;
+    background-color: #f76c6c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
 
 .votebox-title {
     font-weight: bold;

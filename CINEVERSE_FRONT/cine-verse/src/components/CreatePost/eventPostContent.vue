@@ -70,3 +70,6 @@
   // 페이지 로드 시 사용자 ID 가져오기
   fetchMemberId();
   </script>
+<style scoped>
+@import url('@/assets/css/CreatePost/eventPostContent.css');
+</style>

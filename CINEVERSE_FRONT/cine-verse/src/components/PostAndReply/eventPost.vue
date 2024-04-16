@@ -44,6 +44,9 @@
       <button type="button" @click="deletePost">
         삭제
       </button>
+      <div v-if="submitError" class="error-message">
+        <p>이미 퀴즈 답안을 제출했습니다.</p>
+      </div>
     </div>
   </div>
 </template>
@@ -65,6 +68,7 @@ onMounted(() => {
   fetchQuizResult();
 });
 
+const submitError = ref(false);
 const fetchEvent = async () => {
   try {
     const memberIdCookie = document.cookie.split('; ').find(cookie => cookie.startsWith('memberId='));
@@ -140,8 +144,10 @@ const submitAnswer = async () => {
       memberId: memberId,
       quizCorrect: isCorrect ? 'Y' : 'N'
     });
+    submitError.value = false;
   } catch (error) {
     console.error('퀴즈 답안을 제출하는 중 에러 발생:', error);
+    submitError.value = true;
   }
 };
 </script>
