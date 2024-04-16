@@ -197,8 +197,11 @@ kubectl rollout restart deployment/vue002dep
 ![물리모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/cc90d895-444d-4378-b12a-dc940a5df2d6)
 
 ## 와이어 프레임
+![와이어프레임](https://github.com/Jihye1101/jenkins-boot/assets/153909291/100c95ea-aff5-4c34-bb35-9aedd6c75ead)
+(화살표 수정중)
 
 ## 기능 명세서
+![기능명세서1](https://github.com/Jihye1101/jenkins-boot/assets/153909291/0ac9c3ea-933a-4245-adc6-bdb00d0f24f4)
 
 ## 요구사항 명세서
 
