@@ -69,7 +69,7 @@ pipeline {
             }
         }
         stage('Container Build') {
-            steps {   
+            steps {
                 sh "cp ./build/libs/*.jar ."
     
                 sh "docker build -t ${DOCKERHUB_USERNAME}/cine-verse:latest ."
@@ -91,3 +91,93 @@ pipeline {
 4. 사전에 Credential에 등록한 `application.yml`을 Pipeline 스크립트에 작성된 Groovy 문법을 통해 다운로드
 5. 빌드 및 테스트 실행(자동화 과정)
 6. 빌드된 JAR 파일을 통해 이미지 생성 후 Docker Hub에 푸시
+
+## deployment.yml 생성
+\`\`\`
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boot002dep
+spec:
+  selector:
+    matchLabels:
+      app: boot002kube
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: boot002kube
+    spec:
+      containers:
+        - name: boot-container
+          image: angelajsb/cine-verse:latest    # DockerHub에 푸쉬된 가장 최근 image 사용
+          imagePullPolicy: Always    
+          ports:
+            - containerPort: 8081        # 현재 boot project 포트번호
+\`\`\`
+
+## service.yml
+\`\`\`
+apiVersion: v1
+kind: Service
+metadata:
+  name: boot002ser
+spec:
+  type: NodePort
+  ports:
+    - port: 8081                        # container 내부 통신 포트번호
+      targetPort: 8081                  # 현재 service 중인 포트번호
+      protocol: TCP
+      nodePort: 30007                   # 외부 접속 포트번
+  selector:
+    app: boot002kube
+\`\`\`
+
+## Kubernetes
+1. deployment.yml -> pod를 생성하고 관리하는 정보 정의
+2. replicas -> 설정한 갯수에 따라 pod instance 유지, 과부하가 걸리거나 실패한 pod를 자동 재시작 해 항상 n개의 pods 유지
+3. service.yml -> pod에 대한 단일 접점 제공 및 내부적으로 로드 밸런싱 수행
+4. deployment.yml 및 service.yml 적용
+        kubectl apply -f boot002dep.yml
+        kubectl apply -f boot002ser.yml
+5. 소스코드 변경 시 Kubernetes 재시작
+        kubectl rollout restart deployment/boot002dep
+        
+
+## Vue CI/CD
+1. 전제 조건 및 설치 환경
+    1. VS CODE 설치
+    2. VUE3 설치
+    3. Docker Desktop 설치
+
+2. vue project 경로 터미널에서 해당 project image 생성
+\`\`\`
+docker build -t angelajsb/cine-verse-front .
+\`\`\`
+
+3. DockerHub에 해당 image 푸쉬
+\`\`\`
+docker push angelajsb/cine-verse-front
+\`\`\`
+
+4. deployment.yml 생성
+
+5. service.yml 생성
+
+6. deployment.yml 및 service.yml 적용 (명령어 입력)
+
+\`\`\`
+kubectl apply -f vue002dep.yml
+kubectl apply -f vue002ser.yml
+\`\`\`
+
+7. 소스코드 변경 시 이미지 재생성 후 DockerHub 푸쉬
+\`\`\`
+docker build -t angelajsb/cine-verse-front:latest .
+docker push angelajsb/cine-verse-front:latest
+\`\`\`
+
+8. Kubernetes 재시작
+\`\`\`
+kubectl rollout restart deployment/vue002dep
+\`\`\`
