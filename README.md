@@ -32,7 +32,7 @@ CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정
 - `Publish Over SSH` 및 `Pipeline: Stage View` 설치
 
 ### Pipeline 스크립트
-\`\`\`groovy
+```groovy
 pipeline {
     agent any
     tools {
@@ -82,7 +82,6 @@ pipeline {
         }
     }
 }
-\`\`\`
 
 ## Jenkins Pipeline 실행 과정
 1. 변경 코드 GitHub에 업로드
@@ -93,7 +92,7 @@ pipeline {
 6. 빌드된 JAR 파일을 통해 이미지 생성 후 Docker Hub에 푸시
 
 ## deployment.yml 생성
-\`\`\`
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -114,10 +113,10 @@ spec:
           imagePullPolicy: Always    
           ports:
             - containerPort: 8081        # 현재 boot project 포트번호
-\`\`\`
+
 
 ## service.yml
-\`\`\`
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -131,7 +130,6 @@ spec:
       nodePort: 30007                   # 외부 접속 포트번
   selector:
     app: boot002kube
-\`\`\`
 
 ## Kubernetes
 1. deployment.yml -> pod를 생성하고 관리하는 정보 정의
@@ -151,14 +149,14 @@ spec:
     3. Docker Desktop 설치
 
 2. vue project 경로 터미널에서 해당 project image 생성
-\`\`\`
+```
 docker build -t angelajsb/cine-verse-front .
-\`\`\`
+
 
 3. DockerHub에 해당 image 푸쉬
-\`\`\`
+```
 docker push angelajsb/cine-verse-front
-\`\`\`
+
 
 4. deployment.yml 생성
 
@@ -166,18 +164,16 @@ docker push angelajsb/cine-verse-front
 
 6. deployment.yml 및 service.yml 적용 (명령어 입력)
 
-\`\`\`
+```
 kubectl apply -f vue002dep.yml
 kubectl apply -f vue002ser.yml
-\`\`\`
 
 7. 소스코드 변경 시 이미지 재생성 후 DockerHub 푸쉬
-\`\`\`
+```
 docker build -t angelajsb/cine-verse-front:latest .
 docker push angelajsb/cine-verse-front:latest
-\`\`\`
+
 
 8. Kubernetes 재시작
-\`\`\`
+```
 kubectl rollout restart deployment/vue002dep
-\`\`\`
