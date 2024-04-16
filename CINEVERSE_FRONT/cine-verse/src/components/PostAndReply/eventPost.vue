@@ -1,7 +1,3 @@
-<style scoped>
-@import url('@/assets/css/postAndReply/eventPost.css');
-</style> 
-
 <template>
   <div class="wrapper">
     <section>
@@ -12,7 +8,7 @@
     </section>
     <div class="allboard">
       <div class="boardtitlediv">
-        <h2 class="boardtitle"> {{ event.eventTitle }}</h2>
+        <h2 class="boardtitle">{{ event.eventTitle }}</h2>
       </div>
       <div class="datediv">
         <h3 class="date">{{ event.eventDate }}</h3>
@@ -32,9 +28,10 @@
     <hr class="titleLine">
     <div class="maincontent">
       <p v-html="event.eventContent"></p>
-      <div v-if="event.images && event.images.length > 0" class="image-container">
-        <img v-for="(image, index) in event.images" :key="index" :src="image.accessUrl" :alt="'Image ' + (index + 1)"
-          class="event-image">
+      <div v-if="event.quiz" class="quiz-container">
+        <h2>{{ event.quiz.quizQuestion }}</h2>
+        <input type="text" v-model="answer" placeholder="정답을 입력하세요">
+        <button @click="submitAnswer">제출</button>
       </div>
     </div>
     <Like />
@@ -42,18 +39,6 @@
       <button type="button" @click="deletePost">
         삭제
       </button>
-    </div>
-    </div>
-  <div>
-    <!-- 퀴즈를 표시할 영역 -->
-    <div v-if="quiz">
-      <h2>{{ quiz.quizQuestion }}</h2>
-      <input type="text" v-model="answer" placeholder="정답을 입력하세요">
-      <button @click="submitAnswer">제출</button>
-    </div>
-    <!-- 퀴즈 정답률을 표시할 영역 -->
-    <div v-if="quizResult">
-      <h2>퀴즈 정답률: {{ quizResult.correctRate }}%</h2>
     </div>
   </div>
 </template>
@@ -67,11 +52,10 @@ import { useRoute } from "vue-router";
 
 const event = ref({});
 const eventId = useRoute();
-const quiz = ref(null);
 const answer = ref('');
 const quizResult = ref(null);
 
-const fetchevent = () => {
+const fetchEvent = () => {
   axios.get(`http://localhost:8081/event_board/${eventId.params.eventId}`)
     .then(response => {
       event.value = response.data;
@@ -82,7 +66,7 @@ const fetchevent = () => {
 }
 
 onBeforeMount(() => {
-  fetchevent();
+  fetchEvent();
 });
 
 function mainBoard() {
@@ -100,21 +84,11 @@ function deletePost() {
     });
 }
 
-// 서버로부터 퀴즈를 가져오는 함수
-const fetchQuiz = async () => {
-  try {
-    const response = await axios.get('/event_board/quiz');
-    quiz.value = response.data; // 서버로부터 받은 퀴즈를 저장
-  } catch (error) {
-    console.error('퀴즈를 가져오는 중 에러 발생:', error);
-  }
-};
-
 // 서버에 퀴즈 답안을 제출하는 함수
 const submitAnswer = async () => {
   try {
-    const response = await axios.post('/event_board/quiz/submit', {
-      quizId: quiz.value.quizId,
+    const response = await axios.post('http://localhost:8081/event_board/quiz/submit', {
+      quizId: event.value.quiz.quizId,
       quizAnswer: answer.value
     });
     quizResult.value = response.data; // 서버로부터 받은 퀴즈 정답률을 저장
@@ -122,10 +96,8 @@ const submitAnswer = async () => {
     console.error('퀴즈 답안을 제출하는 중 에러 발생:', error);
   }
 };
-
-// 페이지가 로드될 때 퀴즈를 가져오는 함수 호출
-fetchQuiz();
 </script>
+
 <style scoped>
 @import url('@/assets/css/postAndReply/eventPost.css');
-</style> 
+</style>
