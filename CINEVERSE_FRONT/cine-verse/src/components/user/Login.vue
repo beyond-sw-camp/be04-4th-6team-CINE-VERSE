@@ -68,11 +68,11 @@ const login = async () => {
             console.log("role:", response.data.role); // role 출력
             
             isLoggedin.value = true; // 로그인 상태 업데이트
-            router.push('/main'); // 상태 업데이트 후 페이지 이동
+            router.push('/'); // 상태 업데이트 후 페이지 이동
 
             alert('로그인 성공');
 
-            router.push('/main');
+            router.push('/');
         }
     } catch (error) {
         console.log("로그인 실패:", error.response ? error.response.data.message : "Unknown Error")
