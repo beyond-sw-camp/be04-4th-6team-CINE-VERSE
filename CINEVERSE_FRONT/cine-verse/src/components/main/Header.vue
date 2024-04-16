@@ -14,7 +14,7 @@
             <div class="Badgeimg">
                 <img src="@/assets/img/spidermanbadge.jpg" class="badgeimage" @click="badge">
             </div>
-            <div class="Profile">
+            <div class="Profile" @click="profile">
                 <img src="@/assets/img/profile.png" class="profileimage" @click="profile">
             </div>
             <div class="joinbtndiv">

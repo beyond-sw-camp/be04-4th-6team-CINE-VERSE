@@ -5,6 +5,9 @@ template {
 button {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    background-color: #6c7aa1;
+    color: rgb(229, 227, 227);
+    border: 1px solid  rgb(229, 227, 227);
 }
 .info-board{
     display: flex;
@@ -26,7 +29,7 @@ button {
     width:1110px;
     height: 3px;
     border: 0;
-    background-color: #e9740e;
+    background-color: #6c7aa1;
 }
 
 .titleLine {
@@ -35,7 +38,7 @@ button {
     /* margin-right: 2%; */
     height: 3px;
     border: 0;
-    background-color:  #e9740e;
+    background-color: #6c7aa1;
 }
 
 .wrapper {
@@ -55,7 +58,8 @@ button {
 
 .boardtitle {
     font-size: 100%;
-    margin-top: 20px;  
+    margin-top: 18px;  
+    margin-left: 10px;
 }
 
 .writer {
@@ -77,15 +81,16 @@ button {
 }
 
 .writerdiv {
-    width: 15%;
+    width: 18%;
     margin-top: 13px;
 }
 
 .datediv {
-    width:20%;
+    width:18%;
     float:right;
     font-size: 10px;
     margin-top: 13px;
+    margin-left: 30px;
 }
 .edit{
     /* margin-left: 50px; */
@@ -103,6 +108,7 @@ button {
     margin-top: 17px;
     border-radius: 5px;
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 .viewandlike{

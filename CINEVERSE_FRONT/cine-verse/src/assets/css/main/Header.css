@@ -1,7 +1,10 @@
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
     font-family: 'GmarketSansMedium';
+}
+body {
+    margin: 0 !important;
 }
 
 .header {
@@ -9,7 +12,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px 50px;
-    background-color: #fff;
+    width: 100vw;
+    /* height: vw; */
+    box-sizing: border-box; /* 패딩을 너비에 포함 */
+    border-bottom: 3px solid #6c7aa1;
 }
 
 .logo .logoimage {
@@ -39,6 +45,9 @@
     border-radius: 100%;
     cursor: pointer;
 }
+.profileimage {
+    color: white;
+}
 
 .badgeimage {
     width: 35px;
@@ -54,25 +63,32 @@
     padding: 7px 15px;
     cursor: pointer;
     border-radius: 10px;
-    border: 2px solid #FF786C;
+    border: 2px solid #6c7aa1;
 }
 
 .joinbtn {
     background-color: white;
-    color: #FF786C; 
+    color: #6c7aa1; 
 }
 
 
 .joinbtn:hover {
-    background-color: #FFF1F0;
-    color: #FF786C; 
+    background-color: #6c7aa14b;
+    color: #6c7aa1; 
 }
 
 .loginbtn,
 .logoutbtn {
-    background-color: #FF786C;
+    background-color: #6c7aa1;
     color: white;
 }
+
+.loginbtn:hover,
+.logoutbtn:hover {
+    background-color: #6c7a9e9f;
+    color: white;
+}
+
 
 .infobtn,
 .reviewbtn,
@@ -80,9 +96,19 @@
 .freebtn,
 .qnabtn {
     cursor: pointer;
-    border-radius: 10px;
-    border: 2px solid white;
+    border: white;
     background-color: white;
     color: black;
     font-size: 18px;
+}
+
+.infobtn:hover,
+.reviewbtn:hover,
+.eventbtn:hover,
+.freebtn:hover,
+.qnabtn:hover {
+    cursor: pointer;
+    color: black;
+    font-size: 21px;
+    border-bottom: 2px black;
 }

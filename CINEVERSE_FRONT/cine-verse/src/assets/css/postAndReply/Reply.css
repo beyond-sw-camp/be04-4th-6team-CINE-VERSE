@@ -25,7 +25,7 @@ textarea {
 
 /* 등록 버튼 스타일 */
 .btn {
-    background-color: #e9740e;
+    background-color: #6c7aa1;
     color: white;
     padding: 14px 20px;
     border: none;
@@ -44,7 +44,7 @@ textarea {
     /* margin-left: 50px; */
     /* margin-right: 50px; */
     border: 0;
-    background-color: #e9740e;
+    background-color: #6c7aa1;
     margin-bottom: 30px;
 }
 
@@ -67,7 +67,7 @@ textarea {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-bottom: 1px solid rgb(196, 196, 196); /* 각 댓글 아래에 회색 선을 추가합니다. */
+    border-bottom: 1px solid #8698c9dc;; /* 각 댓글 아래에 회색 선을 추가합니다. */
     padding-left: 60px;
 }
 

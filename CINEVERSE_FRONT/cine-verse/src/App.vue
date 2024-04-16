@@ -19,7 +19,7 @@ provide('globalState', globalState);
 </script>
 
 <template>
-    <Header></Header>
+        <Header></Header>
     <main class="container">
         <div class="main1">
             <RouterView />
@@ -32,7 +32,7 @@ provide('globalState', globalState);
 </template>
 
 
-<style scoped>
+<style>
 @font-face {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -63,5 +63,14 @@ provide('globalState', globalState);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+html, body {
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    overflow-x: hidden;
 }
 </style>
