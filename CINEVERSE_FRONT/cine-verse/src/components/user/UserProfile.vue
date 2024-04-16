@@ -148,7 +148,7 @@ async function deleteMember() {
             await axios.patch(`http://localhost:8081/member/delete/${memberId}`);
             alert('회원 탈퇴가 완료되었습니다.');
             localStorage.removeItem('sessionId');
-            router.push('/');
+            router.push('/main');
             isLoggedin.value = false;
         } catch (error) {
             alert('회원 탈퇴 중 오류가 발생했습니다.');
