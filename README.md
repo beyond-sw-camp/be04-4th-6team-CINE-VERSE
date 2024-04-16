@@ -187,6 +187,15 @@ kubectl rollout restart deployment/vue002dep
 
 ## DB모델링
 
+### 개념모델링
+![개념모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/444fc562-7a17-4c39-83e5-5471262a2c29)
+
+### 논리모델링
+![논리모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/4a1a47bc-7ec0-4f89-a6f0-0d7ec683f1fd)
+
+### 물리모델링
+![물리모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/cc90d895-444d-4378-b12a-dc940a5df2d6)
+
 ## 와이어 프레임
 
 ## 기능 명세서
