@@ -5,7 +5,7 @@
                     <h1 class="boardname">리뷰 게시판</h1> 
                 </div>
             <div class="category">
-                <h2 class="boardcategory">{{ review && review.infoCategory ? review.reviewCategory.reviewCategory : 'No Category' }}</h2>
+                <h2 class="boardcategory">{{ review && review.reviewCategory ? review.reviewCategory.reviewCategory : 'No Category' }}</h2>
             </div>
         </div>
             <hr class="boardtitleLine">
