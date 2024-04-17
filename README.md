@@ -11,10 +11,10 @@
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/Jihye1101)
 
 - 팀원 : **윤재은**
-[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">]()
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/yunjaeeun)
 
 - 팀원 : **조수빈**
-[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">]()
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/chosoobin37)
 
 ---
 
