@@ -82,14 +82,23 @@ async function sendMessage() {
 
 # ⚙DB모델링
 
-## 1. 개념모델링
-![개념모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/db51dbbd-2c75-4a06-b675-07ac2143d522)
+<details><summary>1. 개념모델링</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/db51dbbd-2c75-4a06-b675-07ac2143d522" width="100%" />
+</p>
+</details>
 
-## 2. 논리모델링
-![논리모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/337f0ad5-27c3-4c83-a520-cc40a575516a)
+<details><summary>2. 논리모델링</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/337f0ad5-27c3-4c83-a520-cc40a575516a" width="100%" />
+</p>
+</details>
 
-## 3. 물리모델링
-![물리모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454)
+<details><summary>3. 물리모델링</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454" width="100%" />
+</p>
+</details>
 
 ---
 
