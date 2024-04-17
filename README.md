@@ -86,6 +86,7 @@ async function sendMessage() {
 ### 물리모델링
 ![물리모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454)
 
+
 ## 와이어 프레임
 
 ### 1. 메인 - 회원 관련 페이지 (etc 로그인)
@@ -99,6 +100,22 @@ async function sendMessage() {
 
 ### 4. 메인 - 게시판
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/d986ffda-a810-4abc-a31f-7b3ed6a0f199" width="100%" />
+
+### 5. 이벤트 게시판
+![프론트5_이벤트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/614af6d2-e378-43a5-9ea1-6fd2adb18325)
+
+### 6. 리뷰 게시판
+![프론트6_리뷰](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2118e213-479f-49f2-8de6-14b136006922)
+
+### 7. 정보 게시판
+![프론트7_정보](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/6ad1f27a-0e61-42e4-9ff1-5b47186f4d4b)
+
+### 8. 자유 게시판
+![프론트8_자유](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/669fa434-bfd2-4949-96e6-5f3a6687dba2)
+
+### 9. 문의 게시판
+![프론트9_문의](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/edb12469-8dda-42c0-9b44-313944402a46)
+
 
 ## 기능 명세서
 ![기능명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3)
