@@ -18,25 +18,25 @@
 
 ---
 
-## 📌영화 마니아들을 위한 전문 커뮤니티 사이트 기획서
+# 📌영화 마니아들을 위한 전문 커뮤니티 사이트 기획서
 
-### 1. 서비스 기획 배경
+## 1. 서비스 기획 배경
 
 - **현 상황**: 매니아를 위한 영화 커뮤니티의 부재. 대형 플랫폼의 영화 카페는 폐쇄되었고, 기존의 사이트들은 너무 복잡하며 다양한 주제를 아우르고 있어 영화만을 전문으로 다루는 공간이 필요.
 - **필요성**: 영화 매니아들이 자신의 영화 취향을 공유하고, 심도 깊은 토론을 할 수 있는 전문 커뮤니티의 필요가 대두됨.
 
-### 2. 서비스 목표
+## 2. 서비스 목표
 
 - **전문성과 편안함**: 영화만을 전문으로 다루는 커뮤니티 제공으로 사용자들이 보다 쉽게 정보를 얻고 공유할 수 있는 플랫폼 마련.
 - **안전한 이용 환경**: 서버에 위험한 정보를 저장하지 않고, 이용자의 개인정보 보호를 최우선으로 함(예: 쿠키에 회원들의 개인정보를 담지 않음).
 - **활발한 소통 공간**: 사용자들이 자유롭게 정보를 공유하고, 영화에 대한 리뷰나 비평을 자유롭게 표현할 수 있는 오픈된 커뮤니티.
 
-### 3. 서비스 차별화 전략
+## 3. 서비스 차별화 전략
 
 - **포인트 시스템**: 영화 퀴즈 참여를 통해 포인트를 획득하고, 이 포인트를 사용하여 다양한 뱃지(예: 마블, DC 코믹스 뱃지)를 구매할 수 있음.
 - **뱃지 활용**: 구매한 뱃지는 사용자의 프로필 또는 닉네임 옆에 표시되어, 사용자의 관심사와 전문성을 나타낼 수 있음. 이는 사용자간의 소속감을 형성하고, 커뮤니티 내에서의 신뢰도를 증가시키는 역할을 함.
 
-### 4. 기대 효과
+## 4. 기대 효과
 
 - **전문화된 플랫폼**: 영화만을 주제로 하는 전문화된 커뮤니티로서의 자리매김.
 - **사용자 참여 유도**: 포인트 및 뱃지 시스템을 통한 게임화 요소는 사용자의 지속적인 참여를 유도.
@@ -47,9 +47,9 @@
 
 ---
 
-## ✅추가 기능 설명서
+# ✅추가 기능 설명서
 
-1. CGV 실시간 인기 영화 순위 크롤링
+## 1. CGV 실시간 인기 영화 순위 크롤링
 
 Python을 사용하여 requests와 BeautifulSoup 라이브러리로 CGV에서 영화 데이터(실시간 인기 영화 순위 10)를 크롤링하고 json으로 저장
 메인 화면에 들어가면 사용자는 실시간 영화 정보를 통해 최신 트렌드를 파악 가능
@@ -61,7 +61,7 @@ res = requests.get(url)
 soup = BeautifulSoup(res.text, 'html.parser')
 ```
 
-2. OpenAI API를 이용한 챗봇 만들기
+## 2. OpenAI API를 이용한 챗봇 만들기
 
 JavaScript를 사용하여 OpenAI의 API로부터 챗봇의 응답을 받아 처리하는 기능 구현
 api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 보안 처리
@@ -79,46 +79,46 @@ async function sendMessage() {
 
 ---
 
-## ⚙DB모델링
+# ⚙DB모델링
 
-### 개념모델링
+## 1. 개념모델링
 ![개념모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/db51dbbd-2c75-4a06-b675-07ac2143d522)
 
-### 논리모델링
+## 2. 논리모델링
 ![논리모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/337f0ad5-27c3-4c83-a520-cc40a575516a)
 
-### 물리모델링
+## 3. 물리모델링
 ![물리모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454)
 
 ---
 
-## 💻와이어 프레임
+# 💻와이어 프레임
 
-### 1. 메인 - 회원 관련 페이지 (etc 로그인)
+## 1. 메인 - 회원 관련 페이지 (etc 로그인)
 ![프론트1_회원](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410)
 
-### 2. 메인 - 회원프로필 및 뱃지 페이지
+## 2. 메인 - 회원프로필 및 뱃지 페이지
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7f7558a1-9de6-476c-a0f4-2b324e5532ff" width="100%" />
 
-### 3. 메인 - 최신 이벤트, 자유 게시글
+## 3. 메인 - 최신 이벤트, 자유 게시글
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4de57331-36fa-429c-844e-d330e23f2c4e" width="100%" />
 
-### 4. 메인 - 게시판
+## 4. 메인 - 게시판
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/d986ffda-a810-4abc-a31f-7b3ed6a0f199" width="100%" />
 
-### 5. 이벤트 게시판
+## 5. 이벤트 게시판
 ![프론트5_이벤트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/614af6d2-e378-43a5-9ea1-6fd2adb18325)
 
-### 6. 리뷰 게시판
+## 6. 리뷰 게시판
 ![프론트6_리뷰](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2118e213-479f-49f2-8de6-14b136006922)
 
-### 7. 정보 게시판
+## 7. 정보 게시판
 ![프론트7_정보](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/6ad1f27a-0e61-42e4-9ff1-5b47186f4d4b)
 
-### 8. 자유 게시판
+## 8. 자유 게시판
 ![프론트8_자유](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/669fa434-bfd2-4949-96e6-5f3a6687dba2)
 
-### 9. 문의 게시판
+## 9. 문의 게시판
 ![프론트9_문의](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/edb12469-8dda-42c0-9b44-313944402a46)
 
 ---
