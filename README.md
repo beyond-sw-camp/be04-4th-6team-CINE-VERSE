@@ -65,9 +65,10 @@ JavaScript를 사용하여 OpenAI의 API로부터 챗봇의 응답을 받아 처
 api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 보안 처리
 영화 추천 등 다양한 주제에 대한 빠르고 효율적인 대화 가능
 https://platform.openai.com/usage에서 API request 조회 가능
-![API request 조회 가능](https://github.com/Jihye1101/jenkins-boot/assets/153909291/3f027249-706c-4450-afd3-443913a68786)
+![API request 조회 가능](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/e992ae50-852a-4f75-ae49-f56aa11eff18)
 
 중요 코드:
+
 ```
 async function sendMessage() {
   const message = userMessage.value.trim();
