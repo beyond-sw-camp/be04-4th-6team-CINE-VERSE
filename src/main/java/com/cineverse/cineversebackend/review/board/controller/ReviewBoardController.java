@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
-// final test
+
 @RestController
 @RequestMapping("/review_board")
 public class ReviewBoardController {
