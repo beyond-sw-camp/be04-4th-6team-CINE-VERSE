@@ -61,6 +61,7 @@
         axios.get(`http://localhost:8081/free_board/${freeId.params.freeId}`)
         .then(response => {
             free.value = response.data;
+            console.log('서버로부터 받은 정보:', response.data);
         })
         .catch(error => {
             console.error("Error fetching free:", error);

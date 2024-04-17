@@ -68,7 +68,8 @@
     axios.get(`http://localhost:8081/review_board/list`)
       .then(response => {
         review.value = response.data;
-        filteredreview.value = response.data; // 초기에 전체 데이터를 filteredreview에 할당
+        filteredreview.value = response.data; 
+        console.log(info.value);
       })
       .catch(error => {
         console.error("Error fetching review:", error);

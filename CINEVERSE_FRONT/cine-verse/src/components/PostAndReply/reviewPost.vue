@@ -64,6 +64,7 @@
         axios.get(`http://localhost:8081/review_board/${reviewId.params.reviewId}`)
         .then(response => {
             review.value = response.data;
+            console.log('서버로부터 받은 정보:', response.data);
         })
         .catch(error => {
             console.error("Error fetching review:", error);

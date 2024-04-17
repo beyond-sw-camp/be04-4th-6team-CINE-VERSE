@@ -63,7 +63,8 @@
     axios.get(`http://localhost:8081/free_board/list`)
       .then(response => {
         free.value = response.data;
-        filteredfree.value = response.data; // 초기에 전체 데이터를 filteredfree에 할당
+        filteredfree.value = response.data; 
+        console.log(info.value);
       })
       .catch(error => {
         console.error("Error fetching free:", error);

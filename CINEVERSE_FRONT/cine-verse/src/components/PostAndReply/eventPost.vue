@@ -101,8 +101,6 @@ const fetchEvent = async () => {
   }
 };
 
-
-
 function mainBoard() {
   router.push('/event_board/list');
 }

@@ -64,6 +64,7 @@
         axios.get(`http://localhost:8081/info_board/${infoId.params.infoId}`)
         .then(response => {
             info.value = response.data;
+            console.log('서버로부터 받은 정보:', response.data);
         })
         .catch(error => {
             console.error("Error fetching info:", error);

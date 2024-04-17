@@ -68,7 +68,8 @@ const fetchInfo = () => {
   axios.get(`http://localhost:8081/info_board/list`)
     .then(response => {
       info.value = response.data;
-      filteredInfo.value = response.data; // 초기에 전체 데이터를 filteredInfo에 할당
+      filteredInfo.value = response.data; 
+      console.log(info.value);
     })
     .catch(error => {
       console.error("Error fetching info:", error);

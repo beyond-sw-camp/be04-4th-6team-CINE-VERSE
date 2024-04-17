@@ -134,7 +134,7 @@ onMounted(async () => {
   const routerfreeId = parseInt(freeId);
   return commentfreeId === routerfreeId;
 });
-    // replies.value = response.data;
+console.log('서버로부터 받은 정보:', replys.value);
   } catch (error) {
     console.error('데이터 가져오는 중 에러 발생:', error);
   }
