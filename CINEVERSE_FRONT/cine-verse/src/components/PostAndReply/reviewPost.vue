@@ -5,7 +5,7 @@
                     <h1 class="boardname">리뷰 게시판</h1> 
                 </div>
             <div class="category">
-                <h2 class="boardcategory">{{ review.reviewCategory.reviewCategory }}</h2>
+                <h2 class="boardcategory">{{ review && review.infoCategory ? review.reviewCategory.reviewCategory : 'No Category' }}</h2>
             </div>
         </div>
             <hr class="boardtitleLine">
@@ -17,7 +17,7 @@
                 <h3 class="date">작성일: {{ review.reviewDate }}</h3>
             </div>
             <div class="writerdiv">
-                <h3 class="writer">작성자: {{ review.member.nickname }}</h3>
+                <h3 class="writer">작성자: {{ review && review.member ? review.member.nickname : 'Unknown' }}</h3>
             </div>
             <div class="viewandlike">
                 <h3 class="viewandlike">조회수: {{ review.reviewViewCount }}</h3>

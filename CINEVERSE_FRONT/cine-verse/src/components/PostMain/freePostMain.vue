@@ -64,7 +64,7 @@
       .then(response => {
         free.value = response.data;
         filteredfree.value = response.data; 
-        console.log(info.value);
+        console.log(free.value);
       })
       .catch(error => {
         console.error("Error fetching free:", error);

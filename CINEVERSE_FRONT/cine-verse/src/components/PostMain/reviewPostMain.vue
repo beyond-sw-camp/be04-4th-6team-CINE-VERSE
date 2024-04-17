@@ -69,7 +69,7 @@
       .then(response => {
         review.value = response.data;
         filteredreview.value = response.data; 
-        console.log(info.value);
+        console.log(review.value);
       })
       .catch(error => {
         console.error("Error fetching review:", error);
