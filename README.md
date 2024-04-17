@@ -98,7 +98,7 @@ async function sendMessage() {
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4de57331-36fa-429c-844e-d330e23f2c4e" width="100%" />
 
 ### 4. 메인 - 게시판
-![프론트4_게시판](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/d986ffda-a810-4abc-a31f-7b3ed6a0f199)
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/d986ffda-a810-4abc-a31f-7b3ed6a0f199" width="100%" />
 
 ## 기능 명세서
 ![기능명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3)
