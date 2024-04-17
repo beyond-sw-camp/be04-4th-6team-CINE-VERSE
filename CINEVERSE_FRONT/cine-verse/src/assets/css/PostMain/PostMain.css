@@ -63,7 +63,7 @@
   
   /* 글 작성 버튼 */
   .writebutton {
-    background-color: #ffae52;
+    background-color: #6c7aa1;
     color: white;
     padding: 10px 15px; /* 크기 조정 */
     border: none;
@@ -77,7 +77,7 @@
   
   /* 헤더 */
   .header1 {
-    background-color: #f8e1c7;
+    background-color: #b8c4e4;
     height: 50px;
     font-size: 12px;
     text-align: center;

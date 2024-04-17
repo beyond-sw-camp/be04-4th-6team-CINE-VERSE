@@ -71,12 +71,12 @@ body {
 
 #open-chatbot {
   position: fixed;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-image: url('@/assets/img/test.png');;
+  background-image: url('@/assets/img/chatchat2.webp');;
   background-size: cover;
   background-color: white;
   border: none;

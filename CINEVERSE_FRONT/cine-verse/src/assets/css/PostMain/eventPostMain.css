@@ -43,7 +43,7 @@
 
 .votebtn {
     padding: 10px 20px;
-    background-color: #f76c6c;
+    background-color: #6c7aa1;
     border: none;
     border-radius: 5px;
     color: white;
@@ -52,7 +52,7 @@
 }
 .quizbtn {
     padding: 10px 20px;
-    background-color: #f76c6c;
+    background-color: #6c7aa1;
     border: none;
     border-radius: 5px;
     color: white;
@@ -68,7 +68,7 @@
     align-items: center;
     height: 150px;
     width: 100%;
-    border: 2px solid #FF786C;
+    border: 2px solid #6c7aa1;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -77,7 +77,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFF1F0;
+    background-color: #b8c4e4;
     padding: 20px;
     border-radius: 5px;
     width: 100%;
@@ -89,21 +89,21 @@
     margin-left: 10px;
     padding: 5px 10px;
     background-color: white;
-    border: 2px solid #FF786C;
+    border: 2px solid #6c7aa1;
     border-radius: 5px;
-    color: #FF786C;
+    color: #6c7aa1;
     cursor: pointer;
     font-family: GmarketSansMedium;
     font-weight: bold;
 }
 
 .like:hover {
-    background-color: #FF786C;
+    background-color: #6c7aa1;
     color: white;
 }
 
 .liked {
-    background-color: #FF786C;
+    background-color: #6c7aa1;
     color: white;
 }
 

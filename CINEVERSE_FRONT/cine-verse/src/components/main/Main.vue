@@ -2,7 +2,7 @@
     <div class="container">
         <div class="banner">
             <div class="bannerimg">
-                <img src="@/assets/img/mainpagebanner.png" class="mainbannerimage">
+                <img src="@/assets/img/mainpagebanner2.png" class="mainbannerimage">
             </div>
             <div class="content">
                 <div class="eventpost" v-if="latestEvents.length > 0">

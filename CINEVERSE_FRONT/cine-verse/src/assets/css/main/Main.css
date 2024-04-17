@@ -43,8 +43,8 @@
     padding: 7px 15px;
     cursor: pointer;
     border-radius: 10px;
-    border: 2px solid #FF786C;
-    background-color: #FF786C;
+    border: 2px solid #6c7aa1;
+    background-color: #6c7aa1;
     color: white;
     margin-bottom: 15px;
 }
@@ -55,7 +55,7 @@
     justify-content: space-between;
     width: 950px;
     padding: 10px 0;
-    background-color: #FFD8D8;
+    background-color: #b1c2f1;
     border-radius: 10px;
     margin-bottom: 5px;
 }
@@ -102,8 +102,8 @@
     width: 920px;
     height: auto;
     border-radius: 5px;
-    border: 2px solid #FFF1F0;
-    background-color: #FFF1F0;
+    border: 2px solid #dbe2f2;
+    background-color: #dbe2f2;
     color: black;
     display: flex;
     align-items: center;
