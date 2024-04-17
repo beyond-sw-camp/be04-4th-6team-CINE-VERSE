@@ -160,8 +160,13 @@ async function sendMessage() {
 
 ---
 
-## 1️⃣기능 명세서
-![기능명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3)
+# 기능/요구사항/테스트 명세서
+
+<details><summary>1️⃣기능 명세서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3" width="100%" />
+</p>
+</details>
 
 ## 2️⃣요구사항 명세서
 ![요구사항명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/799794c3-ccd0-4efa-965e-f4a50e7e599c)
