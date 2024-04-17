@@ -19,7 +19,7 @@
 ---
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=180&text=Jihye&animation=twinkling&fontColor=ffffff&fontSize=50" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=220&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" />
 
 
 ## 전제 조건 및 설치 환경
