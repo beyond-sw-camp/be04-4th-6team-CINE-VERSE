@@ -138,6 +138,11 @@ const submitAnswer = async () => {
       memberId: memberId,
       quizCorrect: isCorrect ? 'Y' : 'N'
     });
+    if (isCorrect) {
+    window.alert('정답입니다.');
+  } else {
+    window.alert('틀렸습니다.');
+  }
     submitError.value = false;
   } catch (error) {
     console.error('퀴즈 답안을 제출하는 중 에러 발생:', error);
