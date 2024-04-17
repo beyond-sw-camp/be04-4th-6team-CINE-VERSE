@@ -11,7 +11,7 @@
   </div>
   </div>
     <div id="user-input">
-      <input type="text" v-model="userMessage" placeholder="질문을 입력해보세요." @keydown.enter.prevent="sendMessage"/>
+      <input type="text" v-model="userMessage" placeholder="CINEVERSE에게 물어보세요!" @keydown.enter.prevent="sendMessage"/>
       <button @click="sendMessage">전송</button>
     </div>
   </div>
@@ -68,11 +68,11 @@ async function sendMessage() {
   const message = userMessage.value.trim();
   if (message.length === 0) return;
 
-  messages.value.unshift({ sender: '나', content: message });
+  messages.value.unshift({ sender: '🗣', content: message });
   userMessage.value = '';
 
   const aiResponse = await fetchAIResponse(message);
-  messages.value.unshift({ sender: '챗봇', content: aiResponse });
+  messages.value.unshift({ sender: '🎥', content: aiResponse });
 }
 </script>
 
