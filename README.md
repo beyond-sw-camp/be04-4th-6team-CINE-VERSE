@@ -139,10 +139,10 @@ async function sendMessage() {
 width="100%" />
 CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정 문서입니다.
 
-## CICD 아키텍처
+# CICD 아키텍처
 ![CICD아키텍처](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/dcc8283a-541b-40f0-86d3-6227af5838cf)
 
-## 전제 조건 및 설치 환경
+# 전제 조건 및 설치 환경
 이 프로젝트를 시작하기 전에 다음 소프트웨어와 도구가 설치되어 있어야 합니다.
 
 - **IntelliJ**: JDK 17 설치 필요
@@ -152,27 +152,27 @@ CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정
 - **Ngrok**
 - **Webhook**: GitHub와 연동 설정
 
-## Credential 설정
+# Credential 설정
 안전한 개발을 위해 다음 크리덴셜을 설정합니다.
 
 1. **MY-GITHUB-KEY**: RSA 키
 2. **DOCKERHUB-PASSWORD**: Docker Hub 업로드를 위한 계정 정보
 3. **SECRET-ID**: GitHub에 업로드되면 안 되는 `application.yml`
 
-## Jenkins Pipeline 설정
-### Git 저장소와 Webhook 연결
+# Jenkins Pipeline 설정
+## Git 저장소와 Webhook 연결
 - 변경사항 감지 후 Jenkins가 자동으로 빌드를 시작합니다.
 
-### RSA 키 생성
+## RSA 키 생성
 - Jenkins가 Webhook을 통해 변경된 소스 코드를 감지하고, SSH에 사용될 RSA 키를 생성합니다.
 
-### Pipeline 생성 및 설정
+## Pipeline 생성 및 설정
 - Jenkins Tools에서 `Java (OpenJDK 17)` 및 `Gradle (ver 8.7)` 설정
 
-### Plugin 설치
+## Plugin 설치
 - `Publish Over SSH` 및 `Pipeline: Stage View` 설치
 
-### Pipeline 스크립트
+## Pipeline 스크립트
 ```groovy
 pipeline {
     agent any
