@@ -95,7 +95,7 @@ async function sendMessage() {
 
 # 💻와이어 프레임
 
-<summary>## 1. 메인 - 회원 관련 페이지 (etc 로그인)</summary>
+<summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
 ![프론트1_회원](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410)
 
 ## 2. 메인 - 회원프로필 및 뱃지 페이지
