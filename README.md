@@ -185,6 +185,35 @@ kubectl rollout restart deployment/vue002dep
 
 ## 기획 (의도 / 서비스화)
 
+## 추가 기능
+
+##1. CGV 실시간 인기 영화 순위 크롤링
+
+Python을 사용하여 requests와 BeautifulSoup 라이브러리로 CGV에서 영화 데이터(실시간 인기 영화 순위 10)를 크롤링하고 json으로 저장
+메인 화면에 들어가면 사용자는 실시간 영화 정보를 통해 최신 트렌드를 파악 가능
+
+중요 코드:
+```
+url = 'http://www.cgv.co.kr/movies/'
+res = requests.get(url)
+soup = BeautifulSoup(res.text, 'html.parser')
+```
+
+##2. OpenAI API를 이용한 챗봇 만들기
+
+JavaScript를 사용하여 OpenAI의 API로부터 챗봇의 응답을 받아 처리하는 기능 구현
+api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 보안 처리
+영화 추천 등 다양한 주제에 대한 빠르고 효율적인 대화 가능
+https://platform.openai.com/usage에서 API request 조회 가능
+![API request 조회 가능](https://github.com/Jihye1101/jenkins-boot/assets/153909291/3f027249-706c-4450-afd3-443913a68786)
+
+중요 코드:
+```
+async function sendMessage() {
+  const message = userMessage.value.trim();
+  if (message.length === 0) return;
+```
+
 ## DB모델링
 
 ### 개념모델링
