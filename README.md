@@ -1,10 +1,11 @@
 # CINE-VERSE 프로젝트
-![로고](https://github.com/Jihye1101/jenkins-boot/assets/153909291/757b8cf3-313d-4262-acc2-5edcc35d1838)
+![로고](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/be6634ab-906a-4a26-8d73-351ca26c36b8)
 
 ### 팀명: 시내버스
 ### 팀원
 
 - 팀원 : **송동준**
+
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongjunsong)
 
 - 팀원 : **양지혜**
