@@ -1,8 +1,8 @@
 # 🎥CINE-VERSE🚌 프로젝트
 ![로고](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/be6634ab-906a-4a26-8d73-351ca26c36b8)
 
-### 팀명: 시내버스
-### 팀원
+### 🚍팀명: 시내버스
+### 🚌팀원
 
 - 팀원 : **송동준**
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongjunsong)
@@ -18,7 +18,7 @@
 
 ---
 
-## 영화 마니아들을 위한 전문 커뮤니티 사이트 기획서
+## 📌영화 마니아들을 위한 전문 커뮤니티 사이트 기획서
 
 ### 1. 서비스 기획 배경
 
@@ -320,7 +320,7 @@ kubectl rollout restart deployment/vue002dep
 
 --- 
 
-# 프로젝트 회고
+# ✏프로젝트 회고
 
 | 이름 | 내용 |
 | ----- | ----------|
