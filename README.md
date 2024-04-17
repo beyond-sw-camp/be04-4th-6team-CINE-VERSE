@@ -139,6 +139,9 @@ async function sendMessage() {
 width="100%" />
 CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정 문서입니다.
 
+## CICD 아키텍처
+![CICD아키텍처](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/dcc8283a-541b-40f0-86d3-6227af5838cf)
+
 ## 전제 조건 및 설치 환경
 이 프로젝트를 시작하기 전에 다음 소프트웨어와 도구가 설치되어 있어야 합니다.
 
