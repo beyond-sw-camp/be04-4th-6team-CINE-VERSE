@@ -315,6 +315,16 @@ docker push angelajsb/cine-verse-front:latest
 kubectl rollout restart deployment/vue002dep
 ```
 
+--- 
+
+# 프로젝트 회고
+
+| 이름 | 내용 |
+| ----- | ----------|
+|  송동준 |  |
+|  양지혜 |  |
+|  윤재은 |  |
+|  조수빈 |  |
 
 
 
