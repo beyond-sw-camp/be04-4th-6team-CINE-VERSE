@@ -1,4 +1,25 @@
 # CINE-VERSE 프로젝트
+![로고](https://github.com/Jihye1101/jenkins-boot/assets/153909291/757b8cf3-313d-4262-acc2-5edcc35d1838)
+
+### 팀명: 시내버스
+### 팀원
+
+- 팀원 : **송동준**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongjunsong)
+
+- 팀원 : **양지혜**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/Jihye1101)
+
+- 팀원 : **윤재은**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">]()
+
+- 팀원 : **조수빈**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">]()
+
+---
+
+
+
 CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정 문서입니다.
 
 ## 전제 조건 및 설치 환경
