@@ -18,7 +18,7 @@
 
 ---
 
-## 영화 마니아들을 위한 전문 커뮤니티 사이트 기획서
+![CICD](https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=영화 마니아들을 위한 전문 커뮤니티 사이트 기획서&animation=twinkling&fontColor=ffffff&fontSize=50)
 
 ### 1. 서비스 기획 배경
 
