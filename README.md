@@ -77,6 +77,8 @@ async function sendMessage() {
   if (message.length === 0) return;
 ```
 
+---
+
 ## DB모델링
 
 ### 개념모델링
@@ -88,6 +90,7 @@ async function sendMessage() {
 ### 물리모델링
 ![물리모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454)
 
+---
 
 ## 와이어 프레임
 
