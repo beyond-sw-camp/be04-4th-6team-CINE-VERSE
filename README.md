@@ -181,3 +181,28 @@ docker push angelajsb/cine-verse-front:latest
 ```
 kubectl rollout restart deployment/vue002dep
 ```
+
+
+## 기획 (의도 / 서비스화)
+
+## DB모델링
+
+### 개념모델링
+![개념모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/444fc562-7a17-4c39-83e5-5471262a2c29)
+
+### 논리모델링
+![논리모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/4a1a47bc-7ec0-4f89-a6f0-0d7ec683f1fd)
+
+### 물리모델링
+![물리모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/cc90d895-444d-4378-b12a-dc940a5df2d6)
+
+## 와이어 프레임
+![와이어프레임](https://github.com/Jihye1101/jenkins-boot/assets/153909291/100c95ea-aff5-4c34-bb35-9aedd6c75ead)
+(화살표 수정중)
+
+## 기능 명세서
+![기능명세서1](https://github.com/Jihye1101/jenkins-boot/assets/153909291/0ac9c3ea-933a-4245-adc6-bdb00d0f24f4)
+
+## 요구사항 명세서
+
+## 테스트 명세서
