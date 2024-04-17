@@ -188,6 +188,8 @@ CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정
 # 🐳CICD 아키텍처
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2cb77ddc-5e00-4c8c-8ae2-b91b90b98395" width="100%" />
 
+---
+
 # 📎전제 조건 및 설치 환경
 이 프로젝트를 시작하기 전에 다음 소프트웨어와 도구가 설치되어 있어야 합니다.
 
@@ -198,12 +200,16 @@ CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정
 - **Ngrok**
 - **Webhook**: GitHub와 연동 설정
 
+---
+
 # 🔧Credential 설정
 안전한 개발을 위해 다음 크리덴셜을 설정합니다.
 
 1. **MY-GITHUB-KEY**: RSA 키
 2. **DOCKERHUB-PASSWORD**: Docker Hub 업로드를 위한 계정 정보
 3. **SECRET-ID**: GitHub에 업로드되면 안 되는 `application.yml`
+
+---
 
 # 🔗Jenkins Pipeline 설정
 ## Git 저장소와 Webhook 연결
