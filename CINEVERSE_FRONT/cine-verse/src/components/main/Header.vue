@@ -75,7 +75,7 @@ function free() {
 }
 
 function qna() {
-    router.push("/");
+    router.push("/ready");
 }
 
 function main() {

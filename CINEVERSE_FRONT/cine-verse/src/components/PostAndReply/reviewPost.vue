@@ -89,8 +89,11 @@
             console.error("Error deleting post:", error);
         });
     }
-    function editPost() {
-    router.push(`/review_board/modify/${reviewId.value.params.reviewId}`);
+//     function editPost() {
+//     router.push(`/review_board/modify/${reviewId.value.params.reviewId}`);
+// }
+function editPost() {
+    router.push("/ready");
 }
 </script>
 

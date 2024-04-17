@@ -132,7 +132,7 @@ const router = createRouter({
         ,
         {
             path:'/ready',
-            components: () => import('@/components/main/Ready.vue')
+            component: () => import('@/components/main/Ready.vue')
         }
 
     ]

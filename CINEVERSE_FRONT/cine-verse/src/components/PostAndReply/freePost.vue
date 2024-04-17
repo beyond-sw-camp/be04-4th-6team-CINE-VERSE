@@ -86,8 +86,11 @@
             console.error("Error deleting post:", error);
         });
     }
-    function editPost() {
-    router.push(`/free_board/modify/${freeId.value.params.freeId}`);
+//     function editPost() {
+//     router.push(`/free_board/modify/${freeId.value.params.freeId}`);
+// }
+function editPost() {
+    router.push("/ready");
 }
 </script>
 

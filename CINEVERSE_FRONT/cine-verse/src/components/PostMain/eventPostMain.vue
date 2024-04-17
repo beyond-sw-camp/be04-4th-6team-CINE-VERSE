@@ -5,11 +5,13 @@
                 <h1>이벤트 게시판</h1>
             </div>
             <div class="votecontent">
-                <div class="votebtndiv">
+                <div class="btns">
+                    <div class="votebtndiv">
                     <button class="votebtn">퀴즈</button>
                 </div>
                 <div class="quizbtndiv">
                     <button @click="goToWritePage" class="quizbtn">작성</button>
+                </div>
                 </div>
                 <div class="voteboxesdiv">
                     <div class="votebox-row" v-for="(chunk, chunkIndex) in chunkedEvents" :key="`chunk-${chunkIndex}`">

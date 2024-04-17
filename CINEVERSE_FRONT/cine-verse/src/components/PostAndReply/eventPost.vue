@@ -149,6 +149,10 @@ const submitAnswer = async () => {
     submitError.value = true;
   }
 };
+
+function editPost() {
+    router.push("/ready");
+}
 </script>
 
 <style scoped>
