@@ -95,7 +95,7 @@ async function sendMessage() {
 
 # 💻와이어 프레임
 
-<summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
+## 1. 메인 - 회원 관련 페이지 (로그인)
 ![프론트1_회원](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410)
 
 ## 2. 메인 - 회원프로필 및 뱃지 페이지
@@ -142,7 +142,7 @@ CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정
 # CICD 아키텍처
 ![CICD아키텍처](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/dcc8283a-541b-40f0-86d3-6227af5838cf)
 
-# 전제 조건 및 설치 환경
+<summary>전제 조건 및 설치 환경</summary>
 이 프로젝트를 시작하기 전에 다음 소프트웨어와 도구가 설치되어 있어야 합니다.
 
 - **IntelliJ**: JDK 17 설치 필요
