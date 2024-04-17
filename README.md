@@ -18,7 +18,7 @@
 
 ---
 
-![CICD](https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=영화 마니아들을 위한 전문 커뮤니티 사이트 기획서&animation=twinkling&fontColor=ffffff&fontSize=50)
+## 영화 마니아들을 위한 전문 커뮤니티 사이트 기획서
 
 ### 1. 서비스 기획 배경
 
@@ -46,7 +46,7 @@
 퇴근 후 시내버스 타고 영화 한 편 어때요?
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" width="100%" />
 CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정 문서입니다.
 
 ## 전제 조건 및 설치 환경
