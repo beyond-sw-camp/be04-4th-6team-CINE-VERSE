@@ -162,17 +162,23 @@ async function sendMessage() {
 
 # 기능/요구사항/테스트 명세서
 
-<details><summary>1️⃣기능 명세서</summary>
+<details><summary>1. 기능 명세서</summary>
 <p>
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3" width="100%" />
 </p>
 </details>
 
-## 2️⃣요구사항 명세서
-![요구사항명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/799794c3-ccd0-4efa-965e-f4a50e7e599c)
+<details><summary>2. 요구사항 명세서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/799794c3-ccd0-4efa-965e-f4a50e7e599c" width="100%" />
+</p>
+</details>
 
-## 3️⃣테스트 명세서
-![테스트명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/5c5a4b99-b14f-43d1-a024-136d64db705f)
+<details><summary>3. 테스트 명세서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/5c5a4b99-b14f-43d1-a024-136d64db705f" width="100%" />
+</p>
+</details>
 
 ---
 
