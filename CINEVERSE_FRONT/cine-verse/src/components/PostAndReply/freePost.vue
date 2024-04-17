@@ -14,7 +14,7 @@
                 <h3 class="date">작성일: {{ free.freeDate }}</h3>
             </div>
             <div class="writerdiv">
-                <h3 class="writer">작성자: {{ free.member.nickname }}</h3>
+                <h3 class="writer">작성자: {{ free && free.member ? free.member.nickname : 'Unknown' }}</h3>
             </div>
             <div class="viewandlike">
                 <h3 class="viewandlike">조회수: {{ free.freeViewCount }}</h3>
