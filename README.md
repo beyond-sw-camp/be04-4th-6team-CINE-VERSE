@@ -183,7 +183,7 @@ async function sendMessage() {
 ---
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" width="100%" />
-#### CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정 문서입니다.
+CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정 문서입니다.
 
 # 🐳CICD 아키텍처
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2cb77ddc-5e00-4c8c-8ae2-b91b90b98395" width="100%" />
