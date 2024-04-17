@@ -45,6 +45,68 @@
 이러한 사이트는 영화 덕후들에게 맞춤화된 정보를 제공하며, 안전하고 편안한 환경에서 영화에 대한 열정을 공유할 수 있는 최적의 공간이 될 것입니다.
 퇴근 후 시내버스 타고 영화 한 편 어때요?
 
+## 추가 기능 설명서
+
+1. CGV 실시간 인기 영화 순위 크롤링
+
+Python을 사용하여 requests와 BeautifulSoup 라이브러리로 CGV에서 영화 데이터(실시간 인기 영화 순위 10)를 크롤링하고 json으로 저장
+메인 화면에 들어가면 사용자는 실시간 영화 정보를 통해 최신 트렌드를 파악 가능
+
+중요 코드:
+```
+url = 'http://www.cgv.co.kr/movies/'
+res = requests.get(url)
+soup = BeautifulSoup(res.text, 'html.parser')
+```
+
+2. OpenAI API를 이용한 챗봇 만들기
+
+JavaScript를 사용하여 OpenAI의 API로부터 챗봇의 응답을 받아 처리하는 기능 구현
+api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 보안 처리
+영화 추천 등 다양한 주제에 대한 빠르고 효율적인 대화 가능
+https://platform.openai.com/usage에서 API request 조회 가능
+![API request 조회 가능](https://github.com/Jihye1101/jenkins-boot/assets/153909291/3f027249-706c-4450-afd3-443913a68786)
+
+중요 코드:
+```
+async function sendMessage() {
+  const message = userMessage.value.trim();
+  if (message.length === 0) return;
+```
+
+## DB모델링
+
+### 개념모델링
+![개념모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/db51dbbd-2c75-4a06-b675-07ac2143d522)
+
+### 논리모델링
+![논리모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/337f0ad5-27c3-4c83-a520-cc40a575516a)
+
+### 물리모델링
+![물리모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454)
+
+## 와이어 프레임
+
+### 1. 메인 - 회원 관련 페이지 (etc 로그인)
+![프론트1_회원](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410)
+
+### 2. 메인 - 회원프로필 및 뱃지 페이지
+![프론트2_회원프로필뱃지](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7f7558a1-9de6-476c-a0f4-2b324e5532ff)
+
+### 3. 메인 - 최신 이벤트, 자유 게시글
+![프론트3_이벤트자유](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4de57331-36fa-429c-844e-d330e23f2c4e)
+
+### 4. 메인 - 게시판
+![프론트4_게시판](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/d986ffda-a810-4abc-a31f-7b3ed6a0f199)
+
+## 기능 명세서
+![기능명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3)
+
+## 요구사항 명세서
+![요구사항명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/799794c3-ccd0-4efa-965e-f4a50e7e599c)
+
+## 테스트 명세서
+
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" width="100%" />
 CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정 문서입니다.
@@ -232,53 +294,4 @@ kubectl rollout restart deployment/vue002dep
 
 
 
-## 추가 기능
 
-1. CGV 실시간 인기 영화 순위 크롤링
-
-Python을 사용하여 requests와 BeautifulSoup 라이브러리로 CGV에서 영화 데이터(실시간 인기 영화 순위 10)를 크롤링하고 json으로 저장
-메인 화면에 들어가면 사용자는 실시간 영화 정보를 통해 최신 트렌드를 파악 가능
-
-중요 코드:
-```
-url = 'http://www.cgv.co.kr/movies/'
-res = requests.get(url)
-soup = BeautifulSoup(res.text, 'html.parser')
-```
-
-2. OpenAI API를 이용한 챗봇 만들기
-
-JavaScript를 사용하여 OpenAI의 API로부터 챗봇의 응답을 받아 처리하는 기능 구현
-api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 보안 처리
-영화 추천 등 다양한 주제에 대한 빠르고 효율적인 대화 가능
-https://platform.openai.com/usage에서 API request 조회 가능
-![API request 조회 가능](https://github.com/Jihye1101/jenkins-boot/assets/153909291/3f027249-706c-4450-afd3-443913a68786)
-
-중요 코드:
-```
-async function sendMessage() {
-  const message = userMessage.value.trim();
-  if (message.length === 0) return;
-```
-
-## DB모델링
-
-### 개념모델링
-![개념모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/444fc562-7a17-4c39-83e5-5471262a2c29)
-
-### 논리모델링
-![논리모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/4a1a47bc-7ec0-4f89-a6f0-0d7ec683f1fd)
-
-### 물리모델링
-![물리모델링](https://github.com/Jihye1101/jenkins-boot/assets/153909291/cc90d895-444d-4378-b12a-dc940a5df2d6)
-
-## 와이어 프레임
-![와이어프레임](https://github.com/Jihye1101/jenkins-boot/assets/153909291/100c95ea-aff5-4c34-bb35-9aedd6c75ead)
-(화살표 수정중)
-
-## 기능 명세서
-![기능명세서1](https://github.com/Jihye1101/jenkins-boot/assets/153909291/0ac9c3ea-933a-4245-adc6-bdb00d0f24f4)
-
-## 요구사항 명세서
-
-## 테스트 명세서
