@@ -129,9 +129,12 @@ async function sendMessage() {
 ![요구사항명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/799794c3-ccd0-4efa-965e-f4a50e7e599c)
 
 ## 테스트 명세서
+![테스트명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/5c5a4b99-b14f-43d1-a024-136d64db705f)
 
+---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" 
+width="100%" />
 CINE-VERSE 프로젝트의 Jenkins 파이프라인을 통한 CI/CD 환경 설정 문서입니다.
 
 ## 전제 조건 및 설치 환경
