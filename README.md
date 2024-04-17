@@ -5,7 +5,6 @@
 ### 팀원
 
 - 팀원 : **송동준**
-
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongjunsong)
 
 - 팀원 : **양지혜**
