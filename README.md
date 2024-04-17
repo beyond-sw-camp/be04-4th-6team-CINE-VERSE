@@ -97,7 +97,7 @@ async function sendMessage() {
 
 <details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
 <p>
-![프론트1_회원](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410)
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410" width="100%" />
 </p>
 </details>
 
