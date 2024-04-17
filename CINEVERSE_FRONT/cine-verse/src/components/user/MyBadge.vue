@@ -72,13 +72,17 @@ const wearBadge = async (badge) => {
             purchasedBadges.value = [...purchasedBadges.value, wearingBadge.value]
                 .map(b => ({ ...b, badgeStatus: 'N' })); // 모든 구매한 뱃지의 badgeStatus를 'N'으로 설정
         }
+        console.log('착용중인 뱃지', wearingBadge.value);
+        console.log('구매한 뱃지', purchasedBadges.value);
 
         // 새로운 뱃지 착용
         wearingBadge.value = badge;
+        console.log('새로 착용한 뱃지', wearingBadge.value);
 
         // 착용하지 않은 뱃지 목록에서 현재 착용한 뱃지 제거
         purchasedBadges.value = purchasedBadges.value
             .filter(b => b.badge.badgeId !== badge.badge.badgeId);
+            console.log('구매한 뱃지', purchasedBadges.value);
         
     } catch (error) {
         console.error("뱃지 착용 중 에러가 발생했습니다:", error);

@@ -68,6 +68,7 @@ const login = async () => {
             router.push('/'); // 상태 업데이트 후 페이지 이동
 
             alert('로그인 성공');
+            console.log(response);
 
             router.push('/');
         }

@@ -85,6 +85,7 @@ onMounted(async () => {
         const response = await axios.get("http://localhost:8081/event_board/list");
         const sortedEvents = response.data.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate));
         latestEvents.value = sortedEvents.slice(0, 10);
+        console.log(latestEvents.value);
     } catch (error) {
         console.error('최신 이벤트 게시글을 가져오는데 실패했습니다.', error);
     }
@@ -111,6 +112,7 @@ onMounted(async () => {
         const freePostResponse = await axios.get("http://localhost:8081/free_board/list");
         const sortedFreePosts = freePostResponse.data.sort((a, b) => new Date(b.freeDate) - new Date(a.freeDate));
         latestFreePosts.value = sortedFreePosts.slice(0, 10);
+        console.log(latestFreePosts.value);
     } catch (error) {
         console.error('최신 자유 게시글을 가져오는데 실패했습니다.', error);
     }

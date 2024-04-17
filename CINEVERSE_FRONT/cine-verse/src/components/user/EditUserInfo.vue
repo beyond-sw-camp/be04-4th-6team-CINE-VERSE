@@ -77,6 +77,7 @@ onMounted(async () => {
     try {
         const response = await axios.get(`http://localhost:8081/member/${memberId}`);
         editUserInfo.value = response.data;
+        console.log(editUserInfo.value);
     } catch (error) {
         console.error('해당 회원 정보는 존재하지 않습니다.', error);
     }
@@ -118,6 +119,7 @@ const submitForm = async () => {
 
         if (response.status === 200) {
             alert('회원 정보가 성공적으로 수정되었습니다.');
+            console.log(response);
             router.push(`/member/${memberId}`);
         } else {
             throw new Error('응답 상태 코드가 200이 아닙니다.');

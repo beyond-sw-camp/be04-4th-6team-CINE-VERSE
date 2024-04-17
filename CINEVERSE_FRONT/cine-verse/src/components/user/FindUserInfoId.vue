@@ -43,6 +43,7 @@ const foundUserId = ref(null); // 찾은 아이디를 저장할 ref
 const findUserIdByEmail = async () => {
     try {
         const response = await axios.post('http://localhost:8081/member/find_id', { memberEmail: member_Email.value });
+        console.log(response);
         if (response.data === "존재하지 않는 이메일입니다.") {
             alert(response.data);
         } else {

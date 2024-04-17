@@ -95,6 +95,7 @@ const submitForm = async () => {
 
         if (response.status === 201) {
             alert('회원 가입이 완료되었습니다.');
+            console.log(response);
 
             router.push('/member/login');
         }

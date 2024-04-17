@@ -68,9 +68,11 @@ async function fetchMemberData(memberId) {
     try {
         const memberResponse = await axios.get(`http://localhost:8081/member/${memberId}`);
         memInfo.value = memberResponse.data;
+        console.log(memInfo.value);
 
         const pointResponse = await axios.get(`http://localhost:8081/point/${memberId}`);
         pointInfo.value = pointResponse.data[0];
+        console.log(pointInfo.value);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -80,6 +82,7 @@ async function fetchWearingBadge(memberId) {
     try {
         const response = await axios.get(`http://localhost:8081/badge/${memberId}`);
         wearingBadge.value = response.data.find(b => b.badgeStatus === 'Y');
+        console.log(wearingBadge.value);
     } catch (error) {
         console.error('Error fetching badge data:', error);
     }

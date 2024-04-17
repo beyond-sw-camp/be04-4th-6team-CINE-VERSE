@@ -50,6 +50,7 @@ async function resetPassword() {
         const response = await axios.post('http://localhost:8081/email/send', {
             to: memberEmail.value
         });
+        console.log(response);
 
         if (response.status === 200) {
             alert('비밀번호 재설정 이메일을 성공적으로 보냈습니다.');

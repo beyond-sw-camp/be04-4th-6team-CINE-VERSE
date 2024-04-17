@@ -128,6 +128,7 @@ const fetchBadges = async () => {
     try {
         const response = await axios.get('http://localhost:8081/badge/list');
         badges.value = response.data;
+        console.log(badges.value);
     } catch (error) {
         console.error("뱃지 정보를 가져오는 중 에러가 발생했습니다:", error);
     }
@@ -140,6 +141,7 @@ const fetchPurchaseStatus = async (memberId) => {
         response.data.forEach(memberBadge => {
             purchasedStatus.value[memberBadge.badge.badgeId] =
                 memberBadge.badgeStatus === 'Y' || memberBadge.badgeStatus === 'N';
+                console.log(purchasedStatus.value);
         });
     } catch (error) {
         console.error("구매 상태를 가져오는 중 에러가 발생했습니다:", error);
@@ -173,6 +175,7 @@ const buyBadge = async (badgeId) => {
             });
             purchasedStatus.value[badgeId] = true;
             alert('뱃지 구매가 완료되었습니다!');
+            console.log(purchasedStatus.value);
             router.push(`/badge/${memberId}`); // 구매한 후 내 뱃지로 라우터푸시
         } catch (error) {
             console.error("뱃지 구매 중 에러가 발생했습니다:", error);

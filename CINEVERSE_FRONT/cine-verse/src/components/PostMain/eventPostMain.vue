@@ -49,6 +49,8 @@ onMounted(async () => {
     try {
         const response = await axios.get("http://localhost:8081/event_board/list");
         info.value = response.data.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate));
+        console.log(info.value);
+
         // 데이터 로딩 후 isLiked 초기화
         isLiked.value = Array(info.value.length).fill(false);
     } catch (error) {
@@ -84,9 +86,10 @@ const chunkedEvents = computed(() => {
     }
     return chunks;
 });
-function goToWritePage(){
+
+function goToWritePage() {
     router.push(`/event_board/regist`);
-  }
+}
 </script>
 
 
