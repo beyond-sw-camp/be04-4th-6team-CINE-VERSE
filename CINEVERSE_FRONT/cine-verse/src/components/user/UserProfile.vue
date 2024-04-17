@@ -32,7 +32,7 @@
                 <button type="submit" class="joinbtn" @click="edit()">회원정보 수정</button>
             </div>
             <div class="myBadgeimg" v-if="wearingBadge">
-                <img :src="wearingBadge.badge.badgeLocation" class="mybadgeimage">
+                <img :src="wearingBadge.badge.badgeLocation" class="mybadgeimage" @click="mybadge">
             </div>
             <div class="mybadgebtndiv">
                 <button type="submit" class="badge" @click="mybadge">내 뱃지</button>
