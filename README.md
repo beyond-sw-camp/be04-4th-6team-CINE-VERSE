@@ -79,7 +79,7 @@ async function sendMessage() {
 
 ---
 
-## DB모델링
+## ⚙DB모델링
 
 ### 개념모델링
 ![개념모델링](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/db51dbbd-2c75-4a06-b675-07ac2143d522)
@@ -92,7 +92,7 @@ async function sendMessage() {
 
 ---
 
-## 와이어 프레임
+## 💻와이어 프레임
 
 ### 1. 메인 - 회원 관련 페이지 (etc 로그인)
 ![프론트1_회원](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410)
@@ -121,14 +121,15 @@ async function sendMessage() {
 ### 9. 문의 게시판
 ![프론트9_문의](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/edb12469-8dda-42c0-9b44-313944402a46)
 
+---
 
-## 기능 명세서
+## 1️⃣기능 명세서
 ![기능명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3)
 
-## 요구사항 명세서
+## 2️⃣요구사항 명세서
 ![요구사항명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/799794c3-ccd0-4efa-965e-f4a50e7e599c)
 
-## 테스트 명세서
+## 3️⃣테스트 명세서
 ![테스트명세서](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/5c5a4b99-b14f-43d1-a024-136d64db705f)
 
 ---
