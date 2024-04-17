@@ -38,8 +38,8 @@
         <input type="text" v-model="answer" placeholder="정답을 입력하세요">
         <button @click="submitAnswer">제출</button>
       </div>
-      <div v-if="quizRate !== null">
-  <h4>퀴즈 정답률: {{ quizRate }}%</h4>
+      <div v-if="event.quiz && event.quiz.correctRate !== null">
+  <h4>퀴즈 정답률: {{  event.quiz.correctRate  }}%</h4>
 </div>
 
 <!-- 아래에 추가 -->
@@ -65,12 +65,11 @@ import { useRoute } from "vue-router";
 const event = ref({});
 const eventId = useRoute();
 const answer = ref('');
-const quizRate = ref(0);
 
 
 onMounted(() => {
   fetchEvent();
-  fetchQuizResult();
+
 });
 
 const submitError = ref(false);
@@ -92,6 +91,7 @@ const fetchEvent = async () => {
     axios.get(`http://localhost:8081/event_board/${eventId.params.eventId}`)
       .then(response => {
         event.value = response.data;
+        console.log(response.data);
       })
       .catch(error => {
         console.error("Error fetching event:", error);
@@ -101,16 +101,7 @@ const fetchEvent = async () => {
   }
 };
 
-const fetchQuizResult = async () => {
-  try {
-    const response = await axios.get('http://localhost:8081/event_board/correct_rate');
-    quizRate.value = response.data[0].correctRate;
-    
-    console.log('퀴즈 결과:', response.data[0].correctRate);
-  } catch (error) {
-    console.error('퀴즈 결과를 가져오는 중 에러 발생:', error);
-  }
-};
+
 
 function mainBoard() {
   router.push('/event_board/list');
