@@ -97,35 +97,57 @@ async function sendMessage() {
 
 <details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
 <p>
-
 ![프론트1_회원](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410)
-
 </p>
 </details>
 
-## 2. 메인 - 회원프로필 및 뱃지 페이지
+<details><summary>2. 메인 - 회원프로필 및 뱃지 페이지</summary>
+<p>
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7f7558a1-9de6-476c-a0f4-2b324e5532ff" width="100%" />
+</p>
+</details>
 
-## 3. 메인 - 최신 이벤트, 자유 게시글
+<details><summary>3. 메인 - 최신 이벤트, 자유 게시글</summary>
+<p>
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4de57331-36fa-429c-844e-d330e23f2c4e" width="100%" />
+</p>
+</details>
 
-## 4. 메인 - 게시판
+<details><summary>4. 메인 - 게시판</summary>
+<p>
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/d986ffda-a810-4abc-a31f-7b3ed6a0f199" width="100%" />
+</p>
+</details>
 
-## 5. 이벤트 게시판
+<details><summary>5. 이벤트 게시판</summary>
+<p>
 ![프론트5_이벤트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/614af6d2-e378-43a5-9ea1-6fd2adb18325)
+</p>
+</details>
 
-## 6. 리뷰 게시판
+<details><summary>6. 리뷰 게시판</summary>
+<p>
 ![프론트6_리뷰](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2118e213-479f-49f2-8de6-14b136006922)
+</p>
+</details>
 
-## 7. 정보 게시판
+<details><summary>7. 정보 게시판</summary>
+<p>
 ![프론트7_정보](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/6ad1f27a-0e61-42e4-9ff1-5b47186f4d4b)
+</p>
+</details>
 
-## 8. 자유 게시판
+<details><summary>8. 자유 게시판</summary>
+<p>
 ![프론트8_자유](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/669fa434-bfd2-4949-96e6-5f3a6687dba2)
+</p>
+</details>
 
-## 9. 문의 게시판
+<details><summary>9. 문의 게시판</summary>
+<p>
 ![프론트9_문의](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/edb12469-8dda-42c0-9b44-313944402a46)
+</p>
+</details>
 
 ---
 
