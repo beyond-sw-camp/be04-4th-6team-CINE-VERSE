@@ -1,4 +1,4 @@
-🎥CINE-VERSE🚌 프로젝트
+#🎥CINE-VERSE🚌 프로젝트
 
 ### 🚍팀명: 시내버스
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/be6634ab-906a-4a26-8d73-351ca26c36b8" width="50%" />z
