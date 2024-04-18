@@ -63,10 +63,10 @@ body {
 }
 
 .modal {
-  position: fixed; /* 모달을 화면에 고정 */
-  top: 50%; /* 상단에서 50% 위치에 배치 */
-  right: 0; /* 오른쪽 끝에 배치 */
-  transform: translateY(-50%); /* Y축으로 50%만큼 이동하여 중앙 정렬 */
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   background-color: white;
   padding: 20px;
   border-radius: 10px;

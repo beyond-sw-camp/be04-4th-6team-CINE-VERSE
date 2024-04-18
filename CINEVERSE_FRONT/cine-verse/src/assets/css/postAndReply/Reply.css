@@ -8,28 +8,24 @@ textarea {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
 }
-/* 기본 텍스트 박스 설정 */
+
 .box {
-    width: 900px; /* 부모 컨테이너에 맞춰서 조정 */
-    max-width: 900px; /* 최대 너비 설정 */
+    width: 900px; 
+    max-width: 900px; 
     height: 100px;
     max-height: 100px;
     margin-left: 250px;
 }
 
-/* 닫기 버튼 스타일 */
 .closebutton {
     border: 0;
     cursor: pointer;
     background-color: white;
-    /* padding-top: 5px; */
-    /* padding-right: 5px; */
     border-radius: 100%;
     width: 20px;
     height: 20px;
 }
 
-/* 등록 버튼 스타일 */
 .btn {
     background-color: #6c7aa1;
     color: white;
@@ -39,57 +35,55 @@ textarea {
     cursor: pointer;
     font-size: 16px;
     font-style: bold;
-    margin-left: auto; /* 오른쪽 정렬 */
-    display: block; /* 버튼을 별도의 블록으로 설정 */
+    margin-left: auto; 
+    display: block; 
 }
 
-/* 댓글 구분선 스타일 */
 .replyregistline, .replyregistbottomline {
     width: 1100px;
     height: 3px;
-    /* margin-left: 50px; */
-    /* margin-right: 50px; */
     border: 0;
     background-color: #6c7aa1;
     margin-bottom: 30px;
 }
 
 .new-replyline{
-    width: 1100px; /* 기존 폭 유지 */
-    height: 2px; /* 높이 설정 유지 */
-    background-color: gray; /* 색상 유지 */
-    margin-right: auto; /* 오른쪽 마진 자동 조정으로 중앙 정렬 효과 제거 */
+    width: 1100px; 
+    height: 2px;
+    background-color: gray; 
+    margin-right: auto; 
 }
+
 .replyregistline, .replyregistbottomline {
     margin-top: 3%;
 }
 
-/* 댓글 작성자, 내용, 날짜, 닫기 버튼의 스타일 */
 .allreply {
     display: flex;
-    align-items: center; /* 모든 항목을 세로 중앙에 위치시키기 */
+    align-items: center; 
     width: 1000px;
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-bottom: 1px solid #6c7aa1dc;; /* 각 댓글 아래에 회색 선을 추가합니다. */
+    border-bottom: 1px solid #6c7aa1dc;
     padding-left: 60px;
 }
 
 .replywriterdiv {
     margin-left: 30px;
 }
+
 .replydatediv{
     margin-left: 110px;
 }
+
 .closebuttondiv {
     padding-right: 100px;
 }
 
-
 .replywriterdiv {
-    flex-basis: 11%; /* 초기 크기 설정 */
+    flex-basis: 11%; 
 }
 
 .replycontentdiv {
@@ -105,10 +99,9 @@ textarea {
 
 .closebuttondiv {
     flex-basis: 10%;
-    justify-content: flex-end; /* 닫기 버튼을 오른쪽에 위치시키기 */
+    justify-content: flex-end;
 }
 
-/* 댓글이 없을 경우의 스타일 */
 .noreply {
     text-align: center;
     font-size: 20px;
@@ -116,13 +109,12 @@ textarea {
     margin-left: 250px
 }
 
-/* 댓글 등록자 정보 및 댓글 박스 스타일 */
 .registreplywriterdiv, .registreplydiv {
-    float: none; /* 플로팅 제거 */
-    clear: both; /* 이전 플로트 제거 */
-    width: 100%; /* 전체 너비 사용 */
-    /* padding: 10px 0; */
+    float: none;
+    clear: both;
+    width: 100%;
 }
+
 .registreplywriterdiv {
     margin-left: 80px;
     margin-top: 30px;
@@ -130,7 +122,7 @@ textarea {
 
 .registreplydiv {
     display: flex;
-    justify-content: center; /* 중앙 정렬 */
+    justify-content: center; 
     margin-top: 10px;
 }
 
@@ -138,14 +130,13 @@ textarea::placeholder {
     font-size: 12px;
 }
 
-/* 추가: 모바일 반응형 대응 */
 @media (max-width: 768px) {
     .btn, .box, .allreply div {
-        width: 90%; /* 모바일에서는 너비를 줄임 */
-        margin: 10px auto; /* 중앙 정렬 */
+        width: 90%;
+        margin: 10px auto;
     }
 
     .replywriterdiv, .replycontentdiv, .replydatediv, .closebuttondiv {
-        flex-direction: column; /* 모바일에서는 항목을 세로로 배열 */
+        flex-direction: column; 
     }
 }

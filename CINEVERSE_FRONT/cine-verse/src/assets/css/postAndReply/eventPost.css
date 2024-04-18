@@ -2,6 +2,7 @@ template {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
 }
+
 button {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -9,15 +10,18 @@ button {
     color: rgb(229, 227, 227);
     border: 1px solid  rgb(229, 227, 227);
 }
+
 .free-board{
     display: flex;
     justify-content: left;
     width: 1100px;
     height: 70px;
 }
+
 .clickdiv {
     width: 190px;
 }
+
 .category {
     font-size: 15px;
     margin-right: 720px;
@@ -34,8 +38,6 @@ button {
 
 .titleLine {
     width:1110px;
-    /* margin-left: 2%; */
-    /* margin-right: 2%; */
     height: 3px;
     border: 0;
     background-color: #6c7aa1;
@@ -92,6 +94,7 @@ button {
     margin-top: 13px;
     margin-left: 30px;
 }
+
 .editbtn {
     width: 50px;
     height: 30px;
@@ -122,59 +125,62 @@ button {
     margin-right: 15%;
     margin-top: 3%;
 }
+
 .like{
     display:inline-block ;
     margin-left: 490px;
     margin-top: 50px;
 
 }
+
 .titleLine {
-    border: 1px solid #ccc; /* 선 색상과 두께 설정 */
-    margin: 20px 0; /* 위아래 여백 설정 */
-  }
-  
-  .maincontent {
-    padding: 20px; /* 콘텐츠 주변의 안쪽 여백 설정 */
-  }
-  
-  .quiz-container {
-    margin-top: 20px; /* 위쪽 여백 설정 */
-  }
-  
-  .quiz-container h2 {
-    font-size: 20px; /* 퀴즈 제목의 글자 크기 설정 */
-  }
-  
-  .quiz-container input[type="text"] {
-    margin-top: 10px; /* 위쪽 여백 설정 */
-    padding: 5px; /* 입력 상자 주변의 안쪽 여백 설정 */
-    width: 500px; /* 입력 상자의 너비 설정 */
-  }
-  
-  .quiz-container button {
-    margin-top: 10px; /* 위쪽 여백 설정 */
-    padding: 5px 10px; /* 버튼 주변의 안쪽 여백 설정 */
-    background-color: #007bff; /* 배경 색상 설정 */
-    color: #fff; /* 글자 색상 설정 */
-    border: none; /* 테두리 제거 */
-    cursor: pointer; /* 마우스 커서 설정 */
-  }
-  
-  .quiz-container button:hover {
-    background-color: #0056b3; /* 호버 상태일 때 배경 색상 설정 */
-  }
-  
-  .quiz-rate {
-    margin-top: 20px; /* 위쪽 여백 설정 */
-  }
-  
-  .quiz-rate h4 {
-    font-size: 12px; /* 퀴즈 정답률 글자 크기 설정 */
-  }
-  .error-message {
-    margin-top: 10px; /* 경고 메시지 위쪽 여백 설정 */
-    padding: 10px; /* 경고 메시지 주변의 안쪽 여백 설정 */
-    background-color: #ffcccc; /* 경고 메시지 배경색 설정 */
-    border: 1px solid #ff0000; /* 경고 메시지 테두리 설정 */
-    color: #ff0000; /* 경고 메시지 텍스트 색상 설정 */
-  }
+    border: 1px solid #ccc;
+    margin: 20px 0; 
+}
+
+.maincontent {
+    padding: 20px;
+}
+
+.quiz-container {
+    margin-top: 20px;
+}
+
+.quiz-container h2 {
+    font-size: 20px;
+}
+
+.quiz-container input[type="text"] {
+    margin-top: 10px; 
+    padding: 5px; 
+    width: 500px;
+}
+
+.quiz-container button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+}
+
+.quiz-container button:hover {
+    background-color: #0056b3; 
+}
+
+.quiz-rate {
+    margin-top: 20px;
+}
+
+.quiz-rate h4 {
+    font-size: 12px; 
+}
+
+.error-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffcccc;
+    border: 1px solid #ff0000; 
+    color: #ff0000; 
+}

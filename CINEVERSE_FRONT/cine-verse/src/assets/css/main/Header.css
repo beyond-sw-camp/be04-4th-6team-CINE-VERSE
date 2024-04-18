@@ -1,8 +1,7 @@
 * {
-    /* margin: 0; */
-    /* padding: 0; */
     font-family: 'GmarketSansMedium';
 }
+
 body {
     margin: 0 !important;
 }
@@ -73,7 +72,6 @@ body {
     margin-right: -1px;
 }
 
-
 .joinbtn,
 .loginbtn,
 .logoutbtn {
@@ -87,7 +85,6 @@ body {
     background-color: white;
     color: #6c7aa1; 
 }
-
 
 .joinbtn:hover {
     background-color: #6c7aa14b;
@@ -105,7 +102,6 @@ body {
     background-color: #6c7a9e9f;
     color: white;
 }
-
 
 .infobtn,
 .reviewbtn,
