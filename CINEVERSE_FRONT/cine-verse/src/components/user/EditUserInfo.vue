@@ -25,7 +25,7 @@
                     <div class="nicknamelabel">
                         <p class="nicknametext">Nickname</p>
                         <input type="text" class="nicknamebox" id="nicknamebox" v-model.trim="member_nickname"
-                            placeholder="한글 10자 이하로 입력해주세요." pattern="^[ㄱ-ㅎ가-힣]{1,10}$" title="닉네임은 한글 10자 이하로 입력해주세요.">
+                            placeholder="한글 10자 이하로 입력해주세요." pattern="^[ㄱ-힣]{1,10}$" title="닉네임은 한글 10자 이하로 입력해주세요.">
                     </div>
                     <div class="maillabel">
                         <p class="mailtext">E-mail</p>
