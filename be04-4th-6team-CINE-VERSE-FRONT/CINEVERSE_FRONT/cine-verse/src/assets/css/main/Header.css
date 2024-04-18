@@ -1,0 +1,127 @@
+* {
+    font-family: 'GmarketSansMedium';
+}
+
+body {
+    margin: 0 !important;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    width: 100vw;
+    /* height: vw; */
+    box-sizing: border-box; /* 패딩을 너비에 포함 */
+    border-bottom: 3px solid #6c7aa1;
+}
+
+.logo .logoimage {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 90px;
+    font-size: 18px;
+}
+
+.menu div {
+    cursor: pointer;
+}
+
+.btnbox {
+    display: flex;
+    gap: 13px;
+}
+
+.Profile .profileimage {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.profileimage {
+    color: white;
+}
+
+.badgeimage {
+    width: 35px;
+    height: 36px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: -1px;
+}
+
+.badgeimage:hover {
+    width: 40px;
+    height: 36px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: -1px;
+}
+
+.profileimage:hover {
+    width: 40px;
+    height: 36px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: -1px;
+}
+
+.joinbtn,
+.loginbtn,
+.logoutbtn {
+    padding: 7px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #6c7aa1;
+}
+
+.joinbtn {
+    background-color: white;
+    color: #6c7aa1; 
+}
+
+.joinbtn:hover {
+    background-color: #6c7aa14b;
+    color: #6c7aa1; 
+}
+
+.loginbtn,
+.logoutbtn {
+    background-color: #6c7aa1;
+    color: white;
+}
+
+.loginbtn:hover,
+.logoutbtn:hover {
+    background-color: #6c7a9e9f;
+    color: white;
+}
+
+.infobtn,
+.reviewbtn,
+.eventbtn,
+.freebtn,
+.qnabtn {
+    cursor: pointer;
+    border: white;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+}
+
+.infobtn:hover,
+.reviewbtn:hover,
+.eventbtn:hover,
+.freebtn:hover,
+.qnabtn:hover {
+    cursor: pointer;
+    color: black;
+    font-size: 21px;
+    border-bottom: 2px black;
+}

@@ -1,0 +1,151 @@
+.eventboardcontent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.eventboard,
+.votecontent,
+.quizcontent {
+    width: 100%;
+}
+
+.eventboard {
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.votebtndiv,
+.quizbtndiv {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.voteboxesdiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.votebox-row {
+    display: contents;
+}
+
+.voteboxdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc(33.333% - 20px);
+    margin: 0 10px;
+}
+
+.votebtn {
+    padding: 10px 20px;
+    background-color: #6c7aa1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.quizbtn {
+    padding: 10px 20px;
+    background-color: #6c7aa1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.quizbtn:hover {
+    padding: 10px 20px;
+    background-color: #b8c4e4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.votebtn:hover {
+    padding: 10px 20px;
+    background-color: #b8c4e4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.votebox-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    border: 2px solid #6c7aa1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.votebox-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b8c4e4;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.like {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 2px solid #6c7aa1;
+    border-radius: 5px;
+    color: #6c7aa1;
+    cursor: pointer;
+    font-family: GmarketSansMedium;
+    font-weight: bold;
+}
+
+.like:hover {
+    background-color: #6c7aa1;
+    color: white;
+}
+
+.liked {
+    background-color: #6c7aa1;
+    color: white;
+}
+
+.eventboardcontent,
+.votecontent {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.test {
+    margin-left: 300px;
+}
+
+.votecontent {
+    min-width: 1000px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 10px; 
+}

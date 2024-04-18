@@ -1,0 +1,142 @@
+textarea {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.btn {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
+
+.box {
+    width: 900px; 
+    max-width: 900px; 
+    height: 100px;
+    max-height: 100px;
+    margin-left: 250px;
+}
+
+.closebutton {
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+}
+
+.btn {
+    background-color: #6c7aa1;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: bold;
+    margin-left: auto; 
+    display: block; 
+}
+
+.replyregistline, .replyregistbottomline {
+    width: 1100px;
+    height: 3px;
+    border: 0;
+    background-color: #6c7aa1;
+    margin-bottom: 30px;
+}
+
+.new-replyline{
+    width: 1100px; 
+    height: 2px;
+    background-color: gray; 
+    margin-right: auto; 
+}
+
+.replyregistline, .replyregistbottomline {
+    margin-top: 3%;
+}
+
+.allreply {
+    display: flex;
+    align-items: center; 
+    width: 1000px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-bottom: 1px solid #6c7aa1dc;
+    padding-left: 60px;
+}
+
+.replywriterdiv {
+    margin-left: 30px;
+}
+
+.replydatediv{
+    margin-left: 110px;
+}
+
+.closebuttondiv {
+    padding-right: 100px;
+}
+
+.replywriterdiv {
+    flex-basis: 11%; 
+}
+
+.replycontentdiv {
+    flex-basis: 60%;
+    margin-left: 100px;   
+}
+
+.replydatediv {
+    flex-basis: 20%;
+    font-size: 12px;
+    margin-left: 100px;
+}
+
+.closebuttondiv {
+    flex-basis: 10%;
+    justify-content: flex-end;
+}
+
+.noreply {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 250px
+}
+
+.registreplywriterdiv, .registreplydiv {
+    float: none;
+    clear: both;
+    width: 100%;
+}
+
+.registreplywriterdiv {
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.registreplydiv {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px;
+}
+
+textarea::placeholder {
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .btn, .box, .allreply div {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .replywriterdiv, .replycontentdiv, .replydatediv, .closebuttondiv {
+        flex-direction: column; 
+    }
+}

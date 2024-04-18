@@ -1,0 +1,190 @@
+.profilecontent {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+.profileimage {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+
+.nickname {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: white;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 350px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: GmarketSansMedium;
+    font-size: 17px;
+}
+
+.userboxdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    width: 100%; 
+    max-width: 515px; 
+    margin: 20px auto;
+    gap: 15px;
+}
+
+.userbox1, .userbox2, .userbox3 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    min-width: 500px;
+}
+
+.userbox4 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    min-width: 500px;
+}
+
+.user1, .user3, .user5, .user7, .user2, .user4, .user6, .user8 {
+    flex: 1;
+    min-width: 150px;
+    margin-left: 40px;
+}
+
+.user1,
+.user3,
+.user5,
+.user7 {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.user2,
+.user4,
+.user6,
+.user8 {
+    margin-right: 50px;
+}
+
+.userpostbox,
+.likepostbox,
+.userreplybox {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.userreplybox {
+    margin-bottom: 11%;
+}
+
+.userpost1,
+.likepost1,
+.userreply1 {
+    margin-bottom: 1px;
+}
+
+.userpost2,
+.likepost2,
+.userreply2 {
+    margin-top: 1px;
+    width: 800px;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px solid #ff6b6b;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.joinbtndiv,
+.mybadgebtndiv,
+.badgebtndiv,
+.deletebtndiv {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+}
+
+.joinbtndiv {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.joinbtn,
+.deletebtn {
+    width: 440px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5%;
+    margin-bottom: 30px;
+    font-family: GmarketSansMedium;
+}
+
+.joinbtn {
+    background-color: #ff6b6b;
+}
+
+.deletebtn {
+    background-color: #ccc;
+}
+
+.badgeimage {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.mybadgeimage {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.badge,
+.badgebtn {
+    width: 440px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    border: 2px solid #ff6b6b;
+    background-color: white;
+    color: #ff6b6b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: GmarketSansMedium;
+}
+
+.test {
+    margin-left: 300px;
+}

@@ -1,0 +1,199 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.banner {
+    width: 100%;
+}
+
+.bannerimg {
+    margin-top: 4%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.mainbannerimage {
+    max-width: 100%;
+    height: 220px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 5%;
+}
+
+.eventpost,
+.freepost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.eventpostbtn,
+.freepostbtn {
+    padding: 7px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #6c7aa1;
+    background-color: #6c7aa1;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.eventpostheader,
+.freepostheader {
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    padding: 10px 0;
+    background-color: #b1c2f1;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.eventpostheadertitle,
+.freepostheadertitle {
+    flex: 2;
+    text-align: center;
+    font-weight: bold;
+}
+
+.eventpostheadercontent,
+.freepostheadercontent {
+    flex: 2;
+    text-align: center;
+    font-weight: bold;
+}
+
+.eventpostheadernickname,
+.freepostheadernickname {
+    flex: 1.5;
+    text-align: center;
+    font-weight: bold;
+}
+
+.eventpostheaderdate,
+.freepostheaderdate {
+    flex: 1.2;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.eventpostheaderviews,
+.freepostheaderviews {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.eventpostbox,
+.freepostbox {
+    width: 920px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #dbe2f2;
+    background-color: #dbe2f2;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5%;
+}
+
+.eventpostrow,
+.freepostrow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 6px;
+    margin-left: 80px;
+}
+
+.eventposttitle,
+.freeposttitle {
+    flex: 2;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.eventpostcontent,
+.freepostcontent {
+    flex: 2.5;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.eventpostnickname,
+.freepostnickname {
+    flex: 1.5;
+    padding: 0 10px;
+}
+
+.eventpostdate,
+.freepostdate {
+    flex: 1.5;
+    padding: 0 10px;
+}
+
+.eventpostviews,
+.freepostviews {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.freeposttitle,
+.freepostcontent,
+.eventposttitle,
+.eventpostcontent {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.movie-rankings-container {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 100vh;
+    width: 330px;
+    padding-top: 100px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.movie-rankings {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 4px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.movie-rankings h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.movie-rankings ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-rankings li {
+    margin-bottom: 10px;
+}

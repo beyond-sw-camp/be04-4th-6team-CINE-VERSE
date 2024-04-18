@@ -1,0 +1,12 @@
+.preparation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 25%;
+}
+
+img.readyimage {
+  max-width: 100%;
+  max-height: 100%;
+}
