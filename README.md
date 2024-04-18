@@ -182,7 +182,7 @@ async function sendMessage() {
 
 ## 테스트 결과 영상
 
-### 정보 게시판
+### 정보 자유 게시판(정보랑 리뷰 게시판은 형식 똑같아서 정보만 작성)
 <details>
 <summary>게시글 전체 조회 단일 조회</summary>
   
@@ -192,10 +192,81 @@ async function sendMessage() {
 
 <details>
 <summary>정보 게시글 작성 </summary>
- https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/113569573/951a45b2-5e1d-498e-8c5f-2342a3a915d6
+
+  ![정보 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/a241020e-b393-467b-80ae-8e2a10d4ccb0)
 
 </details>
 
+<details>
+<summary>정보 게시글 삭제 </summary>
+
+![정보 게시물 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/44198048-2b47-4905-b323-49a6535c3945)
+
+</details>
+
+<details>
+<summary>정보 게시글 검색</summary>
+
+
+![정보 게시물 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/c7d66ab2-7410-4b6f-9128-5f5e7963ac08)
+
+</details>
+<details>
+<summary>자유 게시글 작성</summary>
+
+![자유 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/68edf6d6-9dd8-49f1-8abe-98aecd5110d9)
+  
+</details>
+
+<details>
+<summary>자유 게시글 삭제</summary>
+
+![자유게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/2d91542f-aeeb-46af-a5b4-1d4769affde0)
+  
+</details>
+
+<details>
+
+<summary>자유 게시글 검색</summary>
+
+![자유 게시글 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/727baa9d-6030-45ec-a1b9-4d9e3dd3eb63)
+
+</details>
+
+### 이벤트 게시판
+<details>
+
+<summary>이벤트 게시글 이동 전체 조회 단일 조회</summary> 
+
+![이벤트 게시글 이동 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/7ce8d265-3082-48a6-8778-9f7c53ce5ab1)
+
+</details>
+
+<details> 
+  
+<summary>이벤트 게시판 작성</summary> 
+
+![이벤트 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/eac92e3b-e6ce-45bd-b8e8-9f837ca8ef06)
+
+</details>
+
+<details>
+
+<summary>이벤트 게시판 삭제</summary>
+
+![이벤트 게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/19c4e1bc-15a2-49a8-916b-d731eb3022bc)
+
+</details>
+
+<details>
+
+<summary>이벤트 게시판 참여</summary>
+
+
+![이벤트 참여](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/ff124f91-bf94-4e3b-a576-229ee3059aa8)
+
+
+</details>
 ---
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" width="100%" />
