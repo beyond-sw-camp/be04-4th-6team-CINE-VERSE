@@ -218,7 +218,81 @@ async function sendMessage() {
 </details>
 
 ---
-# 테스트 결과 영상
+
+# 백엔드 테스트
+
+<details>
+<summary>1. 리뷰 </summary>
+  
+![백엔드테스트1](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/687fcb2c-7cae-46ab-8172-0262a9ff70e1)
+
+</details>
+
+<details>
+<summary>2. 댓글 </summary>
+
+![백엔드테스트2](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/96424f1e-e733-42cb-b73f-7ea32e085a67)
+
+</details>
+
+<details>
+<summary>3. 뱃지 </summary>
+
+![백엔드테스트3](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/aff0b53c-9bc9-4e45-876e-eec9de636543)
+
+</details>
+
+<details>
+<summary>4. 신고 </summary>
+
+![백엔드테스트4](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/79c7707f-aa47-4967-ae44-7f7d1efff783)
+
+</details>
+
+<details>
+<summary>5. 이벤트 게시글 </summary>
+
+![백엔드테스트4](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/79c7707f-aa47-4967-ae44-7f7d1efff783)
+
+</details>
+
+<details>
+<summary>6. 자유 게시글 </summary>
+
+![백엔드테스트7](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/e9023879-71d0-4c33-a820-1260d77cf45f)
+
+</details>
+
+<details>
+<summary>7. 자유 게시글 댓글 </summary>
+  
+![백엔드테스트6](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b8b612a7-0a78-4458-ab94-9f42cffe94dd)
+
+</details>
+
+<details>
+<summary>8. 정보 게시글 </summary>
+  
+![백엔드테스트8](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/ab0fcd21-8097-497c-9a04-914c26bc6a49)
+
+</details>
+
+<details>
+<summary>9. 정보 게시글 </summary>
+  
+![백엔드테스트9](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f54bd183-6f90-4a8c-b157-749dbc3861b3)
+
+</details>
+
+<details>
+<summary>10. 회원 </summary>
+
+![백엔드테스트10](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/cf12a37e-64ef-4c97-bb5d-8c38e892582b)
+
+</details>
+
+
+# 서비스 테스트 결과 영상
 
 ## 메인
 
