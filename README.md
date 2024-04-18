@@ -94,43 +94,43 @@ async function sendMessage() {
 
 <details><summary>1. Domain event</summary>
 <p>
-![DDD1](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/573b10b4-1557-4349-b4d1-8594a7dbc415)
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/573b10b4-1557-4349-b4d1-8594a7dbc415" width="100%" />
 </p>
 </details>
 
 <details><summary>2. Command</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/9c09016e-96ff-4184-ac3b-6a202692538a" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/6dd8f2ff-1973-4186-8cc9-40c0f22e1cb9" width="100%" />
 </p>
 </details>
 
 <details><summary>3. Actor</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/c10de869-47e1-4d35-bc33-c76a6d587089" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0b22f089-a432-4223-97a4-e7308b5c250d" width="100%" />
 </p>
 </details>
 
 <details><summary>4. Aggregate</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/5e583639-7a18-49fe-a63b-8a2e62d9747f" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/6e90a77f-ff4e-44a6-bc11-b6f9f5076757" width="100%" />
 </p>
 </details>
 
 <details><summary>5. Bounded context</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/7e6bdafc-b561-4043-b41c-5affb629d368" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/8f580e17-3550-47d2-ab81-f6a258689627" width="100%" />
 </p>
 </details>
 
 <details><summary>6. Context mapping</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d36c26a7-e587-4e40-9d15-5d87df9fcd03" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0ab1fd84-6afd-4aa9-af2e-bfdf6275af2a" width="100%" />
 </p>
 </details>
 
 <details><summary>7. 중간객체 연결</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/41522f9b-ebe3-4446-b5f1-dda170a25368" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b80336ab-4cd5-4e61-9161-2dd320190a2d" width="100%" />
 </p>
 </details>
 
