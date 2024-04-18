@@ -84,27 +84,103 @@ async function sendMessage() {
 
 <details><summary>1. 개념모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4f4bef61-c402-4920-b6d6-9ed34804dc40" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/db51dbbd-2c75-4a06-b675-07ac2143d522" width="100%" />
 </p>
 </details>
 
 <details><summary>2. 논리모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/3ae5b2ae-dc98-4a1a-98ba-25477ef2133c" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/337f0ad5-27c3-4c83-a520-cc40a575516a" width="100%" />
 </p>
 </details>
 
 <details><summary>3. 물리모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/e5ae084f-f7f4-4bd4-981f-e15fd646bcfc" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454" width="100%" />
 </p>
 </details>
-
 
 ---
 
 # 💻와이어 프레임
 
+<details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410" width="100%" />
+</p>
+</details>
+
+<details><summary>2. 메인 - 회원프로필 및 뱃지 페이지</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7f7558a1-9de6-476c-a0f4-2b324e5532ff" width="100%" />
+</p>
+</details>
+
+<details><summary>3. 메인 - 최신 이벤트, 자유 게시글</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4de57331-36fa-429c-844e-d330e23f2c4e" width="100%" />
+</p>
+</details>
+
+<details><summary>4. 메인 - 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/d986ffda-a810-4abc-a31f-7b3ed6a0f199" width="100%" />
+</p>
+</details>
+
+<details><summary>5. 이벤트 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/614af6d2-e378-43a5-9ea1-6fd2adb18325" width="100%" />
+</p>
+</details>
+
+<details><summary>6. 리뷰 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2118e213-479f-49f2-8de6-14b136006922" width="100%" />
+</p>
+</details>
+
+<details><summary>7. 정보 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/6ad1f27a-0e61-42e4-9ff1-5b47186f4d4b" width="100%" />
+</p>
+</details>
+
+<details><summary>8. 자유 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/669fa434-bfd2-4949-96e6-5f3a6687dba2" width="100%" />
+</p>
+</details>
+
+<details><summary>9. 문의 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/edb12469-8dda-42c0-9b44-313944402a46" width="100%" />
+</p>
+</details>
+
+---
+
+# 📚기능/요구사항/테스트 명세서
+
+<details><summary>1. 기능 명세서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3" width="100%" />
+</p>
+</details>
+
+<details><summary>2. 요구사항 명세서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7c6eb9cc-86cc-43dc-8d91-fd922499bd91" width="100%" />
+</p>
+</details>
+
+<details><summary>3. 테스트 명세서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/5c5a4b99-b14f-43d1-a024-136d64db705f" width="100%" />
+</p>
+</details>
+
+# Api 명세서
 <details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
 <p>
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2444fa8c-cbe0-483f-9c03-b4f13835c6a5" width="100%" />
