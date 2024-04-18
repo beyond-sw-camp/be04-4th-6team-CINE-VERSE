@@ -20,7 +20,7 @@
 
 ---
 
-# WBS
+# 🌀WBS
 
 <details><summary>WBS</summary>
 <p>
@@ -303,7 +303,7 @@ async function sendMessage() {
 </details>
 
 
-# ▶서비스 테스트 결과 영상
+# ✨서비스 테스트 결과 영상
 
 ## 메인
 
