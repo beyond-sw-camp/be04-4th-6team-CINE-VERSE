@@ -389,6 +389,7 @@ async function sendMessage() {
 
 </details>
 
+<details>
 <summary>5-2. 정보 게시글 작성 </summary>
 
   ![정보 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/a241020e-b393-467b-80ae-8e2a10d4ccb0)
