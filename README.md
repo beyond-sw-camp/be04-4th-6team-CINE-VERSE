@@ -1,7 +1,8 @@
 # 🎥CINE-VERSE🚌 프로젝트
 
 ### 🚍팀명: 시내버스
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/be6634ab-906a-4a26-8d73-351ca26c36b8" width="50%" />z
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a755affb-6a73-4660-957a-fd26066a2099" width="50%" />
 
 ### 🚌팀원
 
@@ -68,7 +69,7 @@ JavaScript를 사용하여 OpenAI의 API로부터 챗봇의 응답을 받아 처
 api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 보안 처리
 영화 추천 등 다양한 주제에 대한 빠르고 효율적인 대화 가능
 https://platform.openai.com/usage에서 API request 조회 가능
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/e992ae50-852a-4f75-ae49-f56aa11eff18" width="100%" />
+
 
 중요 코드:
 
@@ -84,19 +85,20 @@ async function sendMessage() {
 
 <details><summary>1. 개념모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/db51dbbd-2c75-4a06-b675-07ac2143d522" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/7ea5b6fe-fa98-4051-bf12-89e3fcb3619d" width="100%" />
 </p>
 </details>
+![개념모델링]()
 
 <details><summary>2. 논리모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/337f0ad5-27c3-4c83-a520-cc40a575516a" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/239890fa-ea13-4a76-aa86-eb3d9cc2ab6f" width="100%" />
 </p>
 </details>
 
 <details><summary>3. 물리모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d5038827-8df7-4001-92fe-d352f35009b2" width="100%" />
 </p>
 </details>
 
@@ -106,55 +108,55 @@ async function sendMessage() {
 
 <details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/679f6dec-e11e-4897-9d39-4417b851e565" width="100%" />
 </p>
 </details>
 
 <details><summary>2. 메인 - 회원프로필 및 뱃지 페이지</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7f7558a1-9de6-476c-a0f4-2b324e5532ff" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/9c09016e-96ff-4184-ac3b-6a202692538a" width="100%" />
 </p>
 </details>
 
 <details><summary>3. 메인 - 최신 이벤트, 자유 게시글</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4de57331-36fa-429c-844e-d330e23f2c4e" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/c10de869-47e1-4d35-bc33-c76a6d587089" width="100%" />
 </p>
 </details>
 
 <details><summary>4. 메인 - 게시판</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/d986ffda-a810-4abc-a31f-7b3ed6a0f199" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/5e583639-7a18-49fe-a63b-8a2e62d9747f" width="100%" />
 </p>
 </details>
 
 <details><summary>5. 이벤트 게시판</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/614af6d2-e378-43a5-9ea1-6fd2adb18325" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/7e6bdafc-b561-4043-b41c-5affb629d368" width="100%" />
 </p>
 </details>
 
 <details><summary>6. 리뷰 게시판</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2118e213-479f-49f2-8de6-14b136006922" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d36c26a7-e587-4e40-9d15-5d87df9fcd03" width="100%" />
 </p>
 </details>
 
 <details><summary>7. 정보 게시판</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/6ad1f27a-0e61-42e4-9ff1-5b47186f4d4b" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/41522f9b-ebe3-4446-b5f1-dda170a25368" width="100%" />
 </p>
 </details>
 
 <details><summary>8. 자유 게시판</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/669fa434-bfd2-4949-96e6-5f3a6687dba2" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/e77a0dd9-150c-4288-af70-681dc2b992f6" width="100%" />
 </p>
 </details>
 
 <details><summary>9. 문의 게시판</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/edb12469-8dda-42c0-9b44-313944402a46" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/08a0bbe4-3945-414f-ae53-95a32426508c" width="100%" />
 </p>
 </details>
 
