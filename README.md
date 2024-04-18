@@ -22,7 +22,7 @@
 
 # WBS
 
-<details><summary>3. 물리모델링</summary>
+<details><summary>WBS
 <p>
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a673d5e7-8022-47fe-a36a-d011a3a64bb0" width="100%" />
 </p>
