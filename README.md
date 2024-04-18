@@ -185,7 +185,7 @@ async function sendMessage() {
 ### 정보 게시판
 <details>
 <summary>페이지 이동</summary>
-
+</details>
 
 ---
 
