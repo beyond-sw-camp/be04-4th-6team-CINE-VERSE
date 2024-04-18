@@ -383,12 +383,14 @@ async function sendMessage() {
 <br>
 
 <details>
+  
 <details>
 <summary>5-1. 정보(자유) 게시글 전체/단일 조회</summary>
   
 ![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
 
 </details>
+
 <summary>5-2. 정보 게시글 작성 </summary>
 
   ![정보 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/a241020e-b393-467b-80ae-8e2a10d4ccb0)
