@@ -206,6 +206,7 @@ async function sendMessage() {
 </details>
 
 <details><summary>5. 게시글 좋아요</summary>
+  
 ![Swagger Editor_page-0006](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/b11e27c2-09f5-4e38-95ff-aaf423645079)
 
 ![Swagger Editor_page-0007](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/da423192-22f1-49e0-a882-e2376ec2405f)
