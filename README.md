@@ -355,9 +355,29 @@ async function sendMessage() {
 # ✨서비스 테스트 결과 영상
 
 <details>
-<summary>1️⃣ 메인페이지 라우터 </summary>
+<summary>1️⃣ 메인페이지 etc</summary>
+<br>
 
-![메인페이지-라우터-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f2e0df14-21b5-401a-a3de-72ba0381be48)
+<details>
+<summary>1-1. 메인페이지 라우터 </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f2e0df14-21b5-401a-a3de-72ba0381be48" width="100%" />
+  
+</details>
+
+<details>
+  
+<summary>1-2. 메인페이지 인기 영화 순위 </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/9a70c400-cdbe-46f3-a766-e3d32fcbd7bf" width="100%" />
+  
+</details>
+
+<summary>1-3. 최신 이벤트/자유 게시글 </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a14e42fb-e0c1-4c41-b5b1-468ec24fcbd2" width="100%" />
+
+</details>
 
 </details>
 
