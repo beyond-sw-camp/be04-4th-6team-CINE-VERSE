@@ -381,8 +381,6 @@ async function sendMessage() {
 <details>
 <summary>5️⃣ 정보 게시판 etc</summary>
 <br>
-
-<details>
   
 <details>
 <summary>5-1. 정보(자유) 게시글 전체/단일 조회</summary>
