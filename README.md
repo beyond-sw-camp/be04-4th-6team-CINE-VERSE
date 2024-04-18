@@ -326,6 +326,9 @@ async function sendMessage() {
 ## 회원
 
 <details>
+<summary>회원 관련 정보</summary>
+
+<details>
 <summary>회원가입 </summary>
   
 ![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/8c69e09b-54e7-44e2-81fd-cd706073f6dc)
@@ -334,6 +337,8 @@ async function sendMessage() {
 
 <details>
 <summary>아이디, 비밀번호 찾기 </summary>
+
+<!-- 여기에 내용을 넣으세요 -->
 
 </details>
 
@@ -361,7 +366,12 @@ async function sendMessage() {
 <details>
 <summary>회원 탈퇴 </summary>
 
+<!-- 여기에 내용을 넣으세요 -->
+
 </details>
+
+</details>
+
 
 ## 뱃지
 <details>
