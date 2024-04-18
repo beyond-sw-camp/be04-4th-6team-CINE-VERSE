@@ -382,7 +382,7 @@ async function sendMessage() {
 
 <summary>3-2. 아이디, 비밀번호 찾기 </summary>
 
-![아이디비번 테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/3d2f435e-8bd1-4a7a-b296-a9306f678235)
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/3d2f435e-8bd1-4a7a-b296-a9306f678235" width="100%" />
 
 </details>
 
