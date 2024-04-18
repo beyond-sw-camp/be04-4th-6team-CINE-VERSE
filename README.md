@@ -64,6 +64,7 @@ soup = BeautifulSoup(res.text, 'html.parser')
 ```
 
 ## 2. OpenAI API를 이용한 챗봇 만들기
+![API request 조회 가능](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/fec60701-b45c-4134-9698-ab42b216d66d)
 
 JavaScript를 사용하여 OpenAI의 API로부터 챗봇의 응답을 받아 처리하는 기능 구현
 api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 보안 처리
@@ -88,7 +89,6 @@ async function sendMessage() {
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/7ea5b6fe-fa98-4051-bf12-89e3fcb3619d" width="100%" />
 </p>
 </details>
-![개념모델링]()
 
 <details><summary>2. 논리모델링</summary>
 <p>
