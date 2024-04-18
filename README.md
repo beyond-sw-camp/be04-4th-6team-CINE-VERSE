@@ -224,6 +224,7 @@ async function sendMessage() {
 <summary>챗봇 </summary>
   
 ![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/b1ff9bd8-8750-4aab-837f-a3eee9b77456)
+![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/dabf9559-90d2-449c-aa08-ad64fa271ed3)
 
 </details>
 
