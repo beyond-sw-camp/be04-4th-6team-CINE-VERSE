@@ -182,7 +182,7 @@ async function sendMessage() {
 
 ## 테스트 결과 영상
 
-### 정보 자 게시판
+### 정보 게시판
 <details>
 <summary>게시글 전체 조회 단일 조회</summary>
   
