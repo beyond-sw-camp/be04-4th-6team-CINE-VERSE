@@ -12,8 +12,6 @@
                 <h5 class="choosing3" @click="findPw()">PW 찾기</h5>
             </div>
             <div class="choose2">
-                <!-- <hr class="basicline"> -->
-                <!-- <hr class="colorline"> -->
             </div>
             <div class="maillabel">
                 <p class="mailtext">E-mail</p>
