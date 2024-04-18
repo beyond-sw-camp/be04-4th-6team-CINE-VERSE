@@ -180,6 +180,13 @@ async function sendMessage() {
 </p>
 </details>
 
+## 테스트 결과 영상
+
+### 정보 게시판
+<details>
+<summary>페이지 이동</summary>
+
+
 ---
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" width="100%" />
