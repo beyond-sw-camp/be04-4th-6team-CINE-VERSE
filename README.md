@@ -185,7 +185,9 @@ async function sendMessage() {
 ### 정보 자 게시판
 <details>
 <summary>게시글 전체 조회 단일 조회</summary>
+  
 https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/113569573/ee210672-978e-4e24-bf72-969e78ae0c28
+
 </details>
 
 <details>
