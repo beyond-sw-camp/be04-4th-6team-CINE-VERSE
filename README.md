@@ -326,8 +326,9 @@ async function sendMessage() {
 ## 회원
 
 <details>
-<summary>회원</summary>
+<summary>회원 etc</summary>
 <br>
+  
 <details>
 <summary>회원가입 </summary>
   
@@ -381,14 +382,19 @@ async function sendMessage() {
 
 </details>
 
-
-## 정보 자유 게시판(정보랑 리뷰 게시판은 형식 똑같아서 정보만 작성)
+  
 <details>
 <summary>게시글 전체 조회 단일 조회</summary>
   
 ![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
 
 </details>
+
+## 정보 게시판
+
+<details>
+<summary>정보 게시판 etc</summary>
+<br>
 
 <details>
 <summary>정보 게시글 작성 </summary>
@@ -411,6 +417,15 @@ async function sendMessage() {
 ![정보 게시물 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/c7d66ab2-7410-4b6f-9128-5f5e7963ac08)
 
 </details>
+
+</details>
+
+## 자유 게시판
+
+<details>
+<summary>자유 게시판 etc</summary>
+<br>
+
 <details>
 <summary>자유 게시글 작성</summary>
 
@@ -433,7 +448,14 @@ async function sendMessage() {
 
 </details>
 
+</details>
+
 ## 이벤트 게시판
+
+<details>
+<summary>이벤트 게시판 etc</summary>
+<br>
+
 <details>
 
 <summary>이벤트 게시글 이동 전체 조회 단일 조회</summary> 
@@ -468,7 +490,13 @@ async function sendMessage() {
 
 </details>
 
+</details>
+
 ## 댓글
+
+<details>
+<summary>댓글 etc</summary>
+<br>
 
 <details>
 
@@ -484,6 +512,8 @@ async function sendMessage() {
 
 ![댓글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/dff38ba4-8f92-49de-a680-6342252f9ad8)
  
+</details>
+
 </details>
 
 ---
