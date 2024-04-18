@@ -181,7 +181,6 @@ async function sendMessage() {
 </details>
 
 # Api 명세서
----
 <details><summary>1. 리뷰(게시글, 댓글)</summary>
 
 ![Swagger Editor_page-0001](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/3e6bf027-0d6a-4978-968a-53c7ac4e5e26)
@@ -216,7 +215,7 @@ async function sendMessage() {
 
 </details>
 
-
+---
 # 테스트 결과 영상
 
 ## 메인
