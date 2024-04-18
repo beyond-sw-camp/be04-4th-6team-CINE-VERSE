@@ -84,21 +84,22 @@ async function sendMessage() {
 
 <details><summary>1. 개념모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/db51dbbd-2c75-4a06-b675-07ac2143d522" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4f4bef61-c402-4920-b6d6-9ed34804dc40" width="100%" />
 </p>
 </details>
 
 <details><summary>2. 논리모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/337f0ad5-27c3-4c83-a520-cc40a575516a" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/3ae5b2ae-dc98-4a1a-98ba-25477ef2133c" width="100%" />
 </p>
 </details>
 
 <details><summary>3. 물리모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/235bb12d-c037-4f4f-af35-47f955d78454" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/e5ae084f-f7f4-4bd4-981f-e15fd646bcfc" width="100%" />
 </p>
 </details>
+
 
 ---
 
@@ -106,7 +107,7 @@ async function sendMessage() {
 
 <details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7aa1b556-d63a-40d6-a372-012096d53410" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2444fa8c-cbe0-483f-9c03-b4f13835c6a5" width="100%" />
 </p>
 </details>
 
@@ -136,9 +137,76 @@ async function sendMessage() {
 
 </details>
 
-## 테스트 결과 영상
+# 테스트 결과 영상
 
-### 정보 자유 게시판(정보랑 리뷰 게시판은 형식 똑같아서 정보만 작성)
+## 메인
+
+<details>
+<summary>챗봇 </summary>
+  
+![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/b1ff9bd8-8750-4aab-837f-a3eee9b77456)
+
+</details>
+
+## 챗봇
+
+<details>
+<summary>챗봇 </summary>
+  
+![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/b1ff9bd8-8750-4aab-837f-a3eee9b77456)
+
+</details>
+
+## 회원
+
+<details>
+<summary>회원가입 </summary>
+  
+![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/554ae851-fe22-464f-9240-bab36cd269e1)
+
+</details>
+
+<details>
+<summary>아이디, 비밀번호 찾기 </summary>
+
+
+</details>
+
+<details>
+<summary>로그인 로그아웃 </summary>
+  
+![로그인로그아웃-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/6be8a8d7-62d6-4897-bcbf-8d330be6274e)
+
+</details>
+
+<details>
+<summary>회원정보 수정 </summary>
+  
+![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/da57629b-d30e-412b-844c-4d27d91346e2)
+
+</details>
+
+<details>
+<summary>회원프로필 확인 </summary>
+
+![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/0440f674-a657-4af3-aa03-82c85173b9f4)
+
+</details>
+
+<details>
+<summary>회원프로필 확인 </summary>
+
+![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/0440f674-a657-4af3-aa03-82c85173b9f4)
+
+</details>
+
+<details>
+<summary>회원 탈퇴 </summary>
+
+
+</details>
+
+## 정보 자유 게시판(정보랑 리뷰 게시판은 형식 똑같아서 정보만 작성)
 <details>
 <summary>게시글 전체 조회 단일 조회</summary>
   
@@ -189,7 +257,7 @@ async function sendMessage() {
 
 </details>
 
-### 이벤트 게시판
+## 이벤트 게시판
 <details>
 
 <summary>이벤트 게시글 이동 전체 조회 단일 조회</summary> 
@@ -241,6 +309,7 @@ async function sendMessage() {
 ![댓글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/dff38ba4-8f92-49de-a680-6342252f9ad8)
  
 </details>
+
 ---
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" width="100%" />
