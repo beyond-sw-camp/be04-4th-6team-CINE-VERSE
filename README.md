@@ -383,22 +383,27 @@ async function sendMessage() {
 <br>
 
 <details>
-<summary>정보 게시글 작성 </summary>
+<details>
+<summary>5-1. 정보(자유) 게시글 전체/단일 조회</summary>
+  
+![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
+
+</details>
+<summary>5-2. 정보 게시글 작성 </summary>
 
   ![정보 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/a241020e-b393-467b-80ae-8e2a10d4ccb0)
 
 </details>
 
 <details>
-<summary>정보 게시글 삭제 </summary>
+<summary>5-3. 정보 게시글 삭제 </summary>
 
 ![정보 게시물 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/44198048-2b47-4905-b323-49a6535c3945)
 
 </details>
 
 <details>
-<summary>정보 게시글 검색</summary>
-
+<summary>5-4. 정보 게시글 검색</summary>
 
 ![정보 게시물 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/c7d66ab2-7410-4b6f-9128-5f5e7963ac08)
 
@@ -412,14 +417,15 @@ async function sendMessage() {
 <br>
 
 <details>
-<summary>자유 게시글 작성</summary>
+<summary>6-1. 자유 게시글 작성</summary>
 
 ![자유 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/68edf6d6-9dd8-49f1-8abe-98aecd5110d9)
   
 </details>
 
 <details>
-<summary>자유 게시글 삭제</summary>
+  
+<summary>6-2. 자유 게시글 삭제</summary>
 
 ![자유게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/2d91542f-aeeb-46af-a5b4-1d4769affde0)
   
@@ -427,7 +433,7 @@ async function sendMessage() {
 
 <details>
 
-<summary>자유 게시글 검색</summary>
+<summary>6-3. 자유 게시글 검색</summary>
 
 ![자유 게시글 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/727baa9d-6030-45ec-a1b9-4d9e3dd3eb63)
 
@@ -442,7 +448,7 @@ async function sendMessage() {
 
 <details>
 
-<summary>이벤트 게시글 이동 전체 조회 단일 조회</summary> 
+<summary>7-1. 이벤트 게시글 이동 전체 조회 단일 조회</summary> 
 
 ![이벤트 게시글 이동 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/7ce8d265-3082-48a6-8778-9f7c53ce5ab1)
 
@@ -450,7 +456,7 @@ async function sendMessage() {
 
 <details> 
   
-<summary>이벤트 게시판 작성</summary> 
+<summary>7-2. 이벤트 게시판 작성</summary> 
 
 ![이벤트 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/eac92e3b-e6ce-45bd-b8e8-9f837ca8ef06)
 
@@ -458,7 +464,7 @@ async function sendMessage() {
 
 <details>
 
-<summary>이벤트 게시판 삭제</summary>
+<summary>7-3. 이벤트 게시판 삭제</summary>
 
 ![이벤트 게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/19c4e1bc-15a2-49a8-916b-d731eb3022bc)
 
@@ -466,7 +472,7 @@ async function sendMessage() {
 
 <details>
 
-<summary>이벤트 게시판 참여</summary>
+<summary>7-4. 이벤트 게시판 참여</summary>
 
 
 ![이벤트 참여](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/ff124f91-bf94-4e3b-a576-229ee3059aa8)
@@ -478,20 +484,12 @@ async function sendMessage() {
 
 
 <details>
-<summary>8️⃣ 게시글 전체/단일 조회</summary>
-  
-![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
-
-</details>
-
-
-<details>
-<summary>9️⃣ 댓글 etc</summary>
+<summary>8️⃣ 댓글 etc</summary>
 <br>
 
 <details>
 
-<summary> 댓글 작성 </summary>
+<summary>8-1. 댓글 작성 </summary>
 
 ![댓글 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/47b6aa50-8b5c-4200-beb4-7b333bc858e4)
 
@@ -499,7 +497,7 @@ async function sendMessage() {
 
 <details>
 
- <summary> 댓글 삭제 </summary>
+ <summary>8-2. 댓글 삭제 </summary>
 
 ![댓글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/dff38ba4-8f92-49de-a680-6342252f9ad8)
  
