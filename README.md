@@ -20,6 +20,15 @@
 
 ---
 
+# WBS
+
+<details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/4573bdca-d8bc-4d1b-90cf-9fa285a17953" width="100%" />
+</p>
+</details>
+
+
 # 📌영화 마니아들을 위한 전문 커뮤니티 서비스 기획서
 
 ## 1. 서비스 기획 배경
