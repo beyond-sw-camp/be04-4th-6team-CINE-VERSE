@@ -182,10 +182,16 @@ async function sendMessage() {
 
 ## 테스트 결과 영상
 
-### 정보 게시판
+### 정보 자 게시판
 <details>
-<summary>페이지 이동</summary>
-![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/113569573/ee210672-978e-4e24-bf72-969e78ae0c28)
+<summary>게시글 전체 조회 단일 조회</summary>
+https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/113569573/ee210672-978e-4e24-bf72-969e78ae0c28
+</details>
+
+<details>
+<summary>정보 게시글 작성 </summary>
+ https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/113569573/951a45b2-5e1d-498e-8c5f-2342a3a915d6
+
 </details>
 
 ---
