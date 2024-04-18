@@ -267,6 +267,45 @@ async function sendMessage() {
 
 
 </details>
+
+## 댓글
+
+<details>
+
+<summary> 댓글 작성 </summary>
+
+![댓글 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/47b6aa50-8b5c-4200-beb4-7b333bc858e4)
+
+</details>
+
+<details>
+
+ <summary> 댓글 삭제 </summary>
+
+![댓글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/dff38ba4-8f92-49de-a680-6342252f9ad8)
+ 
+</details>
+
+#Api 명세서
+<details>
+
+
+
+![Swagger Editor_page-0001](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/3e6bf027-0d6a-4978-968a-53c7ac4e5e26)
+
+![Swagger Editor_page-0002](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/04651a27-575d-405a-9d67-276da2869e9c)
+
+![Swagger Editor_page-0003](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/f99a45af-36d9-4900-8fd2-957f7963a522)
+
+![Swagger Editor_page-0004](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/d3d3c429-8a66-487e-8c19-d6a52ad97ad8)
+
+![Swagger Editor_page-0005](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/cf4b5914-31e5-4d39-b827-dff92946ada5)
+
+![Swagger Editor_page-0006](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/b11e27c2-09f5-4e38-95ff-aaf423645079)
+
+![Swagger Editor_page-0007](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/da423192-22f1-49e0-a882-e2376ec2405f)
+
+</details>
 ---
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5ecfa4,100:57b762&height=200&text=CICD&animation=twinkling&fontColor=ffffff&fontSize=50" width="100%" />
