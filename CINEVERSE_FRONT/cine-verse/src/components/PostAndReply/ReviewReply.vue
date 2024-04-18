@@ -1,7 +1,7 @@
 <template>
     <hr class="replyregistline">
     <div class="replys">
-      <div class="allreply" v-for="reply in replys" :key="reply.infoCommentId" >
+      <div class="allreply" v-for="reply in replys" :key="reply.commentId">
         <div class="replywriterdiv">
           <span v-if="reply.member">{{ reply.member.nickname }}</span>
         </div>
@@ -13,7 +13,7 @@
         </div>
         <div class="closebuttondiv">
           <form action="" name="deleteReply" method="post">
-            <button type="button" class="closebutton" @click="removeReply(reply.infoCommentId)">
+            <button type="button" class="closebutton" @click="removeReply(reply.commentId)">
               <img src="@/assets/img/delete3.png" style="width: 15px; height: 15px;">
             </button>
           </form>
@@ -36,7 +36,6 @@
     </div>
   </template>
   
-  
 <script setup>
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
@@ -47,8 +46,6 @@ const router = useRouter();
 const replys = ref([]);
 const newComment = ref('');
 
-
-// 사용자 닉네임을 쿠키에서 추출하는 함수
 const extractNicknameFromCookie = () => {
   try {
     const nicknameCookie = document.cookie.split('; ').find(cookie => cookie.startsWith('nickname='));
@@ -63,7 +60,6 @@ const extractNicknameFromCookie = () => {
       return null;
     }
 
-    // URL 디코딩 후 반환
     return decodeURIComponent(nicknameValue);
   } catch (error) {
     console.error('사용자 닉네임 추출 중 에러 발생:', error);
@@ -71,14 +67,12 @@ const extractNicknameFromCookie = () => {
   }
 };
 
-// 사용자 닉네임을 추출하여 변수에 할당
 const nickname = ref(extractNicknameFromCookie());
 
-// 페이지가 로드될 때마다 사용자 닉네임을 업데이트
 onMounted(() => {
   nickname.value = extractNicknameFromCookie();
 });
-// console.log(replys)
+
 const submitReply = async () => {
   try {
     const memberIdCookie = document.cookie.split('; ').find(cookie => cookie.startsWith('memberId='));
@@ -93,16 +87,14 @@ const submitReply = async () => {
       return;
     }
 
-    // Vue Router를 통해 infoId 가져오기
-    const infoId = router.currentRoute.value.params.infoId;
+    const reviewId = router.currentRoute.value.params.reviewId;
 
-    const response = await axios.post('http://localhost:8081/info_comment/regist', {
+    const response = await axios.post('http://localhost:8081/review_comment/regist', {
       commentContent: newComment.value,
       member: { memberId },
-      infoId:  infoId  // Vue Router를 통해 가져온 infoId 사용
+      reviewId:  reviewId 
     });
 
-    // 새로운 댓글을 추가하고 입력 필드 초기화
     replys.value.push(response.data);
     newComment.value = '';
   } catch (error) {
@@ -110,14 +102,14 @@ const submitReply = async () => {
   }
 };
 
-const removeReply = async (infoCommentId) => {
+const removeReply = async (commentId) => {
   try {
     if (confirm('댓글을 삭제하시겠습니까?')) {
-      await axios.patch(`http://localhost:8081/info_comment/delete/${infoCommentId}`,{
-        infoCommentId: infoCommentId
+      await axios.patch(`http://localhost:8081/review_comment/delete/${commentId}`,{
+        commentId: commentId
       });
       
-      replys.value = replys.value.filter(reply => reply.replyId !== infoCommentId);
+      replys.value = replys.value.filter(reply => reply.commentId !== commentId);
     }
   } catch (error) {
     console.error('댓글 삭제 중 에러 발생:', error);
@@ -125,14 +117,13 @@ const removeReply = async (infoCommentId) => {
 };
 onMounted(async () => {
   try {
-    // Vue Router를 통해 infoId 가져오기
-    const infoId = router.currentRoute.value.params.infoId;
+    const reviewId = router.currentRoute.value.params.reviewId;
     
-    const response = await axios.get(`http://localhost:8081/info_comment/list?infoId=${infoId}`);
+    const response = await axios.get(`http://localhost:8081/review_comment/list?reviewId=${reviewId}`);
     replys.value = response.data.filter(comment => {
-  const commentInfoId = parseInt(comment.infoId);
-  const routerInfoId = parseInt(infoId);
-  return commentInfoId === routerInfoId;
+  const commentreviewId = parseInt(comment.reviewId);
+  const routerreviewId = parseInt(reviewId);
+  return commentreviewId === routerreviewId;
 });
 console.log('서버로부터 받은 정보:', replys.value);
   } catch (error) {
@@ -142,5 +133,5 @@ console.log('서버로부터 받은 정보:', replys.value);
 </script>
 
 <style scoped>
-@import url('@/assets/css/postAndReply/Reply.css');
+  @import url('@/assets/css/postAndReply/Reply.css');
 </style>

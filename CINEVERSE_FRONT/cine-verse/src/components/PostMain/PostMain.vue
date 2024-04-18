@@ -124,5 +124,5 @@ function filterInfo() {
 </script>
 
 <style scoped>
-@import url('@/assets/css/PostMain/PostMain.css');
+  @import url('@/assets/css/PostMain/PostMain.css');
 </style>

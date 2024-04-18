@@ -45,15 +45,15 @@
         <div class="like">
             <Like/>
         </div>
-        <Replyy/>
+        <ReviewReply/>
     </div>
 </template>
 
 <script setup>
     import router from '@/router/mainRouter';
-    import Replyy from './Replyy.vue';
     import Like from './Like.vue';
     import axios from "axios";
+    import ReviewReply from "@/components/PostAndReply/ReviewReply.vue";
     import { ref, onBeforeMount } from "vue";
     import { useRoute } from "vue-router";
 
@@ -89,14 +89,12 @@
             console.error("Error deleting post:", error);
         });
     }
-//     function editPost() {
-//     router.push(`/review_board/modify/${reviewId.value.params.reviewId}`);
-// }
+
 function editPost() {
     router.push("/ready");
 }
 </script>
 
 <style scoped>
-@import url('@/assets/css/postAndReply/reviewPost.css');  
+@import url('@/assets/css/PostAndReply/ReviewPost.css');  
 </style>

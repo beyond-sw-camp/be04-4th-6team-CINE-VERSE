@@ -82,13 +82,11 @@
   function goToWritePage(){
     router.push(`/free_board/regist`);
   }
-  
-  // 검색 기능 구현
+
   watch([search_condition, search_type], () => {
     if (search_condition.value && search_type.value) {
       filterfree();
     } else {
-      // 검색 조건이 비어있으면 전체 데이터를 보여줍니다.
       filteredfree.value = free.value;
     }
   });
@@ -119,5 +117,5 @@
   </script>
   
   <style scoped>
-@import url('@/assets/css/PostMain/freePostMain.css');
+    @import url('@/assets/css/PostMain/freePostMain.css');
   </style>

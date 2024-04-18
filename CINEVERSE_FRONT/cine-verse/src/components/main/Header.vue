@@ -107,5 +107,5 @@ function badge() {
 </script>
 
 <style scoped>
-    @import url('@/assets/css/main/Header.css');
+    @import url('@/assets/css/Main/Header.css');
 </style>

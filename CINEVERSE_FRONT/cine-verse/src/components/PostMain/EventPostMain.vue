@@ -40,7 +40,6 @@ import router from '@/router/mainRouter';
 
 const info = ref([]);
 
-// 동적으로 좋아요 상태 배열 생성
 const isLiked = ref([]);
 
 function toggleLike(index) {
@@ -53,7 +52,6 @@ onMounted(async () => {
         info.value = response.data.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate));
         console.log(info.value);
 
-        // 데이터 로딩 후 isLiked 초기화
         isLiked.value = Array(info.value.length).fill(false);
     } catch (error) {
         console.error('이벤트 정보 전송 시에 에러 발생하였습니다.', error);
@@ -93,8 +91,6 @@ function goToWritePage() {
     router.push(`/event_board/regist`);
 }
 </script>
-
-
 
 <style scoped>
 @import url('@/assets/css/PostMain/eventPostMain.css');

@@ -56,12 +56,12 @@ const router = createRouter({
         ,
         {
             path: '/event_board/list',
-            component: () => import('@/components/PostMain/eventPostMain.vue')
+            component: () => import('@/components/PostMain/EventPostMain.vue')
         }
         ,
         {
             path: '/info_board/:infoId',
-            component: () => import('@/components/PostAndReply/infoPost.vue')
+            component: () => import('@/components/PostAndReply/InfoPost.vue')
         }
         ,
         {
@@ -81,12 +81,12 @@ const router = createRouter({
         ,
         {
             path: '/review_board/:reviewId',
-            component: () => import('@/components/PostAndReply/reviewPost.vue')
+            component: () => import('@/components/PostAndReply/ReviewPost.vue')
         }
         ,
         {
             path: '/review_board/list',
-            component: () => import('@/components/PostMain/reviewPostMain.vue')
+            component: () => import('@/components/PostMain/ReviewPostMain.vue')
         }
         ,
         {
@@ -101,12 +101,12 @@ const router = createRouter({
         ,
         {
             path: '/free_board/:freeId',
-            component: () => import('@/components/PostAndReply/freePost.vue')
+            component: () => import('@/components/PostAndReply/FreePost.vue')
         }
         ,
         {
             path: '/free_board/list',
-            component: () => import('@/components/PostMain/freePostMain.vue')
+            component: () => import('@/components/PostMain/FreePostMain.vue')
         }
         ,
         {
@@ -121,7 +121,7 @@ const router = createRouter({
         ,    
         { 
             path: '/event_board/:eventId',
-            component: () => import('@/components/PostAndReply/eventPost.vue')
+            component: () => import('@/components/PostAndReply/EventPost.vue')
         
         }
         ,
@@ -137,6 +137,4 @@ const router = createRouter({
 
     ]
 })
-
-
 export default router;

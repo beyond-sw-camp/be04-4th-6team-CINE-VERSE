@@ -36,7 +36,6 @@
     </div>
   </template>
   
-  
 <script setup>
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
@@ -47,8 +46,6 @@ const router = useRouter();
 const replies = ref([]);
 const newComment = ref('');
 
-
-// 사용자 닉네임을 쿠키에서 추출하는 함수
 const extractNicknameFromCookie = () => {
   try {
     const nicknameCookie = document.cookie.split('; ').find(cookie => cookie.startsWith('nickname='));
@@ -63,7 +60,6 @@ const extractNicknameFromCookie = () => {
       return null;
     }
 
-    // URL 디코딩 후 반환
     return decodeURIComponent(nicknameValue);
   } catch (error) {
     console.error('사용자 닉네임 추출 중 에러 발생:', error);
@@ -71,14 +67,12 @@ const extractNicknameFromCookie = () => {
   }
 };
 
-// 사용자 닉네임을 추출하여 변수에 할당
 const nickname = ref(extractNicknameFromCookie());
 
-// 페이지가 로드될 때마다 사용자 닉네임을 업데이트
 onMounted(() => {
   nickname.value = extractNicknameFromCookie();
 });
-// console.log(replies)
+
 const submitReply = async () => {
   try {
     const memberIdCookie = document.cookie.split('; ').find(cookie => cookie.startsWith('memberId='));
@@ -93,16 +87,14 @@ const submitReply = async () => {
       return;
     }
 
-
     const freeId = router.currentRoute.value.params.freeId;
 
     const response = await axios.post('http://localhost:8081/free_comment/regist', {
       commentContent: newComment.value,
       member: { memberId },
-      freeId:  freeId  // Vue Router를 통해 가져온 freeId 사용
+      freeId:  freeId
     });
 
-    // 새로운 댓글을 추가하고 입력 필드 초기화
     replies.value.push(response.data);
     newComment.value = '';
   } catch (error) {
@@ -123,17 +115,19 @@ const removeReply = async (commentId) => {
     console.error('댓글 삭제 중 에러 발생:', error);
   }
 };
+
 onMounted(async () => {
   try {
-    // Vue Router를 통해 freeId 가져오기
     const freeId = router.currentRoute.value.params.freeId;
     
     const response = await axios.get(`http://localhost:8081/free_comment/list?freeId=${freeId}`);
     replies.value = response.data.filter(comment => {
   const commentfreeId = parseInt(comment.freeId);
   const routerfreeId = parseInt(freeId);
+  
   return commentfreeId === routerfreeId;
-});
+    });
+
 console.log('서버로부터 받은 정보:', replys.value);
   } catch (error) {
     console.error('데이터 가져오는 중 에러 발생:', error);
@@ -142,5 +136,5 @@ console.log('서버로부터 받은 정보:', replys.value);
 </script>
 
 <style scoped>
-@import url('@/assets/css/postAndReply/Reply.css');
+  @import url('@/assets/css/PostAndReply/Reply.css');
 </style>

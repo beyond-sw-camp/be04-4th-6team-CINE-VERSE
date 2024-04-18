@@ -1,59 +1,58 @@
 <template>
-  <div class="wrapper">
-    <section>
-      <div class="clickdiv" @click="mainBoard()">
-        <h1 class="boardname">이벤트 게시판</h1>
+    <div class="wrapper">
+      <section>
+        <div class="clickdiv" @click="mainBoard()">
+          <h1 class="boardname">이벤트 게시판</h1>
+        </div>
+        <hr class="boardtitleLine">
+      </section>
+      <div class="allboard">
+        <div class="boardtitlediv">
+          <h2 class="boardtitle">{{ event.eventTitle }}</h2>
+        </div>
+        <div class="datediv">
+          <h3 class="date">작성일: {{ event.eventDate }}</h3>
+        </div>
+        <div class="writerdiv">
+          <h3 class="writer">작성자: {{ event && event.member ? event.member.nickname : 'Unknown' }}</h3>
+        </div>
+        <div class="viewandlike">
+          <h3 class="viewandlike">조회수: {{ event.eventViewCount }}</h3>
+        </div>
+        <div class="edit">
+                  <button type="button" @click="editPost" class="editbtn">
+                  수정
+              </button>
+              </div>
+              <div class="delete">
+              <button type="button" @click="deletePost" class="deletebtn">
+                  삭제
+              </button>
+              </div>
       </div>
-      <hr class="boardtitleLine">
-    </section>
-    <div class="allboard">
-      <div class="boardtitlediv">
-        <h2 class="boardtitle">{{ event.eventTitle }}</h2>
-      </div>
-      <div class="datediv">
-        <h3 class="date">작성일: {{ event.eventDate }}</h3>
-      </div>
-      <div class="writerdiv">
-        <h3 class="writer">작성자: {{ event && event.member ? event.member.nickname : 'Unknown' }}</h3>
-      </div>
-      <div class="viewandlike">
-        <h3 class="viewandlike">조회수: {{ event.eventViewCount }}</h3>
-      </div>
-      <div class="edit">
-                <button type="button" @click="editPost" class="editbtn">
-                수정
-            </button>
-            </div>
-            <div class="delete">
-            <button type="button" @click="deletePost" class="deletebtn">
-                삭제
-            </button>
-            </div>
-    </div>
-    <hr class="titleLine">
-    <div class="maincontent">
-      <p v-html="event.eventContent"></p>
-      <div v-if="event.quiz" class="quiz-container">
-        <h2>{{ event.quiz.quizQuestion }}</h2>
-        <input type="text" v-model="answer" placeholder="정답을 입력하세요">
-        <button @click="submitAnswer">제출</button>
-      </div>
-      <div v-if="event.quiz && event.quiz.correctRate !== null">
-  <h4>퀴즈 정답률: {{  event.quiz.correctRate  }}%</h4>
-</div>
-
-<!-- 아래에 추가 -->
-<div v-else>
-  <h2>퀴즈 결과가 없습니다.</h2>
-</div>
-      <button type="button" @click="deletePost">
-        삭제
-      </button>
-      <div v-if="submitError" class="error-message">
-        <p>이미 퀴즈 답안을 제출했습니다.</p>
-      </div>
-    </div>
+      <hr class="titleLine">
+      <div class="maincontent">
+        <p v-html="event.eventContent"></p>
+        <div v-if="event.quiz" class="quiz-container">
+          <h2>{{ event.quiz.quizQuestion }}</h2>
+          <input type="text" v-model="answer" placeholder="정답을 입력하세요">
+          <button @click="submitAnswer">제출</button>
+        </div>
+        <div v-if="event.quiz && event.quiz.correctRate !== null">
+    <h4>퀴즈 정답률: {{  event.quiz.correctRate  }}%</h4>
   </div>
+
+  <div v-else>
+    <h2>퀴즈 결과가 없습니다.</h2>
+  </div>
+        <button type="button" @click="deletePost">
+          삭제
+        </button>
+        <div v-if="submitError" class="error-message">
+          <p>이미 퀴즈 답안을 제출했습니다.</p>
+        </div>
+      </div>
+    </div>
 </template>
 
 <script setup>
@@ -65,7 +64,6 @@ import { useRoute } from "vue-router";
 const event = ref({});
 const eventId = useRoute();
 const answer = ref('');
-
 
 onMounted(() => {
   fetchEvent();
@@ -156,5 +154,5 @@ function editPost() {
 </script>
 
 <style scoped>
-@import url('@/assets/css/postAndReply/eventPost.css');
+  @import url('@/assets/css/PostAndReply/EventPost.css');
 </style>

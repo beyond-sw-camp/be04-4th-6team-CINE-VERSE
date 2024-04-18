@@ -42,58 +42,55 @@
         <div class="like">
             <Like/>       
         </div>
-        <Replys/>
+        <FreeReply/>
     </div>
 </template>
 
 <script setup>
-    import router from '@/router/mainRouter';
-    import Replys from './Replys.vue';
-    import Like from './Like.vue';
-    import axios from "axios";
-    import { ref, onBeforeMount } from "vue";
-    import { useRoute } from "vue-router";
+import router from '@/router/mainRouter';
+import FreeReply from "@/components/PostAndReply/FreeReply.vue";
+import Like from './Like.vue';
+import axios from "axios";
+import { ref, onBeforeMount } from "vue";
+import { useRoute } from "vue-router";
 
-    const free = ref({});
-    const freeId = useRoute();
+const free = ref({});
+const freeId = useRoute();
 
-    const fetchfree = () => {
-        axios.get(`http://localhost:8081/free_board/${freeId.params.freeId}`)
-        .then(response => {
-            free.value = response.data;
-            console.log('서버로부터 받은 정보:', response.data);
-        })
-        .catch(error => {
-            console.error("Error fetching free:", error);
-        });
-    }
-
-    onBeforeMount(() => {
-        fetchfree();
+const fetchfree = () => {
+    axios.get(`http://localhost:8081/free_board/${freeId.params.freeId}`)
+    .then(response => {
+        free.value = response.data;
+        console.log('서버로부터 받은 정보:', response.data);
+    })
+    .catch(error => {
+        console.error("Error fetching free:", error);
     });
+}
 
-    function mainBoard() {
+onBeforeMount(() => {
+    fetchfree();
+});
+
+function mainBoard() {
+    router.push('/free_board/list');
+}
+
+function deletePost() {
+    axios.patch(`http://localhost:8081/free_board/delete/${freeId.params.freeId}`)
+    .then(response => {
+        console.log('게시물이 성공적으로 삭제되었습니다.');
         router.push('/free_board/list');
-    }
-
-    function deletePost() {
-        axios.patch(`http://localhost:8081/free_board/delete/${freeId.params.freeId}`)
-        .then(response => {
-            console.log('게시물이 성공적으로 삭제되었습니다.');
-            router.push('/free_board/list');
-        })
-        .catch(error => {
-            console.error("Error deleting post:", error);
-        });
-    }
-//     function editPost() {
-//     router.push(`/free_board/modify/${freeId.value.params.freeId}`);
-// }
+    })
+    .catch(error => {
+        console.error("Error deleting post:", error);
+    });
+}
 function editPost() {
     router.push("/ready");
 }
 </script>
 
 <style scoped>
-@import url('@/assets/css/postAndReply/freePost.css');   
+    @import url('@/assets/css/PostAndReply/FreePost.css');
 </style>

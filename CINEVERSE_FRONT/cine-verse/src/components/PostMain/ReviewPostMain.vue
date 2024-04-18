@@ -123,7 +123,6 @@
   }
   </script>
   
-  <style scoped>
-
-@import url('@/assets/css/PostMain/reviewPostMain.css');
+<style scoped>
+  @import url('@/assets/css/PostMain/reviewPostMain.css');
 </style>
