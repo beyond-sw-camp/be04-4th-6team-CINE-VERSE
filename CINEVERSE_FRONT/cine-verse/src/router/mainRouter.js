@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+import MemberView from '@/components/View/Member.vue';
+import EventView from '@/components/View/event.vue';
+import ReviewView from '@/components/View/review.vue';
+import InfoView from '@/components/View/info.vue';
+import FreeView from '@/components/View/free.vue';
 import MainView from '@/components/Main/Main.vue';
 import UserProfile from '@/components/user/UserProfile.vue';
 import Join from '@/components/user/Join.vue';
@@ -32,7 +37,7 @@ const router = createRouter({
         },
         {
             path: '/member',
-            component: UserProfile,
+            component: MemberView,
             children: [
                 {
                     path: 'regist',
@@ -55,6 +60,10 @@ const router = createRouter({
                     component: FindUserInfoPw
                 },
                 {
+                    path: 'point',
+                    component: UserProfile
+                },
+                {
                     path: 'badge',
                     component: Badge
                 },
@@ -66,8 +75,12 @@ const router = createRouter({
         },
         {
             path: '/event_board',
-            component: EventPostMain,
+            component: EventView,
             children: [
+                {
+                    path: 'list',
+                    component: EventPostMain
+                },
                 {
                     path: ':eventId',
                     component: EventPost
@@ -80,8 +93,12 @@ const router = createRouter({
         },
         {
             path: '/info_board',
-            component: InfoPostMain,
+            component: InfoView,
             children: [
+                {
+                    path: 'list',
+                    component: InfoPostMain
+                },
                 {
                     path: 'regist',
                     component: InfoPostContent
@@ -98,8 +115,12 @@ const router = createRouter({
         },
         {
             path: '/review_board',
-            component: ReviewPostMain,
+            component: ReviewView,
             children: [
+                {
+                    path: 'list',
+                    component: ReviewPostMain
+                },
                 {
                     path: 'regist',
                     component: ReviewPostContent
@@ -116,8 +137,12 @@ const router = createRouter({
         },
         {
             path: '/free_board',
-            component: FreePostMain,
+            component: FreeView,
             children: [
+                {
+                    path: 'list',
+                    component: FreePostMain
+                },
                 {
                     path: 'regist',
                     component: FreePostContent
@@ -127,7 +152,7 @@ const router = createRouter({
                     component: EditUserInfo
                 },
                 {
-                    path: '/:freeId',
+                    path: '/S:freeId',
                     component: FreePost
                 }
             ]

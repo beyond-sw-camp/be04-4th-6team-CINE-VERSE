@@ -120,7 +120,7 @@ onMounted(async () => {
   try {
     const freeId = router.currentRoute.value.params.freeId;
     
-    const response = await axios.get(`http://localhost:8081/free_comment/list?freeId=${freeId}`);
+    const response = await axios.get(`http://localhost:8081/free_comment/?freeId=${freeId}`);
     replies.value = response.data.filter(comment => {
   const commentfreeId = parseInt(comment.freeId);
   const routerfreeId = parseInt(freeId);

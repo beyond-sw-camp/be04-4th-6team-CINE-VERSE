@@ -59,7 +59,7 @@ const submitPost = async () => {
     await axios.post('http://localhost:8081/event_board/regist', postData);
 
     console.log('게시물 작성 완료');
-    router.push('/event_board/list');
+    router.push('/event_board');
   } catch (error) {
     console.error('게시물 작성 오류:', error);
   }

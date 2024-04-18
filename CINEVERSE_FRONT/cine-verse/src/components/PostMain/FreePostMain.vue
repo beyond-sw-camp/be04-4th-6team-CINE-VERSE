@@ -80,7 +80,7 @@
   }
   
   function goToWritePage(){
-    router.push(`/regist`);
+    router.push(`/free_board/regist`);
   }
 
   watch([search_condition, search_type], () => {

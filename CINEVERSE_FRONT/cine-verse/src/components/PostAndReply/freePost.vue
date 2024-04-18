@@ -73,14 +73,14 @@ onBeforeMount(() => {
 });
 
 function mainBoard() {
-    router.push('/free_board/list');
+    router.push('/free_board');
 }
 
 function deletePost() {
     axios.patch(`http://localhost:8081/free_board/delete/${freeId.params.freeId}`)
     .then(response => {
         console.log('게시물이 성공적으로 삭제되었습니다.');
-        router.push('/free_board/list');
+        router.push('/free_board');
     })
     .catch(error => {
         console.error("Error deleting post:", error);

@@ -74,7 +74,7 @@ const infoId = useRoute().params.infoId;
         }
       });
 
-      router.push(`/info_board/list`);
+      router.push(`/info_board`);
     } catch (error) {
       console.error('Error updating post:', error);
     }
