@@ -1,4 +1,4 @@
-# 🎥CINE-VERSE🚌 프로젝트
+![메인페이지-라우터-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/60a17727-040a-4bc9-ac95-7758ea63bed5)![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a820d75e-cba5-41cf-8ead-0917ee3b1064)# 🎥CINE-VERSE🚌 프로젝트
 
 ### 🚍팀명: 시내버스
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/be6634ab-906a-4a26-8d73-351ca26c36b8" width="50%" />z
@@ -221,8 +221,9 @@ async function sendMessage() {
 ## 메인
 
 <details>
-<summary>메인 </summary>
+<summary>메인페이지 라우터 </summary>
 
+![메인페이지-라우터-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f2e0df14-21b5-401a-a3de-72ba0381be48)
 
 </details>
 
@@ -240,8 +241,7 @@ async function sendMessage() {
 <details>
 <summary>회원가입 </summary>
   
-![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/554ae851-fe22-464f-9240-bab36cd269e1)
-![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/554ae851-fe22-464f-9240-bab36cd269e1)
+![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/8c69e09b-54e7-44e2-81fd-cd706073f6dc)
 
 </details>
 
@@ -253,29 +253,22 @@ async function sendMessage() {
 
 <details>
 <summary>로그인 로그아웃 </summary>
-  
-![로그인로그아웃-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/6be8a8d7-62d6-4897-bcbf-8d330be6274e)
+
+![로그인로그아웃-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0fbae4fc-c65a-4913-ac97-1a73e897692a)
 
 </details>
 
 <details>
 <summary>회원정보 수정 </summary>
-  
-![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/da57629b-d30e-412b-844c-4d27d91346e2)
+
+![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d7c9296e-f268-4897-a08f-ebdd0e1bef8c)
 
 </details>
 
 <details>
 <summary>회원프로필 확인 </summary>
 
-![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/0440f674-a657-4af3-aa03-82c85173b9f4)
-
-</details>
-
-<details>
-<summary>회원프로필 확인 </summary>
-
-![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/0440f674-a657-4af3-aa03-82c85173b9f4)
+![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/372eeac5-4f7c-4305-aab4-284718326b47)
 
 </details>
 
@@ -284,6 +277,15 @@ async function sendMessage() {
 
 
 </details>
+
+## 뱃지
+<details>
+<summary>뱃지 </summary>
+
+![뱃지-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/821a4331-f081-4573-8b8b-77b275b29db8)
+
+</details>
+
 
 ## 정보 자유 게시판(정보랑 리뷰 게시판은 형식 똑같아서 정보만 작성)
 <details>
