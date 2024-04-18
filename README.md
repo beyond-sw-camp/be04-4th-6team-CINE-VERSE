@@ -181,6 +181,7 @@ async function sendMessage() {
 </details>
 
 # Api 명세서
+---
 <details><summary>1. 리뷰(게시글, 댓글)</summary>
 
 ![Swagger Editor_page-0001](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/3e6bf027-0d6a-4978-968a-53c7ac4e5e26)
@@ -206,34 +207,9 @@ async function sendMessage() {
 </details>
 
 <details><summary>5. 게시글 좋아요</summary>
-![Swagger Editor_page-0006](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/b11e27c2-09f5-4e38-95ff-aaf423645079)
-
-![Swagger Editor_page-0007](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/da423192-22f1-49e0-a882-e2376ec2405f)
-</details>
-
----
-<details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
-<p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2444fa8c-cbe0-483f-9c03-b4f13835c6a5" width="100%" />
-</p>
-</details>
-
-<details><summary>2. 메인 - 회원프로필 및 뱃지 페이지</summary>
-<p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7f7558a1-9de6-476c-a0f4-2b324e5532ff" width="100%" />
-</p>
-</details>
-
-<details><summary>3. 메인 - 최신 이벤트, 자유 게시글</summary>
-<p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/4de57331-36fa-429c-844e-d330e23f2c4e" width="100%" />
-</p>
-</details>
-
-<details><su마</summary>
 
 ![Swagger Editor_page-0005](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/cf4b5914-31e5-4d39-b827-dff92946ada5)
-
+  
 </details>
 
 <details><summary>6. 스키마</summary>
