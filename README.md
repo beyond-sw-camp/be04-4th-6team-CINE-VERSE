@@ -174,21 +174,24 @@ async function sendMessage() {
 
 <details><summary>1. 기능 명세서</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/cc65b91d-1571-4d9e-a762-b3e5fc0569d3" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/20829c20-0880-4ddf-9dfa-3a600ad01b67" width="100%" />
 </p>
 </details>
 
-<details><summary>2. 요구사항 명세서</summary>
+
+<details><summary>2. 요구사항 정의서</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7c6eb9cc-86cc-43dc-8d91-fd922499bd91" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/526afefb-5e1a-4dd9-99db-b2bbe0c9af58" width="100%" />
 </p>
 </details>
 
 <details><summary>3. 테스트 명세서</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/5c5a4b99-b14f-43d1-a024-136d64db705f" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/461a5bbc-b191-4100-b8e6-f3cbea2b4fbb" width="100%" />
 </p>
 </details>
+
+---
 
 # Api 명세서
 <details><summary>1. 리뷰(게시글, 댓글)</summary>
