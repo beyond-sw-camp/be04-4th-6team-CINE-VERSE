@@ -18,7 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Optional;
-// 젠킨스 테스트
 @SpringBootTest
 public class BoardLikeTests {
     private final PostLikeService postLikeService;

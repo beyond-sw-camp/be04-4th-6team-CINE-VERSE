@@ -27,7 +27,7 @@ public class PointServiceImpl implements PointService {
     public void addBoardPoint(int memberId) {
         Point newPoint = new Point();
 
-        newPoint.setMemberPoint(100); // 포인트 값
+        newPoint.setMemberPoint(1000); // 포인트 값
         newPoint.setMemberId(memberId); // 멤버 ID 설정
         newPoint.setPointLog("게시글 작성"); // 포인트 로그 설정
         pointRepository.save(newPoint); // 새로운 포인트 로그 저장

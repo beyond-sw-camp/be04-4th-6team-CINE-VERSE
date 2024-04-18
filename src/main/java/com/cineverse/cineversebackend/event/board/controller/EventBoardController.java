@@ -11,6 +11,10 @@ import com.cineverse.cineversebackend.event.board.entity.quiz.QuizSolver;
 import com.cineverse.cineversebackend.event.board.service.event.EventBoardService;
 import com.cineverse.cineversebackend.event.board.service.quiz.QuizService;
 import com.cineverse.cineversebackend.event.board.service.vote.VoteService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,31 +41,53 @@ public class EventBoardController {
 
 //  테스트용 주석 추가
     @GetMapping("/health_check")
+    @Operation(summary = "백엔드 통신 확인", description = "백엔드 통신 상태를 조회합니다.")
+    @ApiResponse(responseCode = "200", description = "성공")
+    @ApiResponse(responseCode = "500", description = "통신 오류")
     public String health() {
         return "I'm fine";
     }
 
     /* 설명. 이벤트 게시글 작성 (기본) */
     @PostMapping("/regist")
-    public ResponseEntity<EventBoardDTO> test (@RequestBody EventBoardDTO newEvent) {
+    @Operation(summary = "이벤트 게시글 작성", description = "이벤트 게시글을 작성합니다.")
+    @ApiResponse(responseCode = "200", description = "성공")
+    @ApiResponse(responseCode = "400", description = "파라미터 오류")
+    public ResponseEntity<EventBoardDTO> test (
+            @Parameter(required = true, description = "게시글 생성 요청")
+            @RequestBody EventBoardDTO newEvent) {
         eventBoardService.registEvent(newEvent);
         return ResponseEntity.status(HttpStatus.CREATED).body(newEvent);
     }
 
     /* 설명. 이벤트 게시글 수정 */
     @PatchMapping("/modify/{eventId}")
-    public ResponseEntity<EventBoard> modifyEvent(@RequestBody EventBoardDTO event, @PathVariable int eventId) {
+    @Operation(summary = "이벤트 게시글 수정", description = "이벤트 게시글을 수정합니다.")
+    @ApiResponse(responseCode = "200", description = "성공")
+    @ApiResponse(responseCode = "400", description = "파라미터 오류")
+    public ResponseEntity<EventBoard> modifyEvent(
+            @Parameter(required = true, description = "게시글 수정 요청")
+            @RequestBody EventBoardDTO event,
+            @Parameter(required = true, description = "게시글 고유 번호")
+            @PathVariable int eventId) {
         return ResponseEntity.ok(eventBoardService.modifyEvent(eventId, event));
     }
 
     /* 설명. 이벤트 게시글 삭제*/
     @PatchMapping("/delete/{eventId}")
-    public ResponseEntity<EventBoard> deleteEvent(@PathVariable int eventId) {
+    @Operation(summary = "이벤트 게시글 삭제", description = "이벤트 게시글을 삭제합니다.")
+    @ApiResponse(responseCode = "200", description = "성공")
+    @ApiResponse(responseCode = "400", description = "파라미터 오류")
+    public ResponseEntity<EventBoard> deleteEvent(
+            @Parameter(required = true, description = "게시글 고유 번호")
+            @PathVariable int eventId) {
         return ResponseEntity.ok(eventBoardService.deleteEvent(eventId));
     }
 
     /* 설명. 이벤트 게시글 전체 조회 */
     @GetMapping("/list")
+    @Operation(summary = "전체 이벤트 게시글 조회", description = "모든 이벤트 게시글을 조회합니다.")
+    @ApiResponse(responseCode = "200", description = "성공")
     public List<EventBoard> findEventList() {
         List<EventBoard> eventList = eventBoardService.findEventList();
 
@@ -70,7 +96,12 @@ public class EventBoardController {
 
     /* 설명. 이벤트 게시글 단일 조회 */
     @GetMapping("{eventId}")
-    public EventBoardDTO findEventById(@PathVariable int eventId) {
+    @Operation(summary = "단일 이벤트 게시글 조회", description = "단일 이벤트 게시글을 조회합니다.")
+    @ApiResponse(responseCode = "200", description = "성공")
+    @ApiResponse(responseCode = "400", description = "파라미터 오류")
+    public EventBoardDTO findEventById(
+            @Parameter(required = true, description = "게시글 고유 번호")
+            @PathVariable int eventId) {
         EventBoardDTO event = eventBoardService.findEventById(eventId);
 
         return event;
@@ -78,18 +109,16 @@ public class EventBoardController {
 
     /* 설명. 퀴즈 답안 제출 */
     @PostMapping("/quiz/submit")
-    public ResponseEntity<QuizSolver> submitQuizAnswer(@RequestBody QuizSolverDTO quizSolverDTO) {
+    @Operation(summary = "퀴즈 답안 제출", description = "퀴즈의 답안을 제출합니다.")
+    @ApiResponse(responseCode = "200", description = "성공")
+    @ApiResponse(responseCode = "400", description = "파라미터 오류")
+    public ResponseEntity<QuizSolver> submitQuizAnswer(
+            @Parameter(required = true, description = "퀴즈 응시자 정보")
+            @RequestBody QuizSolverDTO quizSolverDTO) {
         quizService.submitAnswer(quizSolverDTO);
         return ResponseEntity.ok().build();
     }
 
-    /* 설명. 퀴즈별 정답률 계산(게시글 조회 안에 넣어야함) */
-    @GetMapping("/correct_rate")
-    public ResponseEntity<List<QuizDTO>> getQuizCorrectRates() {
-        List<QuizDTO> quizDTOList = quizService.calculateCorrectRate();
-
-        return ResponseEntity.ok(quizDTOList);
-    }
 
 //    /* 설명. 투표 제출 */
 //    @PostMapping("/vote/submit")
