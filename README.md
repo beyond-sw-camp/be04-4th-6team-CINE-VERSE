@@ -1,4 +1,4 @@
-![메인페이지-라우터-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/60a17727-040a-4bc9-ac95-7758ea63bed5)![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a820d75e-cba5-41cf-8ead-0917ee3b1064)# 🎥CINE-VERSE🚌 프로젝트
+🎥CINE-VERSE🚌 프로젝트
 
 ### 🚍팀명: 시내버스
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/be6634ab-906a-4a26-8d73-351ca26c36b8" width="50%" />z
