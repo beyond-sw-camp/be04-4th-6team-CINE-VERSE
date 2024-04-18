@@ -321,7 +321,7 @@ spec:
     - port: 8081                        # container 내부 통신 포트번호
       targetPort: 8081                  # 현재 service 중인 포트번호
       protocol: TCP
-      nodePort: 30007                   # 외부 접속 포트번
+      nodePort: 30007                   # 외부 접속 포트번호호
   selector:
     app: boot002kube
 ```
