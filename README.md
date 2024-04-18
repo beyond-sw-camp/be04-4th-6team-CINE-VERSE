@@ -20,7 +20,7 @@
 
 ---
 
-# 🌀WBS
+# 🌀일정 관리
 
 <details><summary>WBS</summary>
 <p>
@@ -87,6 +87,52 @@ async function sendMessage() {
   const message = userMessage.value.trim();
   if (message.length === 0) return;
 ```
+
+---
+
+# 📝DDD
+
+<details><summary>1. Domain event</summary>
+<p>
+![DDD1](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/573b10b4-1557-4349-b4d1-8594a7dbc415)
+</p>
+</details>
+
+<details><summary>2. Command</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/9c09016e-96ff-4184-ac3b-6a202692538a" width="100%" />
+</p>
+</details>
+
+<details><summary>3. Actor</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/c10de869-47e1-4d35-bc33-c76a6d587089" width="100%" />
+</p>
+</details>
+
+<details><summary>4. Aggregate</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/5e583639-7a18-49fe-a63b-8a2e62d9747f" width="100%" />
+</p>
+</details>
+
+<details><summary>5. Bounded context</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/7e6bdafc-b561-4043-b41c-5affb629d368" width="100%" />
+</p>
+</details>
+
+<details><summary>6. Context mapping</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d36c26a7-e587-4e40-9d15-5d87df9fcd03" width="100%" />
+</p>
+</details>
+
+<details><summary>7. 중간객체 연결</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/41522f9b-ebe3-4446-b5f1-dda170a25368" width="100%" />
+</p>
+</details>
 
 ---
 
