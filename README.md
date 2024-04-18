@@ -379,9 +379,10 @@ async function sendMessage() {
 </details>
 
 <details>
+
 <summary>3-2. 아이디, 비밀번호 찾기 </summary>
 
-<!-- 여기에 내용을 넣으세요 -->
+![아이디비번 테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/3d2f435e-8bd1-4a7a-b296-a9306f678235)
 
 </details>
 
@@ -409,7 +410,7 @@ async function sendMessage() {
 <details>
 <summary>3-6. 회원 탈퇴 </summary>
 
-<!-- 여기에 내용을 넣으세요 -->
+![회원탈퇴 테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b463b95f-a0d4-49d6-89d8-f2bb1c528120)
 
 </details>
 
