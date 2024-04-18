@@ -181,6 +181,37 @@ async function sendMessage() {
 </details>
 
 # Api 명세서
+<details><summary>1. 리뷰(게시글, 댓글)</summary>
+
+![Swagger Editor_page-0001](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/3e6bf027-0d6a-4978-968a-53c7ac4e5e26)
+
+</details>
+
+<details><summary>2. 신고, 포인트, 회원</summary>
+
+![Swagger Editor_page-0002](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/04651a27-575d-405a-9d67-276da2869e9c)
+
+</details>
+
+<details><summary>3. 정보(게시글, 댓글), 자유(게시글, 댓글)</summary>
+
+![Swagger Editor_page-0003](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/f99a45af-36d9-4900-8fd2-957f7963a522)
+
+</details>
+
+<details><summary>4. 자유(게시글), 이벤트(게시글), 이메일, 뱃지</summary>
+
+![Swagger Editor_page-0004](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/d3d3c429-8a66-487e-8c19-d6a52ad97ad8)
+
+</details>
+
+<details><summary>5. 게시글 좋아요</summary>
+![Swagger Editor_page-0006](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/b11e27c2-09f5-4e38-95ff-aaf423645079)
+
+![Swagger Editor_page-0007](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/da423192-22f1-49e0-a882-e2376ec2405f)
+</details>
+
+---
 <details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
 <p>
 <img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/2444fa8c-cbe0-483f-9c03-b4f13835c6a5" width="100%" />
