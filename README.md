@@ -1,7 +1,7 @@
 # 🎥CINE-VERSE🚌 프로젝트
 
 ### 🚍팀명: 시내버스
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/be6634ab-906a-4a26-8d73-351ca26c36b8" width="50%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/be6634ab-906a-4a26-8d73-351ca26c36b8" width="50%" />z
 
 ### 🚌팀원
 
@@ -221,10 +221,8 @@ async function sendMessage() {
 ## 메인
 
 <details>
-<summary>챗봇 </summary>
-  
-![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/b1ff9bd8-8750-4aab-837f-a3eee9b77456)
-![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/dabf9559-90d2-449c-aa08-ad64fa271ed3)
+<summary>메인 </summary>
+
 
 </details>
 
@@ -232,8 +230,8 @@ async function sendMessage() {
 
 <details>
 <summary>챗봇 </summary>
-  
-![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/b1ff9bd8-8750-4aab-837f-a3eee9b77456)
+
+![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/dabf9559-90d2-449c-aa08-ad64fa271ed3)
 
 </details>
 
@@ -242,6 +240,7 @@ async function sendMessage() {
 <details>
 <summary>회원가입 </summary>
   
+![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/554ae851-fe22-464f-9240-bab36cd269e1)
 ![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/554ae851-fe22-464f-9240-bab36cd269e1)
 
 </details>
