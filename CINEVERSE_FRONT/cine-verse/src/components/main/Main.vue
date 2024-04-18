@@ -76,11 +76,9 @@ onMounted(() => {
         });
 });
 
-
 const latestEvents = ref([]);
 
 onMounted(async () => {
-
     try {
         const response = await axios.get("http://localhost:8081/event_board/list");
         const sortedEvents = response.data.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate));
@@ -102,7 +100,6 @@ function gotoEvent(eventBoardId) {
         console.error('eventBoardId가 정의되지 않았습니다.');
     }
 }
-
 
 const latestFreePosts = ref([]);
 
@@ -129,9 +126,8 @@ function gotoFree(freeId) {
         console.error('freeId가 정의되지 않았습니다.');
     }
 }
-
 </script>
 
 <style scoped>
-@import url('@/assets/css/main/Main.css');
+    @import url('@/assets/css/main/Main.css');
 </style>

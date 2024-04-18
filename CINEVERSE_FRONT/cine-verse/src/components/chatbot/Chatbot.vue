@@ -54,7 +54,7 @@ async function fetchAIResponse(prompt) {
     }),
   };
 
-  try {
+try {
     const response = await fetch(apiEndpoint, requestOptions);
     const data = await response.json();
     return data.choices && data.choices.length > 0 ? data.choices[0].message.content : 'No response from AI';

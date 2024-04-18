@@ -1,8 +1,8 @@
 <script setup>
-import Header from './components/main/Header.vue';
-import Footer from './components/main/Footer.vue';
+import Header from './components/Main/Header.vue';
+import Footer from './components/Main/Footer.vue';
 
-import Chatbot from './components/chatbot/Chatbot.vue'
+import Chatbot from './components/Chatbot/Chatbot.vue'
 
 import { RouterView } from 'vue-router';
 import { provide, ref, reactive } from 'vue';
@@ -15,7 +15,6 @@ const globalState = reactive({
 });
 
 provide('globalState', globalState);
-
 </script>
 
 <template>
@@ -31,13 +30,11 @@ provide('globalState', globalState);
     <Footer></Footer>
 </template>
 
-
 <style>
 @font-face {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
 }
-
 
 * {
     font-family: GmarketSansMedium;

@@ -6,52 +6,52 @@ const router = createRouter({
     routes: [
         {
             path: '/member/:memberId',
-            component: () => import('@/components/user/UserProfile.vue')
+            component: () => import('@/components/User/UserProfile.vue')
         }
         ,
         {
             path: '/member/regist',
-            component: () => import('@/components/user/Join.vue')       
+            component: () => import('@/components/User/Join.vue')       
         }
         ,
         {
             path: '/member/modify/:memberId',
-            component: () => import('@/components/user/EditUserInfo.vue')
+            component: () => import('@/components/User/EditUserInfo.vue')
         }
         ,
         {
             path: '/member/login',
-            component: () => import('@/components/user/Login.vue')
+            component: () => import('@/components/User/Login.vue')
         }
         ,
         {
             path: '/',
-            component: () => import('@/components/main/Main.vue')
+            component: () => import('@/components/Main/Main.vue')
         }
         ,
         {
             path: '/member/find_id',
-            component: () => import('@/components/user/FindUserInfoId.vue')
+            component: () => import('@/components/User/FindUserInfoId.vue')
         }
         ,
         {
             path: '/member/findaccountPw',
-            component: () => import('@/components/user/FindUserInfoPw.vue')
+            component: () => import('@/components/User/FindUserInfoPw.vue')
         }
         ,
         {
             path: '/member/point',
-            component: () => import('@/components/user/UserProfile.vue')
+            component: () => import('@/components/User/UserProfile.vue')
         }
         ,
         {
             path: '/badge/list',
-            component: () => import('@/components/user/Badge.vue')
+            component: () => import('@/components/User/Badge.vue')
         }
         ,
         {
             path: '/badge/:memberId',
-            component: () => import('@/components/user/MyBadge.vue')
+            component: () => import('@/components/User/MyBadge.vue')
         }
         ,
         {
@@ -76,7 +76,7 @@ const router = createRouter({
         ,
         {
             path: '/info_board/modify/:infoId',
-            component: () => import('@/components/editPost/InfoPostEdit.vue')
+            component: () => import('@/components/EditPost/InfoPostEdit.vue')
         }
         ,
         {
@@ -91,12 +91,12 @@ const router = createRouter({
         ,
         {
             path: '/review_board/regist',
-            component: () => import('@/components/CreatePost/reviewPostContent.vue')
+            component: () => import('@/components/CreatePost/ReviewPostContent.vue')
         }
         ,
         {
             path: '/review_board/modify/:reviewId',
-            component: () => import('@/components/editPost/InfoPostEdit.vue')
+            component: () => import('@/components/EditPost/InfoPostEdit.vue')
         }
         ,
         {
@@ -111,12 +111,12 @@ const router = createRouter({
         ,
         {
             path: '/free_board/regist',
-            component: () => import('@/components/CreatePost/freePostContent.vue')
+            component: () => import('@/components/CreatePost/FreePostContent.vue')
         }
         ,
         {
             path: '/free_board/modify/:freeId',
-            component: () => import('@/components/editPost/InfoPostEdit.vue')
+            component: () => import('@/components/EditPost/InfoPostEdit.vue')
         }
         ,    
         { 
@@ -127,12 +127,12 @@ const router = createRouter({
         ,
         {
             path: '/event_board/regist',
-            component: () => import('@/components/CreatePost/eventPostContent.vue')
+            component: () => import('@/components/CreatePost/EventPostContent.vue')
         }
         ,
         {
             path:'/ready',
-            component: () => import('@/components/main/Ready.vue')
+            component: () => import('@/components/Main/Ready.vue')
         }
 
     ]

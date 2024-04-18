@@ -30,75 +30,68 @@
         <button type="submit" class="submit-btn" :disabled="submitting">게시물 작성</button>
       </form>
     </div>
-  </template>
+</template>
   
-  <script setup>
-  import { ref } from 'vue';
-  import axios from 'axios';
-  import router from '@/router/mainRouter';
-  
-  const reviewTitle = ref('');
-  const reviewContent = ref('');
-  const reviewCategory = ref('1'); // 기본 카테고리 설정
-  const images = ref([]);
-  const submitting = ref(false); 
-  
-  
-  // 게시물 작성 함수
-  const submitPost = async () => {
-    if (submitting.value) return; 
-  submitting.value = true; 
-    try {
-      // 쿠키에서 사용자 아이디 가져오기
-      const memberIdCookie = document.cookie.split('; ')
-        .find(cookie => cookie.startsWith('memberId='));
-      
-      if (!memberIdCookie) {
-        console.error('사용자 정보가 없습니다.');
-        return;
-      }
-  
-      const memberId = memberIdCookie.split('=')[1];
-      if (!memberId) {
-        console.error('사용자 아이디가 없습니다.');
-        return;
-      }
-  
-      const formData = new FormData();
-      formData.append('reviewBoard', JSON.stringify({
-        reviewTitle: reviewTitle.value,
-        reviewContent: reviewContent.value,
-        member: { memberId: memberId },
-        reviewCategory: { reviewCategoryId: reviewCategory.value, reviewCategory: "카테고리 " + reviewCategory.value }
-      }));
-  
-      // 이미지 배열이 비어있지 않은 경우에만 FormData에 이미지를 추가
-      if (images.value.length > 0) {
-        images.value.forEach(image => {
-          formData.append('images', image);
-        });
-      } else {
-        // 이미지 배열이 비어있는 경우 빈 이미지를 추가
-        formData.append('images', new Blob(), 'empty_image');
-      }
-  
-      // 게시물 등록 요청 보내기
-      await axios.post('http://localhost:8081/review_board/regist', formData);
-  
-      console.log('게시물 작성 완료');
-      router.push('/review_board/list');
-    } catch (error) {
-      console.error('게시물 작성 오류:', error);
+<script setup>
+import { ref } from 'vue';
+import axios from 'axios';
+import router from '@/router/mainRouter';
+
+const reviewTitle = ref('');
+const reviewContent = ref('');
+const reviewCategory = ref('1');
+const images = ref([]);
+const submitting = ref(false); 
+
+const submitPost = async () => {
+  if (submitting.value) return; 
+submitting.value = true; 
+  try {
+    const memberIdCookie = document.cookie.split('; ')
+      .find(cookie => cookie.startsWith('memberId='));
+    
+    if (!memberIdCookie) {
+      console.error('사용자 정보가 없습니다.');
+      return;
     }
-  };
+
+    const memberId = memberIdCookie.split('=')[1];
+    if (!memberId) {
+      console.error('사용자 아이디가 없습니다.');
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('reviewBoard', JSON.stringify({
+      reviewTitle: reviewTitle.value,
+      reviewContent: reviewContent.value,
+      member: { memberId: memberId },
+      reviewCategory: { reviewCategoryId: reviewCategory.value, reviewCategory: "카테고리 " + reviewCategory.value }
+    }));
+
+    if (images.value.length > 0) {
+      images.value.forEach(image => {
+        formData.append('images', image);
+      });
+    } else {
+      formData.append('images', new Blob(), 'empty_image');
+    }
+
+    await axios.post('http://localhost:8081/review_board/regist', formData);
+
+    console.log('게시물 작성 완료');
+    router.push('/review_board/list');
+  } catch (error) {
+    console.error('게시물 작성 오류:', error);
+  }
+};
+
+const handleFileChange = (event) => {
+  images.value = Array.from(event.target.files);
+};
+</script>
   
-  // 파일 변경 처리 함수
-  const handleFileChange = (event) => {
-    images.value = Array.from(event.target.files);
-  };
-  </script>
-  
-  <style scoped>
-@import url('@/assets/css/CreatePost/reviewPostContent.css');
-  </style>
+<style scoped>
+  @import url('@/assets/css/CreatePost/reviewPostContent.css');
+</style>
   

@@ -101,14 +101,11 @@ function profile() {
     }
 }
 
-
 function badge() {
     router.push("/badge/list");
 }
-
 </script>
 
-
 <style scoped>
-@import url('@/assets/css/main/Header.css');
+    @import url('@/assets/css/main/Header.css');
 </style>

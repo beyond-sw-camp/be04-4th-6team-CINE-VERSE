@@ -30,5 +30,5 @@
 </script>
 
 <style scoped>
-@import url('@/assets/css/main/Footer.css');
+    @import url('@/assets/css/main/Footer.css');
 </style>

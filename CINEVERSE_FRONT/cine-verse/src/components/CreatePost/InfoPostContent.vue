@@ -43,7 +43,6 @@ const infoCategory = ref('1');
 const images = ref([]);
 const submitting = ref(false); 
 
-
 const submitPost = async () => {
   if (submitting.value) return; 
   submitting.value = true; 
@@ -71,17 +70,14 @@ const submitPost = async () => {
       infoCategory: { infoCategoryId: infoCategory.value, infoCategory: "카테고리 " + infoCategory.value }
     }));
 
-    // 이미지 배열이 비어있지 않은 경우에만 FormData에 이미지를 추가
     if (images.value.length > 0) {
       images.value.forEach(image => {
         formData.append('images', image);
       });
     } else {
-      // 이미지 배열이 비어있는 경우 빈 이미지를 추가
       formData.append('images', new Blob(), 'empty_image');
     }
 
-    // 게시물 등록 요청 보내기
     await axios.post('http://localhost:8081/info_board/regist', formData);
 
     console.log('게시물 작성 완료');
@@ -91,12 +87,11 @@ const submitPost = async () => {
   }
 };
 
-// 파일 변경 처리 함수
 const handleFileChange = (event) => {
   images.value = Array.from(event.target.files);
 };
 </script>
 
 <style scoped>
-@import url('@/assets/css/CreatePost/infoPostContent.css');
+  @import url('@/assets/css/CreatePost/infoPostContent.css');
 </style>
