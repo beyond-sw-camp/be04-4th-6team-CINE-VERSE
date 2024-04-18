@@ -306,7 +306,7 @@ async function sendMessage() {
 # ✨서비스 테스트 결과 영상
 
 <details>
-<summary>1. 메인페이지 라우터 </summary>
+<summary>1️⃣ 메인페이지 라우터 </summary>
 
 ![메인페이지-라우터-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f2e0df14-21b5-401a-a3de-72ba0381be48)
 
@@ -314,7 +314,7 @@ async function sendMessage() {
 
 
 <details>
-<summary>2. 챗봇 </summary>
+<summary>2️⃣ 챗봇 </summary>
 
 ![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/dabf9559-90d2-449c-aa08-ad64fa271ed3)
 
@@ -322,7 +322,7 @@ async function sendMessage() {
 
 
 <details>
-<summary>3. 회원 etc</summary>
+<summary>3️⃣ 회원 etc</summary>
 <br>
   
 <details>
@@ -371,7 +371,7 @@ async function sendMessage() {
 
 
 <details>
-<summary>4. 뱃지 </summary>
+<summary>4️⃣ 뱃지 </summary>
 
 ![뱃지-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/821a4331-f081-4573-8b8b-77b275b29db8)
 
@@ -379,7 +379,7 @@ async function sendMessage() {
 
 
 <details>
-<summary>5. 정보 게시판 etc</summary>
+<summary>5️⃣ 정보 게시판 etc</summary>
 <br>
 
 <details>
@@ -408,7 +408,7 @@ async function sendMessage() {
 
 
 <details>
-<summary>6. 자유 게시판 etc</summary>
+<summary>6️⃣ 자유 게시판 etc</summary>
 <br>
 
 <details>
@@ -437,7 +437,7 @@ async function sendMessage() {
 
 
 <details>
-<summary>7. 이벤트 게시판 etc</summary>
+<summary>7️⃣ 이벤트 게시판 etc</summary>
 <br>
 
 <details>
@@ -478,7 +478,7 @@ async function sendMessage() {
 
 
 <details>
-<summary>8. 게시글 전체/단일 조회</summary>
+<summary>8️⃣ 게시글 전체/단일 조회</summary>
   
 ![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
 
@@ -486,7 +486,7 @@ async function sendMessage() {
 
 
 <details>
-<summary>9. 댓글 etc</summary>
+<summary>9️⃣ 댓글 etc</summary>
 <br>
 
 <details>
