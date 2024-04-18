@@ -323,9 +323,11 @@ async function sendMessage() {
 
 </details>
 
-<details>
-<summary>회원<br></summary>
+## 회원
 
+<details>
+<summary>회원</summary>
+<br>
 <details>
 <summary>회원가입 </summary>
   
