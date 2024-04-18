@@ -326,42 +326,42 @@ async function sendMessage() {
 <br>
   
 <details>
-<summary>회원가입 </summary>
+<summary>3-1. 회원가입 </summary>
   
 ![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/8c69e09b-54e7-44e2-81fd-cd706073f6dc)
 
 </details>
 
 <details>
-<summary>아이디, 비밀번호 찾기 </summary>
+<summary>3-2. 아이디, 비밀번호 찾기 </summary>
 
 <!-- 여기에 내용을 넣으세요 -->
 
 </details>
 
 <details>
-<summary>로그인 로그아웃 </summary>
+<summary>3-3. 로그인 로그아웃 </summary>
 
 ![로그인로그아웃-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0fbae4fc-c65a-4913-ac97-1a73e897692a)
 
 </details>
 
 <details>
-<summary>회원정보 수정 </summary>
+<summary>3-4. 회원정보 수정 </summary>
 
 ![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d7c9296e-f268-4897-a08f-ebdd0e1bef8c)
 
 </details>
 
 <details>
-<summary>회원프로필 확인 </summary>
+<summary>3-5. 회원프로필 확인 </summary>
 
 ![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/372eeac5-4f7c-4305-aab4-284718326b47)
 
 </details>
 
 <details>
-<summary>회원 탈퇴 </summary>
+<summary>3-6. 회원 탈퇴 </summary>
 
 <!-- 여기에 내용을 넣으세요 -->
 
