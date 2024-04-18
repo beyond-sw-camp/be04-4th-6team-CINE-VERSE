@@ -80,7 +80,7 @@ const latestEvents = ref([]);
 
 onMounted(async () => {
     try {
-        const response = await axios.get("http://localhost:8081/event_board");
+        const response = await axios.get("http://localhost:8081/event_board/list");
         const sortedEvents = response.data.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate));
         latestEvents.value = sortedEvents.slice(0, 10);
         console.log(latestEvents.value);
@@ -106,7 +106,7 @@ const latestFreePosts = ref([]);
 onMounted(async () => {
 
     try {
-        const freePostResponse = await axios.get("http://localhost:8081/free_board");
+        const freePostResponse = await axios.get("http://localhost:8081/free_board/list");
         const sortedFreePosts = freePostResponse.data.sort((a, b) => new Date(b.freeDate) - new Date(a.freeDate));
         latestFreePosts.value = sortedFreePosts.slice(0, 10);
         console.log(latestFreePosts.value);

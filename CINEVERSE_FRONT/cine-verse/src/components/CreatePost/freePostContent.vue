@@ -69,7 +69,7 @@ const submitPost = async () => {
     await axios.post('http://localhost:8081/free_board/regist', formData);
 
     console.log('게시물 작성 완료');
-    router.push('/free_board');
+    router.push('/free_board/list');
   } catch (error) {
     console.error('게시물 작성 오류:', error);
   } finally {

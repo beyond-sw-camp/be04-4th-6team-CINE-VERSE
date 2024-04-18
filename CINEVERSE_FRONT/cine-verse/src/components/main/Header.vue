@@ -59,19 +59,19 @@ function login() {
 }
 
 function info() {
-    router.push("/info_board");
+    router.push("/info_board/list");
 }
 
 function review() {
-    router.push("/review_board");
+    router.push("/review_board/list");
 }
 
 function event() {
-    router.push("/event_board");
+    router.push("/event_board/list");
 }
 
 function free() {
-    router.push("/free_board");
+    router.push("/free_board/list");
 }
 
 function qna() {

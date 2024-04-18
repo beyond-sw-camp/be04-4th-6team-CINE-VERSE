@@ -80,7 +80,7 @@ submitting.value = true;
     await axios.post('http://localhost:8081/review_board/regist', formData);
 
     console.log('게시물 작성 완료');
-    router.push('/review_board');
+    router.push('/review_board/list');
   } catch (error) {
     console.error('게시물 작성 오류:', error);
   }
