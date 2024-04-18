@@ -170,7 +170,7 @@ async function sendMessage() {
 
 <details><summary>2. 요구사항 명세서</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/799794c3-ccd0-4efa-965e-f4a50e7e599c" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE-CICD/assets/153909291/7c6eb9cc-86cc-43dc-8d91-fd922499bd91" width="100%" />
 </p>
 </details>
 
