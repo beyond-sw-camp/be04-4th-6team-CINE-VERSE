@@ -186,7 +186,7 @@ async function sendMessage() {
 <details>
 <summary>게시글 전체 조회 단일 조회</summary>
   
-https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1
+![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
 
 </details>
 
