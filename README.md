@@ -180,6 +180,25 @@ async function sendMessage() {
 </p>
 </details>
 
+# Api 명세서
+<details>
+
+![Swagger Editor_page-0001](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/3e6bf027-0d6a-4978-968a-53c7ac4e5e26)
+
+![Swagger Editor_page-0002](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/04651a27-575d-405a-9d67-276da2869e9c)
+
+![Swagger Editor_page-0003](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/f99a45af-36d9-4900-8fd2-957f7963a522)
+
+![Swagger Editor_page-0004](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/d3d3c429-8a66-487e-8c19-d6a52ad97ad8)
+
+![Swagger Editor_page-0005](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/cf4b5914-31e5-4d39-b827-dff92946ada5)
+
+![Swagger Editor_page-0006](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/b11e27c2-09f5-4e38-95ff-aaf423645079)
+
+![Swagger Editor_page-0007](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/da423192-22f1-49e0-a882-e2376ec2405f)
+
+</details>
+
 ## 테스트 결과 영상
 
 ### 정보 자유 게시판(정보랑 리뷰 게시판은 형식 똑같아서 정보만 작성)
@@ -288,8 +307,6 @@ async function sendMessage() {
 
 #Api 명세서
 <details>
-
-
 
 ![Swagger Editor_page-0001](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/3e6bf027-0d6a-4978-968a-53c7ac4e5e26)
 
