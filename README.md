@@ -22,12 +22,11 @@
 
 # WBS
 
-<details><summary>WBS </summary>
+<details><summary>3. 물리모델링</summary>
 <p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/4573bdca-d8bc-4d1b-90cf-9fa285a17953" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a673d5e7-8022-47fe-a36a-d011a3a64bb0" width="100%" />
 </p>
 </details>
-
 
 # 📌영화 마니아들을 위한 전문 커뮤니티 서비스 기획서
 
