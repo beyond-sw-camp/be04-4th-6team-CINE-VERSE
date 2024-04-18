@@ -410,7 +410,7 @@ async function sendMessage() {
 <details>
 <summary>3-6. 회원 탈퇴 </summary>
 
-![회원탈퇴 테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b463b95f-a0d4-49d6-89d8-f2bb1c528120)
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b463b95f-a0d4-49d6-89d8-f2bb1c528120" width="100%" />
 
 </details>
 
