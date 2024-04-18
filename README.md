@@ -335,7 +335,6 @@ async function sendMessage() {
 <details>
 <summary>아이디, 비밀번호 찾기 </summary>
 
-
 </details>
 
 <details>
@@ -361,7 +360,6 @@ async function sendMessage() {
 
 <details>
 <summary>회원 탈퇴 </summary>
-
 
 </details>
 
