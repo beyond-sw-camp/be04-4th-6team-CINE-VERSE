@@ -59,8 +59,6 @@
 </p>
 </details>
 
----
-
 # 📝DDD
 
 <details><summary>1. Domain event</summary>
