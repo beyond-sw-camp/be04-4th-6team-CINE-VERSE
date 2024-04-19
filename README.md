@@ -913,9 +913,9 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
 
 </details>
 
-<br>
+---
 
-# 고도화 예정 기술
+# 🌐고도화 예정 기술
 
 1. 이벤트 게시판 투표 구현
 2. spring security 적용
@@ -926,7 +926,7 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
 7. 회원신고
 8. qna
 
-<br>
+---
 
 # ✏프로젝트 회고
 
