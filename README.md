@@ -90,6 +90,67 @@ async function sendMessage() {
   if (message.length === 0) return;
 ```
 
+3. S3 서버 이용한 다중 이미지 업로드
+
+Java와 Spring Boot를 사용하여 AWS S3에 이미지 파일을 업로드하고 관리하는 기능 구현
+안정적인 AWS S3를 사용함으로써 대용량 이미지 저장 및 관리 용이하고, 데이터 보안 강화
+
+중요 코드:
+
+```
+@Bean
+    public AmazonS3Client amazonS3Client() {
+        BasicAWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
+
+        return (AmazonS3Client) AmazonS3ClientBuilder.standard()
+                .withCredentials(new AWSStaticCredentialsProvider(credentials))
+                .withRegion(region)
+                .build();
+    }
+
+try {
+            ObjectMetadata objectMetadata = new ObjectMetadata();
+            objectMetadata.setContentType(multipartFile.getContentType());
+            objectMetadata.setContentLength(multipartFile.getInputStream().available());
+
+            amazonS3Client.putObject(bucketName, storedName, multipartFile.getInputStream(), objectMetadata); 
+
+            String accessUrl = amazonS3Client.getUrl(bucketName, storedName).toString();
+            image.setAccessUrl(accessUrl);
+            imageRepository.save(image); 
+        }
+```
+
+4. SMTP를 활용한 인증 이메일 발송 및 비밀번호 변경
+
+SMTP를 통해 사용자의 이메일로 비밀번호 재설정 인증용 난수를 보내고 비밀번호 변경 기능 구형
+이메일을 통해 사용자가 안전하게 자신의 계정을 관리할 수 있으며, 서비스에 대한 신뢰성이 향상
+
+중요 코드:
+```
+public EmailMessage sendMail(EmailMessage emailMessage) {
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+        try {
+            MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, false, "UTF-8");
+
+            String newPwd = createRandom();
+            mimeMessageHelper.setTo(emailMessage.getTo());
+            mimeMessageHelper.setSubject("비밀번호 재설정");
+            mimeMessageHelper.setText("재설정된 비밀번호: " + newPwd);
+            mimeMessageHelper.setFrom(new InternetAddress(from));
+
+            javaMailSender.send(mimeMessage);
+            memberService.changePwd(newPwd, emailMessage.getTo());
+
+            emailMessage.setMessage("재설정된 비밀번호: " + newPwd);
+            emailMessage.setSubject("비밀번호 재설정");
+
+            return emailMessage;
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+```
 ---
 
 # 📝DDD
