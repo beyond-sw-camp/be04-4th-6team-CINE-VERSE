@@ -588,7 +588,8 @@
 
 ## Pipeline 스크립트
 
-<details><summery>중요코드</summery>
+<details>
+<summery>중요코드</summery>
     
 ```groovy
 pipeline {
@@ -642,7 +643,7 @@ pipeline {
 }
 ```
 
-</detials>
+</details>
 
 ## Jenkins Pipeline 실행 과정
 1. 변경 코드 GitHub에 업로드
@@ -794,7 +795,7 @@ Java와 Spring Boot를 사용하여 AWS S3에 이미지 파일을 업로드하�
 안정적인 AWS S3를 사용함으로써 대용량 이미지 저장 및 관리 용이하고, 데이터 보안 강화
 
 
-<details><summery>중요코드</summery>
+<details><summary>중요코드</summary>
 
 ```
 @Bean
