@@ -20,16 +20,6 @@
 
 ---
 
-# 🌀일정 관리
-
-<details><summary>WBS</summary>
-<p>
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a673d5e7-8022-47fe-a36a-d011a3a64bb0" width="100%" />
-</p>
-</details>
-
----
-
 # 📌영화 마니아들을 위한 전문 커뮤니티 서비스 기획서
 
 ## 1. 서비스 기획 배경
@@ -344,7 +334,10 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
     }
 ```
 
-<details><summary>## 문서</summary>
+# 문서
+<details><summary>문서 상세보기</summary>
+
+---
 
 # 🌀일정 관리
 
