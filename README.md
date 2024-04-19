@@ -47,6 +47,508 @@
 #### 이러한 사이트는 영화 마니아들에게 맞춤화된 정보를 제공하며, 안전하고 편안한 환경에서 영화에 대한 열정을 공유할 수 있는 최적의 공간이 될 것입니다.
 #### 퇴근 후 🚌시내버스 타고 🎥영화 한 편 어때요?
 
+# 📋설계문서
+<details><summary>상세보기</summary>
+
+---
+
+# 🌀일정 관리
+
+<details><summary>WBS</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a673d5e7-8022-47fe-a36a-d011a3a64bb0" width="100%" />
+</p>
+</details>
+
+---
+
+# 📝DDD
+
+<details><summary>1. Domain event</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/573b10b4-1557-4349-b4d1-8594a7dbc415" width="100%" />
+</p>
+</details>
+
+<details><summary>2. Command</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/6dd8f2ff-1973-4186-8cc9-40c0f22e1cb9" width="100%" />
+</p>
+</details>
+
+<details><summary>3. Actor</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0b22f089-a432-4223-97a4-e7308b5c250d" width="100%" />
+</p>
+</details>
+
+<details><summary>4. Aggregate</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/6e90a77f-ff4e-44a6-bc11-b6f9f5076757" width="100%" />
+</p>
+</details>
+
+<details><summary>5. Bounded context</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/8f580e17-3550-47d2-ab81-f6a258689627" width="100%" />
+</p>
+</details>
+
+<details><summary>6. Context mapping</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0ab1fd84-6afd-4aa9-af2e-bfdf6275af2a" width="100%" />
+</p>
+</details>
+
+<details><summary>7. 중간객체 연결</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b80336ab-4cd5-4e61-9161-2dd320190a2d" width="100%" />
+</p>
+</details>
+
+---
+
+# ⚙DB모델링
+
+<details><summary>1. 개념모델링</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/7ea5b6fe-fa98-4051-bf12-89e3fcb3619d" width="100%" />
+</p>
+</details>
+
+<details><summary>2. 논리모델링</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/239890fa-ea13-4a76-aa86-eb3d9cc2ab6f" width="100%" />
+</p>
+</details>
+
+<details><summary>3. 물리모델링</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d5038827-8df7-4001-92fe-d352f35009b2" width="100%" />
+</p>
+</details>
+
+---
+
+# 💻와이어 프레임
+
+<details><summary>1. 메인 - 회원 관련 페이지 (로그인)</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/679f6dec-e11e-4897-9d39-4417b851e565" width="100%" />
+</p>
+</details>
+
+<details><summary>2. 메인 - 회원프로필 및 뱃지 페이지</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/9c09016e-96ff-4184-ac3b-6a202692538a" width="100%" />
+</p>
+</details>
+
+<details><summary>3. 메인 - 최신 이벤트, 자유 게시글</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/c10de869-47e1-4d35-bc33-c76a6d587089" width="100%" />
+</p>
+</details>
+
+<details><summary>4. 메인 - 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/5e583639-7a18-49fe-a63b-8a2e62d9747f" width="100%" />
+</p>
+</details>
+
+<details><summary>5. 이벤트 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/7e6bdafc-b561-4043-b41c-5affb629d368" width="100%" />
+</p>
+</details>
+
+<details><summary>6. 리뷰 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d36c26a7-e587-4e40-9d15-5d87df9fcd03" width="100%" />
+</p>
+</details>
+
+<details><summary>7. 정보 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/41522f9b-ebe3-4446-b5f1-dda170a25368" width="100%" />
+</p>
+</details>
+
+<details><summary>8. 자유 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/e77a0dd9-150c-4288-af70-681dc2b992f6" width="100%" />
+</p>
+</details>
+
+<details><summary>9. 문의 게시판</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/08a0bbe4-3945-414f-ae53-95a32426508c" width="100%" />
+</p>
+</details>
+
+---
+
+# 📚기능/요구사항/테스트 명세서
+
+<details><summary>1. 기능 명세서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/20829c20-0880-4ddf-9dfa-3a600ad01b67" width="100%" />
+</p>
+</details>
+
+
+<details><summary>2. 요구사항 정의서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/526afefb-5e1a-4dd9-99db-b2bbe0c9af58" width="100%" />
+</p>
+</details>
+
+<details><summary>3. 테스트 명세서</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/461a5bbc-b191-4100-b8e6-f3cbea2b4fbb" width="100%" />
+</p>
+</details>
+
+---
+
+# 🅰Api 명세서
+<details><summary>1. 리뷰(게시글, 댓글)</summary>
+
+![Swagger Editor_page-0001](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/3e6bf027-0d6a-4978-968a-53c7ac4e5e26)
+
+</details>
+<details><summary>2. 신고, 포인트, 회원</summary>
+  
+![Swagger Editor_page-0002](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/04651a27-575d-405a-9d67-276da2869e9c)
+
+</details>
+<details><summary>3. 정보(게시글, 댓글), 자유(게시글, 댓글)</summary>
+  
+![Swagger Editor_page-0003](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/f99a45af-36d9-4900-8fd2-957f7963a522)
+
+</details>
+<details><summary>4. 자유(게시글), 이벤트(게시글), 이메일, 뱃지</summary>
+  
+![Swagger Editor_page-0004](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/d3d3c429-8a66-487e-8c19-d6a52ad97ad8)
+
+</details>
+
+<details><summary>5. 게시글 좋아요</summary>
+  
+![Swagger Editor_page-0005](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/cf4b5914-31e5-4d39-b827-dff92946ada5)
+
+</details>
+
+<details><summary>6. 스키마</summary>
+  
+![Swagger Editor_page-0006](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/b11e27c2-09f5-4e38-95ff-aaf423645079)
+![Swagger Editor_page-0007](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/da423192-22f1-49e0-a882-e2376ec2405f)
+
+</details>
+
+---
+
+
+# ✔백엔드 테스트
+
+<details>
+<summary>1. 회원 </summary>
+
+![백엔드테스트10](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/cf12a37e-64ef-4c97-bb5d-8c38e892582b)
+
+</details>
+
+<details>
+<summary>2. 정보 게시글 </summary>
+  
+![백엔드테스트8](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/ab0fcd21-8097-497c-9a04-914c26bc6a49)
+
+</details>
+
+<details>
+<summary>3. 정보 게시글 댓글</summary>
+  
+![백엔드테스트9](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f54bd183-6f90-4a8c-b157-749dbc3861b3)
+
+</details>
+
+<details>
+<summary>4. 자유 게시글 </summary>
+
+![백엔드테스트7](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/e9023879-71d0-4c33-a820-1260d77cf45f)
+
+</details>
+
+<details>
+<summary>5. 자유 게시글 댓글 </summary>
+  
+![백엔드테스트6](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b8b612a7-0a78-4458-ab94-9f42cffe94dd)
+
+</details>
+
+<details>
+<summary>6. 리뷰 게시글 </summary>
+  
+![백엔드테스트1](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/687fcb2c-7cae-46ab-8172-0262a9ff70e1)
+
+</details>
+
+<details>
+<summary>7. 리뷰 게시글 댓글 </summary>
+
+![백엔드테스트2](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/96424f1e-e733-42cb-b73f-7ea32e085a67)
+
+</details>
+
+<details>
+<summary>8. 이벤트 게시글 </summary>
+
+![백엔드테스트4](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/79c7707f-aa47-4967-ae44-7f7d1efff783)
+
+</details>
+
+<details>
+<summary>9. 뱃지 </summary>
+
+![백엔드테스트3](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/aff0b53c-9bc9-4e45-876e-eec9de636543)
+
+</details>
+
+<details>
+<summary>10. 신고 </summary>
+
+![백엔드테스트4](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/79c7707f-aa47-4967-ae44-7f7d1efff783)
+
+</details>
+
+---
+
+# ✨서비스 테스트 결과 영상
+
+<details>
+<summary>1️⃣ 메인페이지 etc</summary>
+<br>
+
+<details>
+<summary>1-1. 메인페이지 라우터 </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f2e0df14-21b5-401a-a3de-72ba0381be48" width="100%" />
+  
+</details>
+
+<details>
+<summary>1-2. 메인페이지 인기 영화 순위 </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/9a70c400-cdbe-46f3-a766-e3d32fcbd7bf" width="100%" />
+  
+</details>
+
+<details>
+<summary>1-3. 최신 이벤트/자유 게시글 </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a14e42fb-e0c1-4c41-b5b1-468ec24fcbd2" width="100%" />
+
+</details>
+
+</details>
+
+
+<details>
+<summary>2️⃣ 챗봇 </summary>
+
+![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/dabf9559-90d2-449c-aa08-ad64fa271ed3)
+
+</details>
+
+
+<details>
+<summary>3️⃣ 회원 etc</summary>
+<br>
+  
+<details>
+<summary>3-1. 회원가입 </summary>
+  
+![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/8c69e09b-54e7-44e2-81fd-cd706073f6dc)
+
+</details>
+
+<details>
+
+<summary>3-2. 아이디, 비밀번호 찾기 </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/3d2f435e-8bd1-4a7a-b296-a9306f678235" width="100%" />
+
+</details>
+
+<details>
+<summary>3-3. 로그인 로그아웃 </summary>
+
+![로그인로그아웃-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0fbae4fc-c65a-4913-ac97-1a73e897692a)
+
+</details>
+
+<details>
+<summary>3-4. 회원정보 수정 </summary>
+
+![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d7c9296e-f268-4897-a08f-ebdd0e1bef8c)
+
+</details>
+
+<details>
+<summary>3-5. 회원프로필 확인 </summary>
+
+![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/372eeac5-4f7c-4305-aab4-284718326b47)
+
+</details>
+
+<details>
+<summary>3-6. 회원 탈퇴 </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b463b95f-a0d4-49d6-89d8-f2bb1c528120" width="100%" />
+
+</details>
+
+</details>
+
+
+<details>
+<summary>4️⃣ 뱃지 </summary>
+
+![뱃지-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/821a4331-f081-4573-8b8b-77b275b29db8)
+
+</details>
+
+
+<details>
+<summary>5️⃣ 정보 게시판 etc</summary>
+<br>
+  
+<details>
+<summary>5-1. 정보(자유) 게시글 전체/단일 조회</summary>
+  
+![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
+
+</details>
+
+<details>
+<summary>5-2. 정보 게시글 작성 </summary>
+
+  ![정보 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/a241020e-b393-467b-80ae-8e2a10d4ccb0)
+
+</details>
+
+<details>
+<summary>5-3. 정보 게시글 삭제 </summary>
+
+![정보 게시물 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/44198048-2b47-4905-b323-49a6535c3945)
+
+</details>
+
+<details>
+<summary>5-4. 정보 게시글 검색</summary>
+
+![정보 게시물 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/c7d66ab2-7410-4b6f-9128-5f5e7963ac08)
+
+</details>
+
+</details>
+
+
+<details>
+<summary>6️⃣ 자유 게시판 etc</summary>
+<br>
+
+<details>
+<summary>6-1. 자유 게시글 작성</summary>
+
+![자유 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/68edf6d6-9dd8-49f1-8abe-98aecd5110d9)
+  
+</details>
+
+<details>
+  
+<summary>6-2. 자유 게시글 삭제</summary>
+
+![자유게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/2d91542f-aeeb-46af-a5b4-1d4769affde0)
+  
+</details>
+
+<details>
+
+<summary>6-3. 자유 게시글 검색</summary>
+
+![자유 게시글 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/727baa9d-6030-45ec-a1b9-4d9e3dd3eb63)
+
+</details>
+
+</details>
+
+
+<details>
+<summary>7️⃣ 이벤트 게시판 etc</summary>
+<br>
+
+<details>
+
+<summary>7-1. 이벤트 게시글 이동 전체 조회 단일 조회</summary> 
+
+![이벤트 게시글 이동 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/7ce8d265-3082-48a6-8778-9f7c53ce5ab1)
+
+</details>
+
+<details> 
+  
+<summary>7-2. 이벤트 게시판 작성</summary> 
+
+![이벤트 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/eac92e3b-e6ce-45bd-b8e8-9f837ca8ef06)
+
+</details>
+
+<details>
+
+<summary>7-3. 이벤트 게시판 삭제</summary>
+
+![이벤트 게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/19c4e1bc-15a2-49a8-916b-d731eb3022bc)
+
+</details>
+
+<details>
+
+<summary>7-4. 이벤트 게시판 참여</summary>
+
+
+![이벤트 참여](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/ff124f91-bf94-4e3b-a576-229ee3059aa8)
+
+
+</details>
+
+</details>
+
+
+<details>
+<summary>8️⃣ 댓글 etc</summary>
+<br>
+
+<details>
+
+<summary>8-1. 댓글 작성 </summary>
+
+![댓글 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/47b6aa50-8b5c-4200-beb4-7b333bc858e4)
+
+</details>
+
+<details>
+
+ <summary>8-2. 댓글 삭제 </summary>
+
+![댓글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/dff38ba4-8f92-49de-a680-6342252f9ad8)
+ 
+</details>
+
+</details>
+
+</details>
+
 ---
 
 # 🐳CICD 아키텍처
@@ -89,6 +591,8 @@
 - `Publish Over SSH` 및 `Pipeline: Stage View` 설치
 
 ## Pipeline 스크립트
+<details><summery>중요코드</summery>
+    
 ```groovy
 pipeline {
     agent any
@@ -141,6 +645,8 @@ pipeline {
 }
 ```
 
+</detials>
+
 ## Jenkins Pipeline 실행 과정
 1. 변경 코드 GitHub에 업로드
 2. Webhook 통해 변화 감지
@@ -150,7 +656,7 @@ pipeline {
 6. 빌드된 JAR 파일을 통해 이미지 생성 후 Docker Hub에 푸시
 
 ## deployment.yml 생성
-<details>
+<details><summery>yml 내용</summery>
 
 ```
 apiVersion: apps/v1
@@ -178,8 +684,7 @@ spec:
 </details>
 
 ## service.yml
-<details>
-    
+<details><summery>yml 내용</summery>    
 
 ```
 apiVersion: v1
@@ -257,8 +762,8 @@ kubectl rollout restart deployment/vue002dep
 Python을 사용하여 requests와 BeautifulSoup 라이브러리로 CGV에서 영화 데이터(실시간 인기 영화 순위 10)를 크롤링하고 json으로 저장
 메인 화면에 들어가면 사용자는 실시간 영화 정보를 통해 최신 트렌드를 파악 가능
 
-중요 코드
-<details>
+
+<details><summery>중요코드</summery>
     
 ```
 url = 'http://www.cgv.co.kr/movies/'
@@ -276,9 +781,8 @@ api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 �
 https://platform.openai.com/usage에서 API request 조회 가능
 
 
-중요 코드
 
-<details>
+<details><summery>중요코드</summery>
 
 ```
 async function sendMessage() {
@@ -292,8 +796,8 @@ async function sendMessage() {
 Java와 Spring Boot를 사용하여 AWS S3에 이미지 파일을 업로드하고 관리하는 기능 구현
 안정적인 AWS S3를 사용함으로써 대용량 이미지 저장 및 관리 용이하고, 데이터 보안 강화
 
-중요 코드
-<details>
+
+<details><summery>중요코드</summery>
 
 ```
 @Bean
@@ -326,9 +830,8 @@ try {
 SMTP를 통해 사용자의 이메일로 비밀번호 재설정 인증용 난수를 보내고 비밀번호 변경 기능 구형
 이메일을 통해 사용자가 안전하게 자신의 계정을 관리할 수 있으며, 서비스에 대한 신뢰성이 향상
 
-중요 코드
 
-<details>
+<details><summery>중요코드</summery>
     
 ```
 public EmailMessage sendMail(EmailMessage emailMessage) {
@@ -358,7 +861,7 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
 </details>
 
 # 문서
-<details><summary>문서 상세보기</summary>
+<details><summary>상세보기</summary>
 
 ---
 
