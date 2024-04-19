@@ -150,6 +150,8 @@ pipeline {
 6. 빌드된 JAR 파일을 통해 이미지 생성 후 Docker Hub에 푸시
 
 ## deployment.yml 생성
+<details>
+
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -173,7 +175,12 @@ spec:
             - containerPort: 8081        # 현재 boot project 포트번호
 ```
 
+</details>
+
 ## service.yml
+<details>
+    
+
 ```
 apiVersion: v1
 kind: Service
@@ -189,6 +196,8 @@ spec:
   selector:
     app: boot002kube
 ```
+
+</details>
 
 ## Kubernetes
 1. deployment.yml -> pod를 생성하고 관리하는 정보 정의
@@ -248,12 +257,15 @@ kubectl rollout restart deployment/vue002dep
 Python을 사용하여 requests와 BeautifulSoup 라이브러리로 CGV에서 영화 데이터(실시간 인기 영화 순위 10)를 크롤링하고 json으로 저장
 메인 화면에 들어가면 사용자는 실시간 영화 정보를 통해 최신 트렌드를 파악 가능
 
-중요 코드:
+중요 코드
+<details>
+    
 ```
 url = 'http://www.cgv.co.kr/movies/'
 res = requests.get(url)
 soup = BeautifulSoup(res.text, 'html.parser')
 ```
+</details>
 
 ## 2. OpenAI API를 이용한 챗봇 만들기
 ![API request 조회 가능](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/fec60701-b45c-4134-9698-ab42b216d66d)
@@ -264,20 +276,24 @@ api 키는 .env 환경변수 처리를 통해 외부에 노출되지 않도록 �
 https://platform.openai.com/usage에서 API request 조회 가능
 
 
-중요 코드:
+중요 코드
+
+<details>
 
 ```
 async function sendMessage() {
   const message = userMessage.value.trim();
   if (message.length === 0) return;
 ```
+</details>
 
 ## 3. S3 서버 이용한 다중 이미지 업로드
 
 Java와 Spring Boot를 사용하여 AWS S3에 이미지 파일을 업로드하고 관리하는 기능 구현
 안정적인 AWS S3를 사용함으로써 대용량 이미지 저장 및 관리 용이하고, 데이터 보안 강화
 
-중요 코드:
+중요 코드
+<details>
 
 ```
 @Bean
@@ -303,12 +319,17 @@ try {
         }
 ```
 
+</details>
+
 ## 4. SMTP를 활용한 인증 이메일 발송 및 비밀번호 변경
 
 SMTP를 통해 사용자의 이메일로 비밀번호 재설정 인증용 난수를 보내고 비밀번호 변경 기능 구형
 이메일을 통해 사용자가 안전하게 자신의 계정을 관리할 수 있으며, 서비스에 대한 신뢰성이 향상
 
-중요 코드:
+중요 코드
+
+<details>
+    
 ```
 public EmailMessage sendMail(EmailMessage emailMessage) {
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
@@ -333,6 +354,8 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
         }
     }
 ```
+
+</details>
 
 # 문서
 <details><summary>문서 상세보기</summary>
