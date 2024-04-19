@@ -344,6 +344,17 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
     }
 ```
 ---
+<details><summary>문서서</summary>
+
+# 🌀일정 관리
+
+<details><summary>WBS</summary>
+<p>
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a673d5e7-8022-47fe-a36a-d011a3a64bb0" width="100%" />
+</p>
+</details>
+
+---
 
 # 📝DDD
 
@@ -830,6 +841,7 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
 
 </details>
 
+</details>
 ---
 
 
