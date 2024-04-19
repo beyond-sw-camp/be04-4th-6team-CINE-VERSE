@@ -60,7 +60,7 @@
 ---
 
 # 🐳CICD 아키텍처
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/04995643-7e9d-4f6a-98fe-b417f64a86d6" width="100%" />
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/04995643-7e9d-4f6a-98fe-b417f64a86d6" width="60%" />
 
 ---
 
