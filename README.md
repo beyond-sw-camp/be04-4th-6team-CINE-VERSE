@@ -588,8 +588,7 @@
 
 ## Pipeline 스크립트
 
-<details>
-<summery>중요코드</summery>
+<details><summery>중요코드</summery>
     
 ```groovy
 pipeline {
