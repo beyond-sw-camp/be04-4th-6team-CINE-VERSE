@@ -22,9 +22,9 @@
 
 # 기술 스택
 
-| SpringBoot | MariaDB | Spring Data JPA |
-| --- | --- | --- |
-| ![Spring Boot](https://img.shields.io/badge/spring-boot-green.svg) | ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) | ![Spring Data JPA](https://img.shields.io/badge/spring-data-jpa-green.svg) |
+| SpringBoot | MariaDB | Spring Data JPA | Jenkins | Kubernetes | Docker | Ngrok | Python | JavaScript | Vue | HTML | CSS |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![SpringBoot](https://img.shields.io/badge/springboot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white) | ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) | ![Spring Data JPA](https://img.shields.io/badge/spring-data-jpa-green.svg) |
 
 
 ---
