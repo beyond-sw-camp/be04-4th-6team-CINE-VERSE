@@ -50,7 +50,6 @@
 # 📋설계문서
 <details><summary>상세보기</summary>
 
----
 
 # 🌀일정 관리
 
