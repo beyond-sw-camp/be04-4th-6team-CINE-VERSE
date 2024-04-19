@@ -34,6 +34,11 @@
 
 # 개발 도구
 
+| IntelliJ IDEA | Visual Studio Code | HeidiSQL | Jenkins | Kubernetes | Docker | ngrok |
+| --- | --- | --- | --- | --- | 
+| ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white) | ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) | ![HeidiSQL](https://img.shields.io/badge/heidisql-%236DB33F.svg?style=for-the-badge&logo=heidisql&logoColor=white)
+
+
 ---
 
 # 📌영화 마니아들을 위한 전문 커뮤니티 서비스 기획서
