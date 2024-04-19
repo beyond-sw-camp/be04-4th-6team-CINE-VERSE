@@ -37,8 +37,6 @@
 | IntelliJ IDEA | Visual Studio Code | HeidiSQL | Visily | Miro | Github | AWS S3 |
 | --- | --- | --- | --- | --- | --- | -- |
 | ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white) | ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) | ![HeidiSQL](https://img.shields.io/badge/heidisql-%236DB33F.svg?style=for-the-badge&logo=heidisql&logoColor=white) | ![Visily](https://img.shields.io/badge/Visily-800080.svg?style=for-the-badge&logo=visily&logoColor=white) | ![Miro](https://img.shields.io/badge/Miro-FFFF00.svg?style=for-the-badge&logo=miro&logoColor=white) | ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) | ![AWS S3](https://img.shields.io/badge/AWS_S3-FF9900.svg?style=for-the-badge&logo=amazons3&logoColor=white)
- |
-
 
 ---
 
