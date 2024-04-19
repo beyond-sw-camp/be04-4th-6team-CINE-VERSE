@@ -22,7 +22,10 @@
 
 # 기술 스택
 
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
+| SpringBoot | MariaDB | Spring Data JPA |
+| --- | --- | --- |
+| ![Spring Boot](https://img.shields.io/badge/spring-boot-green.svg) | ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) | ![Spring Data JPA](https://img.shields.io/badge/spring-data-jpa-green.svg) |
+
 
 ---
 
