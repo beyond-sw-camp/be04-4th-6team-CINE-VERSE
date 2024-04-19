@@ -343,8 +343,8 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
         }
     }
 ```
----
-<details><summary>문서서</summary>
+
+<details><summary>## 문서</summary>
 
 # 🌀일정 관리
 
@@ -842,7 +842,6 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
 </details>
 
 </details>
----
 
 
 # ✏프로젝트 회고
