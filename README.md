@@ -544,7 +544,6 @@
 
 </details>
 
-</details>
 
 
 # 🐳CICD 아키텍처
