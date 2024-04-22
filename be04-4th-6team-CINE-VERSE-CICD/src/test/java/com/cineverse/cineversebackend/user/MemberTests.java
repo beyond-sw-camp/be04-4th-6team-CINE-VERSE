@@ -226,18 +226,4 @@ public class MemberTests {
         assertThat(memberEmail).isEqualTo("yunjaeeun12@naver.com");
         assertThat(beforeChangePassword).isNotEqualTo(afterChangePassword);
     }
-
-    /* 실행 안됨. 수정예정 */
-//    @Test
-//    @DisplayName("비밀번호 변경 실패 테스트")
-//    @Transactional
-//    public void failChangePassword() {
-//        EmailMessage nonExistentEmail = EmailMessage.builder()
-//                .to("test1231231@tset.com")
-//                .build();
-//
-//        assertThatThrownBy(() -> emailService.sendMail(nonExistentEmail))
-//                .isInstanceOf(ChangeSetPersister.NotFoundException.class)
-//                .hasMessageContaining("회원 이메일을 찾을 수 없습니다.");
-//    }
 }
