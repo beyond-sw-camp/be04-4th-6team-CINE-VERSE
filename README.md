@@ -350,235 +350,6 @@
 ![백엔드테스트4](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/79c7707f-aa47-4967-ae44-7f7d1efff783)
 
 </details>
-
----
-
-<br>
-
-# ✨서비스 테스트 결과 영상
-
-<details>
-<summary> <b>1️⃣ 메인페이지 etc</b> </summary>
-<br>
-
-<details>
-<summary> <b>1-1. 메인페이지 라우터</b> </summary>
-
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f2e0df14-21b5-401a-a3de-72ba0381be48" width="100%" />
-  
-</details>
-
-<details>
-<summary> <b>1-2. 메인페이지 인기 영화 순위</b> </summary>
-
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/9a70c400-cdbe-46f3-a766-e3d32fcbd7bf" width="100%" />
-  
-</details>
-
-<details>
-<summary> <b>1-3. 최신 이벤트/자유 게시글</b> </summary>
-
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a14e42fb-e0c1-4c41-b5b1-468ec24fcbd2" width="100%" />
-
-</details>
-
-</details>
-
-
-<details>
-<summary> <b>2️⃣ 챗봇</b> </summary>
-
-![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/dabf9559-90d2-449c-aa08-ad64fa271ed3)
-
-</details>
-
-
-<details>
-<summary> <b>3️⃣ 회원 etc</b> </summary>
-<br>
-  
-<details>
-<summary> <b>3-1. 회원가입</b> </summary>
-  
-![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/8c69e09b-54e7-44e2-81fd-cd706073f6dc)
-
-</details>
-
-<details>
-
-<summary> <b>3-2. 아이디, 비밀번호 찾기</b> </summary>
-
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/3d2f435e-8bd1-4a7a-b296-a9306f678235" width="100%" />
-
-</details>
-
-<details>
-<summary> <b>3-3. 로그인 로그아웃</b> </summary>
-
-![로그인로그아웃-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0fbae4fc-c65a-4913-ac97-1a73e897692a)
-
-</details>
-
-<details>
-<summary> <b>3-4. 회원정보 수정</b> </summary>
-
-![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d7c9296e-f268-4897-a08f-ebdd0e1bef8c)
-
-</details>
-
-<details>
-<summary> <b>3-5. 회원프로필 확인</b> </summary>
-
-![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/372eeac5-4f7c-4305-aab4-284718326b47)
-
-</details>
-
-<details>
-<summary> <b>3-6. 회원 탈퇴</b> </summary>
-
-<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b463b95f-a0d4-49d6-89d8-f2bb1c528120" width="100%" />
-
-</details>
-
-</details>
-
-
-<details>
-<summary> <b>4️⃣ 뱃지</b> </summary>
-
-![뱃지-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/821a4331-f081-4573-8b8b-77b275b29db8)
-
-</details>
-
-
-<details>
-<summary> <b>5️⃣ 정보 게시판 etc</b> </summary>
-<br>
-  
-<details>
-<summary> <b>5-1. 정보(자유) 게시글 전체/단일 조회</b> </summary>
-  
-![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
-
-</details>
-
-<details>
-<summary> <b>5-2. 정보 게시글 작성</b> </summary>
-
-  ![정보 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/a241020e-b393-467b-80ae-8e2a10d4ccb0)
-
-</details>
-
-<details>
-<summary> <b>5-3. 정보 게시글 삭제</b> </summary>
-
-![정보 게시물 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/44198048-2b47-4905-b323-49a6535c3945)
-
-</details>
-
-<details>
-<summary> <b>5-4. 정보 게시글 검색</b> </summary>
-
-![정보 게시물 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/c7d66ab2-7410-4b6f-9128-5f5e7963ac08)
-
-</details>
-
-</details>
-
-
-<details>
-<summary> <b>6️⃣ 자유 게시판 etc</b> </summary>
-<br>
-
-<details>
-<summary> <b>6-1. 자유 게시글 작성</b> </summary>
-
-![자유 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/68edf6d6-9dd8-49f1-8abe-98aecd5110d9)
-  
-</details>
-
-<details>
-  
-<summary> <b>6-2. 자유 게시글 삭제</b> </summary>
-
-![자유게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/2d91542f-aeeb-46af-a5b4-1d4769affde0)
-  
-</details>
-
-<details>
-
-<summary> <b>6-3. 자유 게시글 검색</b> </summary>
-
-![자유 게시글 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/727baa9d-6030-45ec-a1b9-4d9e3dd3eb63)
-
-</details>
-
-</details>
-
-
-<details>
-<summary> <b>7️⃣ 이벤트 게시판 etc</b> </summary>
-<br>
-
-<details>
-
-<summary> <b>7-1. 이벤트 게시글 이동 전체 조회 단일 조회</b> </summary> 
-
-![이벤트 게시글 이동 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/7ce8d265-3082-48a6-8778-9f7c53ce5ab1)
-
-</details>
-
-<details> 
-  
-<summary> <b>7-2. 이벤트 게시판 작성</b> </summary> 
-
-![이벤트 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/eac92e3b-e6ce-45bd-b8e8-9f837ca8ef06)
-
-</details>
-
-<details>
-
-<summary> <b>7-3. 이벤트 게시판 삭제</b> </summary>
-
-![이벤트 게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/19c4e1bc-15a2-49a8-916b-d731eb3022bc)
-
-</details>
-
-<details>
-
-<summary> <b>7-4. 이벤트 게시판 참여</b> </summary>
-
-
-![이벤트 참여](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/ff124f91-bf94-4e3b-a576-229ee3059aa8)
-
-
-</details>
-
-</details>
-
-
-<details>
-<summary> <b>8️⃣ 댓글 etc</b> </summary>
-<br>
-
-<details>
-
-<summary> <b>8-1. 댓글 작성</b> </summary>
-
-![댓글 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/47b6aa50-8b5c-4200-beb4-7b333bc858e4)
-
-</details>
-
-<details>
-
- <summary> <b>8-2. 댓글 삭제</b> </summary>
-
-![댓글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/dff38ba4-8f92-49de-a680-6342252f9ad8)
- 
-</details>
-
-</details>
-
 </details>
 
 
@@ -926,6 +697,230 @@ public EmailMessage sendMail(EmailMessage emailMessage) {
 </details>
 
 ---
+<br>
+
+# ✨서비스 테스트 결과 영상
+
+<details>
+<summary> <b>1️⃣ 메인페이지 etc</b> </summary>
+<br>
+
+<details>
+<summary> <b>1-1. 메인페이지 라우터</b> </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/f2e0df14-21b5-401a-a3de-72ba0381be48" width="100%" />
+  
+</details>
+
+<details>
+<summary> <b>1-2. 메인페이지 인기 영화 순위</b> </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/9a70c400-cdbe-46f3-a766-e3d32fcbd7bf" width="100%" />
+  
+</details>
+
+<details>
+<summary> <b>1-3. 최신 이벤트/자유 게시글</b> </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/a14e42fb-e0c1-4c41-b5b1-468ec24fcbd2" width="100%" />
+
+</details>
+
+</details>
+
+
+<details>
+<summary> <b>2️⃣ 챗봇</b> </summary>
+
+![챗봇-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/dabf9559-90d2-449c-aa08-ad64fa271ed3)
+
+</details>
+
+
+<details>
+<summary> <b>3️⃣ 회원 etc</b> </summary>
+<br>
+  
+<details>
+<summary> <b>3-1. 회원가입</b> </summary>
+  
+![회원가입-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/8c69e09b-54e7-44e2-81fd-cd706073f6dc)
+
+</details>
+
+<details>
+
+<summary> <b>3-2. 아이디, 비밀번호 찾기</b> </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/3d2f435e-8bd1-4a7a-b296-a9306f678235" width="100%" />
+
+</details>
+
+<details>
+<summary> <b>3-3. 로그인 로그아웃</b> </summary>
+
+![로그인로그아웃-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/0fbae4fc-c65a-4913-ac97-1a73e897692a)
+
+</details>
+
+<details>
+<summary> <b>3-4. 회원정보 수정</b> </summary>
+
+![회원정보수정-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/d7c9296e-f268-4897-a08f-ebdd0e1bef8c)
+
+</details>
+
+<details>
+<summary> <b>3-5. 회원프로필 확인</b> </summary>
+
+![유저프로필-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/372eeac5-4f7c-4305-aab4-284718326b47)
+
+</details>
+
+<details>
+<summary> <b>3-6. 회원 탈퇴</b> </summary>
+
+<img src="https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/b463b95f-a0d4-49d6-89d8-f2bb1c528120" width="100%" />
+
+</details>
+
+</details>
+
+
+<details>
+<summary> <b>4️⃣ 뱃지</b> </summary>
+
+![뱃지-테스트](https://github.com/beyond-sw-camp/be04-4th-6team-CINE-VERSE/assets/153909291/821a4331-f081-4573-8b8b-77b275b29db8)
+
+</details>
+
+
+<details>
+<summary> <b>5️⃣ 정보 게시판 etc</b> </summary>
+<br>
+  
+<details>
+<summary> <b>5-1. 정보(자유) 게시글 전체/단일 조회</b> </summary>
+  
+![게시글 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/88094177-9b70-49e2-b1af-bb3923ff8cc1)
+
+</details>
+
+<details>
+<summary> <b>5-2. 정보 게시글 작성</b> </summary>
+
+  ![정보 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/a241020e-b393-467b-80ae-8e2a10d4ccb0)
+
+</details>
+
+<details>
+<summary> <b>5-3. 정보 게시글 삭제</b> </summary>
+
+![정보 게시물 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/44198048-2b47-4905-b323-49a6535c3945)
+
+</details>
+
+<details>
+<summary> <b>5-4. 정보 게시글 검색</b> </summary>
+
+![정보 게시물 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/c7d66ab2-7410-4b6f-9128-5f5e7963ac08)
+
+</details>
+
+</details>
+
+
+<details>
+<summary> <b>6️⃣ 자유 게시판 etc</b> </summary>
+<br>
+
+<details>
+<summary> <b>6-1. 자유 게시글 작성</b> </summary>
+
+![자유 게시물 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/68edf6d6-9dd8-49f1-8abe-98aecd5110d9)
+  
+</details>
+
+<details>
+  
+<summary> <b>6-2. 자유 게시글 삭제</b> </summary>
+
+![자유게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/2d91542f-aeeb-46af-a5b4-1d4769affde0)
+  
+</details>
+
+<details>
+
+<summary> <b>6-3. 자유 게시글 검색</b> </summary>
+
+![자유 게시글 검색](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/727baa9d-6030-45ec-a1b9-4d9e3dd3eb63)
+
+</details>
+
+</details>
+
+
+<details>
+<summary> <b>7️⃣ 이벤트 게시판 etc</b> </summary>
+<br>
+
+<details>
+
+<summary> <b>7-1. 이벤트 게시글 이동 전체 조회 단일 조회</b> </summary> 
+
+![이벤트 게시글 이동 전체 조회 단일 조회](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/7ce8d265-3082-48a6-8778-9f7c53ce5ab1)
+
+</details>
+
+<details> 
+  
+<summary> <b>7-2. 이벤트 게시판 작성</b> </summary> 
+
+![이벤트 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/eac92e3b-e6ce-45bd-b8e8-9f837ca8ef06)
+
+</details>
+
+<details>
+
+<summary> <b>7-3. 이벤트 게시판 삭제</b> </summary>
+
+![이벤트 게시글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/19c4e1bc-15a2-49a8-916b-d731eb3022bc)
+
+</details>
+
+<details>
+
+<summary> <b>7-4. 이벤트 게시판 참여</b> </summary>
+
+
+![이벤트 참여](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/ff124f91-bf94-4e3b-a576-229ee3059aa8)
+
+
+</details>
+
+</details>
+
+<details>
+<summary> <b>8️⃣ 댓글 etc</b> </summary>
+<br>
+
+<details>
+
+<summary> <b>8-1. 댓글 작성</b> </summary>
+
+![댓글 작성](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/47b6aa50-8b5c-4200-beb4-7b333bc858e4)
+
+</details>
+
+<details>
+
+ <summary> <b>8-2. 댓글 삭제</b> </summary>
+
+![댓글 삭제](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/113569573/dff38ba4-8f92-49de-a680-6342252f9ad8)
+ 
+</details>
+
+</details>
 
 # 🌐고도화 예정 기술
 
