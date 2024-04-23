@@ -1,8 +1,10 @@
 package com.cineverse.cineversebackend.like.service;
 
+import com.cineverse.cineversebackend.like.dto.PostLikeDTO;
 import com.cineverse.cineversebackend.like.entity.PostLike;
 import com.cineverse.cineversebackend.like.repo.PostLikeRepository;
 import jakarta.transaction.Transactional;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +13,12 @@ import java.util.Optional;
 @Service
 public class PostLikeServiceImpl implements PostLikeService{
     private PostLikeRepository postLikeRepository;
+    private ModelMapper mapper;
 
     @Autowired
-    public PostLikeServiceImpl(PostLikeRepository postLikeRepository) {
+    public PostLikeServiceImpl(PostLikeRepository postLikeRepository, ModelMapper mapper) {
         this.postLikeRepository = postLikeRepository;
+        this.mapper = mapper;
     }
 
     @Override
@@ -75,5 +79,14 @@ public class PostLikeServiceImpl implements PostLikeService{
             newPostLike.setMemberId(memberId);
             postLikeRepository.save(newPostLike);
         }
+    }
+
+    @Override
+    public PostLikeDTO findLikeList(int memberId) {
+        PostLike postLike = postLikeRepository.findByMemberId(memberId);
+
+        PostLikeDTO postLikeDTO = mapper.map(postLike, PostLikeDTO.class);
+
+        return postLikeDTO;
     }
 }

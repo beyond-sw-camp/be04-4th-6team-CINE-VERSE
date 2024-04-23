@@ -13,4 +13,6 @@ public interface PostLikeRepository extends JpaRepository<PostLike, Integer> {
     Optional<PostLike> findByInfoIdAndMemberId(int infoId, int memberId);
 
     Optional<PostLike> findByEventIdAndMemberId(int eventId, int memberId);
+
+    PostLike findByMemberId(int memberId);
 }

@@ -1,15 +1,13 @@
 package com.cineverse.cineversebackend.like.controller;
 
+import com.cineverse.cineversebackend.like.dto.PostLikeDTO;
 import com.cineverse.cineversebackend.like.service.PostLikeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/like")
@@ -75,6 +73,19 @@ public class PostLikeController {
             @PathVariable int memberId)
     {
         postLikeService.likeEvent(eventId, memberId);
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/list")
+    @Operation(summary = "좋아요 누른 게시글 조회", description = "회원이 좋아요 누른 게시글을 조회합니다.")
+    @ApiResponse(responseCode = "200", description = "성공")
+    @ApiResponse(responseCode = "400", description = "실패")
+    public ResponseEntity<PostLikeDTO> findLikeList(
+            @Parameter(required = true, description = "회원 고유 번호")
+            @RequestParam int memberId
+    ) {
+        PostLikeDTO postLikeDTO = postLikeService.findLikeList(memberId);
+
         return ResponseEntity.ok().build();
     }
 }
