@@ -12,5 +12,4 @@ public class VoteContentDTO {
     private int voteContentId;
     private String voteCandidate;
     private int voteSequence;
-//    private Vote vote;
 }
