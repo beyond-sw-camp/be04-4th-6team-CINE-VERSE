@@ -3,6 +3,7 @@ package com.cineverse.cineversebackend.event.board.controller;
 import com.cineverse.cineversebackend.event.board.dto.EventBoardDTO;
 import com.cineverse.cineversebackend.event.board.dto.quiz.QuizDTO;
 import com.cineverse.cineversebackend.event.board.dto.quiz.QuizSolverDTO;
+import com.cineverse.cineversebackend.event.board.dto.vote.ReadyVoterDTO;
 import com.cineverse.cineversebackend.event.board.dto.vote.VoteContentDTO;
 import com.cineverse.cineversebackend.event.board.dto.vote.VoteDTO;
 //import com.cineverse.cineversebackend.event.board.dto.vote.VoterDTO;
@@ -39,7 +40,6 @@ public class EventBoardController {
         this.voteService = voteService;
     }
 
-//  테스트용 주석 추가
     @GetMapping("/health_check")
     @Operation(summary = "백엔드 통신 확인", description = "백엔드 통신 상태를 조회합니다.")
     @ApiResponse(responseCode = "200", description = "성공")
@@ -119,11 +119,10 @@ public class EventBoardController {
         return ResponseEntity.ok().build();
     }
 
-
-//    /* 설명. 투표 제출 */
-//    @PostMapping("/vote/submit")
-//    public ResponseEntity<?> submitVote(@RequestBody VoterDTO voterDTO) {
-//        voteService.submitVote(voterDTO);
-//        return new ResponseEntity<>(HttpStatus.OK);
-//    }
+    /* 설명. 투표 제출 */
+    @PostMapping("/vote/submit")
+    public ResponseEntity<?> submitVote(@RequestBody ReadyVoterDTO voterDTO) {
+        voteService.submitVote(voterDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
