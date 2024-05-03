@@ -40,17 +40,17 @@ public class VoteServiceImpl implements VoteService {
         this.completeVoterRepository = completeVoterRepository;
     }
 
-    @Override
-    public void submitVote(VoterDTO voterDTO) {
-        Optional<Voter> existingVote = voterRepository
-                .findByVoteContentIdAndMemberId(voterDTO.getVoteContentId(), voterDTO.getMemberId());
-        if (existingVote.isPresent()) {
-            throw new IllegalStateException("이미 투표하였습니다.");
-        }
-
-        Voter voter = new Voter();
-        voter.setVoteContentId(voterDTO.getVoteContentId());
-        voter.setMemberId(voterDTO.getMemberId());
-        voterRepository.save(voter);
-    }
+//    @Override
+//    public void submitVote(VoterDTO voterDTO) {
+//        Optional<Voter> existingVote = voterRepository
+//                .findByVoteContentIdAndMemberId(voterDTO.getVoteContentId(), voterDTO.getMemberId());
+//        if (existingVote.isPresent()) {
+//            throw new IllegalStateException("이미 투표하였습니다.");
+//        }
+//
+//        Voter voter = new Voter();
+//        voter.setVoteContentId(voterDTO.getVoteContentId());
+//        voter.setMemberId(voterDTO.getMemberId());
+//        voterRepository.save(voter);
+//    }
 }

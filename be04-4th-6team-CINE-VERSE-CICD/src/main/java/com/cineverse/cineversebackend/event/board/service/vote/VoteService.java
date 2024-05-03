@@ -8,5 +8,5 @@ import com.cineverse.cineversebackend.event.board.dto.vote.VoteDTO;
 import java.util.List;
 
 public interface VoteService {
-    void submitVote(ReadyVoterDTO voterDTO);
+//    void submitVote(ReadyVoterDTO voterDTO);
 }
