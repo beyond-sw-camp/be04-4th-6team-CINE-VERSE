@@ -38,26 +38,25 @@ public class ImageService {
     @Transactional
     public String saveImage(MultipartFile multipartFile, ReviewBoard reviewBoard) {
         String originalName = multipartFile.getOriginalFilename();
-        String storedName = UUID.randomUUID().toString(); // 실제 파일 저장을 위한 유니크한 이름 생성
+        String storedName = UUID.randomUUID().toString();
 
         Image image = new Image();
         image.setOriginName(originalName);
         image.setStoredName(storedName);
-        image.setReview(reviewBoard); // 여기서 ReviewBoard와 연결
+        image.setReview(reviewBoard);
 
         try {
             ObjectMetadata objectMetadata = new ObjectMetadata();
             objectMetadata.setContentType(multipartFile.getContentType());
             objectMetadata.setContentLength(multipartFile.getInputStream().available());
 
-            amazonS3Client.putObject(bucketName, storedName, multipartFile.getInputStream(), objectMetadata); // S3에 파일 저장
+            amazonS3Client.putObject(bucketName, storedName, multipartFile.getInputStream(), objectMetadata);
 
             String accessUrl = amazonS3Client.getUrl(bucketName, storedName).toString();
             image.setAccessUrl(accessUrl);
-            imageRepository.save(image); // 이미지 정보를 데이터베이스에 저장
+            imageRepository.save(image);
 
         } catch (IOException e) {
-            // 적절한 예외 처리 필요
             e.printStackTrace();
         }
 
